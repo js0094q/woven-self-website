@@ -1,0 +1,26 @@
+/* Custom colors based on your new logo */
+:root {
+  --color-primary: #4A5C5A; /* Darker Teal/Green */
+  --color-secondary: #FB5956; /* Accent, if needed, though mostly using the primary for text */
+  --color-background: #FBF9F6; /* Light, warm off-white from your original body bg */
+  --color-light-bg: #F5F3EF; /* Slightly darker off-white for elements */
+  --color-text: #3D4C4A; /* Very dark teal/green for main text */
+  --color-hero-bg: #EAE6DF; /* A calming, slightly darker off-white for the hero */
+}
+
+/* Note: This file contains the custom CSS variables and font definitions.
+  The main styling is handled by Tailwind CSS classes directly in the HTML.
+  To use this file, you would link it in your <head> and typically have a build
+  process to compile your Tailwind CSS, but for your current setup with the
+  Tailwind CDN, the inline <style> block in index.html is fully functional.
+*/
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
