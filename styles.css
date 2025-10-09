@@ -1,11 +1,11 @@
 /* Custom colors based on your new logo */
 :root {
-  --color-primary: #4A5C5A; /* Darker Teal/Green */
-  --color-secondary: #FB5956; /* Accent, if needed, though mostly using the primary for text */
-  --color-background: #FBF9F6; /* Light, warm off-white from your original body bg */
-  --color-light-bg: #F5F3EF; /* Slightly darker off-white for elements */
-  --color-text: #3D4C4A; /* Very dark teal/green for main text */
-  --color-hero-bg: #EAE6DF; /* A calming, slightly darker off-white for the hero */
+  --color-primary: #3c5452; /* Deep teal green */
+  --color-secondary: #f4a261; /* Warm accent */
+  --color-background: #fbf9f6; /* Light, warm off-white */
+  --color-light-bg: #f2ede7; /* Slightly deeper neutral */
+  --color-text: #2f3b3a; /* Strong contrast for readability */
+  --color-hero-bg: #e6e0d9; /* Calming beige for hero */
 }
 
 /* Note: This file contains the custom CSS variables and font definitions.
