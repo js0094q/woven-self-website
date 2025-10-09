@@ -1,14 +1,4 @@
-:root {
-  --color-primary: #2F5D62;
-  --color-primary-dark: #24494D;
-  --color-accent: #F06543;
-  --color-background: #F8F4ED;
-  --color-background-soft: #F1EBE4;
-  --color-ink: #2E3A3B;
-  --color-ink-soft: rgba(46, 58, 59, 0.72);
-  --transition-base: 200ms ease;
-  --shadow-soft: 0 10px 30px rgba(36, 73, 77, 0.08);
-  --shadow-strong: 0 20px 45px rgba(36, 73, 77, 0.12);
+:root {>>>>>>> main
 }
 
 *,
