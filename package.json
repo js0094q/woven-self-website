@@ -1,0 +1,16 @@
+{
+  "name": "woven-self-website",
+  "version": "1.0.0",
+  "description": "A responsive, accessibility-forward landing page for Lauren Rivers, LPC and The Woven Self Therapeutic Services.",
+  "private": true,
+  "scripts": {
+    "postinstall": "playwright install",
+    "test": "playwright test",
+    "test:report": "playwright show-report",
+    "playwright:install-deps": "playwright install-deps"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}
