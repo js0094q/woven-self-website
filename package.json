@@ -6,6 +6,6 @@
     "build": "node scripts/embed-form-secret.js || true"
   },
   "dependencies": {
-    "@vercel/postgres": "^0.2.0",
+    "@vercel/postgres": "^0.2.0"
   }
 }
