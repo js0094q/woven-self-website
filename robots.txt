@@ -1,7 +1,9 @@
-Allow all web crawlers to access all content
 User-agent: *
 Allow: /
-
-Point crawlers to the sitemap for a list of all pages
+Disallow: /blog/drafts/
+# Primary sitemap index
 Sitemap: https://wovenself.com/sitemap.xml
 
+# Explicit references to important sub-sitemaps (optional but helpful)
+Sitemap: https://wovenself.com/sitemap-main.xml
+Sitemap: https://wovenself.com/sitemap-blog.xml

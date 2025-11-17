@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About the Author | The Woven Self</title>
+  <meta name="description" content="Learn more about Loren Galese, author and therapist behind The Woven Self. Trauma-informed insights woven into writing, healing, and reflection." />
+  <link rel="canonical" href="https://wovenself.com/author" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #4A5C5A;
+      --color-secondary: #FB5956;
+      --color-background: #FBF9F6;
+      --color-light-bg: #F5F3EF;
+      --color-text: #3D4C4A;
+      --color-hero-bg: #EAE6DF;
+    }
+    body { font-family: 'Inter', sans-serif; background-color: var(--color-background); color: var(--color-text); }
+    h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    .btn-primary { @apply bg-[var(--color-primary)] text-white hover:bg-[var(--color-text)] transition shadow-md px-6 py-3 rounded-full font-semibold; }
+    .btn-outline { @apply border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition shadow-md px-6 py-3 rounded-full font-semibold; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 bg-[var(--color-background)]/80 backdrop-blur border-b border-gray-200 z-50">
+    <div class="container mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3">
+        <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="/" class="hover:text-[var(--color-primary)]">Home</a>
+        <a href="/author.html" class="font-semibold text-[var(--color-primary)]">Author</a>
+        <a href="/blog.html" class="hover:text-[var(--color-primary)]">Blog</a>
+        <a href="/#contact" class="hover:text-[var(--color-primary)]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="py-20 sm:py-24">
+    <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <h1 class="text-5xl font-bold font-serif text-[var(--color-text)]">About the Author</h1>
+
+        <p class="mt-8 text-lg">
+          Loren Galese is an emerging author whose work explores healing, emotional attunement, and the quiet internal narratives that shape who we become. Her writing blends therapeutic insight with accessible storytelling, helping readers reflect on their inner world with clarity and compassion.
+        </p>
+
+        <p class="mt-4 text-lg">
+          Drawing from her therapeutic background in EMDR and Internal Family Systems, Loren's work focuses on the parts of ourselves that often go unheard, and the profound transformation that occurs when those parts are finally acknowledged.
+        </p>
+
+        <p class="mt-4 text-lg">
+          Her forthcoming publications continue this thread, weaving together trauma-informed guidance with lyrical reflection.
+        </p>
+
+        <a href="/blog.html" class="btn-outline mt-10 inline-block">Visit the Blog →</a>
+      </div>
+
+      <div>
+        <img src="images/loren-galese.jpg" alt="Portrait of Loren Galese" class="rounded-2xl shadow-xl">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--color-light-bg)] text-center py-8 text-[var(--color-text)]">
+    <p>&copy; 2025 The Woven Self Therapeutic Services, LLC</p>
+  </footer>
+
+</body>
+</html>

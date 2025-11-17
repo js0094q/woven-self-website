@@ -1,22 +1,25 @@
-# The Woven Self — static site
+# The Woven Self — Static Website  
+A minimalist, accessible, mobile-friendly website for The Woven Self (wovenself.com), built with plain HTML and Tailwind CSS via CDN. Deployed automatically through GitHub → Vercel.
 
-A minimalist, accessible, single-page site for The Woven Self with booking via Alma.
+## Live Site  
+https://wovenself.com
 
-## Tech
+---
 
-- Plain HTML + CSS (no build step)
-- Mobile-first, accessible (focus states, readable contrast)
-- Open Graph + favicon included
+## ✨ Project Overview
+This site is fully static — no build tools, no frameworks.  
+Everything runs on:
 
-## Quick start
+- **index.html**
+- **author.html** (modular standalone page)
+- **blog.html** (blog index)
+- **blog/post-name.html** (individual posts)
+- **Tailwind CSS CDN** (no compilation required)
+- **Vercel** for hosting and continuous deployment
+- **GitHub** as the source of truth
 
-1. Install a tiny local server (optional):
-   ```bash
-   # macOS has Python 3; this spins up a local web server
-   python3 -m http.server 8080
-   ```
-2. Visit `http://localhost:8080` in your browser.
+This makes updates fast, secure, and easy to maintain.
 
-## Custom domain support
+---
 
-If you plan to point a custom domain (for example `wovenself.com`) at this static site, follow your hosting provider's connection steps and DNS guidance. Once the records have propagated, test the domain in a few browsers to confirm everything resolves correctly. Need assistance? Drop a note in the contact form or reach out to the maintainer for support.
+## 📁 Folder Structure

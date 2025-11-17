@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | The Woven Self</title>
+  <meta name="description" content="Read therapy-informed reflections, emotional insights, and writing by Loren Galese." />
+  <link rel="canonical" href="https://wovenself.com/blog" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #4A5C5A;
+      --color-secondary: #FB5956;
+      --color-background: #FBF9F6;
+      --color-light-bg: #F5F3EF;
+      --color-text: #3D4C4A;
+      --color-hero-bg: #EAE6DF;
+    }
+    body { background: var(--color-background); color: var(--color-text); font-family: Inter, sans-serif; }
+    h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    .btn-outline { @apply border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition shadow-md px-6 py-3 rounded-full font-semibold; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 bg-[var(--color-background)]/80 backdrop-blur border-b border-gray-200 z-50">
+    <div class="container mx-auto px-4 py-5 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3">
+        <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="/" class="hover:text-[var(--color-primary)]">Home</a>
+        <a href="/author.html" class="hover:text-[var(--color-primary)]">Author</a>
+        <a href="/blog.html" class="font-semibold text-[var(--color-primary)]">Blog</a>
+        <a href="/#contact" class="hover:text-[var(--color-primary)]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-20 text-center">
+    <h1 class="text-5xl font-bold font-serif">Blog & Reflections</h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">
+      Essays, insights, and internal explorations from Loren Galese.
+    </p>
+  </section>
+
+  <!-- POSTS GRID -->
+  <section class="container mx-auto px-4 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <article class="bg-[var(--color-light-bg)] p-8 rounded-2xl shadow hover:-translate-y-2 transition">
+        <h3 class="text-2xl font-serif font-bold text-[var(--color-primary)]">
+          The Parts We Carry
+        </h3>
+        <p class="mt-4">
+          Exploring the internal voices we often silence, and how IFS helps us hear them differently.
+        </p>
+        <a href="/blog/the-parts-we-carry.html" class="btn-outline mt-6 inline-block">Read More →</a>
+      </article>
+
+      <article class="bg-[var(--color-light-bg)] p-8 rounded-2xl shadow hover:-translate-y-2 transition">
+        <h3 class="text-2xl font-serif font-bold text-[var(--color-primary)]">
+          What Healing Actually Looks Like
+        </h3>
+        <p class="mt-4">
+          Healing is not linear, and compassion often moves the process faster than pressure.
+        </p>
+        <a href="/blog/what-healing-looks-like.html" class="btn-outline mt-6 inline-block">Read More →</a>
+      </article>
+
+      <article class="bg-[var(--color-light-bg)] p-8 rounded-2xl shadow hover:-translate-y-2 transition">
+        <h3 class="text-2xl font-serif font-bold text-[var(--color-primary)]">
+          On Becoming
+        </h3>
+        <p class="mt-4">
+          When we grow, something else falls away. A reflection on permission to evolve.
+        </p>
+        <a href="/blog/on-becoming.html" class="btn-outline mt-6 inline-block">Read More →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--color-light-bg)] text-center py-8">
+    <p>&copy; 2025 The Woven Self Therapeutic Services, LLC</p>
+  </footer>
+
+</body>
+</html>

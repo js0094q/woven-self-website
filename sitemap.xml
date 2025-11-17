@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://www.wovenself.com/</loc>
-        <lastmod>2025-10-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+
+  <!-- HOME -->
+  <url>
+    <loc>https://wovenself.com/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- AUTHOR PAGE -->
+  <url>
+    <loc>https://wovenself.com/author.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- BLOG INDEX -->
+  <url>
+    <loc>https://wovenself.com/blog.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- BLOG POSTS -->
+  <url>
+    <loc>https://wovenself.com/blog/the-parts-we-carry.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://wovenself.com/blog/what-healing-looks-like.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://wovenself.com/blog/on-becoming.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.70</priority>
+  </url>
+
 </urlset>
