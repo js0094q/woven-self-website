@@ -1,25 +1,13 @@
-# The Woven Self — Static Website  
-A minimalist, accessible, mobile-friendly website for The Woven Self (wovenself.com), built with plain HTML and Tailwind CSS via CDN. Deployed automatically through GitHub → Vercel.
+# The Woven Self — static site
 
-## Live Site  
-https://wovenself.com
+A minimalist, accessible static website for The Woven Self (wovenself.com), built with plain HTML + Tailwind CDN, deployed through GitHub → Vercel.
 
----
+## Tech
+- Plain HTML + CSS (no build step)
+- Tailwind CSS via CDN
+- Static blog (Markdown + JSON index)
+- Vercel hosting and continuous deployment
 
-## ✨ Project Overview
-This site is fully static — no build tools, no frameworks.  
-Everything runs on:
-
-- **index.html**
-- **author.html** (modular standalone page)
-- **blog.html** (blog index)
-- **blog/post-name.html** (individual posts)
-- **Tailwind CSS CDN** (no compilation required)
-- **Vercel** for hosting and continuous deployment
-- **GitHub** as the source of truth
-
-This makes updates fast, secure, and easy to maintain.
-
----
-
-## 📁 Folder Structure
+## Quick start
+```bash
+python3 -m http.server 8080
