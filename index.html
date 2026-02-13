@@ -1,101 +1,402 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Woven Self | Trauma-Informed Therapy in NJ</title>
-<meta name="description" content="Trauma-informed EMDR and IFS therapy for adults and couples in New Jersey." />
-<link rel="canonical" href="https://wovenself.com/" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="styles.css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Trauma Therapy in New Jersey | EMDR + IFS | The Woven Self</title>
+  <meta name="description" content="Trauma-informed therapy for adults and couples in New Jersey. EMDR and Internal Family Systems (IFS), anxiety, relationship patterns, and life transitions. Telehealth available across NJ." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://wovenself.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trauma Therapy in New Jersey | EMDR + IFS | The Woven Self" />
+  <meta property="og:description" content="Trauma-informed therapy for adults and couples in New Jersey. EMDR + IFS. Telehealth available." />
+  <meta property="og:image" content="https://placehold.co/1200x630/f2ede7/3c5452?text=The+Woven+Self" />
+  <meta property="og:url" content="https://wovenself.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧵</text></svg>">
+
+  <style>
+    .hero-pattern {
+      background-image: radial-gradient(circle at 20% 15%, rgba(60,84,82,0.10), transparent 40%),
+                        radial-gradient(circle at 80% 35%, rgba(244,162,97,0.16), transparent 45%),
+                        radial-gradient(circle at 35% 85%, rgba(60,84,82,0.08), transparent 45%);
+      background-color: var(--color-hero-bg);
+    }
+  </style>
+
+  <!-- Structured data: Therapist / Professional Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "The Woven Self Therapeutic Services, LLC",
+    "description": "Trauma-informed therapy in New Jersey using EMDR and Internal Family Systems (IFS). Telehealth available across NJ.",
+    "areaServed": {
+      "@type": "State",
+      "name": "New Jersey"
+    },
+    "url": "https://wovenself.com/",
+    "sameAs": [
+      "https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806",
+      "https://www.instagram.com/lorengaleseauthor/",
+      "https://www.instagram.com/thewovenselftherapeutic/"
+    ],
+    "provider": {
+      "@type": "Person",
+      "name": "Loren Galese",
+      "jobTitle": "Licensed Professional Counselor"
+    }
+  }
+  </script>
 </head>
 
-<body class="bg-[var(--color-background)] text-[var(--color-text)] font-sans">
+<body class="antialiased">
+  <header class="sticky top-0 z-50 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
+        </a>
 
-<header class="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4 py-5 flex justify-between items-center">
-    <a href="/" class="font-serif text-2xl font-bold text-[var(--color-primary)]">
-      The Woven Self
-    </a>
-    <nav class="hidden md:flex gap-6">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="/author.html">Author</a>
-      <a href="/blog.html">Blog</a>
-      <a href="#contact">Contact</a>
-      <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-         target="_blank"
-         class="px-5 py-2 rounded-full bg-[var(--color-primary)] text-white font-semibold">
-         Book a Session
-      </a>
-    </nav>
+        <button class="hamburger md:hidden" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <nav id="primary-nav" class="hidden md:flex items-center gap-1" aria-label="Primary">
+          <a href="#about" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">About</a>
+          <a href="#services" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Services</a>
+          <a href="/author.html" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Author</a>
+          <a href="/blog.html" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Blog</a>
+          <a href="#contact" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Contact</a>
+
+          <a
+            href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+            class="btn-primary ml-3 px-5 py-2.5 rounded-full font-semibold shadow-sm transition-transform hover:scale-[1.02]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Book a Session</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
+  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="p-6 flex flex-col h-full">
+      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <nav class="mt-6 space-y-2">
+        <a href="#about" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
+        <a href="#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Services</a>
+        <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Author</a>
+        <a href="/blog.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Blog</a>
+        <a href="#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
+      </nav>
+
+      <a
+        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Book via Headway</a>
+    </div>
   </div>
-</header>
 
-<!-- HERO -->
-<section class="py-24 text-center bg-[var(--color-hero-bg)]">
-  <h1 class="text-5xl font-serif font-bold">Every part has a voice.</h1>
-  <h2 class="text-5xl font-serif font-bold text-[var(--color-primary)] mt-2">Every thread tells a story.</h2>
-  <p class="mt-6 text-xl max-w-2xl mx-auto">
-    Trauma-informed therapy to help you weave yours with care.
-  </p>
-</section>
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero-pattern py-24 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight">Every part has a voice.</h1>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[var(--color-primary)] mt-2">Every thread tells a story.</h2>
+        <p class="mt-8 text-lg sm:text-xl max-w-2xl mx-auto">
+          Trauma-informed therapy for adults and couples in New Jersey, with EMDR and Internal Family Systems (IFS). Telehealth available statewide.
+        </p>
 
-<!-- PROBLEM IDENTIFICATION -->
-<section class="py-20 max-w-4xl mx-auto px-4">
-  <h2 class="text-3xl font-serif font-bold mb-6">I may be the right therapist for you if…</h2>
-  <ul class="space-y-3 text-lg list-disc pl-6">
-    <li>You’ve talked about it for years, but your body never moved past it.</li>
-    <li>You feel emotionally reactive even when logically safe.</li>
-    <li>Your nervous system feels stuck on high alert.</li>
-    <li>You repeat relationship patterns you don’t understand.</li>
-    <li>Shame tells you that you “should be over it.”</li>
-    <li>Sleep is disrupted or intrusive memories show up unexpectedly.</li>
-  </ul>
-  <p class="mt-6 text-lg">
-    If you’re nodding along, this isn’t failure — it’s how trauma lives in the nervous system.
-  </p>
-</section>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+            class="btn-primary px-8 py-3.5 rounded-full font-semibold shadow-lg transition-transform hover:scale-[1.02]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Book a Session</a>
 
-<!-- SERVICES -->
-<section id="services" class="bg-[var(--color-light-bg)] py-20 text-center">
-  <h2 class="text-4xl font-serif font-bold">Areas I Work With</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto px-4">
-    <div>Sexual assault & healing</div>
-    <div>Domestic violence recovery</div>
-    <div>Narcissistic abuse</div>
-    <div>Anxiety in teens & young adults</div>
-    <div>Life transitions</div>
-    <div>Couples counseling</div>
-  </div>
-</section>
+          <a href="#services" class="btn-outline px-8 py-3.5 rounded-full font-semibold shadow-lg transition-transform hover:scale-[1.02]">How I Can Help</a>
+        </div>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 max-w-5xl mx-auto px-4">
-  <h2 class="text-4xl font-serif font-bold">Meet Loren</h2>
-  <p class="mt-6 text-lg">
-    I am a Licensed Professional Counselor in New Jersey practicing since 2014.
-    Trained in EMDR and Internal Family Systems, I work collaboratively and
-    person-centered, believing trust is the most impactful part of therapy.
-  </p>
-</section>
+    <!-- THERAPY FIT (marketing / self-identification) -->
+    <section class="py-20 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div class="card bg-white/60 rounded-3xl p-8 sm:p-10">
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold">I may be the right therapist for you if…</h2>
+          <p class="mt-5 text-lg">
+            You’ve spent years talking about it, whether it’s the relationship, the incident, the abuse, but your body and brain never quite moved past it.
+          </p>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 text-center">
-  <h2 class="text-4xl font-serif font-bold">Connect</h2>
-  <div class="mt-8 space-y-3">
-    <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918" target="_blank">Book via Headway</a><br>
-    <a href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806" target="_blank">Psychology Today Profile</a><br>
-    <a href="https://www.instagram.com/thewovenselftherapeutic/" target="_blank">Instagram – Therapy</a><br>
-    <a href="https://www.instagram.com/lorengaleseauthor/" target="_blank">Instagram – Author</a>
-  </div>
-</section>
+          <p class="mt-6 font-semibold">You might recognize yourself in some of the following:</p>
+          <ul class="mt-4 space-y-3 list-disc pl-6">
+            <li>Do you find yourself emotionally reactive even when you logically know you’re safe or “should be fine”?</li>
+            <li>Does your nervous system feel stuck on high alert, hypervigilant, shut down, or swinging between the two?</li>
+            <li>Do you notice repeating relationship patterns that don’t make sense to you, even though you’re self-aware?</li>
+            <li>Do you carry shame or self-criticism for not being “over it yet”?</li>
+            <li>Do your emotions feel intense or overwhelming, making it hard to focus on daily tasks?</li>
+            <li>Are your sleep patterns disrupted, trouble falling asleep, staying asleep, or frequent nightmares?</li>
+            <li>Do intrusive or repetitive thoughts about past events show up when you least expect them?</li>
+            <li>Does your body feel tense, braced, or unable to fully relax, even during calm moments?</li>
+          </ul>
 
-<footer class="py-8 text-center bg-[var(--color-light-bg)]">
-  &copy; 2025 The Woven Self Therapeutic Services, LLC
-</footer>
+          <p class="mt-6 text-lg">
+            If you’re nodding along, this isn’t a personal failure, it’s how trauma lives in the nervous system.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- SERVICES -->
+    <section id="services" class="py-20 sm:py-24 bg-[var(--color-light-bg)]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl sm:text-5xl font-serif font-bold">Services in New Jersey</h2>
+          <p class="mt-4 text-lg max-w-3xl mx-auto">
+            Trauma therapy, anxiety support, couples counseling, and life transitions, with a steady, collaborative pace.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card bg-white/70 p-8 rounded-3xl text-center transition-transform hover:-translate-y-1">
+            <h3 class="text-2xl font-serif font-bold text-[var(--color-primary)]">Individual Therapy</h3>
+            <p class="mt-4">Support for trauma, anxiety, relationship patterns, self-esteem, and life transitions.</p>
+            <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-outline mt-6 inline-block px-6 py-2 rounded-full font-semibold">Book via Headway →</a>
+          </div>
+
+          <div class="card bg-white/70 p-8 rounded-3xl text-center transition-transform hover:-translate-y-1">
+            <h3 class="text-2xl font-serif font-bold text-[var(--color-primary)]">Couples Therapy</h3>
+            <p class="mt-4">Couples counseling at all stages, communication, attachment, and repair work.</p>
+            <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-outline mt-6 inline-block px-6 py-2 rounded-full font-semibold">Book via Headway →</a>
+          </div>
+
+          <div class="card bg-white/70 p-8 rounded-3xl text-center transition-transform hover:-translate-y-1">
+            <h3 class="text-2xl font-serif font-bold text-[var(--color-primary)]">Trauma &amp; Nervous System</h3>
+            <p class="mt-4">EMDR and IFS-informed support for trauma recovery, regulation, and safety in the body.</p>
+            <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-outline mt-6 inline-block px-6 py-2 rounded-full font-semibold">Book via Headway →</a>
+          </div>
+        </div>
+
+        <div class="mt-12 max-w-4xl mx-auto">
+          <h3 class="text-2xl font-serif font-bold">Areas I work with regularly include</h3>
+          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div>• Sexual assault and healing</div>
+            <div>• Domestic violence and recovery</div>
+            <div>• Psychological and emotional abuse</div>
+            <div>• Narcissistic abuse</div>
+            <div>• Adverse childhood experiences and generational trauma</div>
+            <div>• High-control or coercive relationships, groups, or workplaces</div>
+            <div>• Anxiety in teens and young adults</div>
+            <div>• Life transitions</div>
+            <div>• Couples counseling</div>
+            <div>• Identity, self-esteem, and self-worth concerns</div>
+            <div>• LGBTQIA+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <h2 class="text-4xl sm:text-5xl font-serif font-bold">Meet Loren Galese</h2>
+            <div class="mt-6 text-lg space-y-4">
+              <p>
+                I’m Loren, a Licensed Professional Counselor in New Jersey (practicing since 2014). My approach is person-centered and collaborative,
+                with an emphasis on building trust, pacing, and nervous system safety.
+              </p>
+              <p>
+                I’m trained in EMDR and Internal Family Systems (IFS), and I also use The Gottman Method and EFT in couples work.
+                One modality does not fit everyone, we’ll build an approach that supports your goals.
+              </p>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="/author.html" class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Credentials & Story →</a>
+              <a href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Psychology Today →</a>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <img src="images/loren-galese.jpg" alt="Portrait of Loren Galese" class="rounded-3xl w-full h-auto object-cover card" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="py-20 sm:py-24 bg-[var(--color-light-bg)]" aria-label="FAQs">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl sm:text-5xl font-serif font-bold">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="card bg-white/70 rounded-2xl p-6">
+            <h3 class="text-xl font-serif font-semibold text-[var(--color-primary)]">Do you accept insurance?</h3>
+            <p class="mt-3">Scheduling and billing are handled through Headway. You can view availability and check details during booking.</p>
+          </div>
+
+          <div class="card bg-white/70 rounded-2xl p-6">
+            <h3 class="text-xl font-serif font-semibold text-[var(--color-primary)]">Do you offer virtual sessions?</h3>
+            <p class="mt-3">Yes. Telehealth sessions are available for clients located in New Jersey.</p>
+          </div>
+
+          <div class="card bg-white/70 rounded-2xl p-6">
+            <h3 class="text-xl font-serif font-semibold text-[var(--color-primary)]">What is a first session like?</h3>
+            <p class="mt-3">We’ll move at your pace, clarify what brings you to therapy, and map out next steps together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 sm:py-24" aria-label="Contact">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl sm:text-5xl font-serif font-bold">Get in Touch</h2>
+          <p class="mt-4 text-lg max-w-2xl mx-auto">
+            For booking, please use the secure Headway link. For general questions, you can reach out here.
+          </p>
+        </div>
+
+        <div class="max-w-xl mx-auto">
+          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+            <a class="btn-primary px-6 py-3 rounded-full font-semibold text-center shadow-md"
+               href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+               target="_blank" rel="noopener noreferrer">Book via Headway</a>
+
+            <a class="btn-outline px-6 py-3 rounded-full font-semibold text-center shadow-md"
+               href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806"
+               target="_blank" rel="noopener noreferrer">Psychology Today</a>
+          </div>
+
+          <div class="text-center text-sm mb-10">
+            <a href="https://www.instagram.com/thewovenselftherapeutic/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Therapy)</a>
+            <span class="mx-2">•</span>
+            <a href="https://www.instagram.com/lorengaleseauthor/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Author)</a>
+          </div>
+
+          <!-- Note: This is a display-only form (no backend). -->
+          <div id="contact-form-container" class="card bg-white/70 rounded-3xl p-8">
+            <form class="contact-form space-y-4">
+              <div>
+                <label for="name" class="sr-only">Your name</label>
+                <input id="name" name="name" type="text" required
+                       class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white focus:ring-2 focus:ring-[rgba(60,84,82,0.25)]"
+                       placeholder="Your name" />
+              </div>
+
+              <div>
+                <label for="phone" class="sr-only">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel"
+                       class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white focus:ring-2 focus:ring-[rgba(60,84,82,0.25)]"
+                       placeholder="Phone (optional)" />
+              </div>
+
+              <div>
+                <label for="message" class="sr-only">How can I help?</label>
+                <textarea id="message" name="message" required rows="4"
+                          class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white focus:ring-2 focus:ring-[rgba(60,84,82,0.25)]"
+                          placeholder="How can I help?"></textarea>
+              </div>
+
+              <button class="btn-primary w-full px-6 py-3.5 rounded-full font-semibold shadow-md" type="submit">
+                Send Message
+              </button>
+
+              <p class="text-center text-sm pt-2">
+                For privacy, please avoid sharing protected health information in this form.
+              </p>
+            </form>
+          </div>
+
+          <div id="success-message" class="hidden max-w-xl mx-auto mt-6 text-center bg-green-50 border border-green-200 text-green-900 px-4 py-3 rounded-2xl">
+            <p class="font-semibold">Thank you.</p>
+            <p>Your message has been recorded for demo purposes, please book via Headway for a secure scheduling flow.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[var(--color-light-bg)] text-center py-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+      <p class="mt-1 text-sm">Trauma therapy in New Jersey, EMDR + IFS, telehealth available</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Navigation Toggle
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+
+    const toggleNav = () => {
+      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav.classList.toggle('translate-x-full');
+      mobileNavPanel.classList.toggle('hidden');
+    };
+
+    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
+      hamburgerBtn.addEventListener('click', toggleNav);
+      closeMobileNavBtn.addEventListener('click', toggleNav);
+      mobileNavPanel.addEventListener('click', toggleNav);
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
+        });
+      });
+    }
+
+    // Contact Form Submission (display only)
+    const contactForm = document.querySelector('.contact-form');
+    const formContainer = document.getElementById('contact-form-container');
+    const successMessage = document.getElementById('success-message');
+
+    if (contactForm && successMessage && formContainer) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formContainer.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+      });
+    }
+  </script>
 </body>
 </html>
