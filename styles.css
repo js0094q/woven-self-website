@@ -1,14 +1,115 @@
 :root {
-  --color-primary: #3c5452;
-  --color-background: #fbf9f6;
-  --color-light-bg: #f2ede7;
-  --color-text: #2f3b3a;
-  --color-hero-bg: #e6e0d9;
+  --color-primary: #3c5452;      /* Deep teal green */
+  --color-secondary: #f4a261;    /* Warm accent */
+  --color-background: #fbf9f6;   /* Warm off-white */
+  --color-light-bg: #f2ede7;     /* Neutral section bg */
+  --color-text: #2f3b3a;         /* Main text */
+  --color-hero-bg: #e6e0d9;      /* Hero bg */
+  --color-border: rgba(47, 59, 58, 0.12);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
-h1,h2,h3 {
-  font-family: 'Playfair Display', serif;
+
+h1, h2, h3, .font-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(60, 84, 82, 0.35);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Minimal "prose" styling for rendered markdown posts */
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  margin: 0 0 1rem 0;
+}
+
+.prose h2 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: 2rem 0 0.75rem 0;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.prose p { margin: 0.8rem 0; }
+
+.prose ul {
+  margin: 0.9rem 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose li { margin: 0.35rem 0; }
+
+.prose blockquote {
+  margin: 1.2rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid rgba(60, 84, 82, 0.35);
+  background: rgba(242, 237, 231, 0.75);
+  border-radius: 12px;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
