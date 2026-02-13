@@ -4,79 +4,159 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Therapy Blog | Trauma, EMDR, IFS | The Woven Self (NJ)</title>
-  <meta name="description" content="Therapy-informed reflections by Loren Galese, LPC in New Jersey. Trauma, EMDR, IFS, relationships, and healing." />
+  <title>Blog | The Woven Self (NJ)</title>
+  <meta name="description" content="Therapy-informed writing on trauma, healing, relationships, and the nervous system, based in New Jersey." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://wovenself.com/blog" />
 
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="antialiased">
-  <header class="sticky top-0 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)] z-50">
-    <div class="container mx-auto px-4 py-5 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3">
-        <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
-      </a>
-      <nav class="hidden md:flex gap-6 items-center">
-        <a href="/" class="hover:text-[var(--color-primary)]">Home</a>
-        <a href="/author.html" class="hover:text-[var(--color-primary)]">Credentials</a>
-        <a href="/blog.html" class="font-semibold text-[var(--color-primary)]">Blog</a>
-        <a href="/#contact" class="hover:text-[var(--color-primary)]">Contact</a>
-        <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-           target="_blank" rel="noopener noreferrer"
-           class="btn-primary px-5 py-2.5 rounded-full font-semibold shadow-sm">Book</a>
-      </nav>
+
+  <!-- SAME HEADER -->
+  <header class="sticky top-0 z-50 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
+        </a>
+
+        <button class="hamburger md:hidden" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <nav id="primary-nav" class="hidden md:flex items-center gap-2" aria-label="Primary">
+          <a href="/#about" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">About</a>
+          <a href="/#services" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Services</a>
+          <a href="/author.html" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Credentials</a>
+          <a href="/blog.html" class="px-4 py-2 rounded-md font-semibold text-[var(--color-primary)]">Blog</a>
+          <a href="/#contact" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Contact</a>
+
+          <a
+            href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+            target="_blank" rel="noopener noreferrer"
+            class="btn-primary ml-3 px-5 py-2.5 rounded-full font-semibold shadow-sm"
+          >Book via Headway</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <section class="py-20 text-center">
-    <h1 class="text-5xl font-serif font-bold">Blog & Reflections</h1>
-    <p class="mt-4 text-lg max-w-2xl mx-auto">
-      Therapy-informed writing on trauma, healing, relationships, and the nervous system, based in New Jersey.
-    </p>
-  </section>
+  <!-- MOBILE NAV -->
+  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
+  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="p-6 flex flex-col h-full">
+      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
 
-  <section class="container mx-auto px-4 pb-24">
-    <div class="max-w-4xl mx-auto mb-8">
-      <div class="card bg-white/70 rounded-3xl p-6">
-        <label for="search" class="block font-semibold mb-2">Search</label>
-        <input id="search" type="search" placeholder="Search posts by title, tag, or keyword"
-               class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white" />
+      <nav class="mt-6 space-y-2">
+        <a href="/#about" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
+        <a href="/#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Services</a>
+        <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Credentials</a>
+        <a href="/blog.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Blog</a>
+        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
+      </nav>
+
+      <a
+        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
+        target="_blank" rel="noopener noreferrer"
+      >Book via Headway</a>
+    </div>
+  </div>
+
+  <main class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-serif font-semibold">Blog &amp; Reflections</h1>
+        <p class="mt-4 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Therapy-informed writing on trauma, healing, relationships, and the nervous system, based in New Jersey.
+        </p>
       </div>
-    </div>
 
-    <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <!-- JS renders cards here -->
-    </div>
-
-    <div id="posts-empty" class="hidden text-center max-w-xl mx-auto mt-12">
-      <p class="text-lg">No posts match your search.</p>
-    </div>
-
-    <noscript>
-      <div class="max-w-3xl mx-auto text-center">
-        <p>This page needs JavaScript enabled to load posts.</p>
+      <div class="max-w-3xl mx-auto mt-10">
+        <div class="card bg-white/70 rounded-3xl p-6">
+          <label for="search" class="block font-semibold mb-2">Search</label>
+          <input id="search" type="search" placeholder="Search posts by title, tag, or keyword"
+                 class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white" />
+        </div>
       </div>
-    </noscript>
-  </section>
 
-  <footer class="bg-[var(--color-light-bg)] text-center py-8">
-    <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+      <div id="posts-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+      <div id="posts-empty" class="hidden text-center max-w-xl mx-auto mt-10">
+        <p class="text-lg">No posts match your search.</p>
+      </div>
+
+      <div id="posts-error" class="hidden text-center max-w-2xl mx-auto mt-10">
+        <p class="text-lg font-semibold">Unable to load posts.</p>
+        <p class="mt-2 text-sm leading-relaxed opacity-90">
+          Confirm you have a file at <code>/blog/posts.json</code> in the repository and that it is deployed.
+          If the folder is missing, create <code>blog/</code> and add <code>posts.json</code> inside it.
+        </p>
+      </div>
+
+      <noscript>
+        <div class="max-w-3xl mx-auto text-center mt-10">
+          <p>This page needs JavaScript enabled to load posts.</p>
+        </div>
+      </noscript>
+
+    </div>
+  </main>
+
+  <footer class="py-8 text-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+    </div>
   </footer>
 
   <script>
+    // Mobile Nav
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+
+    const toggleNav = () => {
+      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav.classList.toggle('translate-x-full');
+      mobileNavPanel.classList.toggle('hidden');
+    };
+
+    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
+      hamburgerBtn.addEventListener('click', toggleNav);
+      closeMobileNavBtn.addEventListener('click', toggleNav);
+      mobileNavPanel.addEventListener('click', toggleNav);
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
+        });
+      });
+    }
+
+    // Blog loading
     const grid = document.getElementById('posts-grid');
     const empty = document.getElementById('posts-empty');
+    const errorBox = document.getElementById('posts-error');
     const search = document.getElementById('search');
 
     let posts = [];
 
-    function normalize(s) {
-      return (s || '').toLowerCase().trim();
-    }
+    const norm = (s) => (s || '').toLowerCase().trim();
 
     function render(list) {
       grid.innerHTML = '';
@@ -90,37 +170,41 @@
       list.forEach(p => {
         const a = document.createElement('a');
         a.href = `/blog/${p.slug}`;
-        a.className = 'card bg-[var(--color-light-bg)] p-8 rounded-3xl transition-transform hover:-translate-y-1 block';
+        a.className = 'card bg-white/70 p-8 rounded-3xl transition-transform hover:-translate-y-1 block';
 
-        const tags = (p.tags || []).map(t => `<span class="inline-block text-xs px-2 py-1 rounded-full border border-[var(--color-border)] mr-2 mb-2">${t}</span>`).join('');
+        const tags = (p.tags || []).map(t =>
+          `<span class="inline-block text-xs px-2 py-1 rounded-full border border-[var(--color-border)] mr-2 mb-2">${t}</span>`
+        ).join('');
 
         a.innerHTML = `
           <div class="text-sm opacity-80">${p.date || ''}</div>
-          <h2 class="text-2xl font-serif font-bold text-[var(--color-primary)] mt-2">${p.title}</h2>
+          <h2 class="text-2xl font-serif font-semibold text-[var(--color-primary)] mt-2">${p.title}</h2>
           <p class="mt-4">${p.excerpt || ''}</p>
           <div class="mt-5">${tags}</div>
           <div class="mt-6 font-semibold underline underline-offset-4">Read →</div>
         `;
-
         grid.appendChild(a);
       });
     }
 
     function applyFilter() {
-      const q = normalize(search.value);
+      const q = norm(search.value);
       if (!q) return render(posts);
 
       const filtered = posts.filter(p => {
-        const blob = normalize([p.title, p.excerpt, (p.tags || []).join(' '), p.slug].join(' '));
+        const blob = norm([p.title, p.excerpt, (p.tags || []).join(' '), p.slug].join(' '));
         return blob.includes(q);
       });
-
       render(filtered);
     }
 
     async function init() {
+      errorBox.classList.add('hidden');
+
       const res = await fetch('/blog/posts.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('posts.json not found');
       posts = await res.json();
+
       posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
       render(posts);
 
@@ -128,7 +212,7 @@
     }
 
     init().catch(() => {
-      grid.innerHTML = '<div class="max-w-2xl mx-auto text-center">Unable to load posts.</div>';
+      errorBox.classList.remove('hidden');
     });
   </script>
 </body>
