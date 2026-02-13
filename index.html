@@ -54,7 +54,6 @@
 
 <body class="antialiased">
 
-  <!-- CONSISTENT HEADER / NAV (used on all pages) -->
   <header class="sticky top-0 z-50 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="h-20 flex items-center justify-between">
@@ -85,7 +84,6 @@
     </div>
   </header>
 
-  <!-- MOBILE NAV -->
   <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
   <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
     <div class="p-6 flex flex-col h-full">
@@ -113,7 +111,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero-bg py-20 sm:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
@@ -143,7 +140,6 @@
       </div>
     </section>
 
-    <!-- THERAPY FIT -->
     <section class="py-16 sm:py-20">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="card bg-white/70 rounded-3xl p-8 sm:p-10">
@@ -186,56 +182,69 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="card bg-white/70 rounded-3xl p-8 text-center">
+        <!-- ✅ FIX: equal-height cards + button alignment -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Individual Therapy</h3>
-            <p class="mt-4">Support for trauma, anxiety, life transitions, and relationship patterns.</p>
-            <a class="btn-outline mt-6 inline-block px-6 py-2 rounded-full font-semibold"
-               href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-               target="_blank" rel="noopener noreferrer">Book via Headway →</a>
+            <p class="mt-4 leading-relaxed">
+              Support for trauma, anxiety, life transitions, and relationship patterns.
+            </p>
+            <div class="mt-auto pt-6">
+              <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
+                 href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+                 target="_blank" rel="noopener noreferrer">Book via Headway →</a>
+            </div>
           </div>
 
-          <div class="card bg-white/70 rounded-3xl p-8 text-center">
+          <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Couples Therapy</h3>
-            <p class="mt-4">Gottman Method and EFT-informed couples work focused on connection and repair.</p>
-            <a class="btn-outline mt-6 inline-block px-6 py-2 rounded-full font-semibold"
-               href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-               target="_blank" rel="noopener noreferrer">Book via Headway →</a>
+            <p class="mt-4 leading-relaxed">
+              Gottman Method and EFT-informed couples work focused on connection and repair.
+            </p>
+            <div class="mt-auto pt-6">
+              <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
+                 href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+                 target="_blank" rel="noopener noreferrer">Book via Headway →</a>
+            </div>
           </div>
 
-          <div class="card bg-white/70 rounded-3xl p-8 text-center">
+          <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Trauma &amp; Nervous System</h3>
-            <p class="mt-4">EMDR and IFS-informed therapy to support regulation, safety, and healing.</p>
-            <a class="btn-outline mt-6 inline-block px-6 py-2 rounded-full font-semibold"
-               href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-               target="_blank" rel="noopener noreferrer">Book via Headway →</a>
+            <p class="mt-4 leading-relaxed">
+              EMDR and IFS-informed therapy to support regulation, safety, and healing.
+            </p>
+            <div class="mt-auto pt-6">
+              <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
+                 href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+                 target="_blank" rel="noopener noreferrer">Book via Headway →</a>
+            </div>
           </div>
         </div>
 
-        <!-- AREAS LIST (spacing fixed) -->
+        <!-- ✅ FIX: even two-column list using real UL -->
         <div class="mt-12">
           <h3 class="text-2xl sm:text-3xl font-serif font-semibold mb-6">
             Areas I work with regularly include
           </h3>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3 text-base sm:text-lg leading-relaxed">
-            <div>• Sexual assault and healing</div>
-            <div>• Domestic violence and recovery</div>
-            <div>• Psychological and emotional abuse</div>
-            <div>• Narcissistic abuse</div>
-            <div>• Adverse childhood experiences and generational trauma</div>
-            <div>• High-control or coercive relationships, groups, or workplaces</div>
-            <div>• Anxiety in teens and young adults</div>
-            <div>• Life transitions</div>
-            <div>• Couples counseling</div>
-            <div>• Identity, self-esteem, and self-worth concerns</div>
-            <div>• LGBTQIA+</div>
-          </div>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3 text-base sm:text-lg leading-relaxed list-disc pl-6">
+            <li>Sexual assault and healing</li>
+            <li>Domestic violence and recovery</li>
+            <li>Psychological and emotional abuse</li>
+            <li>Narcissistic abuse</li>
+            <li>Adverse childhood experiences and generational trauma</li>
+            <li>High-control or coercive relationships, groups, or workplaces</li>
+            <li>Anxiety in teens and young adults</li>
+            <li>Life transitions</li>
+            <li>Couples counseling</li>
+            <li>Identity, self-esteem, and self-worth concerns</li>
+            <li>LGBTQIA+</li>
+          </ul>
         </div>
+
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="py-16 sm:py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -266,7 +275,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="py-16 sm:py-20 bg-[var(--color-light-bg)]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
@@ -333,7 +341,6 @@
   </footer>
 
   <script>
-    // Mobile Navigation Toggle
     const hamburgerBtn = document.querySelector('.hamburger');
     const closeMobileNavBtn = document.getElementById('close-mobile-nav');
     const mobileNav = document.getElementById('mobile-nav');
@@ -358,7 +365,6 @@
       });
     }
 
-    // Contact Form Submission (display only)
     const contactForm = document.querySelector('.contact-form');
     const formContainer = document.getElementById('contact-form-container');
     const successMessage = document.getElementById('success-message');
