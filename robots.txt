@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /blog/drafts/
-# Primary sitemap index
-Sitemap: https://wovenself.com/sitemap.xml
 
-# Explicit references to important sub-sitemaps (optional but helpful)
-Sitemap: https://wovenself.com/sitemap-main.xml
-Sitemap: https://wovenself.com/sitemap-blog.xml
+Sitemap: https://wovenself.com/sitemap.xml
