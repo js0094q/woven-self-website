@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>About Loren Galese, LPC | The Woven Self | New Jersey</title>
-  <meta name="description" content="Loren Galese is a Licensed Professional Counselor (NJ) practicing since 2014. EMDR and IFS-informed therapy for trauma, anxiety, relationships, and life transitions." />
+  <title>Credentials | Loren Galese, LPC | The Woven Self (NJ)</title>
+  <meta name="description" content="Learn about Loren Galese, Licensed Professional Counselor in New Jersey. EMDR, IFS, and couples therapy informed by the Gottman Method and EFT." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://wovenself.com/author" />
 
@@ -14,96 +14,169 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="antialiased">
-  <header class="sticky top-0 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)] z-50">
-    <div class="container mx-auto px-4 py-5 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3">
-        <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
-      </a>
-      <nav class="hidden md:flex gap-6 items-center">
-        <a href="/" class="hover:text-[var(--color-primary)]">Home</a>
-        <a href="/author.html" class="font-semibold text-[var(--color-primary)]">Credentials</a>
-        <a href="/blog.html" class="hover:text-[var(--color-primary)]">Blog</a>
-        <a href="/#contact" class="hover:text-[var(--color-primary)]">Contact</a>
-        <a href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-           target="_blank" rel="noopener noreferrer"
-           class="btn-primary px-5 py-2.5 rounded-full font-semibold shadow-sm">Book via Headway</a>
-      </nav>
+
+  <!-- SAME HEADER -->
+  <header class="sticky top-0 z-50 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
+        </a>
+
+        <button class="hamburger md:hidden" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <nav id="primary-nav" class="hidden md:flex items-center gap-2" aria-label="Primary">
+          <a href="/#about" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">About</a>
+          <a href="/#services" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Services</a>
+          <a href="/author.html" class="px-4 py-2 rounded-md font-semibold text-[var(--color-primary)]">Credentials</a>
+          <a href="/blog.html" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Blog</a>
+          <a href="/#contact" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Contact</a>
+
+          <a
+            href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+            target="_blank" rel="noopener noreferrer"
+            class="btn-primary ml-3 px-5 py-2.5 rounded-full font-semibold shadow-sm"
+          >Book via Headway</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="py-20 sm:py-24">
-    <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-      <div>
-        <h1 class="text-5xl font-serif font-bold text-[var(--color-text)]">Hi! I’m Loren.</h1>
+  <!-- MOBILE NAV -->
+  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
+  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="p-6 flex flex-col h-full">
+      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
 
-        <div class="mt-8 text-lg space-y-5">
-          <p>
-            I’m Loren, the owner of Woven Self Therapeutic Services, LLC. I am a Licensed Professional Counselor in the state of New Jersey who has been practicing since 2014.
-          </p>
+      <nav class="mt-6 space-y-2">
+        <a href="/#about" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
+        <a href="/#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Services</a>
+        <a href="/author.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Credentials</a>
+        <a href="/blog.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Blog</a>
+        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
+      </nav>
 
-          <p>
-            I didn’t originally set out to become a therapist. I began my academic path in art education, drawn to creativity, expression, and emotions.
-            My first semester of college I took an introductory psychology class and something clicked. Learning about the brain, behavior, and the “why” behind how we feel and act felt endlessly fascinating, and it changed my path.
-          </p>
+      <a
+        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
+        target="_blank" rel="noopener noreferrer"
+      >Book via Headway</a>
+    </div>
+  </div>
 
-          <p>
-            Anxiety has been part of my own life since childhood, so I understand firsthand how overwhelming it can be to move through the world while your nervous system feels constantly on high alert.
-            That lived experience, combined with my training, shaped a deep desire to help others feel more grounded, understood, and less alone.
-          </p>
+  <main class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-          <p>
-            I’ve worked with various populations and found my niche working with individuals and couples navigating anxiety, trauma, relationship challenges, life transitions, stress, family issues, boundary setting, and empowerment.
-            I help clients explore how the lasting impact of difficult life experiences can alter mindset and the body’s sense of safety.
-          </p>
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-serif font-semibold">Hi! I’m Loren.</h1>
 
-          <p>
-            I am trained in Eye Movement Desensitization and Reprocessing (EMDR) and Internal Family Systems (IFS).
-            I also draw from The Gottman Method and EFT for couples.
-            I don’t believe one modality fits all, and I believe building trust in the relationship is the most impactful part of therapy.
-          </p>
+          <div class="mt-6 text-base sm:text-lg leading-relaxed space-y-4">
+            <p>
+              I’m Loren, the owner of Woven Self Therapeutic Services, LLC. I am a Licensed Professional Counselor in the state of New Jersey who has been practicing since 2014.
+            </p>
 
-          <p>
-            My approach is person-centered and collaborative. You set the pace, we move forward in a way that feels safe and manageable, never rushed or forced.
-            My role is to offer guidance, insight, and support while creating a space where all parts of you are welcome.
-          </p>
-        </div>
+            <p>
+              I didn’t originally set out to become a therapist. I began my academic path in art education, drawn to creativity, expression, and emotions.
+              My first semester of college I took an introductory psychology class and something clicked. Learning about the brain, behavior, and the “why” behind how we feel and act felt endlessly fascinating, and it changed my path.
+            </p>
 
-        <div class="mt-10 flex flex-col sm:flex-row gap-3">
-          <a href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806"
-             target="_blank" rel="noopener noreferrer"
-             class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Psychology Today →</a>
+            <p>
+              Anxiety has been part of my own life since childhood, so I understand firsthand how overwhelming it can be to move through the world while your nervous system feels constantly on high alert.
+              That lived experience, combined with my training, shaped a deep desire to help others feel more grounded, understood, and less alone.
+            </p>
 
-          <a href="/blog.html" class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Blog →</a>
-        </div>
+            <p>
+              I’ve worked with various populations and found my niche working with individuals, couples, and families navigating anxiety, trauma, relationship challenges, life transitions, stress, family issues, boundaries, and empowerment.
+            </p>
 
-        <div class="mt-10 card bg-white/70 rounded-3xl p-7">
-          <h2 class="text-2xl font-serif font-bold text-[var(--color-primary)]">Author Projects</h2>
-          <p class="mt-4">
-            Loren is currently working with The Self Publishing Agency (TSPA) on her first book, a memoir exploring themes of trauma, coercive control, and abuse,
-            and how she healed. Loren is in the last stages of editing and design.
-            More updates to come as they are ready. Links to purchase and events will be listed here.
-          </p>
+            <p>
+              I am trained in Eye Movement Desensitization and Reprocessing (EMDR) and Internal Family Systems (IFS).
+              For couples work, I incorporate the Gottman Method and Emotionally Focused Therapy (EFT).
+              I don’t believe one modality fits all, building trust in the therapeutic relationship matters most.
+            </p>
 
-          <div class="mt-5 text-sm">
-            <a href="https://www.instagram.com/lorengaleseauthor/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Author)</a>
-            <span class="mx-2">•</span>
-            <a href="https://www.instagram.com/thewovenselftherapeutic/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Therapy)</a>
+            <p>
+              My approach is person-centered and collaborative. You set the pace, we move forward in a way that feels safe and manageable, never rushed or forced.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806"
+              target="_blank" rel="noopener noreferrer"
+              class="btn-outline px-6 py-3 rounded-full font-semibold text-center"
+            >Psychology Today →</a>
+
+            <a href="/blog.html" class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Blog →</a>
+          </div>
+
+          <div class="mt-10 card bg-white/70 rounded-3xl p-7">
+            <h2 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Author Projects</h2>
+            <p class="mt-4 leading-relaxed">
+              Loren is currently working with The Self Publishing Agency (TSPA) on her first book, a memoir exploring themes of trauma, coercive control, and abuse, and how she healed.
+              Loren is in the last stages of editing and design. More updates to come as they are ready, purchase links and events will be listed here.
+            </p>
+
+            <div class="mt-5 text-sm">
+              <a href="https://www.instagram.com/lorengaleseauthor/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Author)</a>
+              <span class="mx-2">•</span>
+              <a href="https://www.instagram.com/thewovenselftherapeutic/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Therapy)</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="lg:sticky lg:top-28">
-        <img src="images/loren-galese.jpg" alt="Portrait of Loren Galese" class="rounded-3xl card w-full h-auto object-cover" loading="lazy">
+        <div class="lg:sticky lg:top-28">
+          <img src="images/loren-galese.jpg" alt="Portrait of Loren Galese" class="rounded-3xl card w-full h-auto object-cover" loading="lazy">
+        </div>
+
       </div>
     </div>
   </main>
 
-  <footer class="bg-[var(--color-light-bg)] text-center py-8 text-[var(--color-text)]">
-    <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+  <footer class="py-8 text-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+    </div>
   </footer>
+
+  <script>
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+
+    const toggleNav = () => {
+      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav.classList.toggle('translate-x-full');
+      mobileNavPanel.classList.toggle('hidden');
+    };
+
+    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
+      hamburgerBtn.addEventListener('click', toggleNav);
+      closeMobileNavBtn.addEventListener('click', toggleNav);
+      mobileNavPanel.addEventListener('click', toggleNav);
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
+        });
+      });
+    }
+  </script>
+
 </body>
 </html>
