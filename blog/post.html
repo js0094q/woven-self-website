@@ -4,34 +4,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Blog | The Woven Self (NJ)</title>
-  <meta name="description" content="Therapy-informed writing on trauma, healing, relationships, and the nervous system, based in New Jersey." />
+  <title>Blog Post | The Woven Self</title>
+  <meta name="description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://wovenself.com/blog" />
 
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="canonical" href="https://wovenself.com/blog" />
 </head>
 
 <body class="antialiased">
-
-  <header class="sticky top-0 z-50 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)]">
+  <header class="sticky top-0 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)] z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="h-20 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3">
           <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
         </a>
-
-        <nav class="hidden md:flex items-center gap-2" aria-label="Primary">
-          <a href="/#about" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">About</a>
-          <a href="/#services" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Services</a>
+        <nav class="hidden md:flex gap-2 items-center">
+          <a href="/" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Home</a>
           <a href="/author.html" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Credentials</a>
           <a href="/blog.html" class="px-4 py-2 rounded-md font-semibold text-[var(--color-primary)]">Blog</a>
           <a href="/#contact" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Contact</a>
-
           <a
             href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
             target="_blank" rel="noopener noreferrer"
@@ -42,38 +40,16 @@
     </div>
   </header>
 
-  <main class="py-16 sm:py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <main class="py-14 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="../blog.html" class="inline-flex items-center gap-2 text-sm underline underline-offset-4">
+        <span aria-hidden="true">←</span> Back to Blog
+      </a>
 
-      <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-serif font-semibold">Blog &amp; Reflections</h1>
-        <p class="mt-4 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Therapy-informed writing on trauma, healing, relationships, and the nervous system, based in New Jersey.
-        </p>
+      <div class="mt-8 card bg-white/70 rounded-3xl p-7 sm:p-10">
+        <div id="post-meta" class="mb-6"></div>
+        <article id="post-content" class="prose"></article>
       </div>
-
-      <div class="max-w-3xl mx-auto mt-10">
-        <div class="card bg-white/70 rounded-3xl p-6">
-          <label for="search" class="block font-semibold mb-2">Search</label>
-          <input id="search" type="search" placeholder="Search posts by title, tag, or keyword"
-                 class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white" />
-        </div>
-      </div>
-
-      <div id="posts-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-
-      <div id="posts-empty" class="hidden text-center max-w-xl mx-auto mt-10">
-        <p class="text-lg">No posts match your search.</p>
-      </div>
-
-      <div id="posts-error" class="hidden text-center max-w-2xl mx-auto mt-10">
-        <p class="text-lg font-semibold">Unable to load posts.</p>
-        <p class="mt-2 text-sm leading-relaxed opacity-90">
-          Confirm <code>blog/posts.json</code> exists and is committed to GitHub.
-          Then open <code>/blog/posts.json</code> in the browser to verify it loads.
-        </p>
-      </div>
-
     </div>
   </main>
 
@@ -82,76 +58,59 @@
   </footer>
 
   <script>
-    const grid = document.getElementById('posts-grid');
-    const empty = document.getElementById('posts-empty');
-    const errorBox = document.getElementById('posts-error');
-    const search = document.getElementById('search');
-
-    let posts = [];
-
-    const norm = (s) => (s || '').toLowerCase().trim();
-
-    function render(list) {
-      grid.innerHTML = '';
-
-      if (!list.length) {
-        empty.classList.remove('hidden');
-        return;
-      }
-      empty.classList.add('hidden');
-
-      list.forEach(p => {
-        const a = document.createElement('a');
-
-        // ✅ link to your working markdown renderer template
-        a.href = `blog/post.html?slug=${encodeURIComponent(p.slug)}`;
-
-        a.className = 'card bg-white/70 p-8 rounded-3xl transition-transform hover:-translate-y-1 block';
-
-        const tags = (p.tags || []).map(t =>
-          `<span class="inline-block text-xs px-2 py-1 rounded-full border border-[var(--color-border)] mr-2 mb-2">${t}</span>`
-        ).join('');
-
-        a.innerHTML = `
-          <div class="text-sm opacity-80">${p.date || ''}</div>
-          <h2 class="text-2xl font-serif font-semibold text-[var(--color-primary)] mt-2">${p.title}</h2>
-          <p class="mt-4">${p.excerpt || ''}</p>
-          <div class="mt-5">${tags}</div>
-          <div class="mt-6 font-semibold underline underline-offset-4">Read →</div>
-        `;
-
-        grid.appendChild(a);
-      });
+    function getSlug() {
+      const url = new URL(window.location.href);
+      return url.searchParams.get('slug') || '';
     }
 
-    function applyFilter() {
-      const q = norm(search.value);
-      if (!q) return render(posts);
-
-      const filtered = posts.filter(p => {
-        const blob = norm([p.title, p.excerpt, (p.tags || []).join(' '), p.slug].join(' '));
-        return blob.includes(q);
-      });
-
-      render(filtered);
+    function esc(s) {
+      return String(s || '').replace(/[&<>"']/g, (c) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[c]));
     }
 
-    async function init() {
-      errorBox.classList.add('hidden');
+    async function loadPost() {
+      const slug = getSlug();
+      if (!slug) throw new Error('Missing slug');
 
-      // ✅ RELATIVE path (works across deploy contexts)
-      const res = await fetch('blog/posts.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('posts.json not found');
-      posts = await res.json();
+      // ✅ RELATIVE fetch: from /blog/post.html -> posts.json is /blog/posts.json
+      const postsRes = await fetch('posts.json', { cache: 'no-store' });
+      if (!postsRes.ok) throw new Error('posts.json not found');
+      const posts = await postsRes.json();
+      const meta = posts.find(p => p.slug === slug);
 
-      posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-      render(posts);
+      // ✅ RELATIVE fetch: from /blog/post.html -> /blog/posts/<slug>.md
+      const mdRes = await fetch(`posts/${encodeURIComponent(slug)}.md`, { cache: 'no-store' });
+      if (!mdRes.ok) throw new Error('Post not found');
+      const md = await mdRes.text();
 
-      search.addEventListener('input', applyFilter);
+      const title = meta?.title || slug.replace(/-/g, ' ');
+      const date = meta?.date || '';
+      const excerpt = meta?.excerpt || '';
+
+      document.title = `${title} | The Woven Self (NJ)`;
+
+      const descTag = document.querySelector('meta[name="description"]');
+      if (descTag && excerpt) descTag.setAttribute('content', excerpt);
+
+      document.getElementById('post-meta').innerHTML = `
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold">${esc(title)}</h1>
+        ${date ? `<div class="mt-3 text-sm opacity-80">${esc(date)}</div>` : ``}
+      `;
+
+      const html = marked.parse(md, { mangle: false, headerIds: true });
+      document.getElementById('post-content').innerHTML = html;
+
+      // Canonical: reflect the actual URL used for this system
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', window.location.href);
     }
 
-    init().catch(() => {
-      errorBox.classList.remove('hidden');
+    loadPost().catch(() => {
+      document.getElementById('post-meta').innerHTML =
+        '<h1 class="text-3xl font-serif font-bold">Post not found</h1>';
+      document.getElementById('post-content').innerHTML =
+        '<p>Return to the <a href="../blog.html" class="underline underline-offset-4">blog</a>.</p>';
     });
   </script>
 </body>
