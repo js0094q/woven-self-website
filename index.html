@@ -115,35 +115,33 @@
 
   <main>
 
-    <section class="hero-bg py-20 sm:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+   <!-- HERO (more vertically centered) -->
+<section class="hero-bg min-h-[75vh] flex items-center">
+  <div class="max-w-6xl mx-auto px-6 text-center w-full">
+    <!-- Banner logo centered -->
+    <div class="flex items-center justify-center">
+      <img
+        src="/images/hero-banner.png"
+        alt="The Woven Self — Every part has a voice. Every thread tells a story."
+        class="w-full max-w-4xl h-auto"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[var(--color-text)]">
-          Every part has a voice.
-        </h1>
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[var(--color-primary)] mt-2">
-          Every thread tells a story.
-        </h2>
+    <!-- Supporting copy + CTAs -->
+    <p class="mt-6 text-slate-600 max-w-2xl mx-auto">
+      Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. 
+     Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense
+     of self feel more grounded.
+    </p>
 
-        <p class="mt-6 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-         Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. 
-         Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded.
-        </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-            class="btn-primary px-8 py-3.5 rounded-full font-semibold shadow-md"
-            target="_blank" rel="noopener noreferrer"
-          >Book a Session</a>
-
-          <a href="#services" class="btn-outline px-8 py-3.5 rounded-full font-semibold shadow-md">
-            How I Can Help
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a class="btn-primary" href="/contact.html">Book a Session</a>
+      <a class="btn-secondary" href="/services.html">How I Can Help</a>
+    </div>
+  </div>
+</section>
     <section class="py-16 sm:py-20">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="card bg-white/70 rounded-3xl p-8 sm:p-10">
@@ -182,7 +180,7 @@
         <div class="text-center mb-10">
           <h2 class="text-3xl sm:text-4xl font-serif font-semibold">Services</h2>
           <p class="mt-3 text-base sm:text-lg max-w-3xl mx-auto">
-            Trauma-informed care for children, adults, and couples, with a steady, collaborative pace.
+            Trauma-informed care for adolescents, adults, and couples, with a steady, collaborative pace.
           </p>
         </div>
 
@@ -203,7 +201,7 @@
           <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Couples Therapy</h3>
             <p class="mt-4 leading-relaxed">
-              Gottman Method and EFT-informed couples work focused on connection and repair.
+              Research-informed couples therapy focused on strengthening connection, improving communication, and repairing ruptures.
             </p>
             <div class="mt-auto pt-6">
               <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
@@ -215,7 +213,7 @@
           <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Trauma &amp; Nervous System</h3>
             <p class="mt-4 leading-relaxed">
-              EMDR and IFS-informed therapy to support regulation, safety, and healing.
+              Evidence-informed trauma therapy focused on nervous system regulation, emotional safety, and recovery. 
             </p>
             <div class="mt-auto pt-6">
               <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
@@ -228,7 +226,7 @@
         <!-- ✅ FIX: even two-column list using real UL -->
         <div class="mt-12">
           <h3 class="text-2xl sm:text-3xl font-serif font-semibold mb-6">
-            Areas I work with regularly include
+            Areas I work with regularly include:
           </h3>
 
           <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3 text-base sm:text-lg leading-relaxed list-disc pl-6">
