@@ -1,92 +1,266 @@
+/* ===============================
+   THE WOVEN SELF — ORGANIC SYSTEM
+   =============================== */
+
+/* -------- Root Variables -------- */
+
 :root {
-  --color-primary: #3c5452;
-  --color-secondary: #f4a261;
-  --color-background: #fbf9f6;
-  --color-light-bg: #f2ede7;
-  --color-text: #2f3b3a;
-  --color-hero-bg: #e6e0d9;
-  --color-border: rgba(47, 59, 58, 0.14);
-  --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.07);
+  --color-primary: #3f5451;
+  --color-primary-dark: #2f4543;
+
+  --color-background: #faf7f2;
+  --color-light-bg: #f3eee6;
+  --color-border: rgba(0, 0, 0, 0.06);
+
+  --color-text: #2f3a38;
+  --color-muted: #5e6e6b;
+
+  --radius-large: 28px;
+  --radius-medium: 18px;
 }
 
-html { scroll-behavior: smooth; }
+/* -------- Base Reset -------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background-color: var(--color-background);
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   color: var(--color-text);
+  background: var(--color-background);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .font-serif {
-  font-family: "Playfair Display", Georgia, serif;
+/* -------- Typography -------- */
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  margin-top: 0;
 }
 
-a { color: inherit; text-decoration: none; }
-a:hover { color: var(--color-primary); }
-
-:focus-visible {
-  outline: 3px solid rgba(60, 84, 82, 0.35);
-  outline-offset: 3px;
-  border-radius: 12px;
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
 }
 
-.card {
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
+h2 {
+  font-size: 2.2rem;
+  line-height: 1.25;
 }
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* -------- Layout Containers -------- */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* -------- Header -------- */
+
+header {
+  background: rgba(250, 247, 242, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+header .brand-text {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+header nav a {
+  font-size: 15px;
+  color: var(--color-muted);
+}
+
+header nav a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* -------- Buttons -------- */
 
 .btn-primary {
   background: var(--color-primary);
-  color: #fff;
+  color: white;
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
-.btn-primary:hover { filter: brightness(0.95); }
 
-.btn-outline {
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
-}
-.btn-outline:hover {
-  background: var(--color-primary);
-  color: #fff;
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-size: 14px;
+  background: transparent;
+  transition: all 0.2s ease;
 }
 
-/* Minimal prose styling for markdown-rendered posts */
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* -------- Hero Section -------- */
+
+.hero-bg {
+  background: linear-gradient(
+    180deg,
+    #f8f4ee 0%,
+    #f3eee6 100%
+  );
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-bg p {
+  max-width: 600px;
+  margin: 1.5rem auto 0;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+/* -------- Cards -------- */
+
+.card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-large);
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* -------- Lists -------- */
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* -------- Blog Prose -------- */
+
 .prose {
-  font-size: 1.0625rem;
-  line-height: 1.75;
+  max-width: 100%;
+  font-size: 1.05rem;
 }
-.prose h1 {
-  font-size: 2.25rem;
-  line-height: 1.15;
-  margin: 0 0 1rem 0;
-}
-.prose h2 {
-  font-size: 1.6rem;
-  line-height: 1.2;
-  margin: 2rem 0 0.75rem 0;
-}
+
+.prose h1,
+.prose h2,
 .prose h3 {
-  font-size: 1.25rem;
-  line-height: 1.25;
-  margin: 1.5rem 0 0.5rem 0;
+  margin-top: 2rem;
 }
-.prose p { margin: 0.85rem 0; }
-.prose ul { margin: 0.9rem 0; padding-left: 1.25rem; list-style: disc; }
-.prose li { margin: 0.35rem 0; }
-.prose blockquote {
+
+.prose ul {
   margin: 1.2rem 0;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+/* -------- Footer -------- */
+
+footer {
+  background: var(--color-light-bg);
+  padding: 2rem;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+/* -------- Forms -------- */
+
+input,
+textarea {
+  width: 100%;
   padding: 0.9rem 1rem;
-  border-left: 4px solid rgba(60, 84, 82, 0.35);
-  background: rgba(242, 237, 231, 0.75);
-  border-radius: 14px;
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--color-border);
+  font-size: 15px;
+  font-family: inherit;
 }
-.prose hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 2rem 0;
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
 }
-.prose a {
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+
+/* -------- Responsive -------- */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-bg {
+    padding: 4rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.8rem;
+  }
+
 }
