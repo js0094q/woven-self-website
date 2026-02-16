@@ -7,7 +7,7 @@
     <style>
       .stroke {
         fill: none;
-        stroke: #4a5e5b;
+        stroke: #2f4543;
         stroke-width: 2.2;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -15,7 +15,7 @@
 
       .dots {
         fill: none;
-        stroke: #4a5e5b;
+        stroke: #2f4543;
         stroke-width: 2.2;
         stroke-linecap: round;
         stroke-dasharray: 0.1 7;
