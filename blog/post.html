@@ -19,26 +19,40 @@
 </head>
 
 <body class="antialiased">
-  <header class="sticky top-0 bg-[var(--color-background)]/80 backdrop-blur border-b border-[var(--color-border)] z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-20 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-3">
-          <span class="text-2xl font-serif font-bold text-[var(--color-primary)]">The Woven Self</span>
-        </a>
-        <nav class="hidden md:flex gap-2 items-center">
-          <a href="/" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Home</a>
-          <a href="/author.html" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Credentials</a>
-          <a href="/blog.html" class="px-4 py-2 rounded-md font-semibold text-[var(--color-primary)]">Blog</a>
-          <a href="/#contact" class="px-4 py-2 rounded-md hover:text-[var(--color-primary)]">Contact</a>
-          <a
-            href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-            target="_blank" rel="noopener noreferrer"
-            class="btn-primary ml-3 px-5 py-2.5 rounded-full font-semibold shadow-sm"
-          >Book via Headway</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+ <header class="site-header">
+  <div class="site-container header-inner">
+
+    <!-- Brand -->
+    <a href="/" class="brand">
+      <img
+        src="/images/logo-mark.svg"
+        alt="The Woven Self"
+        class="brand-logo"
+      />
+      <span class="brand-text">The Woven Self</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#services" class="nav-link">Services</a>
+      <a href="/author.html" class="nav-link">Credentials</a>
+      <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="/#contact" class="nav-link">Contact</a>
+
+      <a
+        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary header-book"
+      >
+        Book via Headway
+      </a>
+    </nav>
+
+  </div>
+</header>
 
   <main class="py-14 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
