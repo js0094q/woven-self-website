@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Trauma-Informed Therapy in New Jersey | EMDR + IFS | The Woven Self</title>
-  <meta name="description" content="Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounde." />
+  <meta name="description" content="Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://wovenself.com/" />
 
@@ -56,9 +56,14 @@
 <header class="site-header">
   <div class="site-container header-inner">
 
-    <!-- Brand -->
-    <a href="/" class="brand">
-      <span class="brand-text">The Woven Self</span>
+    <!-- Brand (FIX: re-aligned + restored mark) -->
+    <a href="/" class="brand flex items-center gap-3">
+      <img
+        src="/images/logo-mark.svg"
+        alt="The Woven Self"
+        class="brand-logo h-10 w-10"
+      />
+      <span class="brand-text leading-none">The Woven Self</span>
     </a>
 
     <!-- Navigation -->
@@ -82,7 +87,7 @@
 
   </div>
 </header>
-  
+
   <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
   <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
     <div class="p-6 flex flex-col h-full">
@@ -110,33 +115,38 @@
 
   <main>
 
-<!-- HERO (replace your existing hero section with this) -->
-<section class="hero-bg min-h-[75vh] flex items-center">
-  <div class="max-w-6xl mx-auto px-6 text-center w-full">
-    <!-- Logo banner (centered) -->
-    <div class="flex items-center justify-center">
-      <img
-  src="/images/hero-logo-transparent-final.png"
-  alt="The Woven Self — Every part has a voice. Every thread tells a story."
-  class="w-full max-w-4xl h-auto"
-  loading="eager"
-  decoding="async"
-      />
-    </div>
+    <!-- HERO -->
+    <section class="hero-bg min-h-[75vh] flex items-center">
+      <div class="max-w-6xl mx-auto px-6 text-center w-full">
+        <div class="flex items-center justify-center">
+          <img
+            src="/images/hero-logo-transparent-final.png"
+            alt="The Woven Self — Every part has a voice. Every thread tells a story."
+            class="w-full max-w-4xl h-auto"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
 
-    <!-- Supporting copy -->
-    <p class="mt-8 text-slate-600 max-w-2xl mx-auto">
-      Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded.
-    </p>
+        <p class="mt-8 text-slate-600 max-w-2xl mx-auto">
+          Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded.
+        </p>
 
-    <!-- CTAs -->
-    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-      <a class="btn-primary" href="/contact.html">Book a Session</a>
-      <a class="btn-secondary" href="/services.html">How I Can Help</a>
-    </div>
-  </div>
-</section>
-    
+        <!-- CTAs (FIX: equal height + perfectly aligned) -->
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+          <a
+            class="btn-primary inline-flex items-center justify-center min-h-[48px] px-8"
+            href="/contact.html"
+          >Book a Session</a>
+
+          <a
+            class="btn-secondary inline-flex items-center justify-center min-h-[48px] px-8"
+            href="/services.html"
+          >How I Can Help</a>
+        </div>
+      </div>
+    </section>
+
     <section class="py-16 sm:py-20">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="card bg-white/70 rounded-3xl p-8 sm:p-10">
@@ -179,7 +189,6 @@
           </p>
         </div>
 
-        <!-- ✅ FIX: equal-height cards + button alignment -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Individual Therapy</h3>
@@ -208,7 +217,7 @@
           <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
             <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Trauma &amp; Nervous System</h3>
             <p class="mt-4 leading-relaxed">
-              Evidence-informed trauma therapy focused on nervous system regulation, emotional safety, and recovery. 
+              Evidence-informed trauma therapy focused on nervous system regulation, emotional safety, and recovery.
             </p>
             <div class="mt-auto pt-6">
               <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
@@ -218,7 +227,6 @@
           </div>
         </div>
 
-        <!-- ✅ FIX: even two-column list using real UL -->
         <div class="mt-12">
           <h3 class="text-2xl sm:text-3xl font-serif font-semibold mb-6">
             Areas I work with regularly include:
@@ -344,10 +352,10 @@
     const mobileNavPanel = document.getElementById('mobile-nav-panel');
 
     const toggleNav = () => {
-      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav.classList.toggle('translate-x-full');
-      mobileNavPanel.classList.toggle('hidden');
+      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav?.classList.toggle('translate-x-full');
+      mobileNavPanel?.classList.toggle('hidden');
     };
 
     if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
