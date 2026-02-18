@@ -7,6 +7,35 @@
   <title>Blog Post | The Woven Self</title>
   <meta name="description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
   <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Blog Post | The Woven Self" />
+  <meta property="og:description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
+  <meta property="og:image" content="https://wovenself.com/images/logo.png" />
+  <meta property="og:url" content="https://wovenself.com/blog/post.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog Post | The Woven Self" />
+  <meta name="twitter:description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
+  <meta name="twitter:image" content="https://wovenself.com/images/logo.png" />
+  <script id="post-schema" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Blog Post | The Woven Self",
+    "author": {
+      "@type": "Person",
+      "name": "Loren Galese"
+    },
+    "publisher": {
+      "@type": "ProfessionalService",
+      "name": "The Woven Self Therapeutic Services, LLC",
+      "url": "https://wovenself.com/"
+    },
+    "mainEntityOfPage": "https://wovenself.com/blog/post.html",
+    "url": "https://wovenself.com/blog/post.html",
+    "inLanguage": "en-US"
+  }
+  </script>
 
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <link rel="canonical" href="https://wovenself.com/blog" />
+  <link rel="canonical" href="https://wovenself.com/blog/post.html" />
 </head>
 
 <body class="antialiased">
@@ -24,9 +53,7 @@
 
     <!-- Brand -->
     <a href="/" class="brand">
-      <span class="brand-mark-wrap" aria-hidden="true">
-        <span class="brand-mark"><span class="brand-mark-thread"></span></span>
-      </span>
+      <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
       <span class="brand-text">The Woven Self</span>
     </a>
 
@@ -104,6 +131,16 @@
 
       const descTag = document.querySelector('meta[name="description"]');
       if (descTag && excerpt) descTag.setAttribute('content', excerpt);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogTitle) ogTitle.setAttribute('content', `${title} | The Woven Self (NJ)`);
+      if (twTitle) twTitle.setAttribute('content', `${title} | The Woven Self (NJ)`);
+      if (excerpt && ogDesc) ogDesc.setAttribute('content', excerpt);
+      if (excerpt && twDesc) twDesc.setAttribute('content', excerpt);
+      if (ogUrl) ogUrl.setAttribute('content', window.location.href);
 
       document.getElementById('post-meta').innerHTML = `
         <h1 class="text-4xl sm:text-5xl font-serif font-bold">${esc(title)}</h1>
@@ -116,6 +153,32 @@
       // Canonical: reflect the actual URL used for this system
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) canonical.setAttribute('href', window.location.href);
+
+      const postSchema = document.getElementById('post-schema');
+      if (postSchema) {
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": title,
+          "description": excerpt || "Therapy-informed writing by Loren Galese, LPC in New Jersey.",
+          "author": {
+            "@type": "Person",
+            "name": "Loren Galese"
+          },
+          "publisher": {
+            "@type": "ProfessionalService",
+            "name": "The Woven Self Therapeutic Services, LLC",
+            "url": "https://wovenself.com/"
+          },
+          "datePublished": date || undefined,
+          "dateModified": date || undefined,
+          "mainEntityOfPage": window.location.href,
+          "url": window.location.href,
+          "image": "https://wovenself.com/images/logo.png",
+          "inLanguage": "en-US"
+        };
+        postSchema.textContent = JSON.stringify(schema);
+      }
     }
 
     loadPost().catch(() => {
