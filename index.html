@@ -56,8 +56,11 @@
 <header class="site-header">
   <div class="site-container header-inner">
 
-   <!-- Brand (text-only, no icon) -->
-<a href="/" class="brand flex items-center">
+   <!-- Brand -->
+<a href="/" class="brand">
+  <span class="brand-mark-wrap" aria-hidden="true">
+    <span class="brand-mark"><span class="brand-mark-thread"></span></span>
+  </span>
   <span class="brand-text leading-none">The Woven Self</span>
 </a>
 
@@ -168,6 +171,15 @@
             <li>Do intrusive or repetitive thoughts about past events show up when you least expect them?</li>
             <li>Does your body feel tense, braced, or unable to fully relax, even during calm moments?</li>
           </ul>
+
+          <div class="woven-illustration">
+            <div class="woven-threads" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p>Care that helps your thoughts, body, and relationships move in the same direction.</p>
+          </div>
 
           <p class="mt-6 text-base sm:text-lg leading-relaxed">
             If you’re nodding along, this isn’t a personal failure, it’s how trauma lives in the nervous system.
@@ -304,30 +316,45 @@
           </div>
 
           <div id="contact-form-container" class="card bg-white/70 rounded-3xl p-8">
-            <form class="contact-form space-y-4">
+            <form
+              class="contact-form space-y-4"
+              method="POST"
+              action="https://formspree.io/f/your-form-id"
+            >
               <input id="name" name="name" type="text" required
                 class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
                 placeholder="Your name" />
+              <input id="email" name="email" type="email" required
+                class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
+                placeholder="Email" />
               <input id="phone" name="phone" type="tel"
                 class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
                 placeholder="Phone (optional)" />
               <textarea id="message" name="message" required rows="4"
                 class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
                 placeholder="How can I help?"></textarea>
+              <input type="hidden" name="_subject" value="New inquiry from The Woven Self website">
 
-              <button class="btn-primary w-full px-6 py-3.5 rounded-full font-semibold shadow-md" type="submit">
+              <button id="contact-submit" class="btn-primary w-full px-6 py-3.5 rounded-full font-semibold shadow-md" type="submit">
                 Send Message
               </button>
 
               <p class="text-center text-sm pt-2">
                 For privacy, please avoid sharing protected health information in this form.
               </p>
+              <p class="text-center text-xs opacity-80">
+                This form is configured for Formspree. Replace <code>your-form-id</code> with your live ID to activate delivery.
+              </p>
             </form>
           </div>
 
           <div id="success-message" class="hidden mt-6 text-center bg-green-50 border border-green-200 text-green-900 px-4 py-3 rounded-2xl">
             <p class="font-semibold">Thank you.</p>
-            <p>Your message has been recorded for demo purposes. Please use Headway for secure scheduling.</p>
+            <p>Your message was sent successfully. For scheduling, continue using Headway.</p>
+          </div>
+          <div id="form-error-message" class="hidden mt-6 text-center bg-red-50 border border-red-200 text-red-900 px-4 py-3 rounded-2xl">
+            <p class="font-semibold">Message not sent.</p>
+            <p>Please confirm your Formspree form ID is correct, then try again.</p>
           </div>
         </div>
       </div>
@@ -370,12 +397,41 @@
     const contactForm = document.querySelector('.contact-form');
     const formContainer = document.getElementById('contact-form-container');
     const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('form-error-message');
+    const submitButton = document.getElementById('contact-submit');
 
-    if (contactForm && successMessage && formContainer) {
-      contactForm.addEventListener('submit', (e) => {
+    if (contactForm && successMessage && errorMessage && formContainer && submitButton) {
+      contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        formContainer.classList.add('hidden');
-        successMessage.classList.remove('hidden');
+
+        const endpoint = contactForm.getAttribute('action') || '';
+        if (endpoint.includes('your-form-id')) {
+          errorMessage.classList.remove('hidden');
+          successMessage.classList.add('hidden');
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        errorMessage.classList.add('hidden');
+
+        try {
+          const formData = new FormData(contactForm);
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' },
+          });
+
+          if (!response.ok) throw new Error('Form submission failed');
+
+          formContainer.classList.add('hidden');
+          successMessage.classList.remove('hidden');
+        } catch (error) {
+          errorMessage.classList.remove('hidden');
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Message';
+        }
       });
     }
   </script>
