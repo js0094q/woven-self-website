@@ -10,11 +10,16 @@
   <link rel="canonical" href="https://wovenself.com/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Trauma-Informed Therapy in New Jersey | The Woven Self" />
   <meta property="og:description" content="Children, adults, and couples. EMDR, IFS, Gottman, EFT. Telehealth statewide." />
-  <meta property="og:image" content="https://placehold.co/1200x630/f2ede7/3c5452?text=The+Woven+Self" />
+  <meta property="og:image" content="https://wovenself.com/images/logo.png" />
+  <meta property="og:image:alt" content="The Woven Self logo" />
   <meta property="og:url" content="https://wovenself.com/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trauma-Informed Therapy in New Jersey | The Woven Self" />
+  <meta name="twitter:description" content="Supportive trauma-informed therapy in New Jersey for adolescents, adults, and couples." />
+  <meta name="twitter:image" content="https://wovenself.com/images/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,17 +42,68 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "The Woven Self Therapeutic Services, LLC",
-    "description": "Trauma-informed therapy in New Jersey for children, adults, and couples. EMDR, IFS, Gottman Method, and EFT. Telehealth available statewide.",
-    "areaServed": { "@type": "State", "name": "New Jersey" },
-    "url": "https://wovenself.com/",
-    "sameAs": [
-      "https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806",
-      "https://www.instagram.com/lorengaleseauthor/",
-      "https://www.instagram.com/thewovenselftherapeutic/"
-    ],
-    "provider": { "@type": "Person", "name": "Loren Galese", "jobTitle": "Licensed Professional Counselor" }
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://wovenself.com/#organization",
+        "name": "The Woven Self Therapeutic Services, LLC",
+        "url": "https://wovenself.com/",
+        "description": "Trauma-informed therapy in New Jersey for adolescents, adults, and couples, including EMDR, IFS, and couples therapy support.",
+        "image": "https://wovenself.com/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "NJ",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "New Jersey"
+        },
+        "sameAs": [
+          "https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806",
+          "https://www.instagram.com/lorengaleseauthor/",
+          "https://www.instagram.com/thewovenselftherapeutic/"
+        ],
+        "knowsAbout": [
+          "Trauma therapy",
+          "EMDR",
+          "Internal Family Systems (IFS)",
+          "Couples therapy",
+          "Nervous system regulation"
+        ],
+        "serviceType": [
+          "Individual Therapy",
+          "Couples Therapy",
+          "Trauma Therapy"
+        ],
+        "availableLanguage": [
+          "English"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://wovenself.com/#website",
+        "url": "https://wovenself.com/",
+        "name": "The Woven Self",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://wovenself.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://wovenself.com/#webpage",
+        "url": "https://wovenself.com/",
+        "name": "Trauma-Informed Therapy in New Jersey | EMDR + IFS | The Woven Self",
+        "isPartOf": {
+          "@id": "https://wovenself.com/#website"
+        },
+        "about": {
+          "@id": "https://wovenself.com/#organization"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
   }
   </script>
 </head>
@@ -58,9 +114,7 @@
 
    <!-- Brand -->
 <a href="/" class="brand">
-  <span class="brand-mark-wrap" aria-hidden="true">
-    <span class="brand-mark"><span class="brand-mark-thread"></span></span>
-  </span>
+  <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
   <span class="brand-text leading-none">The Woven Self</span>
 </a>
 
@@ -117,15 +171,11 @@
     <section class="hero-bg min-h-[75vh] flex items-center">
       <div class="max-w-6xl mx-auto px-6 text-center w-full">
         <div class="flex items-center justify-center">
-          <img
-          src="/images/hero-logo-transparent-final.png"
-          alt="The Woven Self — Every part has a voice. Every thread tells a story."
-          class="w-full max-w-3xl h-auto"
-          style="filter: saturate(0.88) contrast(1.06) brightness(0.98); mix-blend-mode: multiply;"
-          loading="eager"
-          decoding="async"
-          />
-          
+          <div class="hero-brand">
+            <p class="hero-eyebrow">Every part has a voice</p>
+            <h1 class="hero-wordmark">The Woven Self</h1>
+            <p class="hero-submark">Every thread tells a story.</p>
+          </div>
         </div>
 
         <p class="mt-8 text-slate-600 max-w-2xl mx-auto">
@@ -136,12 +186,12 @@
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-stretch">
           <a
             class="btn-primary inline-flex items-center justify-center min-h-[48px] px-8"
-            href="/contact.html"
+            href="/#contact"
           >Book a Session</a>
 
           <a
             class="btn-secondary inline-flex items-center justify-center min-h-[48px] px-8"
-            href="/services.html"
+            href="/#services"
           >How I Can Help</a>
         </div>
       </div>
@@ -171,15 +221,6 @@
             <li>Do intrusive or repetitive thoughts about past events show up when you least expect them?</li>
             <li>Does your body feel tense, braced, or unable to fully relax, even during calm moments?</li>
           </ul>
-
-          <div class="woven-illustration">
-            <div class="woven-threads" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <p>Care that helps your thoughts, body, and relationships move in the same direction.</p>
-          </div>
 
           <p class="mt-6 text-base sm:text-lg leading-relaxed">
             If you’re nodding along, this isn’t a personal failure, it’s how trauma lives in the nervous system.
