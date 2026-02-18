@@ -43,6 +43,7 @@ body {
 }
 
 .site-header .site-container {
+  max-width: none;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -188,21 +189,33 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: saturate(0.86) contrast(1.03) brightness(0.99);
+  filter: saturate(0.83) contrast(1.01) brightness(1);
   mix-blend-mode: multiply;
-  opacity: 0.95;
-  -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 68%, transparent 100%);
-  mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 68%, transparent 100%);
+  opacity: 0.9;
+  -webkit-mask-image: radial-gradient(ellipse 96% 88% at 50% 50%, #000 46%, rgba(0,0,0,0.9) 58%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0.16) 86%, transparent 100%);
+  mask-image: radial-gradient(ellipse 96% 88% at 50% 50%, #000 46%, rgba(0,0,0,0.9) 58%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0.16) 86%, transparent 100%);
 }
 
 .hero-logo-shell {
   width: min(100%, 790px);
   margin: 0 auto;
-  padding: 0.35rem;
-  border-radius: 36px;
+  padding: 0;
+  border-radius: 46px;
+  background: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-logo-shell::before {
+  content: "";
+  position: absolute;
+  inset: -2%;
+  border-radius: 52px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(244,162,97,0.14), transparent 44%),
-    radial-gradient(circle at 83% 68%, rgba(46,67,65,0.10), transparent 50%);
+    radial-gradient(circle at 18% 24%, rgba(250,247,242,0.9), transparent 54%),
+    radial-gradient(circle at 82% 72%, rgba(250,247,242,0.85), transparent 56%);
+  filter: blur(14px);
+  z-index: -1;
 }
 
 /* ================= BLOG PROSE ================= */
@@ -248,7 +261,7 @@ footer {
 
 @media (max-width: 640px) {
   .site-header .site-container {
-    padding-left: 0.7rem;
+    padding-left: 0.6rem;
     padding-right: 0.7rem;
   }
 }
