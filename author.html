@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'">
 
   <title>Credentials | Loren Galese, LPC | The Woven Self (NJ)</title>
   <meta name="description" content="Learn about Loren Galese, Licensed Professional Counselor in New Jersey. EMDR, IFS, and couples therapy informed by the Gottman Method and EFT." />
@@ -229,5 +229,9 @@
     }
   </script>
 
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>
