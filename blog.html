@@ -49,8 +49,9 @@
   }
   </script>
 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'">
   <link rel="stylesheet" href="/styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -137,8 +138,15 @@
 
     const norm = (s) => (s || '').toLowerCase().trim();
 
+    function makeTagPill(text) {
+      const span = document.createElement('span');
+      span.className = 'inline-block text-xs px-2 py-1 rounded-full border border-[var(--color-border)] mr-2 mb-2';
+      span.textContent = text;
+      return span;
+    }
+
     function render(list) {
-      grid.innerHTML = '';
+      grid.textContent = '';
 
       if (!list.length) {
         empty.classList.remove('hidden');
@@ -148,23 +156,34 @@
 
       list.forEach(p => {
         const a = document.createElement('a');
-
-        // ✅ link to your working markdown renderer template
         a.href = `blog/post.html?slug=${encodeURIComponent(p.slug)}`;
-
         a.className = 'card bg-white/70 p-8 rounded-3xl transition-transform hover:-translate-y-1 block';
 
-        const tags = (p.tags || []).map(t =>
-          `<span class="inline-block text-xs px-2 py-1 rounded-full border border-[var(--color-border)] mr-2 mb-2">${t}</span>`
-        ).join('');
+        const dateEl = document.createElement('div');
+        dateEl.className = 'text-sm opacity-80';
+        dateEl.textContent = p.date || '';
 
-        a.innerHTML = `
-          <div class="text-sm opacity-80">${p.date || ''}</div>
-          <h2 class="text-2xl font-serif font-semibold text-[var(--color-primary)] mt-2">${p.title}</h2>
-          <p class="mt-4">${p.excerpt || ''}</p>
-          <div class="mt-5">${tags}</div>
-          <div class="mt-6 font-semibold underline underline-offset-4">Read →</div>
-        `;
+        const titleEl = document.createElement('h2');
+        titleEl.className = 'text-2xl font-serif font-semibold text-[var(--color-primary)] mt-2';
+        titleEl.textContent = p.title;
+
+        const excerptEl = document.createElement('p');
+        excerptEl.className = 'mt-4';
+        excerptEl.textContent = p.excerpt || '';
+
+        const tagsWrapper = document.createElement('div');
+        tagsWrapper.className = 'mt-5';
+        (p.tags || []).forEach(tag => tagsWrapper.appendChild(makeTagPill(tag)));
+
+        const readEl = document.createElement('div');
+        readEl.className = 'mt-6 font-semibold underline underline-offset-4';
+        readEl.textContent = 'Read →';
+
+        a.appendChild(dateEl);
+        a.appendChild(titleEl);
+        a.appendChild(excerptEl);
+        a.appendChild(tagsWrapper);
+        a.appendChild(readEl);
 
         grid.appendChild(a);
       });
