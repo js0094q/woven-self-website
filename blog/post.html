@@ -14,6 +14,8 @@
   <meta property="og:description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
   <meta property="og:image" content="https://wovenself.com/images/logo.png" />
   <meta property="og:url" content="https://wovenself.com/blog/post.html" />
+  <meta property="article:published_time" content="" />
+  <meta property="article:modified_time" content="" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog Post | The Woven Self" />
   <meta name="twitter:description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
@@ -152,7 +154,8 @@
       if (twTitle) twTitle.setAttribute('content', `${title} | The Woven Self (NJ)`);
       if (excerpt && ogDesc) ogDesc.setAttribute('content', excerpt);
       if (excerpt && twDesc) twDesc.setAttribute('content', excerpt);
-      if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+      const canonicalUrl = `${window.location.origin}/blog/${encodeURIComponent(slug)}`;
+      if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
 
       const metaContainer = document.getElementById('post-meta');
       metaContainer.textContent = '';
@@ -173,7 +176,14 @@
 
       // Canonical: reflect the actual URL used for this system
       const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) canonical.setAttribute('href', window.location.href);
+      if (canonical) canonical.setAttribute('href', canonicalUrl);
+
+      // Article-specific meta
+      const pubTime = date || '';
+      const artPub = document.querySelector('meta[property="article:published_time"]');
+      const artMod = document.querySelector('meta[property="article:modified_time"]');
+      if (artPub && pubTime) artPub.setAttribute('content', pubTime);
+      if (artMod && pubTime) artMod.setAttribute('content', pubTime);
 
       const postSchema = document.getElementById('post-schema');
       if (postSchema) {
@@ -189,12 +199,16 @@
           "publisher": {
             "@type": "ProfessionalService",
             "name": "The Woven Self Therapeutic Services, LLC",
-            "url": "https://wovenself.com/"
+            "url": "https://wovenself.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://wovenself.com/images/logo.png"
+            }
           },
           "datePublished": date || undefined,
           "dateModified": date || undefined,
-          "mainEntityOfPage": window.location.href,
-          "url": window.location.href,
+          "mainEntityOfPage": canonicalUrl,
+          "url": canonicalUrl,
           "image": "https://wovenself.com/images/logo.png",
           "inLanguage": "en-US"
         };
