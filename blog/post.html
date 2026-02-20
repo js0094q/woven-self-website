@@ -7,7 +7,7 @@
   <title>Blog Post | The Woven Self</title>
   <meta name="description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
   <meta name="robots" content="index,follow" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'">
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Blog Post | The Woven Self" />
@@ -209,5 +209,10 @@
         '<p>Return to the <a href="../blog.html" class="underline underline-offset-4">blog</a>.</p>';
     });
   </script>
+
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>
