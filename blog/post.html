@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Blog Post | The Woven Self</title>
+  <meta name="description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
+  <meta name="robots" content="index,follow" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com https://*.vercel-scripts.com 'unsafe-inline'; connect-src 'self' https://*.vercel-analytics.com https://*.vercel-scripts.com; object-src 'none'; base-uri 'self'">
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Blog Post | The Woven Self" />
+  <meta property="og:description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
+  <meta property="og:image" content="https://wovenself.com/images/logo.png" />
+  <meta property="og:url" content="https://wovenself.com/blog/post.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog Post | The Woven Self" />
+  <meta name="twitter:description" content="Therapy-informed writing by Loren Galese, LPC in New Jersey." />
+  <meta name="twitter:image" content="https://wovenself.com/images/logo.png" />
+  <script id="post-schema" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Blog Post | The Woven Self",
+    "author": {
+      "@type": "Person",
+      "name": "Loren Galese"
+    },
+    "publisher": {
+      "@type": "ProfessionalService",
+      "name": "The Woven Self Therapeutic Services, LLC",
+      "url": "https://wovenself.com/"
+    },
+    "mainEntityOfPage": "https://wovenself.com/blog/post.html",
+    "url": "https://wovenself.com/blog/post.html",
+    "inLanguage": "en-US"
+  }
+  </script>
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.1/marked.min.js" crossorigin="anonymous"></script>
+  <link rel="canonical" href="https://wovenself.com/blog/post.html" />
+</head>
+
+<body class="antialiased">
+ <header class="site-header">
+  <div class="site-container header-inner">
+
+    <!-- Brand -->
+    <a href="/" class="brand">
+      <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#services" class="nav-link">Services</a>
+      <a href="/author.html" class="nav-link">Credentials</a>
+      <a href="/blog.html" class="nav-link">Blog</a>
+      <a href="/#contact" class="nav-link">Contact</a>
+
+      <a
+        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary header-book"
+      >
+        Book via Headway
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+  <main class="py-14 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="../blog.html" class="inline-flex items-center gap-2 text-sm underline underline-offset-4">
+        <span aria-hidden="true">←</span> Back to Blog
+      </a>
+
+      <div class="mt-8 card bg-white/70 rounded-3xl p-7 sm:p-10">
+        <div id="post-meta" class="mb-6"></div>
+        <article id="post-content" class="prose"></article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[var(--color-light-bg)] text-center py-8">
+    <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+  </footer>
+
+  <script>
+    function getSlug() {
+      const url = new URL(window.location.href);
+      return url.searchParams.get('slug') || '';
+    }
+
+    const SAFE_PROTOCOLS = ['http:', 'https:', 'mailto:', 'tel:'];
+
+    marked.setOptions({ mangle: false, headerIds: true, breaks: true });
+    // Disallow raw HTML blocks in markdown; enforce safe links/images.
+    marked.use({
+      renderer: {
+        html() { return ''; }
+      },
+      walkTokens(token) {
+        if (token.type === 'link' || token.type === 'image') {
+          const url = (() => { try { return new URL(token.href, window.location.origin); } catch { return null; } })();
+          if (!url || !SAFE_PROTOCOLS.includes(url.protocol)) {
+            token.href = '';
+          }
+        }
+      }
+    });
+
+    async function loadPost() {
+      const slug = getSlug();
+      if (!slug) throw new Error('Missing slug');
+
+      // ✅ RELATIVE fetch: from /blog/post.html -> posts.json is /blog/posts.json
+      const postsRes = await fetch('posts.json', { cache: 'no-store' });
+      if (!postsRes.ok) throw new Error('posts.json not found');
+      const posts = await postsRes.json();
+      const meta = posts.find(p => p.slug === slug);
+
+      // ✅ RELATIVE fetch: from /blog/post.html -> /blog/posts/<slug>.md
+      const mdRes = await fetch(`posts/${encodeURIComponent(slug)}.md`, { cache: 'no-store' });
+      if (!mdRes.ok) throw new Error('Post not found');
+      const md = await mdRes.text();
+
+      const title = meta?.title || slug.replace(/-/g, ' ');
+      const date = meta?.date || '';
+      const excerpt = meta?.excerpt || '';
+
+      document.title = `${title} | The Woven Self (NJ)`;
+
+      const descTag = document.querySelector('meta[name="description"]');
+      if (descTag && excerpt) descTag.setAttribute('content', excerpt);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogTitle) ogTitle.setAttribute('content', `${title} | The Woven Self (NJ)`);
+      if (twTitle) twTitle.setAttribute('content', `${title} | The Woven Self (NJ)`);
+      if (excerpt && ogDesc) ogDesc.setAttribute('content', excerpt);
+      if (excerpt && twDesc) twDesc.setAttribute('content', excerpt);
+      if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+
+      const metaContainer = document.getElementById('post-meta');
+      metaContainer.textContent = '';
+      const h1 = document.createElement('h1');
+      h1.className = 'text-4xl sm:text-5xl font-serif font-bold';
+      h1.textContent = title;
+      metaContainer.appendChild(h1);
+      if (date) {
+        const dateEl = document.createElement('div');
+        dateEl.className = 'mt-3 text-sm opacity-80';
+        dateEl.textContent = date;
+        metaContainer.appendChild(dateEl);
+      }
+
+      const html = marked.parse(md);
+      const article = document.getElementById('post-content');
+      article.innerHTML = html;
+
+      // Canonical: reflect the actual URL used for this system
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', window.location.href);
+
+      const postSchema = document.getElementById('post-schema');
+      if (postSchema) {
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": title,
+          "description": excerpt || "Therapy-informed writing by Loren Galese, LPC in New Jersey.",
+          "author": {
+            "@type": "Person",
+            "name": "Loren Galese"
+          },
+          "publisher": {
+            "@type": "ProfessionalService",
+            "name": "The Woven Self Therapeutic Services, LLC",
+            "url": "https://wovenself.com/"
+          },
+          "datePublished": date || undefined,
+          "dateModified": date || undefined,
+          "mainEntityOfPage": window.location.href,
+          "url": window.location.href,
+          "image": "https://wovenself.com/images/logo.png",
+          "inLanguage": "en-US"
+        };
+        postSchema.textContent = JSON.stringify(schema);
+      }
+    }
+
+    loadPost().catch(() => {
+      document.getElementById('post-meta').innerHTML =
+        '<h1 class="text-3xl font-serif font-bold">Post not found</h1>';
+      document.getElementById('post-content').innerHTML =
+        '<p>Return to the <a href="../blog.html" class="underline underline-offset-4">blog</a>.</p>';
+    });
+  </script>
+
+  <script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
