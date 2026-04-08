@@ -98,12 +98,24 @@
       </a>
     </nav>
 
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+
   </div>
 </header>
   
   <!-- MOBILE NAV -->
-  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
+  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
     <div class="p-6 flex flex-col h-full">
       <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,6 +124,7 @@
       </button>
 
       <nav class="mt-6 space-y-2">
+        <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
         <a href="/#about" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
         <a href="/#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Services</a>
         <a href="/author.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Author</a>
@@ -220,10 +233,10 @@
     const mobileNavPanel = document.getElementById('mobile-nav-panel');
 
     const toggleNav = () => {
-      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav.classList.toggle('translate-x-full');
-      mobileNavPanel.classList.toggle('hidden');
+      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav?.classList.toggle('translate-x-full');
+      mobileNavPanel?.classList.toggle('hidden');
     };
 
     if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {

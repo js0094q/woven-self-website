@@ -10,6 +10,11 @@
   --border: rgba(0,0,0,0.06);
   --text: #2f3a38;
   --muted: #5f6e6b;
+  --color-primary: #2e4341;
+  --color-background: #faf7f2;
+  --color-light-bg: #f4efe7;
+  --color-border: rgba(0,0,0,0.06);
+  --color-text: #2f3a38;
 }
 
 /* Base */
@@ -308,6 +313,18 @@ footer {
   .site-header .site-container {
     padding-left: 0.6rem;
     padding-right: 0.7rem;
+  }
+
+  .card {
+    background: #fff;
+    box-shadow:
+      0 12px 26px rgba(31,42,40,0.06),
+      0 2px 8px rgba(31,42,40,0.04);
+  }
+
+  #mobile-nav {
+    background: #faf7f2;
+    border-left: 1px solid rgba(46,67,65,0.14);
   }
 
   .home-hero {

@@ -76,8 +76,46 @@
       </a>
     </nav>
 
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+
   </div>
 </header>
+
+  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
+  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="p-6 flex flex-col h-full">
+      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <nav class="mt-6 space-y-2">
+        <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
+        <a href="/#about" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
+        <a href="/#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Services</a>
+        <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Author</a>
+        <a href="/blog.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Blog</a>
+        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
+      </nav>
+
+      <a
+        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
+        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
+        target="_blank" rel="noopener noreferrer"
+      >Book via Headway</a>
+    </div>
+  </div>
 
   <main class="py-14 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,6 +133,32 @@
   <footer class="bg-[var(--color-light-bg)] text-center py-8">
     <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
   </footer>
+
+  <script>
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+
+    const toggleNav = () => {
+      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav?.classList.toggle('translate-x-full');
+      mobileNavPanel?.classList.toggle('hidden');
+    };
+
+    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
+      hamburgerBtn.addEventListener('click', toggleNav);
+      closeMobileNavBtn.addEventListener('click', toggleNav);
+      mobileNavPanel.addEventListener('click', toggleNav);
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
+        });
+      });
+    }
+  </script>
 
   <script>
     function getSlug() {
