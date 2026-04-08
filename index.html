@@ -137,11 +137,23 @@
       </a>
     </nav>
 
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+
   </div>
 </header>
 
-  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden md:hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
+  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
     <div class="p-6 flex flex-col h-full">
       <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,9 +180,9 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero-bg min-h-[75vh] flex items-center">
-      <div class="max-w-6xl mx-auto px-6 text-center w-full">
-        <div class="flex items-center justify-center">
+    <section class="home-hero hero-bg min-h-[calc(100svh-84px)] sm:min-h-[75vh] flex items-start sm:items-center pt-6 pb-10 sm:py-0">
+      <div class="max-w-6xl mx-auto px-5 sm:px-6 text-center w-full flex flex-col">
+        <div class="hero-visual order-1 flex items-center justify-center">
           <div class="hero-logo-shell">
             <img
               src="/images/hero-logo-transparent-final.png"
@@ -182,22 +194,21 @@
           </div>
         </div>
 
-        <p class="mt-8 text-slate-600 max-w-2xl mx-auto">
-          Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded.
-        </p>
-
-        <!-- CTAs (FIX: equal height + perfectly aligned) -->
-        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+        <div class="hero-cta order-2 sm:order-3 mt-6 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
           <a
-            class="btn-primary inline-flex items-center justify-center min-h-[48px] px-8"
+            class="btn-primary inline-flex items-center justify-center min-h-[48px] px-8 w-full sm:w-auto"
             href="/#contact"
           >Book a Session</a>
 
           <a
-            class="btn-secondary inline-flex items-center justify-center min-h-[48px] px-8"
+            class="btn-secondary inline-flex items-center justify-center min-h-[48px] px-8 w-full sm:w-auto"
             href="/#services"
           >How I Can Help</a>
         </div>
+
+        <p class="hero-copy order-3 sm:order-2 mt-6 sm:mt-8 text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
+          Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded.
+        </p>
       </div>
     </section>
 
