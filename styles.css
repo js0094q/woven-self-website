@@ -278,6 +278,10 @@ footer {
 @media (max-width: 900px) {
   .nav { display: none; }
   .hamburger { display: inline-flex; }
+  .site-header {
+    background: #faf7f2;
+    backdrop-filter: none;
+  }
   .hero-home h1 { font-size: 2.6rem; }
   .page-hero h1 { font-size: 2rem; }
 }
@@ -307,12 +311,33 @@ footer {
   }
 
   .home-hero {
+    background: linear-gradient(180deg, #f9f4ed 0%, #f2ebe1 100%);
+    border-bottom: 1px solid rgba(46,67,65,0.1);
     padding-top: 0.9rem;
     padding-bottom: 1.4rem;
   }
 
   .home-hero .hero-logo-shell {
     width: min(100%, 540px);
+    background: #f7f0e7;
+    border: 1px solid rgba(46,67,65,0.12);
+    border-radius: 30px;
+    padding: 0.7rem;
+    box-shadow:
+      0 14px 30px rgba(31,42,40,0.08),
+      inset 0 1px 0 rgba(255,255,255,0.86);
+  }
+
+  .home-hero .hero-logo-shell::before {
+    display: none;
+  }
+
+  .home-hero .hero-logo {
+    mix-blend-mode: normal;
+    opacity: 1;
+    filter: saturate(0.96) contrast(1.02);
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .home-hero .hero-cta {
@@ -324,12 +349,20 @@ footer {
     margin-top: 0.9rem;
     max-width: 34ch;
     line-height: 1.55;
+    color: #46524f;
+  }
+
+  .home-hero .btn-secondary {
+    background: rgba(255,255,255,0.86);
+    border-color: rgba(46,67,65,0.22);
   }
 }
 
 @media (max-width: 430px) {
   .home-hero .hero-logo-shell {
     width: min(100%, 430px);
+    border-radius: 26px;
+    padding: 0.58rem;
   }
 
   .home-hero .hero-cta a {
