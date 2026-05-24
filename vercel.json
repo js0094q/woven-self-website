@@ -11,6 +11,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/unfolding", "destination": "/author.html" },
     { "source": "/blog/:slug", "destination": "/blog/post.html?slug=:slug" }
   ]
 }
