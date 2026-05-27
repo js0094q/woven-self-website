@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unfolding Origami Conference Table Tent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="export-toolbar" aria-label="Export controls">
+    <div>
+      <strong>Conference table tent</strong>
+      <span>6 in x 9 in, print-ready layout</span>
+    </div>
+    <button type="button" id="print-design">Print / Save PDF</button>
+    <button type="button" id="download-png">Export PNG</button>
+    <a href="unfolding-origami-table-tent.svg" download>Download SVG</a>
+  </div>
+
+  <main class="flyer" aria-label="Conference table tent for Unfolding Origami: A Memoir">
+    <section class="top-hook" data-layer="Emotional hook">
+      <p contenteditable="true">Some wounds don&rsquo;t bleed &mdash;<br>they fold you inward.</p>
+      <span contenteditable="true">Coming July 2026</span>
+    </section>
+
+    <section class="cover-section" data-layer="Book cover anchor">
+      <svg class="butterfly butterfly-one" viewBox="0 0 120 80" aria-hidden="true">
+        <path d="M60 38 C32 5 8 4 9 31 C10 57 36 58 58 43 Z" />
+        <path d="M62 38 C91 5 113 4 112 31 C111 57 85 58 64 43 Z" />
+        <path d="M58 45 C33 50 23 70 44 74 C58 76 61 58 60 47 Z" />
+        <path d="M64 45 C89 50 99 70 78 74 C64 76 61 58 62 47 Z" />
+      </svg>
+      <img
+        src="../book-cover-unfolding-origami/front-cover-concept-v7-title-author-allcaps-larger.png"
+        alt="Unfolding Origami: A Memoir book cover"
+        class="book-cover"
+      />
+      <svg class="butterfly butterfly-two" viewBox="0 0 120 80" aria-hidden="true">
+        <path d="M60 38 C32 5 8 4 9 31 C10 57 36 58 58 43 Z" />
+        <path d="M62 38 C91 5 113 4 112 31 C111 57 85 58 64 43 Z" />
+        <path d="M58 45 C33 50 23 70 44 74 C58 76 61 58 60 47 Z" />
+        <path d="M64 45 C89 50 99 70 78 74 C64 76 61 58 62 47 Z" />
+      </svg>
+    </section>
+
+    <section class="title-section" data-layer="Title and short description">
+      <h1 contenteditable="true">Unfolding Origami</h1>
+      <p class="subtitle" contenteditable="true">A Memoir</p>
+      <p class="author" contenteditable="true">Loren Galese, LPC, ACS</p>
+      <p class="description" contenteditable="true">
+        A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.
+      </p>
+    </section>
+
+    <section class="quote-section" data-layer="Sarah Edmondson endorsement">
+      <blockquote>
+        <p contenteditable="true">&ldquo;Some wounds don&rsquo;t bleed&mdash;they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.&rdquo;</p>
+        <footer contenteditable="true">&mdash; Sarah Edmondson, Podcast Host and Author of <em>A Little Bit Culty</em></footer>
+      </blockquote>
+    </section>
+
+    <section class="qr-section" data-layer="QR code call to action">
+      <div class="qr-copy">
+        <p contenteditable="true">Join the preorder &amp; launch list</p>
+        <small contenteditable="true">Scan for release updates, essays, and events.</small>
+        <span contenteditable="true">wovenself.com/author</span>
+      </div>
+      <img src="qr-wovenself-unfolding.svg" alt="QR code for wovenself.com/author" class="qr-code" />
+    </section>
+
+    <footer class="flyer-footer" data-layer="Footer">
+      <p contenteditable="true">wovenself.com &bull; loren@wovenself.com &bull; @quietalchemywloren</p>
+    </footer>
+  </main>
+
+  <script>
+    const printButton = document.getElementById('print-design');
+    const downloadButton = document.getElementById('download-png');
+    const flyer = document.querySelector('.flyer');
+
+    printButton?.addEventListener('click', () => window.print());
+
+    const px = (inches) => Math.round(inches * 300);
+
+    function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight) {
+      const words = text.split(/\s+/);
+      let line = '';
+      let cursorY = y;
+
+      words.forEach((word, index) => {
+        const test = line ? `${line} ${word}` : word;
+        if (ctx.measureText(test).width > maxWidth && line) {
+          ctx.fillText(line, x, cursorY);
+          line = word;
+          cursorY += lineHeight;
+        } else {
+          line = test;
+        }
+
+        if (index === words.length - 1 && line) {
+          ctx.fillText(line, x, cursorY);
+        }
+      });
+
+      return cursorY;
+    }
+
+    async function loadImage(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    downloadButton?.addEventListener('click', async () => {
+      if (!flyer) return;
+
+      downloadButton.disabled = true;
+      downloadButton.textContent = 'Exporting...';
+
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = px(6);
+        canvas.height = px(9);
+        const ctx = canvas.getContext('2d');
+
+        const cover = await loadImage('../book-cover-unfolding-origami/front-cover-concept-v7-title-author-allcaps-larger.png');
+        const qr = await loadImage('qr-wovenself-unfolding.svg');
+
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, '#07111f');
+        gradient.addColorStop(0.55, '#0d1828');
+        gradient.addColorStop(1, '#050d19');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = 'rgba(217,138,160,0.35)';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(px(0.18), px(0.18), px(5.64), px(8.64));
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#d98aa0';
+        ctx.font = `${px(0.25)}px Georgia, serif`;
+        ctx.letterSpacing = `${px(0.04)}px`;
+        ctx.fillText("SOME WOUNDS DON'T BLEED -", px(3), px(0.58));
+        ctx.fillText('THEY FOLD YOU INWARD.', px(3), px(0.9));
+
+        ctx.fillStyle = '#c9c0b6';
+        ctx.font = `${px(0.16)}px Georgia, serif`;
+        ctx.fillText('COMING JULY 2026', px(3), px(1.18));
+
+        const coverWidth = px(2.28);
+        const coverHeight = px(3.42);
+        const coverX = (canvas.width - coverWidth) / 2;
+        const coverY = px(1.34);
+        ctx.shadowColor = 'rgba(0,0,0,0.48)';
+        ctx.shadowBlur = px(0.16);
+        ctx.shadowOffsetY = px(0.16);
+        ctx.drawImage(cover, coverX, coverY, coverWidth, coverHeight);
+        ctx.shadowColor = 'transparent';
+
+        ctx.fillStyle = '#f3ede4';
+        ctx.font = `${px(0.34)}px Georgia, serif`;
+        ctx.fillText('UNFOLDING ORIGAMI', px(3), px(5.15));
+        ctx.fillStyle = '#c9c0b6';
+        ctx.font = `${px(0.15)}px Georgia, serif`;
+        ctx.fillText('A MEMOIR', px(3), px(5.4));
+        ctx.fillStyle = '#d98aa0';
+        ctx.font = `${px(0.125)}px Georgia, serif`;
+        ctx.fillText('LOREN GALESE, LPC, ACS', px(3), px(5.62));
+
+        ctx.fillStyle = 'rgba(243,237,228,0.9)';
+        ctx.font = `${px(0.13)}px Georgia, serif`;
+        drawWrappedText(ctx, 'A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.', px(3), px(5.9), px(4.75), px(0.18));
+
+        ctx.strokeStyle = 'rgba(217,138,160,0.55)';
+        ctx.beginPath();
+        ctx.moveTo(px(0.62), px(6.36));
+        ctx.lineTo(px(5.38), px(6.36));
+        ctx.stroke();
+
+        ctx.fillStyle = 'rgba(243,237,228,0.86)';
+        ctx.font = `italic ${px(0.095)}px Georgia, serif`;
+        const quoteBottom = drawWrappedText(
+          ctx,
+          "Some wounds don't bleed - they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.",
+          px(3),
+          px(6.62),
+          px(4.85),
+          px(0.13)
+        );
+
+        ctx.fillStyle = '#d98aa0';
+        ctx.font = `${px(0.095)}px Georgia, serif`;
+        ctx.fillText('- Sarah Edmondson, Podcast Host and Author of A Little Bit Culty', px(3), quoteBottom + px(0.2));
+
+        ctx.strokeStyle = 'rgba(217,138,160,0.55)';
+        ctx.strokeRect(px(0.5), px(7.25), px(5), px(1.25));
+        ctx.drawImage(qr, px(4.02), px(7.31), px(1.12), px(1.12));
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#f3ede4';
+        ctx.font = `${px(0.19)}px Georgia, serif`;
+        ctx.fillText('Join the preorder', px(0.72), px(7.65));
+        ctx.fillText('& launch list', px(0.72), px(7.88));
+        ctx.fillStyle = '#d98aa0';
+        ctx.font = `${px(0.105)}px Avenir Next, Arial, sans-serif`;
+        ctx.fillText('wovenself.com/author', px(0.72), px(8.1));
+
+        ctx.strokeStyle = 'rgba(243,237,228,0.26)';
+        ctx.beginPath();
+        ctx.moveTo(px(0.52), px(8.58));
+        ctx.lineTo(px(5.48), px(8.58));
+        ctx.stroke();
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#c9c0b6';
+        ctx.font = `${px(0.078)}px Avenir Next, Arial, sans-serif`;
+        ctx.fillText('wovenself.com  •  loren@wovenself.com  •  @quietalchemywloren', px(3), px(8.76));
+
+        const link = document.createElement('a');
+        link.download = 'unfolding-origami-conference-table-tent.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      } catch (error) {
+        alert('PNG export could not run in this browser. Use Print / Save PDF, or open through a local server and try again.');
+      } finally {
+        downloadButton.disabled = false;
+        downloadButton.textContent = 'Export PNG';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://formspree.io https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'; form-action https://formspree.io">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://formspree.io https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'">
 
   <title>Unfolding Origami: A Memoir | Loren Galese Author</title>
   <meta name="description" content="Unfolding Origami is Loren Galese's forthcoming trauma memoir about coercive control, identity, healing, and the nonlinear journey back to self-trust. Coming July 2026." />
@@ -201,13 +201,15 @@
         </div>
 
         <div class="launch-form-card">
-          <form id="launch-form" class="launch-form" method="POST" action="https://formspree.io/f/myzndadj">
+          <form id="launch-form" class="launch-form" method="POST" action="/api/forms">
+            <input type="hidden" name="form_type" value="memoir_launch" />
             <label for="launch-first-name">First name</label>
             <input id="launch-first-name" name="first_name" type="text" autocomplete="given-name" required />
 
             <label for="launch-email">Email</label>
             <input id="launch-email" name="email" type="email" autocomplete="email" required />
 
+            <input type="text" name="website" autocomplete="off" class="hp-field" tabindex="-1" aria-hidden="true" />
             <input type="hidden" name="_subject" value="New Unfolding Origami launch list signup" />
             <button id="launch-submit" class="btn-primary" type="submit">Notify Me</button>
             <p class="form-note">No clinical information should be submitted through this form.</p>
@@ -297,69 +299,7 @@
     </div>
   </footer>
 
-  <script>
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-
-    const toggleNav = () => {
-      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav?.classList.toggle('translate-x-full');
-      mobileNavPanel?.classList.toggle('hidden');
-    };
-
-    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
-      hamburgerBtn.addEventListener('click', toggleNav);
-      closeMobileNavBtn.addEventListener('click', toggleNav);
-      mobileNavPanel.addEventListener('click', toggleNav);
-
-      mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
-        });
-      });
-    }
-
-    const launchForm = document.getElementById('launch-form');
-    const launchSubmit = document.getElementById('launch-submit');
-    const launchSuccess = document.getElementById('launch-success');
-    const launchError = document.getElementById('launch-error');
-
-    if (launchForm && launchSubmit && launchSuccess && launchError) {
-      launchForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        if (!launchForm.checkValidity()) {
-          launchForm.reportValidity();
-          return;
-        }
-
-        launchSubmit.disabled = true;
-        launchSubmit.textContent = 'Sending...';
-        launchError.classList.add('hidden');
-
-        try {
-          const formData = new FormData(launchForm);
-          const response = await fetch(launchForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: { Accept: 'application/json' }
-          });
-
-          if (!response.ok) throw new Error('Launch list signup failed');
-
-          launchForm.classList.add('hidden');
-          launchSuccess.classList.remove('hidden');
-        } catch (error) {
-          launchSubmit.disabled = false;
-          launchSubmit.textContent = 'Notify Me';
-          launchError.classList.remove('hidden');
-        }
-      });
-    }
-  </script>
+  <script defer src="/scripts/author.js"></script>
 
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };

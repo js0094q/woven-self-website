@@ -1,0 +1,26 @@
+{
+  "name": "The Woven Self",
+  "short_name": "WovenSelf",
+  "description": "The Woven Self — Trauma-informed therapy and memoir platform by Loren Galese, LPC.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#F5F3EF",
+  "theme_color": "#F5F3EF",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

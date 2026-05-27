@@ -3,106 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://formspree.io https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'; form-action https://formspree.io">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="author" content="Loren Galese" />
+  <meta name="theme-color" content="#F5F3EF" />
+  <meta name="format-detection" content="telephone=no" />
 
-  <title>Trauma-Informed Therapy in New Jersey | EMDR + IFS | The Woven Self</title>
-  <meta name="description" content="Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded." />
-  <meta name="robots" content="index,follow" />
+  <title>Trauma Therapy &amp; Writing by Loren Galese | The Woven Self NJ</title>
+  <meta
+    name="description"
+    content="Trauma-informed therapy, EMDR, IFS, and reflective writing by Loren Galese in New Jersey. Explore healing, nervous system recovery, relationships, and the memoir Unfolding Origami."
+  />
   <link rel="canonical" href="https://wovenself.com/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Trauma-Informed Therapy in New Jersey | The Woven Self" />
-  <meta property="og:description" content="Children, adults, and couples. EMDR, IFS, Gottman, EFT. Telehealth statewide." />
-  <meta property="og:image" content="https://wovenself.com/images/logo.png" />
-  <meta property="og:image:alt" content="The Woven Self logo" />
-  <meta property="og:url" content="https://wovenself.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Trauma-Informed Therapy in New Jersey | The Woven Self" />
-  <meta name="twitter:description" content="Supportive trauma-informed therapy in New Jersey for adolescents, adults, and couples." />
-  <meta name="twitter:image" content="https://wovenself.com/images/logo.png" />
+  <meta property="og:site_name" content="The Woven Self" />
+  <meta property="og:image" content="https://wovenself.com/images/social-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Woven Self by Loren Galese" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@quietalchemywloren" />
+  <meta name="twitter:creator" content="@quietalchemywloren" />
+
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="stylesheet" href="/styles/tailwind.css" />
   <link rel="stylesheet" href="/styles.css" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧵</text></svg>">
-
-  <style>
-    .hero-bg {
-      background-image:
-        radial-gradient(circle at 20% 15%, rgba(60,84,82,0.10), transparent 40%),
-        radial-gradient(circle at 80% 35%, rgba(244,162,97,0.16), transparent 45%),
-        radial-gradient(circle at 35% 85%, rgba(60,84,82,0.08), transparent 45%);
-      background-color: var(--color-hero-bg);
-    }
-  </style>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script defer src="/scripts/analytics.js"></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
-        "@id": "https://wovenself.com/#organization",
+        "@type": "Organization",
         "name": "The Woven Self Therapeutic Services, LLC",
-        "url": "https://wovenself.com/",
-        "description": "Trauma-informed therapy in New Jersey for adolescents, adults, and couples, including EMDR, IFS, and couples therapy support.",
-        "image": "https://wovenself.com/images/logo.png",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "NJ",
-          "addressCountry": "US"
-        },
-        "areaServed": {
-          "@type": "State",
-          "name": "New Jersey"
+        "url": "https://wovenself.com",
+        "logo": "https://wovenself.com/images/logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Loren Galese"
         },
         "sameAs": [
-          "https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806",
           "https://www.instagram.com/lorengaleseauthor/",
           "https://www.instagram.com/thewovenselftherapeutic/"
-        ],
-        "knowsAbout": [
-          "Trauma therapy",
-          "EMDR",
-          "Internal Family Systems (IFS)",
-          "Couples therapy",
-          "Nervous system regulation"
-        ],
-        "serviceType": [
-          "Individual Therapy",
-          "Couples Therapy",
-          "Trauma Therapy"
-        ],
-        "availableLanguage": [
-          "English"
         ]
       },
       {
         "@type": "WebSite",
-        "@id": "https://wovenself.com/#website",
         "url": "https://wovenself.com/",
         "name": "The Woven Self",
         "inLanguage": "en-US",
         "publisher": {
-          "@id": "https://wovenself.com/#organization"
+          "@type": "Organization",
+          "name": "The Woven Self Therapeutic Services, LLC",
+          "url": "https://wovenself.com"
         }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://wovenself.com/#webpage",
-        "url": "https://wovenself.com/",
-        "name": "Trauma-Informed Therapy in New Jersey | EMDR + IFS | The Woven Self",
-        "isPartOf": {
-          "@id": "https://wovenself.com/#website"
-        },
-        "about": {
-          "@id": "https://wovenself.com/#organization"
-        },
-        "inLanguage": "en-US"
       }
     ]
   }
@@ -110,53 +72,59 @@
 </head>
 
 <body class="antialiased">
-<header class="site-header">
-  <div class="site-container header-inner">
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a href="/" class="brand" aria-label="The Woven Self">
+        <img
+          src="/images/logo.png"
+          alt="The Woven Self logo"
+          class="brand-logo"
+          loading="eager"
+          decoding="async"
+        />
+      </a>
 
-   <!-- Brand -->
-<a href="/" class="brand">
-  <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
-</a>
-
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about.html" class="nav-link">About</a>
-      <a href="/#services" class="nav-link">Therapy</a>
-      <a href="/author.html" class="nav-link">Author</a>
-      <a href="/blog.html" class="nav-link">Blog</a>
-      <a href="/#contact" class="nav-link">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/about.html#services" class="nav-link">Therapy</a>
+        <a href="/author.html" class="nav-link">Author</a>
+        <a href="/unfolding-origami" class="nav-link">Memoir</a>
+        <a href="/speaking" class="nav-link">Speaking</a>
+        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </nav>
 
       <a
-        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#launch"
         class="btn-primary header-book"
+        data-track-action="memoir_launch_click"
       >
-        Book via Headway
+        Join the Memoir Launch List
       </a>
-    </nav>
 
-    <button
-      class="hamburger"
-      type="button"
-      aria-label="Open menu"
-      aria-controls="mobile-nav"
-      aria-expanded="false"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
-      </svg>
-    </button>
-
-  </div>
-</header>
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mobile-nav"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
 
   <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
+  <div
+    id="mobile-nav"
+    class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out"
+  >
     <div class="p-6 flex flex-col h-full">
       <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
@@ -164,355 +132,189 @@
       <nav class="mt-6 space-y-2">
         <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
         <a href="/about.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
-        <a href="/#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Therapy</a>
+        <a href="/about.html#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Therapy</a>
         <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Author</a>
-        <a href="/blog.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Blog</a>
+        <a href="/unfolding-origami" class="block py-2 text-lg hover:text-[var(--color-primary)]">Memoir</a>
+        <a href="/speaking" class="block py-2 text-lg hover:text-[var(--color-primary)]">Speaking</a>
+        <a href="/blog" class="block py-2 text-lg hover:text-[var(--color-primary)]">Blog</a>
         <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
       </nav>
-
       <a
-        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
-        target="_blank" rel="noopener noreferrer"
-      >Book via Headway</a>
+        href="#launch"
+        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold"
+        data-track-action="memoir_launch_click"
+      >
+        Join the Memoir Launch List
+      </a>
     </div>
   </div>
 
   <main>
-
-    <!-- HERO -->
-    <section class="home-hero hero-bg min-h-[calc(100svh-84px)] sm:min-h-[75vh] flex items-start sm:items-center pt-6 pb-10 sm:py-0">
-      <div class="max-w-6xl mx-auto px-5 sm:px-6 text-center w-full flex flex-col">
-        <h1 class="sr-only">The Woven Self Trauma-Informed Therapy in New Jersey</h1>
-        <div class="hero-visual order-1 flex items-center justify-center">
-          <div class="hero-logo-shell">
-            <img
-              src="/images/hero-logo-transparent-final.png"
-              alt="The Woven Self — Every part has a voice. Every thread tells a story."
-              class="hero-logo"
-              loading="eager"
-              decoding="async"
-            />
+    <section class="hero-home home-hero">
+      <div class="site-container hero-home-grid">
+        <div>
+          <p class="eyebrow">The Woven Self, NJ</p>
+          <h1>Trauma Therapy, Healing, and Reflective Writing</h1>
+          <p>
+            Trauma-informed therapy, EMDR, IFS, and reflective writing by Loren Galese.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="/about.html#services" class="btn-primary" data-track-action="booking_click">Book a Consultation</a>
+            <a href="/unfolding-origami" class="btn-secondary" data-track-action="memoir_launch_click">Read About the Memoir</a>
           </div>
         </div>
-
-        <div class="hero-cta order-2 sm:order-3 mt-6 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
-          <a
-            class="btn-primary inline-flex items-center justify-center min-h-[48px] px-8 w-full sm:w-auto"
-            href="/#contact"
-          >Book a Session</a>
-
-          <a
-            class="btn-secondary inline-flex items-center justify-center min-h-[48px] px-8 w-full sm:w-auto"
-            href="/#services"
-          >Therapy Approach</a>
-        </div>
-
-        <p class="hero-copy order-3 sm:order-2 mt-6 sm:mt-8 text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
-          Supportive, trauma-informed therapy for adolescents, adults, and couples across New Jersey through telehealth. Our work centers on trauma recovery, helping your nervous system feel safer, your relationships feel more secure, and your sense of self feel more grounded.
-        </p>
+        <figure>
+          <img
+            src="/images/hero-logo-transparent-final.png"
+            alt="The Woven Self brand symbol"
+            class="hero-logo"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
       </div>
     </section>
 
-    <section class="py-16 sm:py-20">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="card bg-white/70 rounded-3xl p-8 sm:p-10">
-
-          <h2 class="text-2xl sm:text-3xl font-serif font-semibold leading-snug text-[var(--color-text)]">
-            I may be the right therapist for you if…
-          </h2>
-
-          <p class="mt-4 text-base sm:text-lg leading-relaxed">
-            You’ve spent years talking about it, whether it’s the relationship, the incident, the abuse,
-            but your body and brain never quite moved past it.
-          </p>
-
-          <p class="mt-6 font-semibold">You might recognize yourself in some of the following:</p>
-          <ul class="mt-4 space-y-3 list-disc pl-6">
-            <li>Do you find yourself emotionally reactive even when you logically know you’re safe or “should be fine”?</li>
-            <li>Does your nervous system feel stuck on high alert, hypervigilant, shut down, or swinging between the two?</li>
-            <li>Do you notice repeating relationship patterns that don’t make sense to you, even though you’re self-aware?</li>
-            <li>Do you carry shame or self-criticism for not being “over it yet”?</li>
-            <li>Do your emotions feel intense or overwhelming, making it hard to focus on daily tasks?</li>
-            <li>Are your sleep patterns disrupted, trouble falling asleep, staying asleep, or frequent nightmares?</li>
-            <li>Do intrusive or repetitive thoughts about past events show up when you least expect them?</li>
-            <li>Does your body feel tense, braced, or unable to fully relax, even during calm moments?</li>
-          </ul>
-
-          <p class="mt-6 text-base sm:text-lg leading-relaxed">
-            If you’re nodding along, this isn’t a personal failure, it’s how trauma lives in the nervous system.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- THERAPY -->
-    <section id="services" class="py-16 sm:py-20 bg-[var(--color-light-bg)]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-3xl sm:text-4xl font-serif font-semibold">Therapy</h2>
-          <p class="mt-3 text-base sm:text-lg max-w-3xl mx-auto">
-            Trauma-informed care for adolescents, adults, and couples, with a steady, collaborative pace.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
-            <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Individual Therapy</h3>
-            <p class="mt-4 leading-relaxed">
-              Support for trauma, anxiety, life transitions, and relationship patterns.
+    <section class="page-content" aria-label="Service and author pathways">
+      <div class="site-container">
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="card">
+            <h2>Looking for Therapy?</h2>
+            <p class="mt-4">
+              If safety, regulation, and emotional recovery are your priorities,
+              our trauma-informed practice offers a steady pace and clinically informed care.
             </p>
-            <div class="mt-auto pt-6">
-              <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
-                 href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-                 target="_blank" rel="noopener noreferrer">Book via Headway →</a>
-            </div>
-          </div>
-
-          <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
-            <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Couples Therapy</h3>
-            <p class="mt-4 leading-relaxed">
-              Research-informed couples therapy focused on strengthening connection, improving communication, and repairing ruptures.
-            </p>
-            <div class="mt-auto pt-6">
-              <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
-                 href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-                 target="_blank" rel="noopener noreferrer">Book via Headway →</a>
-            </div>
-          </div>
-
-          <div class="card bg-white/70 rounded-3xl p-8 text-center flex flex-col h-full">
-            <h3 class="text-2xl font-serif font-semibold text-[var(--color-primary)]">Trauma &amp; Nervous System</h3>
-            <p class="mt-4 leading-relaxed">
-              Evidence-informed trauma therapy focused on nervous system regulation, emotional safety, and recovery.
-            </p>
-            <div class="mt-auto pt-6">
-              <a class="btn-outline inline-flex items-center justify-center px-6 py-2 rounded-full font-semibold"
-                 href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-                 target="_blank" rel="noopener noreferrer">Book via Headway →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-12">
-          <h3 class="text-2xl sm:text-3xl font-serif font-semibold mb-6">
-            Areas I work with regularly include:
-          </h3>
-
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3 text-base sm:text-lg leading-relaxed list-disc pl-6">
-            <li>Sexual assault and healing</li>
-            <li>Domestic violence and recovery</li>
-            <li>Psychological and emotional abuse</li>
-            <li>Narcissistic abuse</li>
-            <li>Adverse childhood experiences and generational trauma</li>
-            <li>Coercive relationships, groups, or workplaces</li>
-            <li>Anxiety in teens and young adults</li>
-            <li>Life transitions</li>
-            <li>Couples counseling</li>
-            <li>Identity, self-esteem, and self-worth concerns</li>
-            <li>LGBTQIA+</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="about" class="py-16 sm:py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-serif font-semibold">Meet Loren Galese</h2>
-            <div class="mt-6 text-base sm:text-lg space-y-4 leading-relaxed">
-              <p>
-                Loren is the owner of Woven Self Therapeutic Services, LLC. She is a Licensed Professional Counselor in New Jersey who has been practicing since 2014.
-              </p>
-              <p>
-                Loren began her academic path in art education, drawn to creativity, expression, and emotion. After taking an introductory psychology course, she found herself pulled toward understanding the brain, behavior, and the reasons people feel, protect, adapt, and heal.
-              </p>
-              <p>
-                Anxiety has been part of Loren's own life since childhood, which informs her steady, compassionate understanding of how overwhelming it can feel when the nervous system is constantly on alert.
-              </p>
-              <p>
-                She works with individuals, couples, and families navigating anxiety, trauma, relationship challenges, life transitions, stress, family issues, boundaries, and empowerment.
-              </p>
-              <p>
-                Loren is trained in Eye Movement Desensitization and Reprocessing (EMDR) and Internal Family Systems (IFS). For couples work, she incorporates the Gottman Method and Emotionally Focused Therapy (EFT).
-              </p>
-              <p>
-                Her approach is person-centered and collaborative. You set the pace, and the work moves in a way that feels safe, manageable, and grounded in trust.
-              </p>
-            </div>
-
-            <div class="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Psychology Today →</a>
-              <a href="/#contact" class="btn-outline px-6 py-3 rounded-full font-semibold text-center">Contact Loren →</a>
-            </div>
-
-            <div class="mt-10 border-t border-[var(--color-border)] pt-6">
-              <p class="text-sm font-semibold uppercase text-[var(--color-primary)]">Author Note</p>
-              <p class="mt-3 leading-relaxed">
-                Loren is also the author of the forthcoming memoir <em>Unfolding Origami</em>.
-              </p>
-              <a href="/author.html" class="mt-3 inline-flex underline underline-offset-4 font-semibold">Learn more about Loren's upcoming memoir →</a>
-            </div>
-          </div>
-
-          <div class="lg:sticky lg:top-28">
-            <img src="/images/loren-author-smiling-outdoor.jpeg" alt="Smiling outdoor portrait of Loren Galese" class="rounded-3xl card w-full h-auto object-cover" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="py-16 sm:py-20 bg-[var(--color-light-bg)]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-3xl sm:text-4xl font-serif font-semibold">Get in Touch</h2>
-          <p class="mt-3 text-base sm:text-lg max-w-2xl mx-auto">
-            For booking, please use the secure Headway link. For general questions, you can reach out here.
-          </p>
-        </div>
-
-        <div class="max-w-xl mx-auto">
-          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-            <a class="btn-primary px-6 py-3 rounded-full font-semibold text-center shadow-md"
-               href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-               target="_blank" rel="noopener noreferrer">Book via Headway</a>
-
-            <a class="btn-outline px-6 py-3 rounded-full font-semibold text-center shadow-md"
-               href="https://www.psychologytoday.com/us/therapists/loren-a-galese-little-falls-nj/1541806"
-               target="_blank" rel="noopener noreferrer">Psychology Today</a>
-          </div>
-
-          <div class="text-center text-sm mb-8">
-            <a href="https://www.instagram.com/thewovenselftherapeutic/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Therapy)</a>
-            <span class="mx-2">•</span>
-            <a href="https://www.instagram.com/lorengaleseauthor/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Instagram (Author)</a>
-          </div>
-
-          <div id="contact-form-container" class="card bg-white/70 rounded-3xl p-8">
-            <form
-              class="contact-form space-y-4"
-              method="POST"
-              action="https://formspree.io/f/myzndadj"
+            <a
+              class="inline-flex mt-5 underline underline-offset-4 font-semibold"
+              href="/about.html#services"
+              data-track-action="booking_click"
             >
-              <input id="name" name="name" type="text" required
-                class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
-                placeholder="Your name" />
-              <input id="email" name="email" type="email" required
-                class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
-                placeholder="Email" />
-              <input id="phone" name="phone" type="tel"
-                class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
-                placeholder="Phone (optional)" />
-              <textarea id="message" name="message" required rows="4"
-                class="w-full px-4 py-3 rounded-xl border border-[var(--color-border)] bg-white"
-                placeholder="How can I help?"></textarea>
-              <input type="hidden" name="_subject" value="New inquiry from The Woven Self website">
+              Book a Consultation
+            </a>
+          </article>
 
-              <button id="contact-submit" class="btn-primary w-full px-6 py-3.5 rounded-full font-semibold shadow-md" type="submit">
-                Send Message
-              </button>
-
-              <p class="text-center text-sm pt-2">
-                For privacy, please avoid sharing protected health information in this form.
-              </p>
-            </form>
-          </div>
-
-          <div id="success-message" class="hidden mt-6 text-center bg-green-50 border border-green-200 text-green-900 px-4 py-3 rounded-2xl">
-            <p class="font-semibold">Thank you.</p>
-            <p>Your message was sent successfully. For scheduling, continue using Headway.</p>
-          </div>
-          <div id="form-error-message" class="hidden mt-6 text-center bg-red-50 border border-red-200 text-red-900 px-4 py-3 rounded-2xl">
-            <p class="font-semibold">The message did not go through.</p>
-            <p>Please check the form and try again.</p>
-          </div>
+          <article class="card">
+            <h2>Exploring Loren’s Writing?</h2>
+            <p class="mt-4">
+              Loren’s memoir and essays connect lived experience, clinical language,
+              and literary care around emotional repair.
+            </p>
+            <a
+              class="inline-flex mt-5 underline underline-offset-4 font-semibold"
+              href="/unfolding-origami"
+              data-track-action="memoir_launch_click"
+            >
+              Read About the Memoir
+            </a>
+          </article>
         </div>
       </div>
     </section>
 
+    <section id="launch" class="launch-section" aria-labelledby="home-launch-heading">
+      <div class="site-container launch-grid">
+        <div>
+          <p class="eyebrow">Join the Memoir Launch List</p>
+          <h2 id="home-launch-heading">Join the Memoir Launch List</h2>
+          <p>
+            Receive preorder updates, readings, and launch reflections from Loren.
+          </p>
+          <div class="mt-6 lead-magnet-grid">
+            <a href="/unfolding-origami#lead-magnets" class="btn-secondary" data-track-action="lead_magnet_click" data-lead-magnet="first_chapter_pdf">First Chapter PDF</a>
+            <a href="/unfolding-origami#lead-magnets" class="btn-secondary" data-track-action="lead_magnet_click" data-lead-magnet="emotional_threads_guide">Emotional Threads Guide</a>
+            <a href="/unfolding-origami#lead-magnets" class="btn-secondary" data-track-action="lead_magnet_click" data-lead-magnet="healing_reflection_worksheet">Healing Reflection Worksheet</a>
+            <a href="/unfolding-origami#lead-magnets" class="btn-secondary" data-track-action="lead_magnet_click" data-lead-magnet="private_excerpt">Private Excerpt</a>
+          </div>
+        </div>
+
+        <div class="launch-form-card">
+          <form
+            id="home-launch-form"
+            class="launch-form"
+            method="POST"
+            action="/api/forms"
+            data-api-form
+            data-form="memoir_launch"
+            data-form-success="Thank you for joining the Memoir Launch List."
+          >
+            <input type="hidden" name="form_type" value="memoir_launch" />
+            <label for="home-first-name" class="sr-only">First name</label>
+            <input id="home-first-name" name="first_name" type="text" autocomplete="given-name" placeholder="First name" />
+            <label for="home-email" class="sr-only">Email</label>
+            <input id="home-email" name="email" type="email" autocomplete="email" placeholder="Email" required />
+            <input type="text" name="website" autocomplete="off" class="hp-field" tabindex="-1" aria-hidden="true" />
+            <input type="hidden" name="cf-turnstile-token" />
+            <div data-turnstile data-turnstile-sitekey="1x00000000000000000000AA" aria-label="Cloudflare Turnstile"></div>
+            <button class="btn-primary" type="submit">Join the Memoir Launch List</button>
+            <p class="form-state success hidden" data-form-success></p>
+            <p class="form-state error hidden" data-form-error></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="site-container text-center">
+        <h2 class="text-3xl sm:text-4xl font-serif font-semibold">Writing and recovery that support each other</h2>
+        <p class="mt-4 max-w-3xl mx-auto leading-relaxed text-slate-700">
+          This site supports long-form writing and therapeutic work rooted in nervous-system safety, clinical grounding, and reflective language.
+        </p>
+        <a href="/blog" class="btn-outline inline-block mt-6" data-track-action="blog_cta_click">Read the Blog</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="py-8 text-center">
+  <a
+    class="sticky-mobile-cta"
+    href="/unfolding-origami#launch"
+    aria-label="Join the Memoir Launch List"
+  >
+    Join the Memoir Launch List
+  </a>
+
+  <div id="exit-intent-modal" class="exit-intent hidden" aria-hidden="true" role="dialog" aria-label="Join the memoir launch list">
+    <div class="exit-intent-inner">
+      <button type="button" class="exit-intent-close" data-exit-intent-close aria-label="Close">&times;</button>
+      <h2 class="font-serif text-2xl">Before you leave</h2>
+      <p class="mt-2">A short launch list keeps readers close to reflections, readings, and preorder updates.</p>
+      <form
+        action="/api/forms"
+        method="POST"
+        data-api-form
+        data-form="memoir_exit"
+        class="mt-4 space-y-3"
+        data-form-success="You’re on the Memoir Launch List."
+      >
+        <input type="hidden" name="form_type" value="memoir_exit" />
+        <input type="text" name="first_name" placeholder="First name" class="w-full" />
+        <input type="email" name="email" placeholder="Email" required class="w-full" />
+        <input type="text" name="website" autocomplete="off" class="hp-field" tabindex="-1" aria-hidden="true" />
+        <input type="hidden" name="cf-turnstile-token" />
+        <div data-turnstile data-turnstile-sitekey="1x00000000000000000000AA" aria-label="Cloudflare Turnstile"></div>
+        <button class="btn-primary w-full" type="submit">Join the Memoir Launch List</button>
+        <p class="form-state success hidden" data-form-success></p>
+        <p class="form-state error hidden" data-form-error></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
-      <p class="mt-1 text-sm">Trauma-informed therapy in New Jersey, EMDR + IFS, couples therapy (Gottman + EFT), telehealth statewide</p>
+      <p>© 2026 The Woven Self Therapeutic Services, LLC</p>
+      <p class="mt-1">New Jersey Licensed Professional Counselor</p>
+      <div class="mt-3 text-sm flex flex-wrap justify-center gap-3">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/accessibility-statement.html">Accessibility</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/therapy-disclaimer.html">Therapy Disclaimer</a>
+        <a href="https://www.instagram.com/thewovenselftherapeutic/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://substack.com/@quietalchemywloren" target="_blank" rel="noopener noreferrer">Substack</a>
+        <a href="/unfolding-origami#launch">Memoir Launch List</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-
-    const toggleNav = () => {
-      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav?.classList.toggle('translate-x-full');
-      mobileNavPanel?.classList.toggle('hidden');
-    };
-
-    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
-      hamburgerBtn.addEventListener('click', toggleNav);
-      closeMobileNavBtn.addEventListener('click', toggleNav);
-      mobileNavPanel.addEventListener('click', toggleNav);
-
-      mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
-        });
-      });
-    }
-
-    const contactForm = document.querySelector('.contact-form');
-    const formContainer = document.getElementById('contact-form-container');
-    const successMessage = document.getElementById('success-message');
-    const errorMessage = document.getElementById('form-error-message');
-    const submitButton = document.getElementById('contact-submit');
-
-    if (contactForm && successMessage && errorMessage && formContainer && submitButton) {
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const endpoint = contactForm.getAttribute('action') || '';
-        if (endpoint.includes('your-form-id')) {
-          errorMessage.classList.remove('hidden');
-          successMessage.classList.add('hidden');
-          return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-        errorMessage.classList.add('hidden');
-
-        try {
-          const formData = new FormData(contactForm);
-          const response = await fetch(endpoint, {
-            method: 'POST',
-            body: formData,
-            headers: { Accept: 'application/json' },
-          });
-
-          if (!response.ok) throw new Error('Form submission failed');
-
-          formContainer.classList.add('hidden');
-          successMessage.classList.remove('hidden');
-        } catch (error) {
-          errorMessage.classList.remove('hidden');
-          submitButton.disabled = false;
-          submitButton.textContent = 'Send Message';
-        }
-      });
-    }
-  </script>
-
-  <script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-  </script>
+  <script defer src="/scripts/site.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>

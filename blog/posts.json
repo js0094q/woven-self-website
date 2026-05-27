@@ -4,13 +4,35 @@
     "title": "The Parts We Carry",
     "date": "2026-02-13",
     "excerpt": "A gentle look at how protective parts form, and what changes when we stop fighting them.",
-    "tags": ["IFS", "trauma", "nervous system"]
+    "tags": ["IFS", "trauma", "nervous system", "emotional abuse"],
+    "word_count": 151,
+    "keywords": ["IFS", "trauma responses", "nervous system regulation", "emotional abuse", "self-protection"],
+    "cluster": "therapy",
+    "articleSection": "therapy",
+    "seo_topics": ["IFS", "attachment", "anxiety", "emotional abuse"],
+    "publish_week": "2026-W06",
+    "status": "published",
+    "intended_cluster_focus": "Therapy foundation",
+    "content_type": "blog_post",
+    "image": "https://wovenself.com/images/author/loren-blue-floral.jpeg",
+    "author_url": "https://wovenself.com/about"
   },
   {
     "slug": "what-healing-actually-looks-like",
     "title": "What Healing Actually Looks Like",
     "date": "2026-02-13",
     "excerpt": "Healing is not linear. It often looks like learning safety, one small moment at a time.",
-    "tags": ["trauma therapy", "EMDR", "New Jersey"]
+    "tags": ["trauma therapy", "EMDR", "New Jersey", "healing"],
+    "word_count": 126,
+    "keywords": ["memory fragmentation", "coercive control", "identity collapse", "body memory", "delayed recognition", "rebuilding selfhood", "EMDR", "IFS", "trauma therapy", "nervous system regulation", "attachment", "anxiety"],
+    "cluster": "memoir",
+    "articleSection": "memoir",
+    "seo_topics": ["coercive control", "memory fragmentation", "nervous system healing", "identity loss"],
+    "publish_week": "2026-W06",
+    "status": "published",
+    "intended_cluster_focus": "Memoir literary bridge",
+    "content_type": "blog_post",
+    "image": "https://wovenself.com/images/unfolding-origami-cover.jpg",
+    "author_url": "https://wovenself.com/about"
   }
 ]

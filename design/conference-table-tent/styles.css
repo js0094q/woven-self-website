@@ -1,0 +1,452 @@
+:root {
+  --navy: #07111f;
+  --navy-soft: #101d30;
+  --cream: #f3ede4;
+  --cream-muted: #c9c0b6;
+  --blush: #d98aa0;
+  --blush-deep: #ad6078;
+  --blue: #5f86a8;
+  --serif: "Cormorant Garamond", "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  --sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #141821;
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  place-items: start center;
+  gap: 18px;
+  padding: 22px;
+  color: var(--cream);
+  font-family: var(--sans);
+}
+
+.export-toolbar {
+  width: min(100%, 6in);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(243,237,228,0.14);
+  background: rgba(7,17,31,0.88);
+  color: var(--cream);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+}
+
+.export-toolbar div {
+  display: grid;
+  gap: 2px;
+}
+
+.export-toolbar strong,
+.export-toolbar span {
+  line-height: 1.25;
+}
+
+.export-toolbar strong {
+  font-size: 14px;
+}
+
+.export-toolbar span {
+  color: var(--cream-muted);
+  font-size: 12px;
+}
+
+.export-toolbar button,
+.export-toolbar a {
+  flex: 0 0 auto;
+  min-height: 38px;
+  border: 1px solid rgba(217,138,160,0.52);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.06);
+  color: var(--cream);
+  cursor: pointer;
+  font: 600 13px var(--sans);
+  text-decoration: none;
+}
+
+.export-toolbar button:hover,
+.export-toolbar a:hover {
+  background: rgba(217,138,160,0.16);
+}
+
+.export-toolbar button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.flyer {
+  position: relative;
+  width: 6in;
+  height: 9in;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 0.055in;
+  padding: 0.4in 0.5in 0.34in;
+  background:
+    radial-gradient(circle at 62% 28%, rgba(95,134,168,0.28), transparent 30%),
+    radial-gradient(circle at 18% 18%, rgba(217,138,160,0.12), transparent 28%),
+    linear-gradient(145deg, #07111f 0%, #0d1828 56%, #050d19 100%);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.5);
+  isolation: isolate;
+}
+
+.flyer::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.13;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 3px 3px, 4px 4px;
+  mix-blend-mode: overlay;
+  z-index: -1;
+}
+
+.flyer::after {
+  position: absolute;
+  inset: 0.24in;
+  content: "";
+  border: 1px solid rgba(217,138,160,0.18);
+  pointer-events: none;
+}
+
+[contenteditable="true"] {
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+}
+
+[contenteditable="true"]:focus {
+  outline-color: rgba(217,138,160,0.72);
+}
+
+.top-hook {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.top-hook p {
+  margin: 0;
+  color: var(--blush);
+  font-family: var(--serif);
+  font-size: 0.215in;
+  line-height: 1.18;
+  letter-spacing: 0.04in;
+}
+
+.top-hook span {
+  display: inline-block;
+  margin-top: 0.055in;
+  color: var(--cream-muted);
+  font-family: var(--serif);
+  font-size: 0.155in;
+  letter-spacing: 0.035in;
+}
+
+.cover-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 3.46in;
+  padding-top: 0.02in;
+}
+
+.book-cover {
+  width: 2.28in;
+  height: 3.42in;
+  object-fit: cover;
+  border-radius: 0.025in;
+  box-shadow:
+    0 0.22in 0.46in rgba(0,0,0,0.42),
+    0 0.04in 0.14in rgba(0,0,0,0.35);
+}
+
+.butterfly {
+  position: absolute;
+  width: 0.54in;
+  fill: var(--blush);
+  stroke: #f0b0bd;
+  stroke-width: 1.4;
+  opacity: 0.72;
+  filter: drop-shadow(0 0.05in 0.08in rgba(0,0,0,0.3));
+}
+
+.butterfly-one {
+  top: 0.46in;
+  right: 0.46in;
+  transform: rotate(11deg);
+}
+
+.butterfly-two {
+  left: 0.36in;
+  bottom: 0.34in;
+  width: 0.43in;
+  transform: rotate(-12deg);
+  opacity: 0.58;
+}
+
+.title-section {
+  text-align: center;
+}
+
+.title-section h1 {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 0.34in;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.03in;
+  text-transform: uppercase;
+}
+
+.subtitle,
+.author,
+.description {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.04in;
+  color: var(--cream-muted);
+  font-family: var(--serif);
+  font-size: 0.145in;
+  letter-spacing: 0.055in;
+  text-transform: uppercase;
+}
+
+.author {
+  margin-top: 0.048in;
+  color: var(--blush);
+  font-family: var(--serif);
+  font-size: 0.12in;
+  letter-spacing: 0.03in;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 4.55in;
+  margin: 0.07in auto 0;
+  color: rgba(243,237,228,0.88);
+  font-family: var(--serif);
+  font-size: 0.125in;
+  line-height: 1.32;
+}
+
+.quote-section {
+  max-width: 4.85in;
+  margin: 0.02in auto 0;
+  padding: 0.11in 0.12in 0;
+  border-top: 1px solid rgba(217,138,160,0.5);
+}
+
+.quote-section blockquote,
+.quote-section p {
+  margin: 0;
+}
+
+.quote-section p {
+  color: rgba(243,237,228,0.86);
+  font-family: var(--serif);
+  font-size: 0.095in;
+  font-style: italic;
+  line-height: 1.34;
+  text-align: center;
+}
+
+.quote-section footer {
+  margin-top: 0.06in;
+  color: var(--blush);
+  font-family: var(--serif);
+  font-size: 0.088in;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.quote-section span {
+  color: var(--cream-muted);
+}
+
+.qr-section {
+  align-self: end;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.24in;
+  align-items: center;
+  width: 4.9in;
+  min-height: 1.42in;
+  margin: 0.11in auto 0;
+  padding: 0.18in 0.32in 0.18in 0.3in;
+  border: 1px solid rgba(217,138,160,0.44);
+  background: rgba(255,255,255,0.045);
+}
+
+.qr-copy p {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 0.2in;
+  line-height: 1.18;
+}
+
+.qr-copy small {
+  display: block;
+  max-width: 2.85in;
+  margin-top: 0.06in;
+  color: rgba(243,237,228,0.78);
+  font-family: var(--serif);
+  font-size: 0.1in;
+  line-height: 1.35;
+}
+
+.qr-copy span {
+  display: block;
+  margin-top: 0.07in;
+  color: var(--blush);
+  font-size: 0.13in;
+  letter-spacing: 0.015in;
+}
+
+.qr-code {
+  width: 1.18in;
+  height: 1.18in;
+  padding: 0.045in;
+  background: #fff;
+}
+
+.flyer-footer {
+  margin-top: 0.03in;
+  padding-top: 0.1in;
+  border-top: 1px solid rgba(243,237,228,0.24);
+  color: rgba(243,237,228,0.72);
+  font-size: 0.076in;
+  letter-spacing: 0.012in;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.flyer-footer p {
+  margin: 0;
+}
+
+@page {
+  size: 6in 9in;
+  margin: 0;
+}
+
+@media print {
+  .export-toolbar {
+    display: none;
+  }
+
+  html,
+  body {
+    width: 6in;
+    height: 9in;
+    background: transparent;
+    padding: 0;
+  }
+
+  .flyer {
+    width: 6in;
+    height: 9in;
+    box-shadow: none;
+  }
+
+  .qr-code {
+    width: 1.18in;
+    height: 1.18in;
+  }
+
+  .qr-section {
+    min-height: 1.34in;
+    margin-top: 0.09in;
+    padding-top: 0.16in;
+    padding-bottom: 0.16in;
+  }
+
+  .flyer-footer {
+    gap: 0.05in;
+  }
+
+  .footer-row {
+    gap: 0.05in 0.08in;
+  }
+
+  .footer-contact {
+    grid-template-columns: 0.14in minmax(0, 1fr);
+    gap: 0.03in;
+    row-gap: 0.02in;
+  }
+
+  .footer-contact i {
+    width: 0.13in;
+    height: 0.13in;
+    font-size: 0.042in;
+  }
+
+  .footer-contact b {
+    font-size: 0.038in;
+    letter-spacing: 0.013in;
+  }
+
+  .footer-contact span {
+    font-size: 0.033in;
+    line-height: 1.16;
+  }
+
+  .tspa-logo {
+    width: 0.54in;
+    transform: none;
+    opacity: 0.9;
+  }
+
+  .footer-heading {
+    margin-bottom: -0.01in;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 14px;
+  }
+
+  .export-toolbar {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .export-toolbar div {
+    flex: 1 0 100%;
+  }
+
+  .export-toolbar button,
+  .export-toolbar a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .flyer {
+    zoom: 0.66;
+  }
+}
+
+@media (max-width: 340px) {
+  .flyer {
+    zoom: 0.53;
+  }
+}
