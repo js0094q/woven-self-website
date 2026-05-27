@@ -1,0 +1,182 @@
+{
+  "version": "1.0",
+  "planning_horizon_weeks": 4,
+  "weeks": [
+    {
+      "week": "2026-W21",
+      "theme": "Nervous system literacy for people living with stress",
+      "carousels": [
+        {
+          "title": "Nervous System Insights",
+          "topic": "Three signs your system is in overdrive and how to pause before spiraling.",
+          "status": "Planned",
+          "source": "Clinical frame: co-regulation",
+          "ctaText": "Draft caption",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        },
+        {
+          "title": "Trauma education",
+          "topic": "Polyvagal language map for first-response clients.",
+          "status": "Planned",
+          "source": "EMDR + IFS lens",
+          "ctaText": "Draft carousel notes",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "reels": [
+        {
+          "title": "Reading excerpt",
+          "topic": "Quick reflection from the memoir before emotional naming starts.",
+          "status": "Planned",
+          "ctaText": "Record reel draft",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "quotes": [
+        {
+          "title": "Anchor quote",
+          "topic": "A line on delayed recognition without alarmist language.",
+          "status": "Planned",
+          "ctaText": "Create quote graphic",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "substack": [
+        {
+          "title": "Identity",
+          "topic": "How identity fragments under coercive control and starts to reassemble.",
+          "status": "Draft this week",
+          "ctaText": "Open Substack draft",
+          "ctaUrl": "https://substack.com/@quietalchemywloren"
+        }
+      ]
+    },
+    {
+      "week": "2026-W22",
+      "theme": "Memory recovery and delayed recognition",
+      "carousels": [
+        {
+          "title": "Trauma education",
+          "topic": "When memory returns in fragments instead of headlines.",
+          "status": "Planned",
+          "ctaText": "Draft caption",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        },
+        {
+          "title": "Memoir excerpt",
+          "topic": "A short scene that shows emotional reality before labeling it.",
+          "status": "Planned",
+          "ctaText": "Draft carousel notes",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "reels": [
+        {
+          "title": "Writing process",
+          "topic": "How Loren translates clinical themes into memoir prose.",
+          "status": "Planned",
+          "ctaText": "Film reel draft",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "quotes": [
+        {
+          "title": "Reflection quote",
+          "topic": "A neutral, minimal visual for nervous-system recovery.",
+          "status": "Planned",
+          "ctaText": "Create quote graphic",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "substack": [
+        {
+          "title": "Memory",
+          "topic": "Reading memory as body knowledge, not only cognition.",
+          "status": "Draft",
+          "ctaText": "Open Substack draft",
+          "ctaUrl": "https://substack.com/@quietalchemywloren"
+        }
+      ]
+    },
+    {
+      "week": "2026-W23",
+      "theme": "Practical regulation and repair",
+      "carousels": [
+        {
+          "title": "Nervous system insights",
+          "topic": "Micro-practices for regulation before social overwhelm.",
+          "status": "Planned",
+          "ctaText": "Draft caption",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "reels": [
+        {
+          "title": "Reflective prompt",
+          "topic": "A 30-second writing prompt for one-body check-in.",
+          "status": "Planned",
+          "ctaText": "Record reel draft",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "quotes": [
+        {
+          "title": "Minimal quote",
+          "topic": "A short, grounded quote on emotional regulation.",
+          "status": "Planned",
+          "ctaText": "Create quote graphic",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "substack": [
+        {
+          "title": "Emotional healing",
+          "topic": "Recovery after coercive control: not linear, but deeply practical.",
+          "status": "Draft",
+          "ctaText": "Open Substack draft",
+          "ctaUrl": "https://substack.com/@quietalchemywloren"
+        }
+      ]
+    },
+    {
+      "week": "2026-W24",
+      "theme": "Rebuilding identity after collapse",
+      "carousels": [
+        {
+          "title": "Trauma education",
+          "topic": "How parts can split and still stay connected over time.",
+          "status": "Planned",
+          "ctaText": "Draft caption",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "reels": [
+        {
+          "title": "Reflective prompt",
+          "topic": "Prompt on naming inner conflict with compassion.",
+          "status": "Planned",
+          "ctaText": "Film reel draft",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "quotes": [
+        {
+          "title": "Essay bridge quote",
+          "topic": "A line tying memoir identity themes to nervous-system language.",
+          "status": "Planned",
+          "ctaText": "Create quote graphic",
+          "ctaUrl": "https://www.instagram.com/thewovenselftherapeutic/"
+        }
+      ],
+      "substack": [
+        {
+          "title": "Recovery after coercive control",
+          "topic": "What rebuilding selfhood looks like after emotional collapse.",
+          "status": "Draft",
+          "ctaText": "Open Substack draft",
+          "ctaUrl": "https://substack.com/@quietalchemywloren"
+        }
+      ]
+    }
+  ]
+}
