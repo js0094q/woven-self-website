@@ -16,6 +16,11 @@
   </url>
 
   <url>
+    <loc>https://wovenself.com/preorder.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://wovenself.com/blog.html</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
