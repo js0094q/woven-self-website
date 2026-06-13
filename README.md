@@ -21,10 +21,10 @@ https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00
 
 ### Product
 Product name:
-Folding Origami: A Memoir — Signed Paperback Preorder
+Unfolding Origami: A Memoir — Signed Paperback Preorder
 
 Product description:
-Preorder a signed paperback copy of Folding Origami: A Memoir by Loren Galese.
+Preorder a signed paperback copy of Unfolding Origami: A Memoir by Loren Galese.
 Release date: July 20. Each preorder includes a surprise from the author.
 This is a preorder. Signed paperback copies will ship after release and printing are complete. If the fulfillment timeline changes materially, preorder customers will be notified by email.
 
