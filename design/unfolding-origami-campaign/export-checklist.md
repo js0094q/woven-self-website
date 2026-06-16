@@ -5,9 +5,9 @@
 - [ ] Instagram post templates are 1080 x 1080.
 - [ ] Instagram story templates are 1080 x 1920.
 - [ ] Sell sheet is letter size.
-- [ ] Table tent is landscape letter size.
+- [ ] Table tent is portrait 6 x 9 in.
 - [ ] All visible URLs use `wovenself.com/author`.
-- [ ] All CTAs say `Preorder Now` or `Preorder signed copies`.
+- [ ] CTAs use current approved preorder language for each asset.
 - [ ] No stale `Join the Launch List` copy appears.
 - [ ] No stale `Folding Origami` copy appears in live-facing assets.
 - [ ] Copy includes `trauma therapist`.

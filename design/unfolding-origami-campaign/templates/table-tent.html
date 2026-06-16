@@ -6,22 +6,23 @@
   <title>Unfolding Origami Table Tent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #FBF7F0;
-      --warm-white: #FFFDF9;
-      --sage: #4A5C5A;
-      --muted-sage: #7D8C88;
-      --clay: #B98F76;
-      --soft-clay: #E6D1C3;
-      --ink: #2F3A38;
-      --mist: #EDE8E1;
-      --border: #D8CEC2;
+      --navy-950: #07101b;
+      --navy-900: #0d1928;
+      --navy-850: #142438;
+      --cream: #f6eee3;
+      --cream-muted: #cfc8bd;
+      --pink: #d98aa4;
+      --pink-deep: #a96580;
+      --border: rgba(217, 138, 164, 0.52);
+      --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+      --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
     }
 
     @page {
-      size: 11in 8.5in;
+      size: 6in 9in;
       margin: 0;
     }
 
@@ -29,203 +30,321 @@
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
-      min-height: 100vh;
+      min-height: 100%;
+      background: #121824;
+    }
+
+    body {
       display: grid;
       place-items: center;
-      background: var(--mist);
-      color: var(--ink);
-      font-family: "Inter", Arial, sans-serif;
+      padding: 0.25in;
+      color: var(--cream);
+      font-family: var(--serif);
     }
 
     .sheet {
       position: relative;
-      width: 11in;
-      height: 8.5in;
+      width: 6in;
+      height: 9in;
       overflow: hidden;
-      padding: 0.35in;
+      display: grid;
+      grid-template-rows: 0.96in 3.1in 0.95in 0.48in 1.05in 1.22in 0.3in;
+      gap: 0.05in;
+      padding: 0.34in 0.46in 0.24in;
       background:
-        linear-gradient(150deg, transparent 0 52%, rgba(216, 206, 194, 0.42) 52.1%, transparent 52.35%),
-        linear-gradient(30deg, transparent 0 22%, rgba(230, 209, 195, 0.42) 22.1%, transparent 22.4%),
-        var(--cream);
+        radial-gradient(circle at 52% 28%, rgba(80, 117, 148, 0.3), transparent 38%),
+        linear-gradient(145deg, #131629 0%, var(--navy-900) 48%, var(--navy-950) 100%);
+      box-shadow: 0 0.18in 0.55in rgba(0, 0, 0, 0.42);
     }
 
     .sheet::before {
       content: "";
       position: absolute;
-      inset: 0.22in;
-      border: 1px solid rgba(216, 206, 194, 0.72);
+      inset: 0.21in;
+      border: 1px solid var(--border);
       pointer-events: none;
     }
 
-    .motif {
-      position: absolute;
-      right: 0.72in;
-      top: 0.64in;
-      width: 1.7in;
-      height: 1.25in;
-      color: rgba(74, 92, 90, 0.22);
-      pointer-events: none;
-    }
-
-    .layout {
+    .topline,
+    .identity,
+    .summary,
+    .endorsement,
+    .footer {
       position: relative;
       z-index: 1;
-      height: 100%;
-      display: grid;
-      grid-template-columns: 2.1in 1fr 1.8in;
-      gap: 0.3in;
-      align-items: stretch;
-    }
-
-    .cover,
-    .qr {
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      background: rgba(255, 253, 249, 0.74);
-      color: var(--muted-sage);
-      font-size: 0.15in;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      line-height: 1.3;
       text-align: center;
-      text-transform: uppercase;
     }
 
-    .cover {
-      min-height: 100%;
-      padding: 0.18in;
-    }
-
-    .cover img {
-      display: block;
-      width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      box-shadow: 0 0.06in 0.18in rgba(47, 58, 56, 0.16);
-    }
-
-    .main {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 0.16in 0;
-    }
-
-    h1 {
-      max-width: 4.6in;
-      margin: 0;
-      color: var(--sage);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 0.57in;
-      line-height: 0.96;
-      letter-spacing: 0;
-    }
-
-    .author {
-      margin-top: 0.14in;
-      color: var(--muted-sage);
-      font-size: 0.17in;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+    .topline {
+      display: grid;
+      align-content: start;
+      justify-items: center;
+      padding-top: 0.02in;
       text-transform: uppercase;
     }
 
     .hook {
-      max-width: 4.75in;
-      margin: 0.32in 0 0;
-      color: var(--ink);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 0.32in;
-      line-height: 1.16;
+      max-width: 5.05in;
+      margin: 0;
+      color: var(--pink);
+      font-size: 0.27in;
+      font-weight: 700;
+      letter-spacing: 0.145em;
+      line-height: 1.12;
     }
 
-    .description {
-      max-width: 4.8in;
-      margin: 0.18in 0 0;
-      color: var(--ink);
-      font-size: 0.165in;
-      line-height: 1.45;
+    .release {
+      margin: 0.12in 0 0;
+      color: var(--cream-muted);
+      font-size: 0.19in;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1;
     }
 
-    .preorder {
-      max-width: 4.85in;
+    .cover-wrap {
+      position: relative;
+      z-index: 1;
       display: grid;
-      gap: 0.08in;
-      padding: 0.18in 0.2in;
-      border-left: 0.06in solid var(--clay);
-      background: rgba(255, 253, 249, 0.68);
-      color: var(--ink);
-      font-size: 0.17in;
-      line-height: 1.32;
+      place-items: center;
     }
 
-    .preorder strong {
-      color: var(--sage);
-      font-size: 0.21in;
+    .cover-wrap img {
+      display: block;
+      width: 2.2in;
+      height: 3.1in;
+      object-fit: cover;
+      box-shadow: 0 0.08in 0.24in rgba(0, 0, 0, 0.36);
     }
 
-    .right {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 0.2in;
-      padding: 0.16in 0;
-    }
-
-    .scan {
-      color: var(--clay);
-      font-size: 0.15in;
-      font-weight: 800;
-      letter-spacing: 0.1em;
+    .identity {
+      display: grid;
+      align-content: center;
+      justify-items: center;
       text-transform: uppercase;
     }
 
+    h1 {
+      margin: 0;
+      color: var(--cream);
+      font-size: 0.42in;
+      font-weight: 700;
+      letter-spacing: 0.095em;
+      line-height: 0.96;
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      margin: 0.08in 0 0;
+      color: var(--cream-muted);
+      font-size: 0.21in;
+      font-weight: 700;
+      letter-spacing: 0.27em;
+      line-height: 1;
+    }
+
+    .author {
+      margin: 0.12in 0 0;
+      color: var(--pink);
+      font-size: 0.16in;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1;
+    }
+
+    .summary {
+      display: grid;
+      place-items: center;
+    }
+
+    .summary p {
+      max-width: 4.55in;
+      margin: 0;
+      color: var(--cream);
+      font-size: 0.145in;
+      font-weight: 700;
+      line-height: 1.28;
+    }
+
+    .endorsement {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.08in 0.18in;
+    }
+
+    .endorsement blockquote {
+      margin: 0;
+    }
+
+    .endorsement p {
+      margin: 0;
+      color: var(--cream);
+      font-size: 0.123in;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.34;
+    }
+
+    .endorsement footer {
+      margin-top: 0.1in;
+      color: var(--pink);
+      font-size: 0.115in;
+      font-weight: 700;
+      line-height: 1.18;
+    }
+
+    .preorder-box {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 1.08in;
+      gap: 0.32in;
+      align-items: center;
+      padding: 0.18in 0.22in;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .preorder-box h2 {
+      margin: 0;
+      color: var(--cream);
+      font-size: 0.25in;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+
+    .url {
+      display: block;
+      margin-top: 0.18in;
+      color: var(--pink);
+      font-family: var(--sans);
+      font-size: 0.115in;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      line-height: 1;
+    }
+
     .qr {
-      width: 1.45in;
-      height: 1.45in;
-      margin-left: auto;
-      border-style: dashed;
-      color: var(--clay);
+      width: 1.08in;
+      height: 1.08in;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      padding: 0.1in;
     }
 
     .qr img {
       display: block;
-      width: 1.2in;
-      height: 1.2in;
-    }
-
-    .url {
-      color: var(--sage);
-      font-size: 0.16in;
-      font-weight: 800;
-      line-height: 1.25;
-      text-align: right;
-      white-space: nowrap;
+      width: 0.9in;
+      height: 0.9in;
     }
 
     .footer {
       display: grid;
-      gap: 0.06in;
-      padding-top: 0.14in;
-      border-top: 1px solid var(--border);
-      color: var(--ink);
-      font-size: 0.13in;
-      line-height: 1.35;
-      text-align: right;
+      grid-template-columns: 1fr auto;
+      gap: 0.16in;
+      align-items: end;
+      color: var(--cream-muted);
+      font-family: var(--sans);
+    }
+
+    .connect {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.1in;
+      padding-top: 0.11in;
+      border-top: 1px solid rgba(207, 198, 187, 0.34);
+      text-align: left;
+    }
+
+    .connect::before {
+      content: "CONNECT";
+      position: absolute;
+      top: -0.08in;
+      left: 50%;
+      padding: 0 0.1in;
+      transform: translateX(-50%);
+      background: var(--navy-950);
+      color: var(--pink);
+      font-family: var(--serif);
+      font-size: 0.11in;
+      font-weight: 700;
+      letter-spacing: 0.34em;
+      line-height: 1;
+    }
+
+    .contact-item {
+      font-size: 0.058in;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .agency {
+      display: grid;
+      grid-template-columns: 0.26in 0.52in;
+      gap: 0.05in;
+      align-items: center;
+      color: var(--cream-muted);
+      font-size: 0.055in;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .agency-mark {
+      width: 0.25in;
+      height: 0.25in;
+      border: 1px solid var(--cream-muted);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .agency-mark::before,
+    .agency-mark::after {
+      content: "";
+      position: absolute;
+      background: var(--cream-muted);
+      transform-origin: center;
+    }
+
+    .agency-mark::before {
+      width: 1px;
+      height: 0.18in;
+      left: 50%;
+      top: 0.035in;
+      transform: rotate(28deg);
+    }
+
+    .agency-mark::after {
+      width: 0.15in;
+      height: 1px;
+      left: 0.045in;
+      top: 0.12in;
+      transform: rotate(-28deg);
     }
 
     [contenteditable="true"]:focus {
-      outline: 2px solid rgba(185, 143, 118, 0.42);
-      outline-offset: 4px;
+      outline: 2px solid rgba(217, 138, 164, 0.58);
+      outline-offset: 3px;
     }
 
     @media print {
+      html,
       body {
-        min-height: auto;
         background: transparent;
+      }
+
+      body {
+        display: block;
+        padding: 0;
       }
 
       .sheet {
@@ -236,49 +355,53 @@
 </head>
 <body>
   <main class="sheet" aria-label="Print table tent">
-    <svg class="motif" viewBox="0 0 180 130" aria-hidden="true">
-      <path d="M10 88 L78 18 L169 96 L96 74 L72 121 L78 18 L96 74 L10 88 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M96 74 L129 29 L169 96" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-    </svg>
-    <section class="layout">
-      <div class="cover">
-        <img src="../../../images/unfolding-origami-cover.jpg" alt="Cover of Unfolding Origami: A Memoir by Loren Galese">
-      </div>
-
-      <article class="main">
-        <div>
-          <h1 contenteditable="true">Unfolding Origami: A Memoir</h1>
-          <div class="author" contenteditable="true">Loren Galese</div>
-          <p class="hook" contenteditable="true">Some wounds don't bleed - they fold you inward.</p>
-          <p class="description" contenteditable="true">A trauma therapist's memoir about folding back to yourself after trauma.</p>
-          <p class="description" contenteditable="true">A trauma therapist's memoir about trauma, coercive control, survival, and folding back to yourself.</p>
-          <p class="description" contenteditable="true">A trauma therapist's memoir about surviving trauma, re-defining your shape, and folding back to yourself.</p>
-        </div>
-
-        <div class="preorder">
-          <div contenteditable="true">Preorders are open now.</div>
-          <strong contenteditable="true">Preorder signed copies</strong>
-          <div contenteditable="true">$24.99</div>
-          <div contenteditable="true">Signed copies include a surprise from Loren.</div>
-          <div contenteditable="true">Release date: July 20.</div>
-        </div>
-      </article>
-
-      <aside class="right">
-        <div>
-          <div class="scan" contenteditable="true">Scan to preorder:</div>
-          <div class="qr">
-            <img src="../assets/preorder-qr.svg" alt="QR code for the Unfolding Origami preorder page">
-          </div>
-          <div class="url" contenteditable="true">wovenself.com/author</div>
-        </div>
-        <footer class="footer">
-          <div contenteditable="true">loren@wovenself.com</div>
-          <div contenteditable="true">Substack: @quietalchemywloren</div>
-          <div contenteditable="true">wovenself.com</div>
-        </footer>
-      </aside>
+    <section class="topline" aria-label="Book hook">
+      <p class="hook" contenteditable="true">Some wounds don't bleed -<br>they fold you inward.</p>
+      <p class="release" contenteditable="true">Coming July 2026</p>
     </section>
+
+    <figure class="cover-wrap">
+      <img src="../../../images/unfolding-origami-cover.jpg" alt="Cover of Unfolding Origami: A Memoir by Loren Galese">
+    </figure>
+
+    <section class="identity" aria-label="Book title and author">
+      <h1 contenteditable="true">Unfolding Origami</h1>
+      <p class="subtitle" contenteditable="true">A Memoir</p>
+      <p class="author" contenteditable="true">Loren Galese, LPC, ACS</p>
+    </section>
+
+    <section class="summary" aria-label="Book description">
+      <p contenteditable="true">A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.</p>
+    </section>
+
+    <section class="endorsement" aria-label="Endorsement">
+      <blockquote>
+        <p contenteditable="true">Some wounds don't bleed - they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.</p>
+        <footer contenteditable="true">- Sarah Edmondson, Podcast Host and Author of A Little Bit Culty</footer>
+      </blockquote>
+    </section>
+
+    <section class="preorder-box" aria-label="Preorder call to action">
+      <div>
+        <h2 contenteditable="true">Join the preorder<br>&amp; launch list</h2>
+        <span class="url" contenteditable="true">wovenself.com/author</span>
+      </div>
+      <div class="qr">
+        <img src="../assets/preorder-qr.svg" alt="QR code for the Unfolding Origami preorder page">
+      </div>
+    </section>
+
+    <footer class="footer" aria-label="Contact details">
+      <div class="connect">
+        <div class="contact-item" contenteditable="true">Email: loren@wovenself.com</div>
+        <div class="contact-item" contenteditable="true">Social/Substack: @quietalchemywloren</div>
+        <div class="contact-item" contenteditable="true">Website: wovenself.com</div>
+      </div>
+      <div class="agency" aria-label="The Self Publishing Agency">
+        <span class="agency-mark" aria-hidden="true"></span>
+        <span>The Self<br>Publishing<br>Agency</span>
+      </div>
+    </footer>
   </main>
 </body>
 </html>

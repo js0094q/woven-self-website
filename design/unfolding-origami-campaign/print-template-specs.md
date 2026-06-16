@@ -57,34 +57,35 @@ Design requirements:
 
 Source path: `templates/table-tent.html`
 
-Format: `11 x 8.5 in landscape`
+Format: `6 x 9 in portrait`
 
 Output: `exports/table-tent.pdf`
 
 Required content:
 
 - `Unfolding Origami: A Memoir`
-- `Loren Galese`
+- `Loren Galese, LPC, ACS`
 - `Some wounds don't bleed - they fold you inward.`
-- `A trauma therapist's memoir about folding back to yourself after trauma.`
-- `Preorder signed copies`
-- `Signed copies include a surprise from Loren.`
-- `$24.99`
-- `July 20`
+- `Coming July 2026`
+- `A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.`
+- `Join the preorder & launch list`
 - `wovenself.com/author`
+- `Email: loren@wovenself.com`
+- `Social/Substack: @quietalchemywloren`
+- `Website: wovenself.com`
 
 Required layout elements:
 
 - Book cover image from `images/unfolding-origami-cover.jpg`.
 - QR code from `assets/preorder-qr.svg`.
-- Subtle Quiet Paper System motif.
+- Dark navy and pink visual system matching the most recent table tent reference.
 - Clean readable footer.
 - Editable HTML text.
 
 Print requirements:
 
-- Page must be landscape letter size.
-- Margins must be at least `0.35in`.
+- Page must be portrait `6 x 9 in`.
+- Margins must keep all content inside the visible border.
 - QR code must be at least `0.25in` from all page edges.
 - Do not rasterize text.
 - Keep contrast high enough for bookstore, event table, and signing-table use.
