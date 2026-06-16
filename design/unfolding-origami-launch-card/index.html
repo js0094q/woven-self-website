@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unfolding Origami Launch List Promo Card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="export-toolbar" aria-label="Design controls">
+    <div>
+      <strong>Launch list promo card</strong>
+      <span>1080 x 1350 social/poster layout</span>
+    </div>
+    <button type="button" id="print-design">Print / Save PDF</button>
+  </div>
+
+  <div class="card-stage">
+    <main class="promo-card" aria-label="Promotional card for Unfolding Origami: A Memoir">
+      <section class="topline" aria-label="Brand and release context">
+        <p contenteditable="true">The Woven Self</p>
+        <span contenteditable="true">Coming July 2026</span>
+      </section>
+
+    <section class="hero" aria-label="Book and launch message">
+      <div class="hero-copy">
+        <p class="hook" contenteditable="true">
+          Some wounds don&rsquo;t bleed &mdash;<br />
+          they fold you inward.
+        </p>
+        <div class="title-rule" aria-hidden="true"></div>
+        <h1 contenteditable="true">Unfolding<br />Origami</h1>
+        <p class="subtitle" contenteditable="true">A Memoir</p>
+        <p class="author" contenteditable="true">Loren Galese, LPC, ACS</p>
+      </div>
+
+      <div class="book-panel" aria-label="Book cover">
+        <svg class="butterfly butterfly-one" viewBox="0 0 120 80" aria-hidden="true">
+          <path d="M60 38 C32 5 8 4 9 31 C10 57 36 58 58 43 Z" />
+          <path d="M62 38 C91 5 113 4 112 31 C111 57 85 58 64 43 Z" />
+          <path d="M58 45 C33 50 23 70 44 74 C58 76 61 58 60 47 Z" />
+          <path d="M64 45 C89 50 99 70 78 74 C64 76 61 58 62 47 Z" />
+        </svg>
+        <img
+          src="../book-cover-unfolding-origami/front-cover-concept-v7-title-author-allcaps-larger.png"
+          alt="Unfolding Origami: A Memoir book cover"
+          class="book-cover"
+        />
+        <svg class="butterfly butterfly-two" viewBox="0 0 120 80" aria-hidden="true">
+          <path d="M60 38 C32 5 8 4 9 31 C10 57 36 58 58 43 Z" />
+          <path d="M62 38 C91 5 113 4 112 31 C111 57 85 58 64 43 Z" />
+          <path d="M58 45 C33 50 23 70 44 74 C58 76 61 58 60 47 Z" />
+          <path d="M64 45 C89 50 99 70 78 74 C64 76 61 58 62 47 Z" />
+        </svg>
+      </div>
+    </section>
+
+    <section class="description" aria-label="Book description">
+      <p contenteditable="true">
+        A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.
+      </p>
+    </section>
+
+    <section class="quote-band" aria-label="Endorsement">
+      <blockquote>
+        <p contenteditable="true">
+          &ldquo;Galese traces that quiet unraveling and the courageous work of unfolding back into yourself.&rdquo;
+        </p>
+        <footer contenteditable="true">
+          &mdash; Sarah Edmondson, Podcast Host and Author of <em>A Little Bit Culty</em>
+        </footer>
+      </blockquote>
+    </section>
+
+    <section class="launch-cta" aria-label="Launch list call to action">
+      <div class="cta-copy">
+        <h2 contenteditable="true">Join the launch list</h2>
+        <p contenteditable="true">Receive preorder updates, release news, essays, events, and reflections from Loren.</p>
+        <span contenteditable="true">wovenself.com/author</span>
+      </div>
+      <img src="../conference-table-tent/qr-wovenself-unfolding.svg" alt="QR code for wovenself.com/author" class="qr-code" />
+    </section>
+
+      <footer class="card-footer" aria-label="Contact">
+        <p contenteditable="true">wovenself.com &bull; loren@wovenself.com &bull; @quietalchemywloren</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('print-design')?.addEventListener('click', () => window.print());
+
+    const stage = document.querySelector('.card-stage');
+    const card = document.querySelector('.promo-card');
+    const nativeWidth = 1080;
+    const nativeHeight = 1350;
+
+    function fitCard() {
+      if (!stage || !card || window.matchMedia('print').matches) return;
+
+      const sidePadding = window.innerWidth <= 620 ? 32 : 48;
+      const availableWidth = Math.min(nativeWidth, Math.max(280, window.innerWidth - sidePadding));
+      const scale = availableWidth / nativeWidth;
+
+      stage.style.width = `${availableWidth}px`;
+      stage.style.height = `${nativeHeight * scale}px`;
+      card.style.setProperty('--card-scale', String(scale));
+    }
+
+    fitCard();
+    window.addEventListener('resize', fitCard);
+  </script>
+</body>
+</html>
