@@ -72,7 +72,7 @@
         "@id": "https://wovenself.com/author.html#webpage",
         "url": "https://wovenself.com/author.html",
         "name": "Unfolding Origami: A Memoir | Loren Galese Author",
-        "description": "Author page and launch-list hub for Loren Galese's forthcoming memoir, Unfolding Origami.",
+        "description": "Author page and preorder hub for Loren Galese's forthcoming memoir, Unfolding Origami.",
         "about": {
           "@id": "https://wovenself.com/author.html#unfolding-origami"
         },
@@ -166,7 +166,12 @@
             A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.
           </p>
           <div class="author-hero-actions">
-            <a href="#launch-list" class="btn-primary">Join the Launch List</a>
+            <a
+              href="https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >Preorder Now</a>
             <a href="#quiet-alchemy" class="btn-secondary author-on-dark">Read Loren's Writing</a>
           </div>
         </div>
@@ -193,34 +198,33 @@
     <section id="launch-list" class="launch-section">
       <div class="site-container launch-grid">
         <div>
-          <p class="eyebrow">Preorder Updates</p>
-          <h2>Join the Launch List</h2>
+          <p class="eyebrow">Signed paperback preorder</p>
+          <h2>Preorder Now</h2>
           <p>
-            Receive preorder updates, release news, essays, events, and reflections from Loren.
+            Preorder your signed copy of <em>Unfolding Origami: A Memoir</em>. Preorders are $24.99 and include a signed copy plus a surprise from Loren. Release date: July 20.
           </p>
         </div>
 
         <div class="launch-form-card">
-          <form id="launch-form" class="launch-form" method="POST" action="https://formspree.io/f/myzndadj">
-            <label for="launch-first-name">First name</label>
-            <input id="launch-first-name" name="first_name" type="text" autocomplete="given-name" required />
-
-            <label for="launch-email">Email</label>
-            <input id="launch-email" name="email" type="email" autocomplete="email" required />
-
-            <input type="hidden" name="_subject" value="New Unfolding Origami launch list signup" />
-            <button id="launch-submit" class="btn-primary" type="submit">Notify Me</button>
-            <p class="form-note">No clinical information should be submitted through this form.</p>
-          </form>
-
-          <div id="launch-success" class="form-state success hidden" role="status" aria-live="polite">
-            <p class="font-semibold">Thank you.</p>
-            <p>You are on the launch list for <em>Unfolding Origami</em>.</p>
-          </div>
-          <div id="launch-error" class="form-state error hidden" role="alert">
-            <p class="font-semibold">The signup did not go through.</p>
-            <p>Please check your email address and try again.</p>
-          </div>
+          <p class="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary)]">Signed paperback preorder</p>
+          <p class="mt-4 text-4xl font-serif font-semibold">$24.99</p>
+          <dl class="mt-5 space-y-3 text-sm leading-relaxed">
+            <div>
+              <dt class="font-semibold">Release date</dt>
+              <dd>July 20</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Includes</dt>
+              <dd>Signed copy plus a surprise from Loren</dd>
+            </div>
+          </dl>
+          <a
+            href="https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary mt-6 inline-flex w-full justify-center"
+          >Preorder Now</a>
+          <p class="form-note">Payment and shipping information are collected securely through Stripe.</p>
         </div>
       </div>
     </section>
@@ -322,43 +326,6 @@
       });
     }
 
-    const launchForm = document.getElementById('launch-form');
-    const launchSubmit = document.getElementById('launch-submit');
-    const launchSuccess = document.getElementById('launch-success');
-    const launchError = document.getElementById('launch-error');
-
-    if (launchForm && launchSubmit && launchSuccess && launchError) {
-      launchForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        if (!launchForm.checkValidity()) {
-          launchForm.reportValidity();
-          return;
-        }
-
-        launchSubmit.disabled = true;
-        launchSubmit.textContent = 'Sending...';
-        launchError.classList.add('hidden');
-
-        try {
-          const formData = new FormData(launchForm);
-          const response = await fetch(launchForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: { Accept: 'application/json' }
-          });
-
-          if (!response.ok) throw new Error('Launch list signup failed');
-
-          launchForm.classList.add('hidden');
-          launchSuccess.classList.remove('hidden');
-        } catch (error) {
-          launchSubmit.disabled = false;
-          launchSubmit.textContent = 'Notify Me';
-          launchError.classList.remove('hidden');
-        }
-      });
-    }
   </script>
 
   <script>
