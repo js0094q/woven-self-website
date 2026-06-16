@@ -225,6 +225,11 @@ body {
     0 4px 12px rgba(0,0,0,0.03);
 }
 
+img.card {
+  display: block;
+  padding: 0;
+}
+
 .hero-logo {
   width: 100%;
   height: auto;
