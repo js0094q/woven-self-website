@@ -3,6 +3,7 @@
 
 # Local outputs
 output/
+.worktrees/
 
 # Python virtual environments
 .venv/
