@@ -72,7 +72,7 @@ https://wovenself.com/author
 
 For book clubs interested in memoir, trauma recovery, identity, women's stories, and healing, *Unfolding Origami: A Memoir* is available for preorder now.
 
-This is reader-community language for people who survived quietly and are finding their way back to themselves.
+For people who survived quietly and are finding their way back to themselves.
 
 Signed preorder copies include a surprise from Loren.
 
