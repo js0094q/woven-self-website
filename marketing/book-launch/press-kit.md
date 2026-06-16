@@ -2,7 +2,7 @@
 
 ## Book
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 ## Author
 
@@ -24,27 +24,33 @@ https://wovenself.com/author
 
 https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00
 
+## Primary Positioning
+
+*Unfolding Origami: A Memoir* is a trauma therapist's personal story of surviving trauma, naming coercive control, and re-defining her shape after being folded inward by pain.
+
 ## Short Author Bio
 
-Loren Galese is a Licensed Professional Counselor in New Jersey and the owner of The Woven Self Therapeutic Services, LLC. Her work centers trauma-informed therapy, healing, relationships, identity, and the nervous system. *Folding Origami: A Memoir* is her first book.
+Loren Galese is a Licensed Professional Counselor in New Jersey and the owner of The Woven Self Therapeutic Services, LLC. Her work centers trauma-informed therapy, healing, relationships, identity, and the nervous system. *Unfolding Origami: A Memoir* is her first book.
 
 ## Medium Author Bio
 
 Loren Galese is a Licensed Professional Counselor in New Jersey and the owner of The Woven Self Therapeutic Services, LLC. She works with individuals, couples, and families navigating trauma, anxiety, relationship challenges, life transitions, and emotional healing. Her therapeutic approach is collaborative, trauma-informed, and grounded in helping people feel safer, more connected, and more fully themselves.
 
-*Folding Origami: A Memoir* is Loren's first book. It explores trauma, coercive control, survival, identity, and the courageous process of unfolding back into oneself.
+*Unfolding Origami: A Memoir* is Loren's first book. It is a trauma therapist's personal story of surviving trauma, naming coercive control, and re-defining her shape after being folded inward by pain.
 
 ## Short Press Description
 
-New Jersey therapist and author Loren Galese releases *Folding Origami: A Memoir*, a personal account of trauma, coercive control, survival, and healing.
+New Jersey therapist and author Loren Galese releases *Unfolding Origami: A Memoir*, a personal account of trauma, coercive control, survival, and return.
 
 ## Longer Press Description
 
-Loren Galese, LPC, a New Jersey therapist and owner of The Woven Self Therapeutic Services, LLC, is releasing *Folding Origami: A Memoir* on July 20.
+Loren Galese, LPC, a New Jersey therapist and owner of The Woven Self Therapeutic Services, LLC, is releasing *Unfolding Origami: A Memoir* on July 20.
 
-The memoir explores trauma, coercive control, survival, memory, identity, and the long process of unfolding back into oneself after abuse. Written with emotional clarity and restraint, *Folding Origami* offers a personal lens on invisible wounds, nervous system survival, and healing that does not flatten or simplify the experience of recovery.
+The memoir explores trauma, coercive control, survival, memory, identity, and the long process of folding back to yourself after abuse. Written with emotional clarity and restraint, *Unfolding Origami* offers a personal lens on invisible wounds, nervous system survival, and return that does not flatten or simplify the experience of recovery.
 
-Preorders are currently open. Signed preorder copies include a surprise from Loren.
+For readers who have survived quietly, questioned themselves deeply, or are learning to trust their own instincts again, this memoir offers a personal story of trauma, survival, and return.
+
+Preorders are open now. Preorders are $24.99 and include a signed copy plus a surprise from Loren. Release date: July 20. [Preorder Now](https://wovenself.com/author)
 
 ## Pull Quote
 
@@ -52,7 +58,7 @@ Preorders are currently open. Signed preorder copies include a surprise from Lor
 
 ## Full Endorsement Quote
 
-"Some wounds don't bleed - they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and luminous."
+"Some wounds don't bleed - they fold you inward. Galese traces that quiet unraveling and the courageous work of folding back to yourself. This memoir is a personal testament to re-defining your shape after pain."
 
 ## Interview Topics
 

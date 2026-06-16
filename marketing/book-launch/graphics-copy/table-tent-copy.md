@@ -2,13 +2,13 @@
 
 ## Front Side
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Loren Galese
 
 Some wounds don't bleed - they fold you inward.
 
-A memoir about trauma, coercive control, survival, and unfolding back into yourself.
+A trauma therapist's memoir about survival, coercive control, and folding back to yourself.
 
 Preorders are open now.
 

@@ -22,10 +22,14 @@ Unfolding is not forgetting. It is learning how to hold the story without becomi
 
 ## Quote 6
 
-This memoir is about the quiet work of coming back to yourself.
+This memoir is about the quiet work of folding back to yourself.
+
+## Quote 7
+
+Re-defining your shape after pain can begin quietly.
 
 ## Attribution Line
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Loren Galese

@@ -1,23 +1,35 @@
-# Folding Origami Book Launch Assets
+# Unfolding Origami Book Launch Assets
 
-This folder contains reusable marketing assets for Loren Galese's preorder and launch campaign for *Folding Origami: A Memoir*.
+This folder contains reusable marketing assets for Loren Galese's preorder and launch campaign for *Unfolding Origami: A Memoir*.
 
 ## Core Details
 
 | Field | Detail |
 |---|---|
-| Book Title | *Folding Origami: A Memoir* |
+| Book Title | *Unfolding Origami: A Memoir* |
 | Author | Loren Galese |
 | Price | $24.99 |
 | Release Date | July 20 |
-| Preorder Incentive | Signed copy + surprise from Loren |
+| Preorder Incentive | Signed copy plus a surprise from Loren |
 | Website | https://wovenself.com/author |
 | Payment Link | https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00 |
 | Primary CTA | Preorder Now |
 
 ## Primary Positioning
 
-*Folding Origami* is a memoir about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
+*Unfolding Origami: A Memoir* is a trauma therapist's personal story of surviving trauma, naming coercive control, and re-defining her shape after being folded inward by pain.
+
+For readers who have survived quietly, questioned themselves deeply, or are learning to trust their own instincts again, this memoir offers a personal story of trauma, survival, and return.
+
+## Preorder Copy
+
+Preorders are open now.
+
+Preorders are $24.99 and include a signed copy plus a surprise from Loren.
+
+Release date: July 20.
+
+[Preorder Now](https://wovenself.com/author)
 
 ## Campaign Goal
 

@@ -2,7 +2,7 @@
 
 ## Title
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 ## Author
 
@@ -14,7 +14,7 @@ Some wounds don't bleed - they fold you inward.
 
 ## Description
 
-*Folding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
+*Unfolding Origami: A Memoir* is a trauma therapist's personal story of surviving trauma, naming coercive control, and re-defining her shape after being folded inward by pain.
 
 ## Emotional Threads
 
@@ -26,7 +26,8 @@ Some wounds don't bleed - they fold you inward.
 - Reality reversal
 - The delayed collapse
 - Naming what happened
-- Unfolding back into yourself
+- Folding back to yourself
+- Re-defining your shape
 
 ## Reader Audience
 
@@ -47,9 +48,11 @@ Price: $24.99
 
 Release Date: July 20
 
-Preorder Incentive: Signed copy + surprise from Loren
+Preorder Incentive: Signed copy plus a surprise from Loren
 
 Website: https://wovenself.com/author
+
+[Preorder Now](https://wovenself.com/author)
 
 ## Contact
 

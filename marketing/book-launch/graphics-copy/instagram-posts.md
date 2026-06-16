@@ -4,7 +4,7 @@
 
 PREORDERS ARE OPEN
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 by Loren Galese
 
@@ -21,7 +21,7 @@ https://wovenself.com/author
 
 Some wounds don't bleed - they fold you inward.
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Preorders open now.
 
@@ -43,9 +43,11 @@ Identity
 
 Healing
 
-Unfolding back into yourself
+Folding back to yourself
 
-*Folding Origami: A Memoir*
+Re-defining your shape
+
+*Unfolding Origami: A Memoir*
 
 ---
 
@@ -71,15 +73,15 @@ Writing this book meant returning to parts of my story I once thought I would ne
 
 - Loren Galese
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 ---
 
 ## Graphic 6: Book Club
 
-For readers of memoir, trauma recovery, women's stories, and healing.
+For readers who survived quietly, questioned themselves deeply, or are learning to trust their own instincts again.
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Preorder now:
 https://wovenself.com/author

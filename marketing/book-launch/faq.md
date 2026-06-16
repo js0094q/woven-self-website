@@ -2,7 +2,7 @@
 
 ## When is the book being released?
 
-*Folding Origami: A Memoir* releases July 20.
+*Unfolding Origami: A Memoir* releases July 20.
 
 ## How much is the preorder?
 
@@ -10,7 +10,7 @@ Preorders are $24.99.
 
 ## What is included with preorder?
 
-Each preorder includes a signed copy + surprise from Loren.
+Each preorder includes a signed copy plus a surprise from Loren.
 
 ## Where can I preorder?
 
@@ -23,15 +23,15 @@ Yes. Preorders are processed through Stripe.
 
 ## What is the book about?
 
-*Folding Origami: A Memoir* is about trauma, coercive control, survival, healing, and the process of unfolding back into yourself.
+*Unfolding Origami: A Memoir* is a trauma therapist's personal story of surviving trauma, naming coercive control, and re-defining her shape after being folded inward by pain.
 
 ## Who is this book for?
 
-This memoir may resonate with trauma survivors, memoir readers, therapists, advocates, book clubs, and readers interested in healing, identity, emotional abuse, and recovery.
+For readers who have survived quietly, questioned themselves deeply, or are learning to trust their own instincts again, this memoir offers a personal story of trauma, survival, and return.
 
 ## Is this Loren's first book?
 
-Yes. *Folding Origami: A Memoir* is Loren Galese's first book.
+Yes. *Unfolding Origami: A Memoir* is Loren Galese's first book.
 
 ## Is Loren available for interviews or events?
 
