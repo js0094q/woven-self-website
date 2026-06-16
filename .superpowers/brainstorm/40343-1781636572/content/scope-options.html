@@ -1,0 +1,64 @@
+<h2>Which scope should the design spec own?</h2>
+<p class="subtitle">The repo currently has a live author/preorder page plus untracked campaign material. Pick the boundary before we define the design.</p>
+
+<div class="cards">
+  <div class="card" data-choice="website-only" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#faf7f2;padding:22px">
+      <div style="border:1px solid rgba(46,67,65,.18);border-radius:18px;background:white;padding:18px">
+        <div style="height:11px;width:42%;background:#2e4341;border-radius:20px;margin-bottom:14px"></div>
+        <div style="height:44px;width:76%;background:#d8cec2;border-radius:8px;margin-bottom:12px"></div>
+        <div style="height:9px;width:90%;background:#7d8c88;border-radius:20px;margin-bottom:8px"></div>
+        <div style="height:9px;width:72%;background:#7d8c88;border-radius:20px;margin-bottom:18px"></div>
+        <div style="height:34px;width:130px;background:#2e4341;border-radius:999px"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Website Copy Update</h3>
+      <p>Update the live author page and metadata only. Fastest, least surface area, but leaves campaign assets inconsistent.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="campaign-only" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fbf7f0;padding:22px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="aspect-ratio:1;background:white;border:1px solid #d8cec2;border-radius:12px;padding:14px">
+          <div style="height:8px;width:55%;background:#b98f76;border-radius:20px;margin-bottom:16px"></div>
+          <div style="height:42px;width:80%;background:#4a5c5a;border-radius:7px"></div>
+        </div>
+        <div style="aspect-ratio:1;background:#ede8e1;border:1px solid #d8cec2;border-radius:12px;padding:14px">
+          <div style="height:54px;width:70%;background:#4a5c5a;border-radius:7px;margin:auto"></div>
+        </div>
+        <div style="aspect-ratio:1;background:#fffdf9;border:1px solid #d8cec2;border-radius:12px;padding:14px">
+          <div style="height:9px;width:90%;background:#7d8c88;border-radius:20px;margin-top:36px"></div>
+        </div>
+        <div style="aspect-ratio:1;background:#e6d1c3;border:1px solid #d8cec2;border-radius:12px"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Campaign Asset System</h3>
+      <p>Define the reusable visual/copy system for social, email, print, and exports. Strong for launch assets, but does not directly fix the live page.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="integrated" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fbf7f0;padding:22px">
+      <div style="display:grid;grid-template-columns:1.3fr .9fr;gap:14px;align-items:stretch">
+        <div style="background:white;border:1px solid #d8cec2;border-radius:16px;padding:16px">
+          <div style="height:10px;width:36%;background:#b98f76;border-radius:20px;margin-bottom:14px"></div>
+          <div style="height:38px;width:84%;background:#2e4341;border-radius:8px;margin-bottom:12px"></div>
+          <div style="height:9px;width:91%;background:#7d8c88;border-radius:20px;margin-bottom:7px"></div>
+          <div style="height:9px;width:76%;background:#7d8c88;border-radius:20px;margin-bottom:16px"></div>
+          <div style="height:30px;width:120px;background:#2e4341;border-radius:999px"></div>
+        </div>
+        <div style="display:grid;grid-template-rows:1fr 1fr;gap:12px">
+          <div style="background:#fffdf9;border:1px solid #d8cec2;border-radius:14px"></div>
+          <div style="background:#ede8e1;border:1px solid #d8cec2;border-radius:14px"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Integrated Campaign + Website</h3>
+      <p>One design system and message architecture, then apply it to the live author page and campaign templates. Recommended for consistency.</p>
+    </div>
+  </div>
+</div>
