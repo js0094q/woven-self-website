@@ -65,10 +65,11 @@ Required content:
 
 - `Unfolding Origami: A Memoir`
 - `Loren Galese, LPC, ACS`
-- `Some wounds don't bleed - they fold you inward.`
+- `Some wounds don’t bleed — they fold you inward.`
 - `Coming July 2026`
 - `A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.`
 - `Preorder Now`
+- `Preorder page:`
 - `wovenself.com/author`
 - `Email: loren@wovenself.com`
 - `Social/Substack: @quietalchemywloren`
@@ -81,11 +82,13 @@ Required layout elements:
 - Dark navy and pink visual system matching the most recent table tent reference.
 - Clean readable footer.
 - Editable HTML text.
+- The Self Publishing Agency mark aligned in the far-right footer area.
 
 Print requirements:
 
 - Page must be portrait `6 x 9 in`.
 - Margins must keep all content inside the visible border.
 - QR code must be at least `0.25in` from all page edges.
+- QR code must link to `https://wovenself.com/author` and sit fully inside the pink CTA box with a white quiet zone.
 - Do not rasterize text.
 - Keep contrast high enough for bookstore, event table, and signing-table use.

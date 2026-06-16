@@ -51,8 +51,8 @@
       height: 9in;
       overflow: hidden;
       display: grid;
-      grid-template-rows: 0.96in 3.1in 0.95in 0.48in 1.05in 1.22in 0.3in;
-      gap: 0.05in;
+      grid-template-rows: 0.86in 3.08in 0.95in 0.54in 1.12in 1.16in 0.33in;
+      gap: 0.06in;
       padding: 0.34in 0.46in 0.24in;
       background:
         radial-gradient(circle at 52% 28%, rgba(80, 117, 148, 0.3), transparent 38%),
@@ -90,14 +90,14 @@
       max-width: 5.05in;
       margin: 0;
       color: var(--pink);
-      font-size: 0.27in;
+      font-size: 0.265in;
       font-weight: 700;
-      letter-spacing: 0.145em;
+      letter-spacing: 0.105em;
       line-height: 1.12;
     }
 
     .release {
-      margin: 0.12in 0 0;
+      margin: 0.1in 0 0;
       color: var(--cream-muted);
       font-size: 0.19in;
       font-weight: 700;
@@ -115,7 +115,7 @@
     .cover-wrap img {
       display: block;
       width: 2.2in;
-      height: 3.1in;
+      height: 3.08in;
       object-fit: cover;
       box-shadow: 0 0.08in 0.24in rgba(0, 0, 0, 0.36);
     }
@@ -166,7 +166,7 @@
       color: var(--cream);
       font-size: 0.145in;
       font-weight: 700;
-      line-height: 1.28;
+      line-height: 1.32;
     }
 
     .endorsement {
@@ -175,7 +175,7 @@
       justify-items: center;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 0.08in 0.18in;
+      padding: 0.1in 0.24in;
     }
 
     .endorsement blockquote {
@@ -185,16 +185,16 @@
     .endorsement p {
       margin: 0;
       color: var(--cream);
-      font-size: 0.123in;
+      font-size: 0.13in;
       font-style: italic;
       font-weight: 600;
-      line-height: 1.34;
+      line-height: 1.32;
     }
 
     .endorsement footer {
-      margin-top: 0.1in;
+      margin-top: 0.09in;
       color: var(--pink);
-      font-size: 0.115in;
+      font-size: 0.108in;
       font-weight: 700;
       line-height: 1.18;
     }
@@ -203,10 +203,10 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 1.02in;
+      grid-template-columns: minmax(0, 1fr) 1in;
       gap: 0.32in;
       align-items: center;
-      padding: 0.08in 0.22in;
+      padding: 0.08in 0.24in;
       border: 1px solid var(--border);
       text-align: left;
     }
@@ -219,25 +219,37 @@
       line-height: 1.05;
     }
 
+    .preorder-label {
+      display: block;
+      margin-top: 0.16in;
+      color: var(--cream-muted);
+      font-family: var(--sans);
+      font-size: 0.075in;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
     .url {
       display: block;
-      margin-top: 0.18in;
+      margin-top: 0.07in;
       color: var(--pink);
       font-family: var(--sans);
-      font-size: 0.115in;
+      font-size: 0.13in;
       font-weight: 600;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.12em;
       line-height: 1;
     }
 
     .qr {
-      width: 1.02in;
-      height: 1.02in;
+      width: 1in;
+      height: 1in;
       display: grid;
       place-items: center;
       justify-self: end;
       background: #fff;
-      padding: 0.14in;
+      padding: 0.13in;
     }
 
     .qr img {
@@ -251,7 +263,7 @@
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 0.16in;
-      align-items: end;
+      align-items: center;
       color: var(--cream-muted);
       font-family: var(--sans);
     }
@@ -261,7 +273,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.1in;
-      padding-top: 0.11in;
+      padding-top: 0.13in;
       border-top: 1px solid rgba(207, 198, 187, 0.34);
       text-align: left;
     }
@@ -269,32 +281,32 @@
     .connect::before {
       content: "CONNECT";
       position: absolute;
-      top: -0.08in;
+      top: -0.075in;
       left: 50%;
       padding: 0 0.1in;
       transform: translateX(-50%);
       background: var(--navy-950);
       color: var(--pink);
       font-family: var(--serif);
-      font-size: 0.11in;
+      font-size: 0.115in;
       font-weight: 700;
       letter-spacing: 0.34em;
       line-height: 1;
     }
 
     .contact-item {
-      font-size: 0.058in;
-      line-height: 1.15;
+      font-size: 0.066in;
+      line-height: 1.18;
       white-space: nowrap;
     }
 
     .agency {
       display: grid;
-      grid-template-columns: 0.26in 0.52in;
-      gap: 0.05in;
+      grid-template-columns: 0.29in 0.58in;
+      gap: 0.055in;
       align-items: center;
       color: var(--cream-muted);
-      font-size: 0.055in;
+      font-size: 0.06in;
       font-weight: 700;
       letter-spacing: 0.06em;
       line-height: 1.08;
@@ -302,8 +314,8 @@
     }
 
     .agency-mark {
-      width: 0.25in;
-      height: 0.25in;
+      width: 0.285in;
+      height: 0.285in;
       border: 1px solid var(--cream-muted);
       border-radius: 50%;
       position: relative;
@@ -319,17 +331,17 @@
 
     .agency-mark::before {
       width: 1px;
-      height: 0.18in;
+      height: 0.2in;
       left: 50%;
-      top: 0.035in;
+      top: 0.04in;
       transform: rotate(28deg);
     }
 
     .agency-mark::after {
-      width: 0.15in;
+      width: 0.17in;
       height: 1px;
-      left: 0.045in;
-      top: 0.12in;
+      left: 0.05in;
+      top: 0.14in;
       transform: rotate(-28deg);
     }
 
@@ -358,7 +370,7 @@
 <body>
   <main class="sheet" aria-label="Print table tent">
     <section class="topline" aria-label="Book hook">
-      <p class="hook" contenteditable="true">Some wounds don't bleed -<br>they fold you inward.</p>
+      <p class="hook" contenteditable="true">Some wounds don&rsquo;t bleed &mdash;<br>they fold you inward.</p>
       <p class="release" contenteditable="true">Coming July 2026</p>
     </section>
 
@@ -378,14 +390,15 @@
 
     <section class="endorsement" aria-label="Endorsement">
       <blockquote>
-        <p contenteditable="true">Some wounds don't bleed - they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.</p>
-        <footer contenteditable="true">- Sarah Edmondson, Podcast Host and Author of A Little Bit Culty</footer>
+        <p contenteditable="true">Some wounds don&rsquo;t bleed&mdash;they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.</p>
+        <footer contenteditable="true">&mdash; Sarah Edmondson, Podcast Host and Author of A Little Bit Culty</footer>
       </blockquote>
     </section>
 
     <section class="preorder-box" aria-label="Preorder call to action">
       <div>
         <h2 contenteditable="true">Preorder Now</h2>
+        <span class="preorder-label" contenteditable="true">Preorder page:</span>
         <span class="url" contenteditable="true">wovenself.com/author</span>
       </div>
       <div class="qr">
