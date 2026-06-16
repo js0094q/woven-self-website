@@ -68,7 +68,7 @@ Required content:
 - `Some wounds don't bleed - they fold you inward.`
 - `Coming July 2026`
 - `A memoir about coercive control, trauma, identity, and the nonlinear journey back to self-trust.`
-- `Join the preorder & launch list`
+- `Preorder Now`
 - `wovenself.com/author`
 - `Email: loren@wovenself.com`
 - `Social/Substack: @quietalchemywloren`

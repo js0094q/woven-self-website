@@ -203,7 +203,7 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 1.08in;
+      grid-template-columns: minmax(0, 1fr) 1.16in;
       gap: 0.32in;
       align-items: center;
       padding: 0.18in 0.22in;
@@ -231,18 +231,20 @@
     }
 
     .qr {
-      width: 1.08in;
-      height: 1.08in;
+      width: 1.16in;
+      height: 1.16in;
       display: grid;
       place-items: center;
+      justify-self: end;
       background: #fff;
-      padding: 0.1in;
+      padding: 0.14in;
     }
 
     .qr img {
       display: block;
-      width: 0.9in;
-      height: 0.9in;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .footer {
@@ -383,7 +385,7 @@
 
     <section class="preorder-box" aria-label="Preorder call to action">
       <div>
-        <h2 contenteditable="true">Join the preorder<br>&amp; launch list</h2>
+        <h2 contenteditable="true">Preorder Now</h2>
         <span class="url" contenteditable="true">wovenself.com/author</span>
       </div>
       <div class="qr">
