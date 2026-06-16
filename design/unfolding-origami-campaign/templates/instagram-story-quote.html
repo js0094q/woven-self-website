@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unfolding Origami Instagram Quote Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FBF7F0;
+      --warm-white: #FFFDF9;
+      --sage: #4A5C5A;
+      --muted-sage: #7D8C88;
+      --clay: #B98F76;
+      --soft-clay: #E6D1C3;
+      --ink: #2F3A38;
+      --mist: #EDE8E1;
+      --border: #D8CEC2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--mist);
+      color: var(--ink);
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .canvas {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background:
+        linear-gradient(154deg, transparent 0 48%, rgba(216, 206, 194, 0.48) 48.1%, transparent 48.35%),
+        linear-gradient(71deg, transparent 0 25%, rgba(230, 209, 195, 0.48) 25.1%, transparent 25.45%),
+        var(--warm-white);
+      padding: 150px 96px;
+    }
+
+    .canvas::before {
+      content: "";
+      position: absolute;
+      inset: 70px 58px;
+      border: 1px solid rgba(216, 206, 194, 0.72);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .fold-mark {
+      width: 138px;
+      height: 138px;
+      border-top: 1px solid var(--clay);
+      border-right: 1px solid var(--clay);
+      align-self: flex-end;
+    }
+
+    .quote {
+      max-width: 840px;
+      margin: 0;
+      color: var(--sage);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 112px;
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .book {
+      margin-top: 66px;
+      color: var(--ink);
+      font-size: 34px;
+      font-weight: 800;
+    }
+
+    .author {
+      margin-top: 16px;
+      color: var(--muted-sage);
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .cta {
+      padding-top: 38px;
+      border-top: 1px solid var(--border);
+      color: var(--ink);
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    .url {
+      color: var(--sage);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    [contenteditable="true"]:focus {
+      outline: 3px solid rgba(185, 143, 118, 0.42);
+      outline-offset: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="Instagram story quote graphic">
+    <section class="content">
+      <div class="fold-mark" aria-hidden="true"></div>
+      <div>
+        <p class="quote" contenteditable="true">Some wounds don't bleed -<br>they fold you inward.</p>
+        <div class="book" contenteditable="true">Unfolding Origami: A Memoir</div>
+        <div class="author" contenteditable="true">Loren Galese</div>
+      </div>
+      <div class="cta" contenteditable="true">Preorder signed copies:<br><span class="url">wovenself.com/author</span></div>
+    </section>
+  </main>
+</body>
+</html>
