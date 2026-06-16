@@ -12,10 +12,10 @@ Required sections:
 
 - Book title and hook.
 - Book description.
-- Book cover placeholder.
+- Book cover image from `images/unfolding-origami-cover.jpg`.
 - Emotional threads.
 - Preorder CTA.
-- QR placeholder.
+- QR code from `assets/preorder-qr.svg`.
 - Contact details.
 
 Required content:
@@ -49,7 +49,7 @@ Design requirements:
 - Use the Quiet Paper System.
 - Keep text editable in source HTML.
 - Use restrained origami and fold-line motifs.
-- Keep QR placeholder clearly labeled unless a real QR code is generated.
+- Keep the generated preorder QR code pointed at `https://wovenself.com/author`.
 - Avoid rasterized text.
 - Keep footer contact details clean and readable.
 
@@ -75,8 +75,8 @@ Required content:
 
 Required layout elements:
 
-- Book cover placeholder.
-- QR code placeholder.
+- Book cover image from `images/unfolding-origami-cover.jpg`.
+- QR code from `assets/preorder-qr.svg`.
 - Subtle Quiet Paper System motif.
 - Clean readable footer.
 - Editable HTML text.

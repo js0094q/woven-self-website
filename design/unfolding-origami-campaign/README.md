@@ -77,6 +77,6 @@ External Stripe links must use `target="_blank" rel="noopener noreferrer"`.
 - Use `wovenself.com/author` for visible campaign traffic.
 - Use `Preorder Now` or `Preorder signed copies` for CTAs.
 - Keep text editable in source files.
-- Keep QR code placeholders clearly labeled unless a real QR code is generated.
+- Use `assets/preorder-qr.svg` for preorder QR placements.
 - Keep reader-community copy restrained and non-sensationalized.
 - Do not redesign the full website as part of this campaign system.

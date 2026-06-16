@@ -83,6 +83,13 @@
       text-transform: uppercase;
     }
 
+    .cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 0.08in 0.2in rgba(47, 58, 56, 0.18);
+    }
+
     .qr {
       width: 1.6in;
       height: 1.6in;
@@ -97,6 +104,12 @@
       line-height: 1.25;
       text-align: center;
       text-transform: uppercase;
+    }
+
+    .qr img {
+      display: block;
+      width: 1.35in;
+      height: 1.35in;
     }
 
     .side-details {
@@ -254,8 +267,12 @@
   <main class="sheet" aria-label="Print sell sheet">
     <section class="grid">
       <aside>
-        <div class="cover" contenteditable="true">Book cover placeholder</div>
-        <div class="qr" contenteditable="true">QR code placeholder</div>
+        <div class="cover">
+          <img src="../../../images/unfolding-origami-cover.jpg" alt="Cover of Unfolding Origami: A Memoir by Loren Galese">
+        </div>
+        <div class="qr">
+          <img src="../assets/preorder-qr.svg" alt="QR code for the Unfolding Origami preorder page">
+        </div>
         <div class="side-details">
           <div contenteditable="true">Preorders:</div>
           <div contenteditable="true">$24.99</div>

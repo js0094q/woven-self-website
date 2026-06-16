@@ -76,7 +76,7 @@ Color usage:
 - `--campaign-soft-clay`: folded-corner details.
 - `--campaign-ink`: body copy and high-contrast text.
 - `--campaign-mist`: soft dividers and secondary surfaces.
-- `--campaign-border`: paper-card borders and QR placeholder outlines.
+- `--campaign-border`: paper-card borders and QR code frames.
 
 ## Typography
 

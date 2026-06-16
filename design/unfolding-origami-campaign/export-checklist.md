@@ -16,7 +16,7 @@
 - [ ] Reader-community language is included where appropriate.
 - [ ] Designs are restrained and non-sensationalized.
 - [ ] Text remains editable in source HTML.
-- [ ] QR code placeholder is clearly labeled unless a real QR code is generated.
+- [ ] QR code scans to `https://wovenself.com/author`.
 - [ ] Exports are placed in `design/unfolding-origami-campaign/exports/`.
 
 ## Expected Exports
