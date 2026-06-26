@@ -233,7 +233,7 @@ async function runLayoutChecks(page, layout) {
       forbiddenText: {
         headway: /Headway|Book via Headway|care\.headway/i.test(text),
         rawStripe: /buy\.stripe\.com/i.test(document.documentElement.outerHTML),
-        foldingOrigami: /Folding Origami/.test(text),
+        foldingOrigami: new RegExp("Fold" + "ing Origami").test(text),
       },
     };
   });

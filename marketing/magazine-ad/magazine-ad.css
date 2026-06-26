@@ -545,8 +545,8 @@ body.half-vertical-export {
 
 .half-page {
   background:
-    radial-gradient(circle at 18% 18%, rgba(221, 120, 136, 0.18), transparent 28%),
-    radial-gradient(circle at 88% 6%, rgba(111, 152, 192, 0.2), transparent 30%),
+    radial-gradient(circle at 18% 18%, rgba(221, 120, 136, 0.1), transparent 28%),
+    radial-gradient(circle at 88% 6%, rgba(46, 67, 65, 0.14), transparent 30%),
     linear-gradient(135deg, rgba(4, 7, 22, 0.028) 0 1px, transparent 1px 100%),
     linear-gradient(135deg, #fdf7f0 0%, var(--cover-cream) 44%, #edf1f1 100%);
   background-size: auto, auto, 1.15in 1.15in, auto;
@@ -585,15 +585,16 @@ body.half-vertical-export {
 }
 
 .half-horizontal .safe-area {
-  grid-template-columns: 1.68in minmax(0, 2.16in) minmax(0, 1.42in) 1.15in;
+  grid-template-columns: 1.74in minmax(0, 2.48in) minmax(0, 2.56in);
   grid-template-rows: minmax(0, 1fr);
   align-items: stretch;
-  column-gap: 0.16in;
+  column-gap: 0.18in;
 }
 
 .half-cover-panel,
 .half-title-panel,
 .half-author-panel,
+.half-side-panel,
 .half-cta,
 .vertical-title-panel,
 .vertical-visuals,
@@ -641,7 +642,7 @@ body.half-vertical-export {
 .half-title-panel {
   display: grid;
   align-content: center;
-  gap: 0.055in;
+  gap: 0.07in;
   min-width: 0;
 }
 
@@ -665,18 +666,39 @@ body.half-vertical-export {
 }
 
 .half-title-panel h1 {
-  max-width: 2.08in;
-  font-size: 27pt;
-  line-height: 0.92;
+  max-width: 2.5in;
+  font-size: 29.5pt;
+  line-height: 0.94;
 }
 
-.half-subtitle {
+.half-subtitle,
+.half-bookline span {
   margin: 0;
   color: var(--cover-butterfly-pink);
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 15.5pt;
   font-weight: 700;
   line-height: 1;
+}
+
+.half-bookline {
+  margin: 0;
+  color: var(--sage);
+  font-size: 8.7pt;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.28;
+  text-transform: uppercase;
+}
+
+.half-bookline span {
+  display: inline;
+  font-size: 13pt;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.half-subtitle {
+  font-size: 15.5pt;
 }
 
 .half-byline {
@@ -690,11 +712,19 @@ body.half-vertical-export {
 }
 
 .half-rule {
-  width: 0.9in;
+  width: 1.02in;
   height: 0.02in;
   margin: 0.045in 0;
   background: var(--cover-butterfly-pink);
   opacity: 0.84;
+}
+
+.local-line {
+  margin: 0;
+  color: #263241;
+  font-size: 9.2pt;
+  font-weight: 650;
+  line-height: 1.42;
 }
 
 .half-description {
@@ -727,12 +757,27 @@ body.half-vertical-export {
   min-width: 0;
 }
 
+.half-side-panel {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 0.16in;
+  min-width: 0;
+}
+
+.author-quote-row {
+  display: grid;
+  grid-template-columns: 0.72in minmax(0, 1fr);
+  gap: 0.1in;
+  align-items: start;
+}
+
 .author-photo {
   margin: 0;
   overflow: hidden;
   background: #fffaf2;
   border: 1px solid rgba(28, 39, 60, 0.2);
-  border-radius: 0.08in;
+  border-radius: 999px;
   box-shadow: 0 0.1in 0.2in rgba(4, 7, 22, 0.12);
 }
 
@@ -745,18 +790,18 @@ body.half-vertical-export {
 }
 
 .half-horizontal .author-photo {
-  width: 1.34in;
-  height: 1.34in;
+  width: 0.72in;
+  height: 0.86in;
 }
 
 .half-endorsement {
-  padding: 0.11in 0 0.09in 0.1in;
+  padding: 0.08in 0 0.07in 0.1in;
   border-left-color: var(--cover-butterfly-pink);
   background: linear-gradient(90deg, rgba(255, 250, 242, 0.76), rgba(240, 224, 207, 0.18) 82%);
 }
 
 .half-endorsement p {
-  font-size: 8.4pt;
+  font-size: 7.8pt;
   line-height: 1.33;
 }
 
@@ -772,7 +817,7 @@ body.half-vertical-export {
 }
 
 .half-endorsement footer {
-  margin-top: 0.055in;
+  margin-top: 0.05in;
   font-size: 5.8pt;
   letter-spacing: 0.06em;
   line-height: 1.25;
@@ -792,7 +837,7 @@ body.half-vertical-export {
   align-self: stretch;
   display: grid;
   align-content: center;
-  gap: 0.08in;
+  gap: 0.075in;
   min-width: 0;
   padding: 0.12in;
   background: rgba(255, 253, 248, 0.88);
@@ -805,20 +850,37 @@ body.half-vertical-export {
 
 .half-horizontal .half-cta {
   align-self: center;
+  grid-template-columns: minmax(0, 1.32in) 0.82in;
+  align-items: center;
+  padding: 0.1in;
 }
 
 .half-cta-title {
   margin: 0;
   color: var(--cover-deep-blue);
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 12.4pt;
+  font-size: 11.2pt;
   font-weight: 700;
   line-height: 1.06;
+}
+
+.half-cta-support {
+  margin: 0.045in 0 0;
+  color: var(--muted);
+  font-size: 6.5pt;
+  font-weight: 700;
+  line-height: 1.28;
 }
 
 .half-qr-row {
   display: grid;
   gap: 0.065in;
+}
+
+.half-horizontal .half-qr-row {
+  grid-template-columns: 0.82in;
+  justify-items: center;
+  gap: 0.045in;
 }
 
 .half-qr-row img {
@@ -837,7 +899,7 @@ body.half-vertical-export {
 }
 
 .qr-label {
-  color: var(--cover-muted-blue);
+  color: var(--cover-butterfly-pink);
   font-size: 5.7pt;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -848,11 +910,11 @@ body.half-vertical-export {
 .half-url {
   margin-top: 0.03in;
   color: var(--cover-ink);
-  font-size: 8pt;
+  font-size: 7.5pt;
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1.14;
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 .half-vertical {
@@ -863,15 +925,15 @@ body.half-vertical-export {
 
 .half-vertical .safe-area {
   display: grid;
-  grid-template-rows: auto auto auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto auto minmax(0, auto) minmax(0, 1fr);
   align-content: stretch;
-  gap: 0.11in;
+  gap: 0.1in;
 }
 
 .vertical-title-panel {
   display: grid;
   justify-items: center;
-  gap: 0.045in;
+  gap: 0.055in;
   text-align: center;
 }
 
@@ -884,6 +946,22 @@ body.half-vertical-export {
   max-width: 3.02in;
   font-size: 25pt;
   line-height: 0.94;
+}
+
+.vertical-title-panel .half-bookline {
+  max-width: 2.76in;
+  font-size: 7.6pt;
+  line-height: 1.24;
+}
+
+.vertical-title-panel .half-bookline span {
+  font-size: 11.8pt;
+}
+
+.vertical-title-panel .local-line {
+  max-width: 2.78in;
+  font-size: 7.3pt;
+  line-height: 1.32;
 }
 
 .vertical-title-panel .half-subtitle {
@@ -914,7 +992,7 @@ body.half-vertical-export {
 
 .vertical-copy-panel {
   display: grid;
-  gap: 0.09in;
+  gap: 0;
 }
 
 .vertical-copy-panel .half-description {
@@ -924,11 +1002,11 @@ body.half-vertical-export {
 }
 
 .vertical-endorsement {
-  padding: 0.09in 0 0.08in 0.1in;
+  padding: 0.08in 0 0.075in 0.1in;
 }
 
 .vertical-endorsement p {
-  font-size: 7.8pt;
+  font-size: 7.5pt;
 }
 
 .vertical-cta {
@@ -936,11 +1014,16 @@ body.half-vertical-export {
   grid-template-columns: 1fr;
   justify-items: center;
   text-align: center;
-  padding: 0.1in;
+  padding: 0.105in;
 }
 
 .vertical-cta .half-cta-title {
-  font-size: 12.1pt;
+  font-size: 11.6pt;
+}
+
+.vertical-cta .half-cta-support {
+  max-width: 2.35in;
+  font-size: 6.3pt;
 }
 
 .vertical-cta .half-qr-row {

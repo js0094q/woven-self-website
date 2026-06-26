@@ -11,6 +11,17 @@
 ## Loren Feedback Revision
 This revision adds half-page layouts, incorporates Loren’s author image, uses pink accents sampled from the book-cover butterflies, and verifies Sarah Edmondson’s quote from the live author page.
 
+## Final Print Concept Refinement
+The half-page layouts use a local-author book-ad hierarchy:
+- `Unfolding Origami`
+- `A Memoir by Loren Galese, LPC, ACS`
+- `A local New Jersey author's memoir of survival, self-trust, and healing.`
+- Sarah Edmondson endorsement excerpt
+- `Preorder your signed copy`
+- `wovenself.com/author`
+
+The book cover remains the dominant sales object. Loren's portrait is used as a secondary author anchor.
+
 ## Half-Page Layouts
 Files:
 - `magazine-ad-half-horizontal.html`
@@ -97,6 +108,7 @@ Sarah Edmondson quote is exact or clearly marked as a shortened excerpt.
 No invented quote wording appears.
 Pink accents are sampled from the cover, especially the butterflies.
 Printed URL remains wovenself.com/author.
+CTA reads Preorder your signed copy.
 No raw Stripe URL appears as printed text.
 No therapy booking CTA appears.
 No safe-area overflow.
@@ -132,6 +144,7 @@ Book cover remains undistorted.
 Loren portrait remains undistorted.
 Sarah Edmondson quote is exact or clearly marked as a shortened excerpt.
 Printed URL remains wovenself.com/author.
+CTA reads Preorder your signed copy.
 No raw Stripe URL appears as printed text.
 No therapy booking CTA appears.
 No safe-area overflow.
