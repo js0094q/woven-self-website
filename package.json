@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "export:magazine-ad": "node marketing/magazine-ad/export-visuals.mjs",
+    "flodesk:kit": "node scripts/list-flodesk-build-kit.js"
+  },
+  "devDependencies": {
+    "playwright": "1.61.0",
+    "sharp": "0.34.5"
+  }
+}

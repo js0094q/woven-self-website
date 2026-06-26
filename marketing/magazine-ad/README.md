@@ -21,6 +21,58 @@ Use browser print:
 - Margins: None
 - Background graphics: On
 
+## Exported Visuals
+Final generated files live in:
+`marketing/magazine-ad/exports/`
+
+Files:
+- `magazine-ad.png` — print proof image, 2550x3300px
+- `magazine-ad.pdf` — print proof PDF, Letter size
+- `magazine-ad-minimal.png` — alternate print proof image
+- `magazine-ad-minimal.pdf` — alternate print proof PDF
+- `magazine-ad-preview.jpg` — lightweight preview image
+
+## Regenerate Exports
+Run:
+
+```bash
+npm install
+npm run export:magazine-ad
+```
+
+If Playwright browsers are missing, run:
+
+```bash
+npx playwright install chromium
+```
+
+## Visual QA Requirements
+After generating exports, verify:
+
+```text
+Primary PNG exists.
+Primary PNG is approximately 2550x3300px.
+Minimal PNG exists.
+Minimal PNG is approximately 2550x3300px.
+Primary PDF exists.
+Minimal PDF exists.
+Preview JPG exists.
+QR remains readable.
+Book cover remains undistorted.
+No safe-area overflow.
+No broken images.
+```
+
+Use available tools, for example:
+
+```bash
+file marketing/magazine-ad/exports/*
+identify marketing/magazine-ad/exports/*.png
+pdfinfo marketing/magazine-ad/exports/*.pdf
+```
+
+If ImageMagick or pdfinfo are unavailable, use Node-based checks.
+
 ## QR Code
 The QR code points to:
 `https://wovenself.com/author`
