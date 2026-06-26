@@ -10,10 +10,13 @@ const exportsDir = path.join(adDir, "exports");
 const sourceFiles = {
   primaryHtml: path.join(adDir, "magazine-ad.html"),
   minimalHtml: path.join(adDir, "magazine-ad-minimal.html"),
+  halfHorizontalHtml: path.join(adDir, "magazine-ad-half-horizontal.html"),
+  halfVerticalHtml: path.join(adDir, "magazine-ad-half-vertical.html"),
   css: path.join(adDir, "magazine-ad.css"),
   qr: path.join(adDir, "assets/qr-author.png"),
   cover: path.join(repoRoot, "design/book-cover-unfolding-origami/front-cover-concept-v7-title-author-allcaps-larger.png"),
   logo: path.join(repoRoot, "images/logo.png"),
+  authorPortrait: path.join(repoRoot, "images/loren-author-blue-floral.jpeg"),
 };
 
 const outputs = {
@@ -22,13 +25,86 @@ const outputs = {
   minimalPng: path.join(exportsDir, "magazine-ad-minimal.png"),
   minimalPdf: path.join(exportsDir, "magazine-ad-minimal.pdf"),
   previewJpg: path.join(exportsDir, "magazine-ad-preview.jpg"),
+  halfHorizontalPng: path.join(exportsDir, "magazine-ad-half-horizontal.png"),
+  halfHorizontalPdf: path.join(exportsDir, "magazine-ad-half-horizontal.pdf"),
+  halfVerticalPng: path.join(exportsDir, "magazine-ad-half-vertical.png"),
+  halfVerticalPdf: path.join(exportsDir, "magazine-ad-half-vertical.pdf"),
+  halfHorizontalPreviewJpg: path.join(exportsDir, "magazine-ad-half-horizontal-preview.jpg"),
 };
 
-const expectedPng = {
-  width: 2550,
-  height: 3300,
-  tolerance: 10,
-};
+const layouts = [
+  {
+    label: "primary",
+    htmlPath: sourceFiles.primaryHtml,
+    pngPath: outputs.primaryPng,
+    pdfPath: outputs.primaryPdf,
+    cssWidth: 816,
+    cssHeight: 1056,
+    pdfWidth: "8.5in",
+    pdfHeight: "11in",
+    expectedPng: { width: 2550, height: 3300, tolerance: 10 },
+    viewport: { width: 900, height: 1200 },
+    safeInset: 24,
+    minQrCssSize: 96,
+  },
+  {
+    label: "minimal",
+    htmlPath: sourceFiles.minimalHtml,
+    pngPath: outputs.minimalPng,
+    pdfPath: outputs.minimalPdf,
+    cssWidth: 816,
+    cssHeight: 1056,
+    pdfWidth: "8.5in",
+    pdfHeight: "11in",
+    expectedPng: { width: 2550, height: 3300, tolerance: 10 },
+    viewport: { width: 900, height: 1200 },
+    safeInset: 24,
+    minQrCssSize: 96,
+  },
+  {
+    label: "half-horizontal",
+    htmlPath: sourceFiles.halfHorizontalHtml,
+    pngPath: outputs.halfHorizontalPng,
+    pdfPath: outputs.halfHorizontalPdf,
+    cssWidth: 720,
+    cssHeight: 468,
+    pdfWidth: "7.5in",
+    pdfHeight: "4.875in",
+    expectedPng: { width: 2250, height: 1463, tolerance: 10 },
+    viewport: { width: 820, height: 570 },
+    safeInset: 17.28,
+    minQrCssSize: 78,
+  },
+  {
+    label: "half-vertical",
+    htmlPath: sourceFiles.halfVerticalHtml,
+    pngPath: outputs.halfVerticalPng,
+    pdfPath: outputs.halfVerticalPdf,
+    cssWidth: 348,
+    cssHeight: 936,
+    pdfWidth: "3.625in",
+    pdfHeight: "9.75in",
+    expectedPng: { width: 1088, height: 2925, tolerance: 10 },
+    viewport: { width: 448, height: 1036 },
+    safeInset: 17.28,
+    minQrCssSize: 78,
+  },
+];
+
+const previewExports = [
+  {
+    label: "primary preview",
+    sourcePng: outputs.primaryPng,
+    outputJpg: outputs.previewJpg,
+    width: 1200,
+  },
+  {
+    label: "half-horizontal preview",
+    sourcePng: outputs.halfHorizontalPng,
+    outputJpg: outputs.halfHorizontalPreviewJpg,
+    width: 1200,
+  },
+];
 
 async function importRequiredPackage(packageName, installHint) {
   try {
@@ -60,39 +136,40 @@ async function assertOutputExists(filePath, label) {
   }
 }
 
-function assertApproxDimension(actual, expected, label) {
-  if (Math.abs(actual - expected) > expectedPng.tolerance) {
+function assertApproxDimension(actual, expected, tolerance, label) {
+  if (Math.abs(actual - expected) > tolerance) {
     throw new Error(`${label} expected approximately ${expected}px, got ${actual}px`);
   }
 }
 
-async function loadAdPage(browser, htmlPath) {
+async function loadAdPage(browser, layout) {
   const page = await browser.newPage({
-    viewport: { width: 900, height: 1200 },
+    viewport: layout.viewport,
     deviceScaleFactor: 3.125,
   });
 
-  await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
+  await page.goto(pathToFileURL(layout.htmlPath).href, { waitUntil: "networkidle" });
   await page.evaluate(() => document.fonts?.ready);
   return page;
 }
 
-async function runLayoutChecks(page, label) {
+async function runLayoutChecks(page, layout) {
   const result = await page.evaluate(() => {
     const px = value => Math.round(value * 100) / 100;
     const pageEl = document.querySelector(".ad-page");
     const safeEl = document.querySelector(".safe-area");
-    const qrCard = document.querySelector(".qr-card");
-    const qrImg = document.querySelector(".qr-card img");
-    const coverImg = document.querySelector(".cover-frame img, .minimal-cover img");
+    const qrContainer = document.querySelector(".qr-card, .half-cta");
+    const qrImg = document.querySelector(".qr-card img, .half-qr-row img");
+    const coverImg = document.querySelector(".cover-frame img, .minimal-cover img, .half-cover img");
+    const portraitImg = document.querySelector(".author-photo img");
 
-    if (!pageEl || !safeEl || !qrCard || !qrImg || !coverImg) {
+    if (!pageEl || !safeEl || !qrContainer || !qrImg || !coverImg) {
       return { missingSelectors: true };
     }
 
     const pageRect = pageEl.getBoundingClientRect();
     const safeRect = safeEl.getBoundingClientRect();
-    const qrCardRect = qrCard.getBoundingClientRect();
+    const qrContainerRect = qrContainer.getBoundingClientRect();
     const qrRect = qrImg.getBoundingClientRect();
     const coverRect = coverImg.getBoundingClientRect();
     const brokenImages = [...document.images]
@@ -112,16 +189,23 @@ async function runLayoutChecks(page, label) {
       })
       .map(el => ({
         tag: el.tagName.toLowerCase(),
-        className: el.className || "",
+        className: typeof el.className === "string" ? el.className : "",
         text: (el.textContent || "").trim().slice(0, 80),
       }));
 
-    const qrInsideCard =
-      qrRect.left >= qrCardRect.left &&
-      qrRect.top >= qrCardRect.top &&
-      qrRect.right <= qrCardRect.right &&
-      qrRect.bottom <= qrCardRect.bottom;
+    const qrInsideContainer =
+      qrRect.left >= qrContainerRect.left &&
+      qrRect.top >= qrContainerRect.top &&
+      qrRect.right <= qrContainerRect.right &&
+      qrRect.bottom <= qrContainerRect.bottom;
 
+    const portrait = portraitImg
+      ? {
+          naturalWidth: portraitImg.naturalWidth,
+          naturalHeight: portraitImg.naturalHeight,
+          objectFit: window.getComputedStyle(portraitImg).objectFit,
+        }
+      : null;
     const text = document.body.innerText;
 
     return {
@@ -140,11 +224,12 @@ async function runLayoutChecks(page, label) {
         y: Math.max(0, document.documentElement.scrollHeight - document.documentElement.clientHeight),
       },
       qrSize: { width: px(qrRect.width), height: px(qrRect.height) },
-      qrInsideCard,
+      qrInsideContainer,
       coverAspect: {
         rendered: px(coverRect.width / coverRect.height),
         natural: px(coverImg.naturalWidth / coverImg.naturalHeight),
       },
+      portrait,
       forbiddenText: {
         headway: /Headway|Book via Headway|care\.headway/i.test(text),
         rawStripe: /buy\.stripe\.com/i.test(document.documentElement.outerHTML),
@@ -153,65 +238,79 @@ async function runLayoutChecks(page, label) {
     };
   });
 
-  if (result.missingSelectors) throw new Error(`${label}: required layout selectors are missing`);
-  if (result.pageSize.width !== 816 || result.pageSize.height !== 1056) {
-    throw new Error(`${label}: expected .ad-page to be 816x1056 CSS px, got ${JSON.stringify(result.pageSize)}`);
-  }
-  if (
-    result.safeArea.insetLeft !== 24 ||
-    result.safeArea.insetTop !== 24 ||
-    result.safeArea.width !== 768 ||
-    result.safeArea.height !== 1008
-  ) {
-    throw new Error(`${label}: safe area check failed: ${JSON.stringify(result.safeArea)}`);
-  }
+  if (result.missingSelectors) throw new Error(`${layout.label}: required layout selectors are missing`);
+  assertApproxDimension(result.pageSize.width, layout.cssWidth, 0.75, `${layout.label} .ad-page width`);
+  assertApproxDimension(result.pageSize.height, layout.cssHeight, 0.75, `${layout.label} .ad-page height`);
+  assertApproxDimension(result.safeArea.insetLeft, layout.safeInset, 0.75, `${layout.label} safe-area left inset`);
+  assertApproxDimension(result.safeArea.insetTop, layout.safeInset, 0.75, `${layout.label} safe-area top inset`);
+  assertApproxDimension(result.safeArea.width, layout.cssWidth - layout.safeInset * 2, 1, `${layout.label} safe-area width`);
+  assertApproxDimension(result.safeArea.height, layout.cssHeight - layout.safeInset * 2, 1, `${layout.label} safe-area height`);
+
   if (result.brokenImages.length > 0) {
-    throw new Error(`${label}: broken images: ${result.brokenImages.join(", ")}`);
+    throw new Error(`${layout.label}: broken images: ${result.brokenImages.join(", ")}`);
   }
   if (result.outsideSafeArea.length > 0) {
-    throw new Error(`${label}: content outside safe area: ${JSON.stringify(result.outsideSafeArea)}`);
+    throw new Error(`${layout.label}: content outside safe area: ${JSON.stringify(result.outsideSafeArea)}`);
   }
   if (result.scrollOverflow.x !== 0 || result.scrollOverflow.y !== 0) {
-    throw new Error(`${label}: scroll overflow: ${JSON.stringify(result.scrollOverflow)}`);
+    throw new Error(`${layout.label}: scroll overflow: ${JSON.stringify(result.scrollOverflow)}`);
   }
-  if (result.qrSize.width < 96 || result.qrSize.height < 96 || !result.qrInsideCard) {
-    throw new Error(`${label}: QR placement check failed: ${JSON.stringify({ qrSize: result.qrSize, qrInsideCard: result.qrInsideCard })}`);
+  if (result.qrSize.width < layout.minQrCssSize || result.qrSize.height < layout.minQrCssSize || !result.qrInsideContainer) {
+    throw new Error(`${layout.label}: QR placement check failed: ${JSON.stringify({ qrSize: result.qrSize, qrInsideContainer: result.qrInsideContainer })}`);
   }
   if (Math.abs(result.coverAspect.rendered - result.coverAspect.natural) > 0.01) {
-    throw new Error(`${label}: book cover aspect ratio changed: ${JSON.stringify(result.coverAspect)}`);
+    throw new Error(`${layout.label}: book cover aspect ratio changed: ${JSON.stringify(result.coverAspect)}`);
+  }
+  if (result.portrait && (result.portrait.naturalWidth === 0 || result.portrait.naturalHeight === 0 || !["cover", "contain"].includes(result.portrait.objectFit))) {
+    throw new Error(`${layout.label}: author portrait rendering check failed: ${JSON.stringify(result.portrait)}`);
   }
   for (const [name, found] of Object.entries(result.forbiddenText)) {
-    if (found) throw new Error(`${label}: forbidden text found: ${name}`);
+    if (found) throw new Error(`${layout.label}: forbidden text found: ${name}`);
   }
 }
 
-async function exportLayout(browser, sharp, { label, htmlPath, pngPath, pdfPath }) {
-  const page = await loadAdPage(browser, htmlPath);
-  await runLayoutChecks(page, label);
+async function exportLayout(browser, sharp, layout) {
+  const page = await loadAdPage(browser, layout);
+  await runLayoutChecks(page, layout);
 
-  await page.locator(".ad-page").screenshot({ path: pngPath });
+  await page.locator(".ad-page").screenshot({ path: layout.pngPath });
   await page.pdf({
-    path: pdfPath,
-    width: "8.5in",
-    height: "11in",
+    path: layout.pdfPath,
+    width: layout.pdfWidth,
+    height: layout.pdfHeight,
     margin: { top: "0", right: "0", bottom: "0", left: "0" },
     printBackground: true,
-    preferCSSPageSize: true,
   });
 
   await page.close();
 
-  await assertOutputExists(pngPath, `${label} PNG`);
-  await assertOutputExists(pdfPath, `${label} PDF`);
+  await assertOutputExists(layout.pngPath, `${layout.label} PNG`);
+  await assertOutputExists(layout.pdfPath, `${layout.label} PDF`);
 
-  const metadata = await sharp(pngPath).metadata();
-  assertApproxDimension(metadata.width, expectedPng.width, `${label} PNG width`);
-  assertApproxDimension(metadata.height, expectedPng.height, `${label} PNG height`);
+  const metadata = await sharp(layout.pngPath).metadata();
+  assertApproxDimension(metadata.width, layout.expectedPng.width, layout.expectedPng.tolerance, `${layout.label} PNG width`);
+  assertApproxDimension(metadata.height, layout.expectedPng.height, layout.expectedPng.tolerance, `${layout.label} PNG height`);
 
   return {
-    label,
-    png: path.relative(repoRoot, pngPath),
-    pdf: path.relative(repoRoot, pdfPath),
+    label: layout.label,
+    png: path.relative(repoRoot, layout.pngPath),
+    pdf: path.relative(repoRoot, layout.pdfPath),
+    dimensions: `${metadata.width}x${metadata.height}`,
+  };
+}
+
+async function exportPreview(sharp, preview) {
+  await sharp(preview.sourcePng)
+    .resize({ width: preview.width })
+    .jpeg({ quality: 85 })
+    .toFile(preview.outputJpg);
+
+  await assertOutputExists(preview.outputJpg, preview.label);
+  const metadata = await sharp(preview.outputJpg).metadata();
+
+  return {
+    label: preview.label,
+    file: path.relative(repoRoot, preview.outputJpg),
     dimensions: `${metadata.width}x${metadata.height}`,
   };
 }
@@ -235,33 +334,18 @@ async function main() {
 
   try {
     const exported = [];
-    exported.push(await exportLayout(browser, sharp, {
-      label: "primary",
-      htmlPath: sourceFiles.primaryHtml,
-      pngPath: outputs.primaryPng,
-      pdfPath: outputs.primaryPdf,
-    }));
-    exported.push(await exportLayout(browser, sharp, {
-      label: "minimal",
-      htmlPath: sourceFiles.minimalHtml,
-      pngPath: outputs.minimalPng,
-      pdfPath: outputs.minimalPdf,
-    }));
+    for (const layout of layouts) {
+      exported.push(await exportLayout(browser, sharp, layout));
+    }
 
-    await sharp(outputs.primaryPng)
-      .resize({ width: 1200 })
-      .jpeg({ quality: 85 })
-      .toFile(outputs.previewJpg);
-
-    await assertOutputExists(outputs.previewJpg, "preview JPG");
-    const previewMetadata = await sharp(outputs.previewJpg).metadata();
+    const previews = [];
+    for (const preview of previewExports) {
+      previews.push(await exportPreview(sharp, preview));
+    }
 
     console.log(JSON.stringify({
       exports: exported,
-      preview: {
-        file: path.relative(repoRoot, outputs.previewJpg),
-        dimensions: `${previewMetadata.width}x${previewMetadata.height}`,
-      },
+      previews,
     }, null, 2));
   } finally {
     await browser?.close();
