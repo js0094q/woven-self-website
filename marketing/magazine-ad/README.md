@@ -73,6 +73,16 @@ pdfinfo marketing/magazine-ad/exports/*.pdf
 
 If ImageMagick or pdfinfo are unavailable, use Node-based checks.
 
+## Book Cover Color Palette
+Approximate colors sampled from `design/book-cover-unfolding-origami/front-cover-concept-v7-title-author-allcaps-larger.png`:
+- Deep blue: `#040716`
+- Muted blue: `#1C273C`
+- Pale blue: `#6F98C0`
+- Warm cream: `#F0E0CF`
+- Soft gold / tan: `#A8A19A`
+- Text dark: `#03050F`
+- Rose accent: `#D36A7C`
+
 ## QR Code
 The QR code points to:
 `https://wovenself.com/author`
