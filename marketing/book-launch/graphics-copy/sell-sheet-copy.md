@@ -2,7 +2,7 @@
 
 ## Title
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 ## Author
 
@@ -14,7 +14,7 @@ Some wounds don't bleed - they fold you inward.
 
 ## Description
 
-*Folding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
+*Unfolding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
 
 ## Emotional Threads
 

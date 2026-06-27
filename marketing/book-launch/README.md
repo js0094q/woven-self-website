@@ -1,12 +1,12 @@
-# Folding Origami Book Launch Assets
+# Unfolding Origami Book Launch Assets
 
-This folder contains reusable marketing assets for Loren Galese's preorder and launch campaign for *Folding Origami: A Memoir*.
+This folder contains reusable marketing assets for Loren Galese's preorder and launch campaign for *Unfolding Origami: A Memoir*.
 
 ## Core Details
 
 | Field | Detail |
 |---|---|
-| Book Title | *Folding Origami: A Memoir* |
+| Book Title | *Unfolding Origami: A Memoir* |
 | Author | Loren Galese |
 | Price | $24.99 |
 | Release Date | July 20 |
@@ -17,7 +17,7 @@ This folder contains reusable marketing assets for Loren Galese's preorder and l
 
 ## Primary Positioning
 
-*Folding Origami* is a memoir about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
+*Unfolding Origami* is a memoir about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
 
 ## Campaign Goal
 

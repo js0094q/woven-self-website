@@ -2,19 +2,19 @@
 
 ## Core Message
 
-*Folding Origami* is a memoir about trauma, coercive control, survival, and the slow process of unfolding back into yourself.
+*Unfolding Origami* is a memoir about trauma, coercive control, survival, and the slow process of unfolding back into yourself.
 
 ## 15-Second Version
 
-My memoir, *Folding Origami*, is about trauma, coercive control, survival, and healing. Preorders are open now, and signed copies include a surprise from Loren.
+My memoir, *Unfolding Origami*, is about trauma, coercive control, survival, and healing. Preorders are open now, and signed copies include a surprise from Loren.
 
 ## 30-Second Version
 
-*Folding Origami: A Memoir* is about what trauma can do quietly - how it changes memory, identity, trust, and the body. It is also about survival and the long process of unfolding back into yourself. Preorders are open now at https://wovenself.com/author.
+*Unfolding Origami: A Memoir* is about what trauma can do quietly - how it changes memory, identity, trust, and the body. It is also about survival and the long process of unfolding back into yourself. Preorders are open now at https://wovenself.com/author.
 
 ## 60-Second Version
 
-*Folding Origami* began as a way to tell the truth about what trauma and coercive control can do to a person internally. Not every wound is visible. Some experiences fold us inward, separate us from our voice, and make us question our own reality. This memoir traces that experience and the slow, complicated work of healing. Preorders are open now, and signed copies include a surprise from Loren.
+*Unfolding Origami* began as a way to tell the truth about what trauma and coercive control can do to a person internally. Not every wound is visible. Some experiences fold us inward, separate us from our voice, and make us question our own reality. This memoir traces that experience and the slow, complicated work of healing. Preorders are open now, and signed copies include a surprise from Loren.
 
 ## Key Phrases
 

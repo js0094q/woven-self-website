@@ -4,7 +4,7 @@
 
 PREORDERS ARE OPEN
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Signed copy + surprise from Loren
 
@@ -19,7 +19,7 @@ Some wounds don't bleed.
 
 They fold you inward.
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Preorder now.
 
@@ -41,7 +41,7 @@ Memoir
 
 Identity
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 ---
 

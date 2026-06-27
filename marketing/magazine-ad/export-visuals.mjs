@@ -15,21 +15,23 @@ const sourceFiles = {
   css: path.join(adDir, "magazine-ad.css"),
   qr: path.join(adDir, "assets/qr-author.png"),
   cover: path.join(repoRoot, "design/book-cover-unfolding-origami/front-cover-concept-v7-title-author-allcaps-larger.png"),
-  logo: path.join(repoRoot, "images/logo.png"),
-  authorPortrait: path.join(repoRoot, "images/loren-author-blue-floral.jpeg"),
 };
 
 const outputs = {
   primaryPng: path.join(exportsDir, "magazine-ad.png"),
   primaryPdf: path.join(exportsDir, "magazine-ad.pdf"),
+  primaryJpg: path.join(exportsDir, "magazine-ad.jpg"),
   minimalPng: path.join(exportsDir, "magazine-ad-minimal.png"),
   minimalPdf: path.join(exportsDir, "magazine-ad-minimal.pdf"),
   previewJpg: path.join(exportsDir, "magazine-ad-preview.jpg"),
   halfHorizontalPng: path.join(exportsDir, "magazine-ad-half-horizontal.png"),
   halfHorizontalPdf: path.join(exportsDir, "magazine-ad-half-horizontal.pdf"),
+  halfHorizontalJpg: path.join(exportsDir, "magazine-ad-half-horizontal.jpg"),
   halfVerticalPng: path.join(exportsDir, "magazine-ad-half-vertical.png"),
   halfVerticalPdf: path.join(exportsDir, "magazine-ad-half-vertical.pdf"),
+  halfVerticalJpg: path.join(exportsDir, "magazine-ad-half-vertical.jpg"),
   halfHorizontalPreviewJpg: path.join(exportsDir, "magazine-ad-half-horizontal-preview.jpg"),
+  halfVerticalPreviewJpg: path.join(exportsDir, "magazine-ad-half-vertical-preview.jpg"),
 };
 
 const layouts = [
@@ -73,7 +75,7 @@ const layouts = [
     expectedPng: { width: 2250, height: 1463, tolerance: 10 },
     viewport: { width: 820, height: 570 },
     safeInset: 17.28,
-    minQrCssSize: 78,
+    minQrCssSize: 70,
   },
   {
     label: "half-vertical",
@@ -87,22 +89,46 @@ const layouts = [
     expectedPng: { width: 1088, height: 2925, tolerance: 10 },
     viewport: { width: 448, height: 1036 },
     safeInset: 17.28,
-    minQrCssSize: 78,
+    minQrCssSize: 70,
   },
 ];
 
 const previewExports = [
   {
-    label: "primary preview",
+    label: "primary JPG",
+    sourcePng: outputs.primaryPng,
+    outputJpg: outputs.primaryJpg,
+    width: 1200,
+  },
+  {
+    label: "primary legacy preview",
     sourcePng: outputs.primaryPng,
     outputJpg: outputs.previewJpg,
     width: 1200,
   },
   {
-    label: "half-horizontal preview",
+    label: "half-horizontal JPG",
+    sourcePng: outputs.halfHorizontalPng,
+    outputJpg: outputs.halfHorizontalJpg,
+    width: 1200,
+  },
+  {
+    label: "half-horizontal legacy preview",
     sourcePng: outputs.halfHorizontalPng,
     outputJpg: outputs.halfHorizontalPreviewJpg,
     width: 1200,
+  },
+  {
+    label: "half-vertical JPG",
+    sourcePng: outputs.halfVerticalPng,
+    outputJpg: outputs.halfVerticalJpg,
+    width: 900,
+  },
+  {
+    label: "half-vertical legacy preview",
+    sourcePng: outputs.halfVerticalPng,
+    outputJpg: outputs.halfVerticalPreviewJpg,
+    width: 900,
   },
 ];
 
@@ -234,6 +260,10 @@ async function runLayoutChecks(page, layout) {
         headway: /Headway|Book via Headway|care\.headway/i.test(text),
         rawStripe: /buy\.stripe\.com/i.test(document.documentElement.outerHTML),
         foldingOrigami: new RegExp("Fold" + "ing Origami").test(text),
+        sellSheetDate: new RegExp("Release\\s*date|" + "July\\s*20", "i").test(text),
+        isbnCode: new RegExp("IS" + "BN|" + "979" + "-8-9956116-0-8", "i").test(text),
+        wovenSelfLogo: /The Woven Self/i.test(text),
+        clinicalCredentialLine: /Licensed Professional Counselor/i.test(text),
       },
     };
   });

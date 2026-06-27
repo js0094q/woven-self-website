@@ -2,7 +2,7 @@
 
 ## Front Side
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Loren Galese
 

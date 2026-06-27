@@ -26,6 +26,6 @@ This memoir is about the quiet work of coming back to yourself.
 
 ## Attribution Line
 
-*Folding Origami: A Memoir*
+*Unfolding Origami: A Memoir*
 
 Loren Galese

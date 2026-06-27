@@ -8,7 +8,7 @@ Approved design for implementation planning.
 
 ## Context
 
-The Woven Self website is a static HTML/CSS/Tailwind-CDN site deployed through Vercel. The current live-facing author and preorder pages use `Unfolding Origami: A Memoir` as the book title. The attached campaign brief and existing untracked marketing assets used mixed `Folding Origami` and `Unfolding Origami` language.
+The Woven Self website is a static HTML/CSS/Tailwind-CDN site deployed through Vercel. The current live-facing author and preorder pages use `Unfolding Origami: A Memoir` as the book title. The attached campaign brief and existing untracked marketing assets used mixed old-title and current-title language.
 
 `Unfolding Origami: A Memoir` is the correct public title and must be used for live website copy, campaign templates, SEO metadata, social captions, and print assets.
 
@@ -210,7 +210,7 @@ Copy should include:
 - signed copy plus surprise from Loren;
 - `https://wovenself.com/author` for campaign traffic.
 
-Replace stale `Folding Origami` references unless a file is intentionally documenting prior naming.
+Replace stale old-title references unless a file is intentionally documenting prior naming.
 
 ## Data Flow And Safety
 
@@ -241,7 +241,7 @@ Use the smallest relevant validation for the static site and campaign templates:
 1. Search for stale live-facing copy:
 
 ```bash
-rg -n "Folding Origami|Join the Launch List|launch list|coming soon|memoir is currently in development|more updates to come" \
+rg -n "Folding\\s+Origami|Join the Launch\\s+List|launch\\s+list|coming soon|memoir is currently in development|more updates to come" \
   --glob '!/.git/**' \
   --glob '!node_modules/**'
 ```

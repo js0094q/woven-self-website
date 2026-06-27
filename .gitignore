@@ -18,6 +18,19 @@ yarn-error.log*
 output/
 .worktrees/
 
+# Local campaign and newsletter work product
+/newsletter/
+/flodesk-build-kit/
+/flodesk/
+/design/unfolding-origami-campaign/
+/design/conference-table-tent/
+/images/newsletter/
+/scripts/
+/substack/
+/marketing/magazine-ad/exports/
+/Agents.md
+/styles-campaign.css
+
 # Python virtual environments
 .venv/
 

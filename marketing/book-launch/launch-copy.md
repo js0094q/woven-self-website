@@ -6,21 +6,21 @@ Some wounds don't bleed - they fold you inward.
 
 ## Short Book Description
 
-*Folding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the quiet work of unfolding back into yourself.
+*Unfolding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the quiet work of unfolding back into yourself.
 
 ## Medium Book Description
 
-*Folding Origami: A Memoir* traces the emotional aftermath of trauma and coercive control, exploring how pain can fold a person inward and how healing asks us to slowly return to the self. Through a personal and reflective lens, Loren Galese writes about survival, memory, identity, and the long process of becoming whole again.
+*Unfolding Origami: A Memoir* traces the emotional aftermath of trauma and coercive control, exploring how pain can fold a person inward and how healing asks us to slowly return to the self. Through a personal and reflective lens, Loren Galese writes about survival, memory, identity, and the long process of becoming whole again.
 
 ## Longer Book Description
 
-*Folding Origami: A Memoir* is Loren Galese's deeply personal account of trauma, coercive control, survival, and healing. The memoir explores how invisible wounds shape identity, relationships, memory, and the nervous system - and how recovery often begins long before we have language for what happened.
+*Unfolding Origami: A Memoir* is Loren Galese's deeply personal account of trauma, coercive control, survival, and healing. The memoir explores how invisible wounds shape identity, relationships, memory, and the nervous system - and how recovery often begins long before we have language for what happened.
 
 With emotional clarity and restraint, Loren traces the quiet unraveling of self that can follow abuse and the courageous work of unfolding back into one's own truth. This is a memoir for readers who have survived, questioned themselves, lost their voice, or begun the difficult process of reclaiming it.
 
 ## Preorder CTA
 
-Preorder your signed copy of *Folding Origami: A Memoir*.
+Preorder your signed copy of *Unfolding Origami: A Memoir*.
 
 Preorders are $24.99 and include a signed copy + surprise from Loren.
 

@@ -100,7 +100,7 @@ Some folders may be untracked depending on the current branch state. Do not add 
 | Stripe payment link | `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00` |
 | Primary CTA | Preorder Now |
 
-The active site uses `Unfolding Origami` for the book title. Some older or untracked marketing assets may still use prior campaign language; verify copy against the live page files before publishing.
+The active site uses `Unfolding Origami` for the book title. Campaign assets should use `Unfolding Origami` consistently; verify copy against the live page files before publishing.
 
 ## Local Development
 

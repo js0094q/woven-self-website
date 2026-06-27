@@ -2,7 +2,7 @@
 
 ## Title
 
-Folding Origami: A Memoir
+Unfolding Origami: A Memoir
 
 ## Author
 
@@ -30,20 +30,20 @@ https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00
 
 ## SEO Title Options
 
-- Folding Origami: A Memoir by Loren Galese
-- Preorder Folding Origami by Loren Galese
-- Folding Origami: A Memoir About Trauma, Survival, and Healing
-- Loren Galese Author | Folding Origami: A Memoir
+- Unfolding Origami: A Memoir by Loren Galese
+- Preorder Unfolding Origami by Loren Galese
+- Unfolding Origami: A Memoir About Trauma, Survival, and Healing
+- Loren Galese Author | Unfolding Origami: A Memoir
 
 ## SEO Description Options
 
-Preorder *Folding Origami: A Memoir* by Loren Galese. A personal story about trauma, coercive control, survival, and unfolding back into yourself.
+Preorder *Unfolding Origami: A Memoir* by Loren Galese. A personal story about trauma, coercive control, survival, and unfolding back into yourself.
 
-Preorders are open for *Folding Origami: A Memoir* by Loren Galese. Signed copies include a surprise from Loren. Release date: July 20.
+Preorders are open for *Unfolding Origami: A Memoir* by Loren Galese. Signed copies include a surprise from Loren. Release date: July 20.
 
 ## Social Preview Description
 
-Preorder *Folding Origami: A Memoir*, a deeply personal story about trauma, coercive control, survival, and unfolding back into yourself.
+Preorder *Unfolding Origami: A Memoir*, a deeply personal story about trauma, coercive control, survival, and unfolding back into yourself.
 
 ## Hashtags
 

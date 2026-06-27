@@ -644,8 +644,8 @@ The `export-checklist.md` must include:
 - [ ] Table tent is landscape letter size.
 - [ ] All visible URLs use `wovenself.com/author`.
 - [ ] All CTAs say `Preorder Now` or `Preorder signed copies`.
-- [ ] No stale `Join the Launch List` copy appears.
-- [ ] No stale `Folding Origami` copy appears in live-facing assets.
+- [ ] No stale list-building CTA copy appears.
+- [ ] No stale old-title copy appears in live-facing assets.
 - [ ] Copy includes `trauma therapist`.
 - [ ] Copy includes `folding back to yourself`.
 - [ ] Copy includes `re-defining your shape`.
@@ -674,7 +674,7 @@ Run:
 
 ```bash
 find design/unfolding-origami-campaign -maxdepth 2 -type f | sort
-rg -n "Folding Origami|Join the Launch List|PLACEHOLDER_MARKER" design/unfolding-origami-campaign || true
+rg -n "Folding\\s+Origami|Join the Launch\\s+List|PLACEHOLDER_MARKER" design/unfolding-origami-campaign || true
 ```
 
 Expected: required docs and SVG files are present; no stale title or placeholder markers appear in the new campaign folder.
@@ -891,11 +891,11 @@ Use visible placeholders labeled `Book cover placeholder` and `QR code placehold
 Run:
 
 ```bash
-rg -n "Folding Origami|Join the Launch List|launch list|unsupported|bestseller|award" design/unfolding-origami-campaign/templates || true
+rg -n "Folding\\s+Origami|Join the Launch\\s+List|launch\\s+list|unsupported|bestseller|award" design/unfolding-origami-campaign/templates || true
 rg -n "Unfolding Origami: A Memoir|Loren Galese|wovenself\\.com/author" design/unfolding-origami-campaign/templates
 ```
 
-Expected: no stale title or launch-list copy; required title/author/URL appear across templates.
+Expected: no stale old-title or list-building CTA copy; required title/author/URL appear across templates.
 
 - [ ] **Step 6: Commit campaign docs and templates**
 
@@ -941,7 +941,7 @@ Expected: marketing files are visible and untracked or modified as user-owned ca
 Run:
 
 ```bash
-perl -0pi -e 's/Folding Origami/Unfolding Origami/g' marketing/book-launch/**/*.md marketing/book-launch/*.md
+perl -0pi -e 's/Folding\\s+Origami/Unfolding Origami/g' marketing/book-launch/**/*.md marketing/book-launch/*.md
 ```
 
 Expected: active marketing copy uses `Unfolding Origami`.
@@ -993,11 +993,11 @@ Do not add sensational claims or guarantees.
 Run:
 
 ```bash
-rg -n "Folding Origami|Join the Launch List|launch list|coming soon|memoir is currently in development|more updates to come" marketing/book-launch || true
+rg -n "Folding\\s+Origami|Join the Launch\\s+List|launch\\s+list|coming soon|memoir is currently in development|more updates to come" marketing/book-launch || true
 rg -n "trauma therapist|folding back to yourself|re-defining your shape|survived quietly|signed copy plus a surprise from Loren|https://wovenself\\.com/author" marketing/book-launch
 ```
 
-Expected: no stale active title or launch-list copy remains. Required campaign phrases appear in marketing files.
+Expected: no stale active old-title or list-building CTA copy remains. Required campaign phrases appear in marketing files.
 
 - [ ] **Step 6: Commit marketing normalization**
 
@@ -1027,7 +1027,7 @@ Expected: commit includes intentional marketing Markdown updates and excludes `.
 Run:
 
 ```bash
-rg -n "Folding Origami|Join the Launch List|launch list|coming soon|memoir is currently in development|more updates to come" \
+rg -n "Folding\\s+Origami|Join the Launch\\s+List|launch\\s+list|coming soon|memoir is currently in development|more updates to come" \
   --glob '!/.git/**' \
   --glob '!node_modules/**' \
   --glob '!docs/superpowers/specs/**' \
@@ -1088,7 +1088,7 @@ http://localhost:8080/design/unfolding-origami-campaign/templates/sell-sheet.htm
 http://localhost:8080/design/unfolding-origami-campaign/templates/table-tent.html
 ```
 
-Confirm correct title, author, URL, dimensions, readable text, generous margins, restrained visual language, no unsupported claims, and no stale launch-list copy.
+Confirm correct title, author, URL, dimensions, readable text, generous margins, restrained visual language, no unsupported claims, and no stale list-building CTA copy.
 
 - [ ] **Step 5: Check git status and final diff**
 

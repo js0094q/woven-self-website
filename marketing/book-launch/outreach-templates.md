@@ -6,7 +6,7 @@
 
 Hi [Name],
 
-I'm reaching out on behalf of Loren Galese, LPC, a New Jersey therapist and author of *Folding Origami: A Memoir*, releasing July 20.
+I'm reaching out on behalf of Loren Galese, LPC, a New Jersey therapist and author of *Unfolding Origami: A Memoir*, releasing July 20.
 
 The memoir explores trauma, coercive control, survival, and the process of unfolding back into oneself after abuse.
 
@@ -40,7 +40,7 @@ Hi [Name],
 
 I'm reaching out to suggest Loren Galese, LPC, as a guest for [Podcast Name].
 
-Loren is a New Jersey therapist and author of *Folding Origami: A Memoir*, releasing July 20. The book explores trauma, coercive control, survival, memory, identity, and the work of unfolding back into oneself after abuse.
+Loren is a New Jersey therapist and author of *Unfolding Origami: A Memoir*, releasing July 20. The book explores trauma, coercive control, survival, memory, identity, and the work of unfolding back into oneself after abuse.
 
 She would be a strong fit for a conversation about:
 
@@ -63,11 +63,11 @@ Best,
 
 ## Bookstore Pitch
 
-**Subject:** Local author event inquiry: Folding Origami by Loren Galese
+**Subject:** Local author event inquiry: Unfolding Origami by Loren Galese
 
 Hi [Name],
 
-I'm reaching out on behalf of Loren Galese, LPC, a New Jersey therapist and author of *Folding Origami: A Memoir*, releasing July 20.
+I'm reaching out on behalf of Loren Galese, LPC, a New Jersey therapist and author of *Unfolding Origami: A Memoir*, releasing July 20.
 
 The memoir explores trauma, coercive control, survival, and healing. We're currently looking for opportunities for author events, signings, local displays, or consignment placement.
 
@@ -94,7 +94,7 @@ Best,
 
 Hi [Name],
 
-I'm reaching out on behalf of Loren Galese, LPC, a New Jersey therapist and author of *Folding Origami: A Memoir*, releasing July 20.
+I'm reaching out on behalf of Loren Galese, LPC, a New Jersey therapist and author of *Unfolding Origami: A Memoir*, releasing July 20.
 
 The memoir explores trauma, coercive control, survival, identity, and healing. Loren is available for author talks, memoir discussions, and trauma-informed community conversations.
 
@@ -123,7 +123,7 @@ Best,
 
 Hi [Name],
 
-I wanted to share that Loren Galese, LPC, has opened preorders for *Folding Origami: A Memoir*.
+I wanted to share that Loren Galese, LPC, has opened preorders for *Unfolding Origami: A Memoir*.
 
 The book explores trauma, coercive control, survival, identity, and the long process of healing after abuse.
 

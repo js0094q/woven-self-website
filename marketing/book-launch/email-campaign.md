@@ -4,15 +4,15 @@
 
 **Subject Options**
 
-- Preorders are open for Folding Origami
+- Preorders are open for Unfolding Origami
 - My memoir is ready for preorder
-- Folding Origami is now available for preorder
+- Unfolding Origami is now available for preorder
 
 **Body**
 
 Hi,
 
-I'm grateful to share that preorders are now open for *Folding Origami: A Memoir*.
+I'm grateful to share that preorders are now open for *Unfolding Origami: A Memoir*.
 
 This book is about trauma, coercive control, survival, and the slow, complicated process of unfolding back into yourself.
 
@@ -33,7 +33,7 @@ Loren
 
 **Subject Options**
 
-- Why I wrote Folding Origami
+- Why I wrote Unfolding Origami
 - The story behind the memoir
 - Some wounds don't bleed
 
@@ -41,7 +41,7 @@ Loren
 
 Hi,
 
-*Folding Origami* began as a way to tell the truth about what trauma can do quietly.
+*Unfolding Origami* began as a way to tell the truth about what trauma can do quietly.
 
 Not every wound is visible. Some experiences change the way we remember, trust, speak, love, and see ourselves.
 
@@ -67,7 +67,7 @@ Loren
 
 Hi,
 
-A quick reminder that signed preorder copies of *Folding Origami: A Memoir* are available now.
+A quick reminder that signed preorder copies of *Unfolding Origami: A Memoir* are available now.
 
 Each preorder is $24.99 and includes:
 
@@ -89,14 +89,14 @@ Loren
 **Subject Options**
 
 - Last chance to preorder a signed copy
-- Folding Origami releases July 20
+- Unfolding Origami releases July 20
 - Final preorder reminder
 
 **Body**
 
 Hi,
 
-*Folding Origami: A Memoir* releases July 20.
+*Unfolding Origami: A Memoir* releases July 20.
 
 Preorders are still open for signed copies, and each preorder includes a surprise from Loren.
 
