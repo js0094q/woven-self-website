@@ -157,6 +157,14 @@ body {
   background: rgba(255,255,255,0.92);
 }
 
+#mobile-nav-panel {
+  z-index: 140;
+}
+
+#mobile-nav {
+  z-index: 150;
+}
+
 /* ================= HERO ================= */
 
 .hero-home {
