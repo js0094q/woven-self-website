@@ -15,6 +15,9 @@
   --color-light-bg: #f4efe7;
   --color-border: rgba(0,0,0,0.06);
   --color-text: #2f3a38;
+  --book-cover-blue: #1c283c;
+  --book-cover-cream: #f4efe7;
+  --book-cover-pink: #eba7b5;
 }
 
 /* Base */
@@ -315,7 +318,7 @@ img.card {
     linear-gradient(180deg, rgba(17,24,32,0.96), rgba(24,36,46,0.94)),
     #111820;
   color: #f8f1e7;
-  padding: 4.5rem 0 5rem;
+  padding: 4rem 0 4.25rem;
 }
 
 .author-hero-grid {
@@ -361,11 +364,39 @@ img.card {
   line-height: 1.8;
 }
 
+.author-hero-cta-group {
+  margin-top: 2rem;
+  max-width: 520px;
+}
+
 .author-hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-top: 2rem;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.author-hero-actions .preorder-cta {
+  width: min(100%, 248px);
+}
+
+.author-writing-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.author-writing-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8f1e7;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.author-writing-link a:hover {
+  color: var(--book-cover-pink);
 }
 
 .author-on-dark {
@@ -379,11 +410,33 @@ img.card {
 
 .book-cover-panel {
   position: relative;
-  max-width: 390px;
+  max-width: 360px;
   margin-left: auto;
+  text-align: center;
 }
 
-.book-cover-panel::after {
+.cover-reveal-kicker {
+  margin: 0 0 0.8rem;
+  color: #f0b0b8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cover-reveal-note {
+  margin: 0.95rem auto 0;
+  max-width: 28ch;
+  color: rgba(248,241,231,0.72);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.book-cover-frame {
+  position: relative;
+}
+
+.book-cover-frame::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -394,7 +447,7 @@ img.card {
   pointer-events: none;
 }
 
-.book-cover-panel img {
+.book-cover-frame img {
   display: block;
   width: 100%;
   height: auto;
@@ -408,36 +461,52 @@ img.card {
   padding: 4.5rem 0;
 }
 
-.endorsement-quote {
-  max-width: 910px;
-  margin: 0 auto;
-  padding: 2.25rem 0;
-  border-top: 1px solid rgba(46,67,65,0.18);
-  border-bottom: 1px solid rgba(46,67,65,0.18);
+.endorsement-section h2 {
+  margin: 0 0 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.35rem;
+  line-height: 1.16;
   text-align: center;
+  color: var(--sage);
 }
 
-.endorsement-quote p {
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.testimonial-card {
+  margin: 0;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(46,67,65,0.18);
+  border-bottom: 1px solid rgba(46,67,65,0.18);
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+}
+
+.testimonial-card p {
   margin: 0;
   font-family: "Playfair Display", serif;
-  font-size: 1.75rem;
+  font-size: 1.32rem;
   line-height: 1.55;
   color: var(--sage);
 }
 
-.endorsement-quote footer {
+.testimonial-card figcaption {
   margin-top: 1.5rem;
-  background: transparent;
-  padding: 0;
   color: var(--muted);
+  line-height: 1.55;
 }
 
-.endorsement-quote footer span,
-.endorsement-quote footer small {
+.testimonial-card figcaption span,
+.testimonial-card figcaption small {
   display: block;
 }
 
-.endorsement-quote footer span {
+.testimonial-card figcaption span {
   color: var(--text);
   font-weight: 600;
 }
@@ -474,7 +543,74 @@ img.card {
   line-height: 1.75;
 }
 
+.preorder-cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 1.8rem;
+  width: 100%;
+}
+
+.preorder-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 300px);
+  min-height: 48px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.preorder-cta:hover {
+  transform: translateY(-1px);
+}
+
+.preorder-cta-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.preorder-cta-primary:hover {
+  opacity: 0.92;
+}
+
+.preorder-cta-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: rgba(44,69,64,0.35);
+}
+
+.preorder-cta-secondary:hover {
+  background: rgba(46,67,65,0.08);
+}
+
+.author-hero-actions .preorder-cta-secondary {
+  color: #f8f1e7;
+  border-color: rgba(248,241,231,0.42);
+}
+
+.author-hero-actions .preorder-cta-secondary:hover {
+  background: rgba(248,241,231,0.1);
+}
+
+.preorder-options-copy .preorder-cta-stack {
+  align-items: flex-start;
+  max-width: 300px;
+}
+
 .launch-form-card {
+  position: relative;
+  overflow: hidden;
   background: rgba(255,255,255,0.76);
   border: 1px solid rgba(46,67,65,0.12);
   border-radius: 24px;
@@ -482,6 +618,148 @@ img.card {
   box-shadow:
     0 18px 40px rgba(31,42,40,0.08),
     0 4px 14px rgba(31,42,40,0.05);
+}
+
+.preorder-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-kicker {
+  margin: 0;
+  color: var(--sage);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.preorder-detail-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.45rem 0 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.preorder-detail-list div {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(46,67,65,0.12);
+}
+
+.preorder-detail-list dt {
+  color: var(--sage);
+  font-weight: 700;
+}
+
+.preorder-detail-list dd {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+}
+
+.preorder-detail-list dd strong {
+  color: var(--text);
+  font-size: 1.35rem;
+  font-family: "Playfair Display", serif;
+}
+
+.preorder-detail-list dd span {
+  color: rgba(47,58,56,0.76);
+  font-size: 0.92rem;
+}
+
+.preorder-card-actions {
+  align-items: stretch;
+}
+
+.preorder-card-actions .preorder-cta {
+  width: 100%;
+}
+
+.preorder-detail-card {
+  background: var(--book-cover-blue);
+  color: var(--book-cover-cream);
+  border-color: rgba(244,239,231,0.14);
+  box-shadow: 0 24px 70px rgba(39,63,74,0.18);
+}
+
+.preorder-detail-card .detail-kicker,
+.preorder-detail-card .preorder-detail-list dt,
+.preorder-detail-card .preorder-detail-list dd strong {
+  color: #ffffff !important;
+}
+
+.preorder-detail-card .preorder-detail-list dd,
+.preorder-detail-card .preorder-detail-list dd span,
+.preorder-detail-card .form-note {
+  color: rgba(244,239,231,0.84);
+}
+
+.preorder-detail-card .preorder-detail-list div {
+  border-color: rgba(244,239,231,0.18);
+}
+
+.preorder-detail-card .preorder-cta-primary {
+  background: var(--book-cover-cream);
+  color: var(--book-cover-blue);
+  border-color: var(--book-cover-cream);
+  box-shadow: none;
+}
+
+.preorder-detail-card .preorder-cta-secondary {
+  background: transparent;
+  color: var(--book-cover-cream);
+  border-color: rgba(244,239,231,0.68);
+}
+
+.preorder-detail-card .preorder-cta-secondary:hover {
+  background: rgba(244,239,231,0.1);
+}
+
+.book-butterflies {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.book-butterfly-accent {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.18));
+  z-index: 0;
+}
+
+.book-butterfly-accent img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.book-butterfly-accent-one {
+  width: clamp(46px, 7vw, 82px);
+  top: 1.25rem;
+  right: 1.35rem;
+  opacity: 0.9;
+  transform: rotate(8deg);
+}
+
+.book-butterfly-accent-two {
+  width: clamp(34px, 5vw, 58px);
+  bottom: -1.75rem;
+  left: -2rem;
+  opacity: 0.58;
+  transform: rotate(-12deg);
+}
+
+.book-butterfly-accent-three {
+  width: clamp(34px, 5vw, 54px);
+  top: 8.4rem;
+  right: 2.1rem;
+  opacity: 0.56;
+  transform: rotate(-8deg);
 }
 
 .launch-form {
@@ -697,6 +975,7 @@ footer {
 
   .author-hero-grid,
   .launch-grid,
+  .testimonial-grid,
   .speaking-grid,
   .memoir-layout,
   .substack-grid {
@@ -710,6 +989,10 @@ footer {
   .book-cover-panel {
     max-width: 330px;
     margin-left: 0;
+  }
+
+  .testimonial-grid {
+    gap: 1.5rem;
   }
 
   .substack-grid {
@@ -812,23 +1095,35 @@ footer {
     font-size: 1.35rem;
   }
 
+  .author-hero-cta-group {
+    max-width: none;
+  }
+
   .author-hero-actions {
     flex-direction: column;
   }
 
-  .author-hero-actions a,
+  .author-hero-actions .preorder-cta,
+  .preorder-cta,
   .speaking-cta {
     width: 100%;
     justify-content: center;
   }
 
-  .endorsement-quote {
-    padding-left: 0;
-    padding-right: 0;
+  .preorder-options-copy .preorder-cta-stack {
+    max-width: none;
   }
 
-  .endorsement-quote p {
-    font-size: 1.42rem;
+  .endorsement-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.45rem 0;
+  }
+
+  .testimonial-card p {
+    font-size: 1.18rem;
   }
 
   .launch-section h2,
@@ -840,6 +1135,23 @@ footer {
 
   .launch-form-card {
     padding: 1.25rem;
+  }
+
+  .book-butterfly-accent-one {
+    width: 46px;
+    top: 1rem;
+    right: 0.9rem;
+  }
+
+  .book-butterfly-accent-two {
+    width: 36px;
+    bottom: -1.2rem;
+    left: -1.35rem;
+    opacity: 0.46;
+  }
+
+  .book-butterfly-accent-three {
+    display: none;
   }
 
   .memoir-section,

@@ -10,6 +10,17 @@ https://wovenself.com
 
 The site is built with plain HTML, CSS, Tailwind CDN, small client-side JavaScript, and static Markdown/JSON blog content. It is deployed through GitHub and Vercel. No Node.js install or build step is required for local development.
 
+## Agent Handoff
+
+Before making future Codex changes, read:
+
+```txt
+AGENTS.md
+context.md
+```
+
+`AGENTS.md` contains the repo operating rules. `context.md` contains the current low-token handoff for the author campaign, active preorder links, current assets, and recent QA notes.
+
 ## Purpose
 
 The website supports two primary goals:
@@ -50,6 +61,8 @@ The website supports two primary goals:
   vercel.json
   sitemap.xml
   robots.txt
+  AGENTS.md
+  context.md
   README.md
   /blog/
     post.html
@@ -65,7 +78,8 @@ The website supports two primary goals:
     loren-author-bw.jpeg
     loren-author-smiling.jpeg
     loren-author-smiling-outdoor.jpeg
-    unfolding-origami-cover.jpg
+    unfolding-origami-ebook-cover.jpg
+    unfolding-origami-butterfly-*.png
   /design/
     /unfolding-origami-launch-card/
   /marketing/
@@ -93,12 +107,17 @@ Some folders may be untracked depending on the current branch state. Do not add 
 | --- | --- |
 | Book title | *Unfolding Origami: A Memoir* |
 | Author | Loren Galese |
-| Price | $24.99 |
-| Release date | July 20 |
+| Signed paperback price | $24.99 |
+| Release date | July 20, 2026 |
+| ISBN | 979-8-9956116-0-8 |
+| Kindle ASIN | B0H27BM8K1 |
 | Preorder incentive | Signed copy plus a surprise from Loren |
 | Primary preorder page | `https://wovenself.com/author` |
 | Stripe payment link | `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00` |
-| Primary CTA | Preorder Now |
+| Kindle preorder link | `https://www.amazon.com/dp/B0H27BM8K1` |
+| Loren Substack | `https://substack.com/@quietalchemywloren` |
+| Primary CTA | Preorder Signed Paperback |
+| Secondary CTA | Preorder the Kindle Ebook |
 
 The active site uses `Unfolding Origami` for the book title. Campaign assets should use `Unfolding Origami` consistently; verify copy against the live page files before publishing.
 
@@ -257,8 +276,11 @@ https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00
 Website flow:
 
 ```txt
-Author Page -> Preorder Page -> Stripe Checkout -> Thank You Page
+Author Page -> Stripe Checkout -> Thank You Page
+Author Page -> Amazon Kindle Product Page
 ```
+
+The standalone `/preorder.html` page still supports signed paperback preorder flow, but `author.html` is the primary campaign landing page.
 
 Configure the Stripe Payment Link success redirect to:
 
