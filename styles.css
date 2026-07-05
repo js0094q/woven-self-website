@@ -457,6 +457,131 @@ img.card {
     0 8px 24px rgba(0,0,0,0.24);
 }
 
+.excerpt-page-main {
+  padding: 4.25rem 0 4.75rem;
+}
+
+.excerpt-book-section {
+  overflow: hidden;
+  background: var(--book-cover-cream);
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 30px;
+  box-shadow: 0 18px 45px rgba(16,34,49,0.12);
+}
+
+.excerpt-book-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.8fr);
+  align-items: stretch;
+}
+
+.excerpt-copy {
+  padding: clamp(2.1rem, 5vw, 3.5rem);
+}
+
+.excerpt-book-section .eyebrow {
+  color: #9b5f6f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.excerpt-book-section h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--book-cover-blue);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.55rem, 5vw, 4.65rem);
+  font-weight: 600;
+  line-height: 1.06;
+}
+
+.excerpt-deck {
+  max-width: 64ch;
+  margin: 1.45rem 0 0;
+  color: rgba(47,58,56,0.82);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.excerpt-note {
+  max-width: 650px;
+  margin-top: 2rem;
+  padding: 1.35rem 1.45rem;
+  background: rgba(255,255,255,0.74);
+  border: 1px solid rgba(255,255,255,0.66);
+  border-radius: 22px;
+}
+
+.excerpt-note h2 {
+  margin: 0;
+  color: var(--book-cover-blue);
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.excerpt-note p {
+  margin: 0.65rem 0 0;
+  color: rgba(47,58,56,0.82);
+  line-height: 1.7;
+}
+
+.excerpt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.excerpt-actions .preorder-cta {
+  width: min(100%, 265px);
+}
+
+.excerpt-book-section .preorder-cta-primary {
+  background: var(--book-cover-blue);
+  color: #ffffff;
+  border-color: var(--book-cover-blue);
+}
+
+.excerpt-book-section .preorder-cta-secondary {
+  background: rgba(255,255,255,0.66);
+  color: var(--book-cover-blue);
+  border-color: rgba(28,40,60,0.44);
+}
+
+.excerpt-book-section .preorder-cta-secondary:hover {
+  background: rgba(255,255,255,0.86);
+}
+
+.excerpt-price-note {
+  max-width: 58ch;
+  margin: 1.15rem 0 0;
+  color: rgba(47,58,56,0.78);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.excerpt-cover-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: clamp(2.2rem, 5vw, 3.5rem);
+  background: var(--book-cover-blue);
+  color: var(--book-cover-cream);
+}
+
+.excerpt-cover-content {
+  width: min(100%, 360px);
+  text-align: center;
+}
+
+.excerpt-cover-content .book-cover-frame img {
+  border-radius: 22px;
+}
+
 .endorsement-section {
   padding: 4.5rem 0;
 }
@@ -986,6 +1111,7 @@ footer {
   }
 
   .author-hero-grid,
+  .excerpt-book-grid,
   .launch-grid,
   .testimonial-grid,
   .speaking-grid,
@@ -1001,6 +1127,10 @@ footer {
   .book-cover-panel {
     max-width: 330px;
     margin-left: 0;
+  }
+
+  .excerpt-book-section h1 {
+    max-width: 14ch;
   }
 
   .testimonial-grid {
@@ -1097,6 +1227,27 @@ footer {
 
   .author-hero {
     padding: 2.75rem 0 3.25rem;
+  }
+
+  .excerpt-page-main {
+    padding: 2.75rem 0 3.25rem;
+  }
+
+  .excerpt-book-section {
+    border-radius: 24px;
+  }
+
+  .excerpt-copy,
+  .excerpt-cover-panel {
+    padding: 1.5rem;
+  }
+
+  .excerpt-book-section h1 {
+    font-size: 2.35rem;
+  }
+
+  .excerpt-actions .preorder-cta {
+    width: 100%;
   }
 
   .author-hero h1 {
