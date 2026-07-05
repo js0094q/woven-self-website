@@ -511,6 +511,18 @@ img.card {
   font-weight: 600;
 }
 
+.testimonial-author-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+.testimonial-author-link:hover,
+.testimonial-author-link:focus-visible {
+  opacity: 0.82;
+}
+
 .launch-section {
   padding: 4.25rem 0;
   background: #f1e8dd;
