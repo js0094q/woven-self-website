@@ -45,7 +45,7 @@ Do not make this look like a therapy-services email. This should feel like a boo
 
 ---
 
-### 2. Hero Block
+### 2. Hero Cover Announcement Block
 
 Headline:
 
@@ -59,47 +59,85 @@ Subheadline/body:
 Unfolding Origami: A Memoir is now available for preorder.
 ```
 
-Include brief opening copy from the Flodesk copy file.
+Release line:
 
-CTA buttons:
+```text
+Releasing July 2026
+```
 
-- Preorder Your Signed Copy
-- Preorder on Amazon Kindle
+Use the official cover image in this block. Keep the layout cover-led and uncluttered.
 
-Links:
+No link is required for this image block.
 
-Signed paperback:
+---
+
+### 3. Author Note Block
+
+Use Loren’s revised note as the body copy:
+
+```text
+I’m so grateful to finally share the official cover with you. This book has been years in the making, and seeing it take shape as something real, visible, and close to readers’ hands has been emotional in a way I’m still trying to find language for.
+```
+
+```text
+Having the beautiful opportunity to have Sarah Edmondson be an early reader and share her thoughts about my memoir is overwhelming, in the best way. She, along with her husband Anthony “Nippy,” hosts the podcast A Little Bit Culty and also wrote the book A Little Bit Culty: Navigating Cults, Control, and Coercion. They have spent years since their escape from NXIVM learning about control and manipulation, untangling their own experience within a cult while interviewing people who have survived their own version of hell.
+```
+
+```text
+I learned about Sarah, Nippy, and NXIVM in early 2021 while watching The Vow in a COVID stupor. Listening to their stories and hearing them recount what happened pulled back more of the curtain on my own experience, which allowed me to write this memoir. I will forever be grateful for that and for how impactful it can be to hear someone’s story and relate it to your own.
+```
+
+```text
+It’s been my goal with this memoir: to share my story and connect with others and their stories.
+```
+
+---
+
+### 4. Signed Paperback CTA Block
+
+CTA text:
+
+```text
+Preorder Signed Paperback
+```
+
+CTA link:
 
 ```text
 https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00
 ```
 
-Kindle ebook:
-
-```text
-https://www.amazon.com/dp/B0H27BM8K1
-```
-
----
-
-### 3. Cover Image Block
-
-Use the updated official cover.
-
 Recommended settings:
 
 | Setting | Value |
 |---|---|
-| Width | 320–420 px desktop |
-| Mobile | full width with margin |
+| Width | full image block |
+| Mobile | full width |
 | Alignment | center |
-| Corner radius | none unless current campaign style uses rounded corners |
-| Shadow | subtle only |
-| Background | dark blue or warm neutral |
+| Button style | dark filled rounded button |
+| Background | warm neutral |
 
 ---
 
-### 4. Excerpt Section
+### 5. Kindle Ebook CTA Block
+
+CTA text:
+
+```text
+Preorder Kindle Ebook
+```
+
+CTA link:
+
+```text
+https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese-ebook/dp/B0H27BM8K1
+```
+
+Use the same size and spacing as the signed paperback CTA block.
+
+---
+
+### 6. Excerpt Section
 
 Headline:
 
@@ -107,12 +145,24 @@ Headline:
 A Quiet First Look at Loren Galese’s Upcoming Memoir
 ```
 
-Use this exact phrase as the linked CTA text as requested.
+Body:
+
+```text
+As a thank-you for signing up early, I wanted to share an excerpt from Unfolding Origami before it’s available.
+```
+
+Content note:
+
+```text
+This excerpt includes depictions of trauma, including sexual violence, that may be distressing to some. Reader discretion is advised, and those who may be affected are encouraged to seek support from a qualified professional trained in trauma-informed therapeutic services.
+```
+
+Use a soft cream content-note treatment with dark body text. Do not style it like an alarming warning banner.
 
 CTA text:
 
 ```text
-A Quiet First Look at Loren Galese’s Upcoming Memoir
+Read the Excerpt
 ```
 
 CTA URL:
@@ -121,15 +171,9 @@ CTA URL:
 https://wovenself.com/excerpt-unfolding-origami.html
 ```
 
-Add short content note in body copy, not as a warning banner:
-
-```text
-Please read at your own pace.
-```
-
 ---
 
-### 5. Preorder Reminder Block
+### 7. Preorder Reminder Blocks
 
 Use concise copy.
 
@@ -145,7 +189,30 @@ CTA buttons:
 
 ---
 
-### 6. Footer
+### 8. Closing Note Block
+
+Use Loren’s revised closing note:
+
+```text
+Thank you for supporting this journey. Whether you preordered, follow me on Substack, or told a friend about the book, you have made an impact. This story was something I never thought I would share, so sharing it has been a whirlwind.
+```
+
+```text
+This book signifies a shift from someone who was quiet and full of shame to someone sharing her survival story as strength, no longer letting fear stop her.
+```
+
+Signoff:
+
+```text
+With gratitude,
+Loren
+```
+
+Keep this centered and personal. Use serif body text and italic rose accent for the signoff.
+
+---
+
+### 9. Footer
 
 Include:
 
@@ -290,11 +357,7 @@ Use:
 Unfolding Origami: A Memoir
 ```
 
-Do not use:
-
-```text
-Folding Origami
-```
+Do not use the older incorrect title in active newsletter copy or generated image sources.
 
 Use:
 
@@ -330,6 +393,15 @@ Mention:
 Signed paperback preorders are $24.99.
 ```
 
+Spell these references exactly in the author note:
+
+- Sarah Edmondson
+- Anthony “Nippy,”
+- A Little Bit Culty
+- A Little Bit Culty: Navigating Cults, Control, and Coercion
+- NXIVM
+- The Vow
+
 ---
 
 ## Validation Commands
@@ -337,24 +409,20 @@ Signed paperback preorders are $24.99.
 Run:
 
 ```bash
-npm run lint
+find newsletter/part-2-images -maxdepth 1 -type f | sort
 ```
 
-If no lint script exists, run whatever repo validation currently exists.
+Confirm the expected PNG and JPG image blocks exist, including both split hero blocks.
 
 Also run:
 
 ```bash
-grep -R "Folding Origami" .
-grep -R "excerpt-unfolding-origami" sitemap.xml
+git diff --check
 ```
 
-Expected:
+Run source checks for the old incorrect title and the removed chapter-title line across `newsletter/` and `newsletter/part-2-images/`. Both checks should return no newsletter-source matches.
 
-- No incorrect Folding Origami references in public campaign files.
-- No excerpt-unfolding-origami.html entry in sitemap.xml.
-
-Then test locally:
+Test locally:
 
 ```bash
 python3 -m http.server 8080
@@ -363,16 +431,15 @@ python3 -m http.server 8080
 Open:
 
 ```text
-http://localhost:8080/excerpt-unfolding-origami.html
+http://127.0.0.1:8080/newsletter/part-2-images/preview.html
 ```
 
 Confirm:
 
 - page loads
 - cover image loads
-- PDF button opens the excerpt
-- Stripe button opens signed paperback preorder
-- Amazon button opens Kindle preorder
+- split hero blocks appear in order
+- revised excerpt and closing copy appears
 - mobile layout works
 - no horizontal scrolling
 - CTA buttons are uniform

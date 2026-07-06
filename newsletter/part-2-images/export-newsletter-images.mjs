@@ -36,7 +36,8 @@ const palette = {
 
 const imageFilesForPreview = [
   "01-header-logo.png",
-  "02-hero-cover-announcement.png",
+  "02a-hero-cover-announcement.png",
+  "02b-hero-author-note.png",
   "03a-preorder-signed-paperback.png",
   "03b-preorder-kindle-ebook.png",
   "04-excerpt-feature.png",
@@ -44,6 +45,11 @@ const imageFilesForPreview = [
   "05b-reminder-kindle-ebook.png",
   "06-closing-note.png",
   "07-footer.png",
+];
+
+const obsoleteGeneratedFiles = [
+  "02-hero-cover-announcement.png",
+  "02-hero-cover-announcement.jpg",
 ];
 
 const blocks = [
@@ -60,20 +66,34 @@ const blocks = [
     `,
   },
   {
-    name: "02-hero-cover-announcement",
+    name: "02a-hero-cover-announcement",
     width: 1200,
-    height: 1100,
+    height: 1050,
     body: `
       <section class="block block-hero">
         <div class="hero-copy">
           <p class="eyebrow">The Official Cover Is Here</p>
           <h1>Unfolding Origami: A Memoir is now available for preorder.</h1>
-          <p>I’m so grateful to finally share the official cover with you. This book has been years in the making, and seeing it take shape as something real, visible, and close to readers’ hands has been emotional in a way I’m still trying to find language for.</p>
           <p class="release">Releasing July 2026</p>
         </div>
         <div class="hero-cover-panel">
           <p class="cover-kicker">The official cover is here.</p>
           <img class="cover-image" src="${fileUrl(assets.cover)}" alt="Cover of Unfolding Origami: A Memoir by Loren Galese">
+        </div>
+      </section>
+    `,
+  },
+  {
+    name: "02b-hero-author-note",
+    width: 1200,
+    height: 1280,
+    body: `
+      <section class="block block-author-note">
+        <div class="author-note-copy">
+          <p>I’m so grateful to finally share the official cover with you. This book has been years in the making, and seeing it take shape as something real, visible, and close to readers’ hands has been emotional in a way I’m still trying to find language for.</p>
+          <p>Having the beautiful opportunity to have Sarah Edmondson be an early reader and share her thoughts about my memoir is overwhelming, in the best way. She, along with her husband Anthony “Nippy,” hosts the podcast A Little Bit Culty and also wrote the book A Little Bit Culty: Navigating Cults, Control, and Coercion. They have spent years since their escape from NXIVM learning about control and manipulation, untangling their own experience within a cult while interviewing people who have survived their own version of hell.</p>
+          <p>I learned about Sarah, Nippy, and NXIVM in early 2021 while watching The Vow in a COVID stupor. Listening to their stories and hearing them recount what happened pulled back more of the curtain on my own experience, which allowed me to write this memoir. I will forever be grateful for that and for how impactful it can be to hear someone’s story and relate it to your own.</p>
+          <p>It’s been my goal with this memoir: to share my story and connect with others and their stories.</p>
         </div>
       </section>
     `,
@@ -108,7 +128,7 @@ const blocks = [
   {
     name: "04-excerpt-feature",
     width: 1200,
-    height: 900,
+    height: 940,
     body: `
       <section class="block block-excerpt">
         <img class="motif motif-one" src="${fileUrl(assets.butterflyOne)}" alt="">
@@ -116,10 +136,9 @@ const blocks = [
         <div class="excerpt-copy">
           <p class="eyebrow">Private first-look excerpt</p>
           <h2>A Quiet First Look at Loren Galese’s Upcoming Memoir</h2>
-          <p>As a thank-you for being here early, I wanted to share a private excerpt from <em>Unfolding Origami</em> before it is shared more widely.</p>
-          <p>This excerpt comes from a chapter titled “Dumpster Fire Hair Trigger” and reflects on how trauma can collapse the distance between past and present — how the body can remember before the mind has time to catch up.</p>
+          <p>As a thank-you for signing up early, I wanted to share an excerpt from <em>Unfolding Origami</em> before it’s available.</p>
           <div class="content-note">
-            <strong>Please read at your own pace.</strong>
+            This excerpt includes depictions of trauma, including sexual violence, that may be distressing to some. Reader discretion is advised, and those who may be affected are encouraged to seek support from a qualified professional trained in trauma-informed therapeutic services.
           </div>
           <span class="button button-primary excerpt-button">Read the Excerpt</span>
         </div>
@@ -164,13 +183,13 @@ const blocks = [
   {
     name: "06-closing-note",
     width: 1200,
-    height: 620,
+    height: 820,
     body: `
       <section class="block block-closing">
         <img class="motif motif-three" src="${fileUrl(assets.butterflyThree)}" alt="">
         <div class="closing-note">
-          <p>Thank you for reading, sharing, preordering, and being part of this process.</p>
-          <p>This book is about trauma, coercive control, identity, and the nonlinear journey back to self-trust. I’m grateful it is beginning to find its way toward readers.</p>
+          <p>Thank you for supporting this journey. Whether you preordered, follow me on Substack, or told a friend about the book, you have made an impact. This story was something I never thought I would share, so sharing it has been a whirlwind.</p>
+          <p>This book signifies a shift from someone who was quiet and full of shame to someone sharing her survival story as strength, no longer letting fear stop her.</p>
           <p class="signature">With gratitude,<br>Loren</p>
         </div>
       </section>
@@ -287,7 +306,7 @@ function baseCss() {
     }
 
     .block-hero {
-      height: 1100px;
+      height: 1050px;
       display: grid;
       grid-template-columns: 1fr 450px;
     }
@@ -356,6 +375,38 @@ function baseCss() {
       background: var(--blue);
       padding: 80px 46px;
       color: var(--cream);
+    }
+
+    .block-author-note {
+      height: 1280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 94px 120px;
+    }
+
+    .author-note-copy {
+      width: 960px;
+      padding: 70px 78px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(228, 215, 204, 0.86);
+      border-radius: 36px;
+    }
+
+    .author-note-copy p {
+      margin: 0 0 30px;
+      color: rgba(36, 49, 58, 0.9);
+      font-size: 29px;
+      line-height: 1.5;
+    }
+
+    .author-note-copy p:last-child {
+      margin-bottom: 0;
+      color: var(--blue);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 36px;
+      line-height: 1.34;
+      text-align: center;
     }
 
     .cover-kicker {
@@ -457,7 +508,7 @@ function baseCss() {
     }
 
     .block-excerpt {
-      height: 900px;
+      height: 940px;
       padding: 68px 120px 0;
     }
 
@@ -479,15 +530,15 @@ function baseCss() {
     }
 
     .content-note {
-      width: 560px;
+      width: 800px;
       margin-top: 24px;
-      padding: 20px 28px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(255, 255, 255, 0.78);
+      padding: 24px 30px;
+      background: rgba(255, 248, 240, 0.88);
+      border: 1px solid rgba(228, 215, 204, 0.9);
       border-radius: 28px;
-      color: var(--blue);
+      color: rgba(36, 49, 58, 0.86);
       font-size: 24px;
-      line-height: 1.35;
+      line-height: 1.42;
     }
 
     .excerpt-button {
@@ -570,11 +621,11 @@ function baseCss() {
     }
 
     .block-closing {
-      height: 620px;
+      height: 820px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 82px 120px;
+      padding: 92px 120px;
     }
 
     .closing-note {
@@ -586,10 +637,10 @@ function baseCss() {
 
     .closing-note p {
       margin-top: 0;
-      margin-bottom: 30px;
+      margin-bottom: 34px;
       color: var(--blue);
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 42px;
+      font-size: 38px;
       line-height: 1.32;
     }
 
@@ -756,7 +807,8 @@ ${rows}
 function altText(fileName) {
   const map = {
     "01-header-logo.png": "The Woven Self logo",
-    "02-hero-cover-announcement.png": "The official cover announcement for Unfolding Origami: A Memoir by Loren Galese",
+    "02a-hero-cover-announcement.png": "The official cover announcement for Unfolding Origami: A Memoir by Loren Galese",
+    "02b-hero-author-note.png": "A note from Loren Galese about Sarah Edmondson, Nippy, NXIVM, and Unfolding Origami",
     "03a-preorder-signed-paperback.png": "Preorder signed paperback",
     "03b-preorder-kindle-ebook.png": "Preorder Kindle ebook",
     "04-excerpt-feature.png": "A quiet first look at Loren Galese's upcoming memoir",
@@ -793,9 +845,9 @@ The Woven Self logo
 
 ---
 
-### 2. Hero
+### 2. Hero Cover Announcement
 Image:
-\`02-hero-cover-announcement.png\`
+\`02a-hero-cover-announcement.png\`
 Flodesk link:
 No link required.
 
@@ -804,7 +856,18 @@ The official cover announcement for Unfolding Origami: A Memoir by Loren Galese
 
 ---
 
-### 3. Signed Paperback CTA
+### 3. Author Note
+Image:
+\`02b-hero-author-note.png\`
+Flodesk link:
+No link required.
+
+Alt text:
+A note from Loren Galese about Sarah Edmondson, Nippy, NXIVM, and Unfolding Origami
+
+---
+
+### 4. Signed Paperback CTA
 Image:
 \`03a-preorder-signed-paperback.png\`
 Flodesk link:
@@ -815,7 +878,7 @@ Preorder signed paperback
 
 ---
 
-### 4. Kindle Ebook CTA
+### 5. Kindle Ebook CTA
 Image:
 \`03b-preorder-kindle-ebook.png\`
 Flodesk link:
@@ -826,7 +889,7 @@ Preorder Kindle ebook
 
 ---
 
-### 5. Excerpt Feature
+### 6. Excerpt Feature
 Image:
 \`04-excerpt-feature.png\`
 Flodesk link:
@@ -837,7 +900,7 @@ A quiet first look at Loren Galese's upcoming memoir
 
 ---
 
-### 6. Signed Paperback Reminder CTA
+### 7. Signed Paperback Reminder CTA
 Image:
 \`05a-reminder-signed-paperback.png\`
 Flodesk link:
@@ -848,7 +911,7 @@ Preorder signed paperback
 
 ---
 
-### 7. Kindle Ebook Reminder CTA
+### 8. Kindle Ebook Reminder CTA
 Image:
 \`05b-reminder-kindle-ebook.png\`
 Flodesk link:
@@ -859,7 +922,7 @@ Preorder Kindle ebook
 
 ---
 
-### 8. Closing Note
+### 9. Closing Note
 Image:
 \`06-closing-note.png\`
 Flodesk link:
@@ -870,7 +933,7 @@ A closing note from Loren Galese
 
 ---
 
-### 9. Footer
+### 10. Footer
 Image:
 \`07-footer.png\`
 Flodesk link:
@@ -902,6 +965,10 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
 
   try {
+    await Promise.all(
+      obsoleteGeneratedFiles.map(fileName => fs.rm(path.join(outDir, fileName), { force: true })),
+    );
+
     const exported = [];
     for (const block of blocks) {
       exported.push(await exportBlock(browser, block));
