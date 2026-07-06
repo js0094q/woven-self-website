@@ -6,17 +6,21 @@ Some wounds don't bleed - they fold you inward.
 
 ## Short Book Description
 
-*Unfolding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the quiet work of unfolding back into yourself.
+During the first few months of my freshman year in college, I became entangled in a coercive, cult-like dynamic with my suitemates surrounding being sexually assaulted by someone related to a roommate, but the trauma didn’t end there. I pledged a sorority whose hazing rituals eerily mirrored the powerlessness I had just survived. The lines between fear, loyalty, and identity blurred, leaving me dissociated and questioning my own reality, and who I was. To cope, I turned to alcohol and pills, trying to numb the confusion and pain that no one seemed to see—or validate. Years later, sobriety opened a door to deeper healing.
+
+Now a therapist, I began the difficult work of confronting my own trauma, engaging in intensive therapy to unravel the psychological programming that had kept me trapped in fear and disconnected from my intuition. This memoir reveals how easily someone can lose touch with their intuition when surrounded by groupthink and gaslighting. It’s a story of reclaiming self-trust, recognizing coercion in unexpected places, and the long, nonlinear journey of healing.
 
 ## Medium Book Description
 
-*Unfolding Origami: A Memoir* traces the emotional aftermath of trauma and coercive control, exploring how pain can fold a person inward and how healing asks us to slowly return to the self. Through a personal and reflective lens, Loren Galese writes about survival, memory, identity, and the long process of becoming whole again.
+During the first few months of my freshman year in college, I became entangled in a coercive, cult-like dynamic with my suitemates surrounding being sexually assaulted by someone related to a roommate, but the trauma didn’t end there. I pledged a sorority whose hazing rituals eerily mirrored the powerlessness I had just survived. The lines between fear, loyalty, and identity blurred, leaving me dissociated and questioning my own reality, and who I was. To cope, I turned to alcohol and pills, trying to numb the confusion and pain that no one seemed to see—or validate. Years later, sobriety opened a door to deeper healing.
+
+Now a therapist, I began the difficult work of confronting my own trauma, engaging in intensive therapy to unravel the psychological programming that had kept me trapped in fear and disconnected from my intuition. This memoir reveals how easily someone can lose touch with their intuition when surrounded by groupthink and gaslighting. It’s a story of reclaiming self-trust, recognizing coercion in unexpected places, and the long, nonlinear journey of healing.
 
 ## Longer Book Description
 
-*Unfolding Origami: A Memoir* is Loren Galese's deeply personal account of trauma, coercive control, survival, and healing. The memoir explores how invisible wounds shape identity, relationships, memory, and the nervous system - and how recovery often begins long before we have language for what happened.
+During the first few months of my freshman year in college, I became entangled in a coercive, cult-like dynamic with my suitemates surrounding being sexually assaulted by someone related to a roommate, but the trauma didn’t end there. I pledged a sorority whose hazing rituals eerily mirrored the powerlessness I had just survived. The lines between fear, loyalty, and identity blurred, leaving me dissociated and questioning my own reality, and who I was. To cope, I turned to alcohol and pills, trying to numb the confusion and pain that no one seemed to see—or validate. Years later, sobriety opened a door to deeper healing.
 
-With emotional clarity and restraint, Loren traces the quiet unraveling of self that can follow abuse and the courageous work of unfolding back into one's own truth. This is a memoir for readers who have survived, questioned themselves, lost their voice, or begun the difficult process of reclaiming it.
+Now a therapist, I began the difficult work of confronting my own trauma, engaging in intensive therapy to unravel the psychological programming that had kept me trapped in fear and disconnected from my intuition. This memoir reveals how easily someone can lose touch with their intuition when surrounded by groupthink and gaslighting. It’s a story of reclaiming self-trust, recognizing coercion in unexpected places, and the long, nonlinear journey of healing.
 
 ## Preorder CTA
 

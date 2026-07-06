@@ -42,7 +42,9 @@ New Jersey therapist and author Loren Galese releases *Unfolding Origami: A Memo
 
 Loren Galese, LPC, a New Jersey therapist and owner of The Woven Self Therapeutic Services, LLC, is releasing *Unfolding Origami: A Memoir* on July 20.
 
-The memoir explores trauma, coercive control, survival, memory, identity, and the long process of unfolding back into oneself after abuse. Written with emotional clarity and restraint, *Unfolding Origami* offers a personal lens on invisible wounds, nervous system survival, and healing that does not flatten or simplify the experience of recovery.
+During the first few months of my freshman year in college, I became entangled in a coercive, cult-like dynamic with my suitemates surrounding being sexually assaulted by someone related to a roommate, but the trauma didn’t end there. I pledged a sorority whose hazing rituals eerily mirrored the powerlessness I had just survived. The lines between fear, loyalty, and identity blurred, leaving me dissociated and questioning my own reality, and who I was. To cope, I turned to alcohol and pills, trying to numb the confusion and pain that no one seemed to see—or validate. Years later, sobriety opened a door to deeper healing.
+
+Now a therapist, I began the difficult work of confronting my own trauma, engaging in intensive therapy to unravel the psychological programming that had kept me trapped in fear and disconnected from my intuition. This memoir reveals how easily someone can lose touch with their intuition when surrounded by groupthink and gaslighting. It’s a story of reclaiming self-trust, recognizing coercion in unexpected places, and the long, nonlinear journey of healing.
 
 Preorders are currently open. Signed preorder copies include a surprise from Loren.
 

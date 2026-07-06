@@ -17,6 +17,9 @@ yarn-error.log*
 # Local outputs
 output/
 .worktrees/
+/exports/
+/Loren/
+/design-qa.md
 
 # Local campaign and newsletter work product
 /newsletter/

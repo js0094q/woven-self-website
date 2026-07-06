@@ -14,7 +14,9 @@ Some wounds don't bleed - they fold you inward.
 
 ## Description
 
-*Unfolding Origami: A Memoir* is a deeply personal story about trauma, coercive control, survival, and the slow, courageous process of unfolding back into yourself.
+During the first few months of my freshman year in college, I became entangled in a coercive, cult-like dynamic with my suitemates surrounding being sexually assaulted by someone related to a roommate, but the trauma didn’t end there. I pledged a sorority whose hazing rituals eerily mirrored the powerlessness I had just survived. The lines between fear, loyalty, and identity blurred, leaving me dissociated and questioning my own reality, and who I was. To cope, I turned to alcohol and pills, trying to numb the confusion and pain that no one seemed to see—or validate. Years later, sobriety opened a door to deeper healing.
+
+Now a therapist, I began the difficult work of confronting my own trauma, engaging in intensive therapy to unravel the psychological programming that had kept me trapped in fear and disconnected from my intuition. This memoir reveals how easily someone can lose touch with their intuition when surrounded by groupthink and gaslighting. It’s a story of reclaiming self-trust, recognizing coercion in unexpected places, and the long, nonlinear journey of healing.
 
 ## Emotional Threads
 

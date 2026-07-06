@@ -1,6 +1,6 @@
 # Woven Self Handoff Context
 
-Last updated: 2026-07-05
+Last updated: 2026-07-06
 
 This file is intentionally compact. Read it after `AGENTS.md` before spending tokens on broad repo discovery.
 
@@ -29,19 +29,9 @@ Use these current campaign anchors:
 
 The Kindle CTA should use the direct Amazon product page, not the Amazon author/store page.
 
-## Recent Author Page Work
+## Recent Author Campaign Work
 
-Recent uncommitted campaign edits updated:
-
-- `author.html`
-- `styles.css`
-- `sitemap.xml`
-- `images/unfolding-origami-ebook-cover.jpg`
-- `images/unfolding-origami-butterfly-1.png`
-- `images/unfolding-origami-butterfly-2.png`
-- `images/unfolding-origami-butterfly-3.png`
-
-Current intended behavior:
+Current intended author/preorder behavior:
 
 - Hero shows the official ebook cover with alt text: `Cover of Unfolding Origami: A Memoir by Loren Galese`.
 - Hero has two preorder CTAs: signed paperback via Stripe and Kindle ebook via Amazon.
@@ -64,6 +54,22 @@ Asset QA already performed in the prior pass:
 
 - `file images/unfolding-origami-butterfly-*.png`
 - Python/Pillow alpha check confirmed `RGBA` PNGs with transparent pixels.
+
+July 2026 synopsis cleanup:
+
+- Approved synopsis copy now appears in `author.html`, `preorder.html` product JSON-LD, and the book-launch source files under `marketing/book-launch/`.
+- Newsletter component ownership is mapped in `newsletter/NEWSLETTER-ASSET-MAP.md`. The `newsletter/` folder is generally ignored local work product, so force-add only deliberate files from that folder.
+- Keep endorsements, preorder links, pricing, CTAs, and book positioning untouched unless the user explicitly asks.
+
+July 2026 paperback cover QA:
+
+- Updated InDesign source: `design/book-cover-unfolding-origami/indesign-handoff/reference/Unfolding Origami - Updated Synopsis.indd`.
+- Final repaired cover export: `exports/kdp-paperback-cover-updated-synopsis-final.pdf`.
+- Final proof PNG: `exports/kdp-paperback-cover-updated-synopsis-final.png`.
+- Final QA report: `exports/kdp-paperback-cover-updated-synopsis-final-qa-report.md`.
+- Verdict: `PASS WITH MINOR NOTES`; proceed to ebook work from the final repaired cover export or a later export from the repaired INDD.
+- Important note: the initial InDesign QA export had a blank barcode/ISBN box. The repaired INDD restores the barcode via `design/book-cover-unfolding-origami/indesign-handoff/reference/barcode-isbn-9798995611608.png`.
+- Existing placed artwork still reports about `159-161 PPI`, matching the supplied reference's effective resolution class; the restored barcode is 300 DPI.
 
 ## Source Files To Inspect First
 
@@ -115,11 +121,12 @@ Those screenshots are local evidence, not durable repo artifacts. Re-run browser
 
 This repo often has intentional local campaign assets and ignored work product. Do not clean or delete untracked folders unless the user explicitly asks.
 
-At the time this context was created, notable untracked/local paths included:
+Local work-product paths are intentionally ignored to keep `git status` usable:
 
 - `Loren/`
 - `exports/`
-- `images/unfolding-origami-ebook-cover.jpg`
-- `images/unfolding-origami-butterfly-*.png`
+- `design-qa.md`
+
+Tracked files under ignored paths remain tracked. For future intentional generated exports or newsletter files, use `git add -f path/to/file` after reviewing the artifact.
 
 Stage only reviewed files that are relevant to the user's request.
