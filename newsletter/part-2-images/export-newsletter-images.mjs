@@ -140,6 +140,8 @@ const blocks = [
           <div class="content-note">
             This excerpt includes depictions of trauma, including sexual violence, that may be distressing to some. Reader discretion is advised, and those who may be affected are encouraged to seek support from a qualified professional trained in trauma-informed therapeutic services.
           </div>
+        </div>
+        <div class="excerpt-cta-wrap">
           <span class="button button-primary excerpt-button">Read the Excerpt</span>
         </div>
         <div class="excerpt-band">
@@ -541,9 +543,17 @@ function baseCss() {
       line-height: 1.42;
     }
 
+    .excerpt-cta-wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 24px;
+    }
+
     .excerpt-button {
       width: 330px;
-      margin-top: 24px;
     }
 
     .excerpt-band {
