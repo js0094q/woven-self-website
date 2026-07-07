@@ -531,6 +531,7 @@ img.card {
 .excerpt-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.85rem;
   margin-top: 2rem;
 }
