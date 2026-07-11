@@ -40,7 +40,7 @@ Keep the header minimal.
 
 *Unfolding Origami: A Memoir* is now available for preorder.
 
-Releasing July 2026
+Releasing July 20th, 2026
 
 ---
 

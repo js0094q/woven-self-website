@@ -62,7 +62,7 @@ Unfolding Origami: A Memoir is now available for preorder.
 Release line:
 
 ```text
-Releasing July 2026
+Releasing July 20th, 2026
 ```
 
 Use the official cover image in this block. Keep the layout cover-led and uncluttered.

@@ -74,7 +74,7 @@ const blocks = [
         <div class="hero-copy">
           <p class="eyebrow">The Official Cover Is Here</p>
           <h1>Unfolding Origami: A Memoir is now available for preorder.</h1>
-          <p class="release">Releasing July 2026</p>
+          <p class="release">Releasing July 20th, 2026</p>
         </div>
         <div class="hero-cover-panel">
           <p class="cover-kicker">The official cover is here.</p>
