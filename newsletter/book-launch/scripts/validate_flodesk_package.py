@@ -94,7 +94,6 @@ EXPECTED_BUTTONS = {
     "Buy on Amazon": APPROVED_URLS[0],
     "Order Your Signed Copy": APPROVED_URLS[2],
 }
-REFERENCE_ONLY_LABEL = "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
 CTA_SOURCE = "newsletter/book-launch/launch-newsletter-preview.html"
 EXPECTED_CTAS = (
     {
@@ -757,8 +756,6 @@ def validate_ctas(
             cta_items = [item for item in raw_ctas if isinstance(item, dict)]
         if cta_manifest.get("source") != CTA_SOURCE:
             failures.append("cta-manifest.json source does not name the authoritative newsletter HTML.")
-        if cta_manifest.get("reference_only_label") != REFERENCE_ONLY_LABEL:
-            failures.append("CTA manifest does not preserve the required reference-only label.")
         expected_order = [str(cta["id"]) for cta in EXPECTED_CTAS]
         if cta_manifest.get("approved_order") != expected_order:
             failures.append("CTA manifest approved_order does not match the approved CTA order.")
@@ -851,7 +848,6 @@ def validate_ctas(
                 ("source", CTA_SOURCE),
                 ("cta_file", cta_file),
                 ("reference_image", reference),
-                ("reference_label", REFERENCE_ONLY_LABEL),
             ):
                 if item.get(field) != expected_value:
                     failures.append(
@@ -899,6 +895,14 @@ def validate_ctas(
                     item = cta_matches[0]
                     if item.get("reference_dimensions") != f"{width}x{height}":
                         failures.append(f"CTA reference dimensions do not match: {reference}")
+                    source_region = item.get("reference_source_region")
+                    if not isinstance(source_region, dict) or (
+                        source_region.get("width"), source_region.get("height")
+                    ) != (width, height):
+                        failures.append(
+                            "CTA reference includes pixels outside approved source region: "
+                            f"{reference}"
+                        )
                     actual_hash = hashlib.sha256(reference_path.read_bytes()).hexdigest()
                     if item.get("reference_sha256") != actual_hash:
                         failures.append(f"CTA reference hash does not match: {reference}")

@@ -18,8 +18,6 @@ AMAZON_URL = (
 EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami.html"
 STRIPE_URL = "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
 SOURCE = "newsletter/book-launch/launch-newsletter-preview.html"
-REFERENCE_ONLY = "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
-
 CTA_DATA = (
     {
         "id": "cta-01",
@@ -227,7 +225,6 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
                     },
                     "cta_file": f"native-elements/ctas/{cta['filename']}",
                     "reference_image": f"native-elements/ctas/references/{cta['reference']}",
-                    "reference_label": REFERENCE_ONLY,
                     "validation_status": "approved-source-match",
                 }
             )
@@ -306,6 +303,51 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
         ]
         missing = [relative for relative in required if not (cta_dir / relative).is_file()]
         self.assertEqual(missing, [], f"missing CTA deliverables: {missing}")
+
+    def test_cta_reference_images_are_footer_free_source_crops(self):
+        manifest = self.read_json(
+            PACKAGE_DIR / "native-elements/ctas/cta-manifest.json"
+        )
+        for cta in manifest["ctas"]:
+            with self.subTest(cta=cta["id"]):
+                reference = PACKAGE_DIR / cta["reference_image"]
+                width, height, _transparent = validator.inspect_png(reference)
+                source_region = cta["reference_source_region"]
+                self.assertEqual(
+                    (width, height),
+                    (source_region["width"], source_region["height"]),
+                    f"{cta['id']} includes pixels outside its approved source region",
+                )
+
+    def test_package_docs_do_not_require_visible_reference_footers(self):
+        obsolete_instruction = (
+            "REFERENCE" + " ONLY — BUILD AS A NATIVE FLODESK BUTTON"
+        )
+        offenders = [
+            path.relative_to(PACKAGE_DIR).as_posix()
+            for path in PACKAGE_DIR.rglob("*.md")
+            if obsolete_instruction in path.read_text(encoding="utf-8")
+        ]
+        self.assertEqual(
+            offenders,
+            [],
+            f"obsolete visible reference-footer instruction remains in: {offenders}",
+        )
+
+    def test_cta_reference_footer_extension_is_rejected(self):
+        temporary, package = self.copy_package()
+        self.addCleanup(temporary.cleanup)
+        self.seed_cta_fixture(package)
+
+        def shrink_source_region(value):
+            value["ctas"][0]["reference_source_region"]["height"] -= 1
+
+        self.mutate_cta_manifest(package, shrink_source_region)
+        self.assert_has_failure(
+            package,
+            "CTA reference includes pixels outside approved source region: "
+            "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
+        )
 
     def test_missing_cta_file_reports_exact_path(self):
         temporary, package = self.copy_package()

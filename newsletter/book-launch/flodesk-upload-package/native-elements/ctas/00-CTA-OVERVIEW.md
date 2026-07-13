@@ -1,6 +1,6 @@
 # CTA Overview
 
-These five items are native Flodesk button blocks. The PNGs in `references/` are visual proofs only; never upload a reference PNG as the clickable implementation.
+These five files are production assembly specifications for native Flodesk button blocks. The clean PNGs in `references/` preserve the approved appearance and surrounding spacing without annotations. Use them for visual matching, but create every clickable CTA as the native Flodesk button documented in its Markdown file.
 
 ## Complete CTA table
 
@@ -55,6 +55,6 @@ To build the link:
 7. Reopen its link setting and confirm the saved URL still contains `B0H7YZ5N28` and has no query string or tracking parameter.
 8. Use Flodesk preview to click the image and confirm that it opens the intended Amazon paperback product page.
 
-## Reference-image boundary
+## Production-image boundary
 
-Every PNG in `references/` must visibly state `REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON`. These files document appearance and spacing only. The five live buttons must be created from the native Flodesk button files in this folder.
+Every PNG in `references/` is an unannotated source crop of the approved newsletter render. No label, watermark, instruction panel, or reference footer may be added to those pixels. The production email still uses five native Flodesk buttons so the destinations remain clickable, accessible, and editable.

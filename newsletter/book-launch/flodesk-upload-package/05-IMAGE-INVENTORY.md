@@ -63,7 +63,7 @@ Upload only the 20 PNGs in `upload-pieces/`. The legacy `assets/` folders contai
 
 ## Native CTA visual references
 
-The six PNGs under `native-elements/ctas/references/` are visual references, not upload pieces. Each individual CTA image visibly says `REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON`. Use them to compare width, height, color, radius, typography, and surrounding spacing while building the five live Flodesk Button blocks.
+The six PNGs under `native-elements/ctas/references/` are production assembly guides, not upload pieces. Each individual CTA image is an unannotated exact crop of the approved source render, including the approved surrounding spacing. Use them to compare width, height, color, radius, typography, and spacing while building the five live Flodesk Button blocks.
 
 - `01-buy-the-book-on-amazon-reference.png`
 - `02-read-an-excerpt-reference.png`

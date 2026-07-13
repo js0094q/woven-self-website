@@ -42,7 +42,7 @@ Do not schedule or send until every applicable item is checked and reviewed.
 - [ ] All five CTA files under `native-elements/ctas/` were used individually.
 - [ ] Each CTA appears exactly once in the 28-position assembly sequence.
 - [ ] Each CTA appears exactly once in `package-manifest.json` and `native-elements/ctas/cta-manifest.json`.
-- [ ] Each CTA reference PNG exists and visibly says `REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON`.
+- [ ] Each CTA reference PNG exists as an unannotated exact source crop with no label, watermark, instruction panel, or footer.
 - [ ] `native-elements/ctas/references/all-ctas-contact-sheet.png` shows all five CTAs in approved order.
 - [ ] The Amazon and Stripe purchase routes remain distinct.
 - [ ] Every CTA remains a native Flodesk Button block; no reference image is the clickable implementation.

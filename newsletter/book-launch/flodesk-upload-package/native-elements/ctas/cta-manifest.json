@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "package_name": "Unfolding Origami Launch Newsletter Native CTA Kit",
-  "generated_at": "2026-07-13T15:23:25.741Z",
+  "generated_at": "2026-07-13T15:53:05.412Z",
   "source": "newsletter/book-launch/launch-newsletter-preview.html",
   "source_sha256": "0ba09d28916a8d7a51621a19b10243ad8b2654c4590485368913b5c7f189922e",
   "validation_status": "verified-against-authoritative-html",
@@ -12,7 +12,6 @@
     "cta-04",
     "cta-05"
   ],
-  "reference_only_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
   "contact_sheet": "native-elements/ctas/references/all-ctas-contact-sheet.png",
   "ctas": [
     {
@@ -65,7 +64,6 @@
         "source_measured_height_px_at_390": 54
       },
       "reference_image": "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
-      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
       "validation_status": "verified-against-authoritative-html",
       "source_order": 1,
       "source_render_interval": "heroAmazon",
@@ -83,9 +81,9 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x228",
-      "reference_size_bytes": 23129,
-      "reference_sha256": "b10bdd842f57fa71a3af897e68e3727cad8a9c064e48082f096b16ce9c3bbf26",
+      "reference_dimensions": "1280x132",
+      "reference_size_bytes": 7728,
+      "reference_sha256": "c029e90e20591945a9ea5e396e270c786eb9a1a00619a39bef90e57749af3d15",
       "reference_source_region": {
         "left": 0,
         "top": 1393,
@@ -142,7 +140,6 @@
         "source_measured_height_px_at_390": 54
       },
       "reference_image": "native-elements/ctas/references/02-read-an-excerpt-reference.png",
-      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
       "validation_status": "verified-against-authoritative-html",
       "source_order": 2,
       "source_render_interval": "heroExcerpt",
@@ -160,9 +157,9 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x224",
-      "reference_size_bytes": 20757,
-      "reference_sha256": "090a73ade303b0ef4a8e0bcc87b6256f5bbcea738bfd1bbeb094fb2cd613773a",
+      "reference_dimensions": "1280x128",
+      "reference_size_bytes": 6245,
+      "reference_sha256": "96a08eadd7d48c3a0747fa3389f25173075e7d449640f9cbf456beb3793d2743",
       "reference_source_region": {
         "left": 0,
         "top": 1525,
@@ -220,7 +217,6 @@
         "source_measured_height_px_at_390": 54
       },
       "reference_image": "native-elements/ctas/references/03-buy-the-memoir-now-reference.png",
-      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
       "validation_status": "verified-against-authoritative-html",
       "source_order": 3,
       "source_render_interval": "insideAmazon",
@@ -238,9 +234,9 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x272",
-      "reference_size_bytes": 22081,
-      "reference_sha256": "663916cb7eb0b9334838efee81f6794640c717f3330243f67e7826638e13fb30",
+      "reference_dimensions": "1280x176",
+      "reference_size_bytes": 7002,
+      "reference_sha256": "ce3bbdb4ec8a21558db0a53b0023f772274a2f2850d53a46f9b0d79072842944",
       "reference_source_region": {
         "left": 0,
         "top": 5992,
@@ -299,7 +295,6 @@
         "source_measured_height_px_at_390": 54
       },
       "reference_image": "native-elements/ctas/references/04-buy-on-amazon-reference.png",
-      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
       "validation_status": "verified-against-authoritative-html",
       "source_order": 4,
       "source_render_interval": "purchaseButtons",
@@ -317,9 +312,9 @@
         "padding_bottom": "16px",
         "padding_left": "18px"
       },
-      "reference_dimensions": "566x236",
-      "reference_size_bytes": 18103,
-      "reference_sha256": "4a62f8c8fbc42cc42753443770f8c521817d9dd78fd9aa3cabdc8c7ac1d6520c",
+      "reference_dimensions": "566x140",
+      "reference_size_bytes": 5095,
+      "reference_sha256": "63323578864b3dd44570f055a6fa5f0e93471c297bb80b9c1a8bfee4c040e2b6",
       "reference_source_region": {
         "left": 72,
         "top": 8128,
@@ -379,7 +374,6 @@
         "source_measured_height_px_at_390": 54
       },
       "reference_image": "native-elements/ctas/references/05-order-your-signed-copy-reference.png",
-      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
       "validation_status": "verified-against-authoritative-html",
       "source_order": 5,
       "source_render_interval": "purchaseButtons",
@@ -397,9 +391,9 @@
         "padding_bottom": "16px",
         "padding_left": "18px"
       },
-      "reference_dimensions": "566x236",
-      "reference_size_bytes": 23398,
-      "reference_sha256": "c6a33b21ab62ecd5f88267cf3e4a2ad715d97aa6a221471cb944128488fd9c02",
+      "reference_dimensions": "566x140",
+      "reference_size_bytes": 8070,
+      "reference_sha256": "b150ecdb7be68d2a256c462e8be10a6cc99a64d6da6ede8a098e0f1e201272fa",
       "reference_source_region": {
         "left": 642,
         "top": 8128,

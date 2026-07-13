@@ -48,8 +48,6 @@ const EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami.html";
 const STRIPE_URL = "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00";
 const SARAH_URL = "https://alittlebitculty.com/";
 const SOURCE_HTML = "newsletter/book-launch/launch-newsletter-preview.html";
-const CTA_REFERENCE_LABEL = "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON";
-
 const PIECES = [
   { number: "01", filename: "01-author-identifier.png", name: "Author identifier", range: "author" },
   { number: "02", filename: "02-hero-visual.png", name: "Hero visual", range: "hero", clickable: true, destination: AMAZON_URL },
@@ -117,7 +115,6 @@ const CTA_DEFINITIONS = [
       gap_after_px: 12,
     },
     reference_image: "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
-    reference_label: CTA_REFERENCE_LABEL,
     validation_status: "verified-against-authoritative-html",
     proof_range: "heroAmazon",
   },
@@ -164,7 +161,6 @@ const CTA_DEFINITIONS = [
       gap_after_px: 10,
     },
     reference_image: "native-elements/ctas/references/02-read-an-excerpt-reference.png",
-    reference_label: CTA_REFERENCE_LABEL,
     validation_status: "verified-against-authoritative-html",
     proof_range: "heroExcerpt",
   },
@@ -211,7 +207,6 @@ const CTA_DEFINITIONS = [
       gap_after_px: 26,
     },
     reference_image: "native-elements/ctas/references/03-buy-the-memoir-now-reference.png",
-    reference_label: CTA_REFERENCE_LABEL,
     validation_status: "verified-against-authoritative-html",
     proof_range: "insideAmazon",
   },
@@ -259,7 +254,6 @@ const CTA_DEFINITIONS = [
       gap_after_px: 12,
     },
     reference_image: "native-elements/ctas/references/04-buy-on-amazon-reference.png",
-    reference_label: CTA_REFERENCE_LABEL,
     validation_status: "verified-against-authoritative-html",
     proof_range: "purchaseButtons",
   },
@@ -307,7 +301,6 @@ const CTA_DEFINITIONS = [
       gap_after_px: 0,
     },
     reference_image: "native-elements/ctas/references/05-order-your-signed-copy-reference.png",
-    reference_label: CTA_REFERENCE_LABEL,
     proof_range: "purchaseButtons",
     validation_status: "verified-against-authoritative-html",
   },
@@ -793,28 +786,7 @@ async function createCtaReferences(
       .toColourspace("srgb")
       .png({ compressionLevel: 9, adaptiveFiltering: true })
       .toBuffer();
-    const labelHeight = 96;
-    const labelSvg = Buffer.from(
-      `<svg width="${region.width}" height="${labelHeight}" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="#0D182A"/>
-        <text x="50%" y="32" text-anchor="middle" fill="#F3E7D4" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700">${escapeXml(`${definition.id.toUpperCase()} · ${definition.label}`)}</text>
-        <text x="50%" y="68" text-anchor="middle" fill="#9FB9D3" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700">${escapeXml(CTA_REFERENCE_LABEL)}</text>
-      </svg>`,
-    );
-    const buffer = await sharp({
-      create: {
-        width: region.width,
-        height: region.height + labelHeight,
-        channels: 3,
-        background: "#F7EFE4",
-      },
-    })
-      .composite([
-        { input: sourceBuffer, left: 0, top: 0 },
-        { input: labelSvg, left: 0, top: region.height },
-      ])
-      .png({ compressionLevel: 9, adaptiveFiltering: true })
-      .toBuffer();
+    const buffer = sourceBuffer;
     const filePath = path.join(packageDirectory, definition.reference_image);
     writeFileSync(filePath, buffer);
     const metadata = await sharp(buffer).metadata();
@@ -838,7 +810,7 @@ async function createCtaContactSheet(sharp, ctaReferenceResults) {
   const heading = Buffer.from(
     `<svg width="${width}" height="${headingHeight}" xmlns="http://www.w3.org/2000/svg">
       <rect width="100%" height="100%" fill="#0D182A"/>
-      <text x="50%" y="46" text-anchor="middle" fill="#F3E7D4" font-family="Georgia,serif" font-size="28" font-weight="700">Approved native CTA references · top-to-bottom order</text>
+      <text x="50%" y="46" text-anchor="middle" fill="#F3E7D4" font-family="Georgia,serif" font-size="28" font-weight="700">Native CTA production guide · top-to-bottom order</text>
     </svg>`,
   );
   const composites = [{ input: heading, left: 0, top: 0 }];
@@ -1185,7 +1157,6 @@ async function exportPackage() {
       ),
       validation_status: "verified-against-authoritative-html",
       approved_order: ctaManifestEntries.map((cta) => cta.id),
-      reference_only_label: CTA_REFERENCE_LABEL,
       contact_sheet: "native-elements/ctas/references/all-ctas-contact-sheet.png",
       ctas: ctaManifestEntries,
     };
@@ -1238,7 +1209,6 @@ async function exportPackage() {
         size_bytes: result.buffer.length,
         sha256: sha256(result.buffer),
         reference_only: true,
-        visible_reference_label: CTA_REFERENCE_LABEL,
       })),
       {
         filename: "native-elements/ctas/references/all-ctas-contact-sheet.png",
