@@ -1,0 +1,28 @@
+{
+  "approved_desktop": {
+    "width": 1440,
+    "height": 5092,
+    "sha256": "2f31d6276df71bb82e9aeac56fb1cd13be59944bc4a93de40279bf9c2c474a24"
+  },
+  "approved_mobile": {
+    "width": 390,
+    "height": 5491,
+    "sha256": "cf5cb442ac2f6c34ee54a9ab09e07c526d3a75ff91102f25024acd34934e832c"
+  },
+  "reassembled_desktop_proof": {
+    "width": 1280,
+    "height": 10072,
+    "pixel_equal_to_direct_retina_master": true,
+    "approved_desktop_shell_mean_channel_delta": 1.863509,
+    "approved_desktop_shell_max_channel_delta": 135,
+    "note": "Any nonzero approved-preview delta is limited to a fresh Chromium text anti-aliasing variation; geometry and source are unchanged."
+  },
+  "reassembled_mobile_proof": {
+    "width": 780,
+    "height": 6898,
+    "approved_mobile_width": 390,
+    "approved_mobile_height": 5491,
+    "matches_approved_mobile_reflow": false,
+    "note": "A single 640px desktop raster set scales to 390px and cannot preserve the approved live 16px mobile typography or line wrapping."
+  }
+}

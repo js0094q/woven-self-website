@@ -1,0 +1,1235 @@
+{
+  "package_name": "Unfolding Origami Launch Newsletter",
+  "status": "approved-for-manual-flodesk-assembly-with-complete-native-cta-kit-and-mobile-review-item",
+  "generated_at": "2026-07-13T15:23:25.741Z",
+  "created_from": "approved launch newsletter HTML and approved desktop preview",
+  "upload_piece_count": 20,
+  "master_width": 1280,
+  "flodesk_display_width": "640px or full content width",
+  "upload_pieces": [
+    {
+      "number": "01",
+      "filename": "upload-pieces/01-author-identifier.png",
+      "section_name": "Author identifier",
+      "width": 1280,
+      "height": 112,
+      "format": "png",
+      "file_size_bytes": 7819,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 0,
+        "bottom": 112
+      },
+      "sha256": "d33a2904d9433baf7b4aa5c45c323f10346fc859bb83faf3ad9d538db36d0c66",
+      "transparent": false,
+      "alt_text": "LOREN GALESE, LPC, ACS · AUTHOR",
+      "embedded_text": [
+        "LOREN GALESE, LPC, ACS · AUTHOR"
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 1
+    },
+    {
+      "number": "02",
+      "filename": "upload-pieces/02-hero-visual.png",
+      "section_name": "Hero visual",
+      "width": 1280,
+      "height": 720,
+      "format": "png",
+      "file_size_bytes": 533046,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 112,
+        "bottom": 832
+      },
+      "sha256": "8a75d9891ff0c90477a4e8a8b9b7658edc96aa38667e18f5bcbecfe2f32ffd04",
+      "transparent": false,
+      "alt_text": "Unfolding Origami by Loren Galese displayed upright beside a stack of paperback copies.",
+      "embedded_text": [],
+      "clickable": true,
+      "destination": "https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28",
+      "position_in_assembly_sequence": 2
+    },
+    {
+      "number": "03",
+      "filename": "upload-pieces/03-butterfly-separator-01.png",
+      "section_name": "Butterfly separator 01",
+      "width": 1280,
+      "height": 61,
+      "format": "png",
+      "file_size_bytes": 3390,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 832,
+        "bottom": 893
+      },
+      "sha256": "0e0ae176acb777cfd8ec042642e1dd7bfd7e2e393c791f9fd414d0a5c28a0c90",
+      "transparent": false,
+      "alt_text": "",
+      "embedded_text": [],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 3
+    },
+    {
+      "number": "04",
+      "filename": "upload-pieces/04-hero-eyebrow-heading-and-supporting-copy.png",
+      "section_name": "Hero eyebrow, heading, and supporting copy",
+      "width": 1280,
+      "height": 500,
+      "format": "png",
+      "file_size_bytes": 54762,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 893,
+        "bottom": 1393
+      },
+      "sha256": "fd7703d56ad6ca439397098510723bc75710122b5c7d9aa3b223a45f43026901",
+      "transparent": false,
+      "alt_text": "UNFOLDING ORIGAMI: A MEMOIR\n\nThe book is officially here.\n\nAfter years of writing, revising, remembering, and unfolding, Unfolding Origami is now available.",
+      "embedded_text": [
+        "UNFOLDING ORIGAMI: A MEMOIR",
+        "The book is officially here.",
+        "After years of writing, revising, remembering, and unfolding, Unfolding Origami is now available."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 4
+    },
+    {
+      "number": "05",
+      "filename": "upload-pieces/05-butterfly-separator-02.png",
+      "section_name": "Butterfly separator 02",
+      "width": 1280,
+      "height": 96,
+      "format": "png",
+      "file_size_bytes": 7209,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 1653,
+        "bottom": 1749
+      },
+      "sha256": "7db89a4944b51495a6cc64dc31b630d6a1471deb4b1d81c3974470c7dda98c7e",
+      "transparent": false,
+      "alt_text": "",
+      "embedded_text": [],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 7
+    },
+    {
+      "number": "06",
+      "filename": "upload-pieces/06-opening-letter-part-01.png",
+      "section_name": "Opening letter part 01",
+      "width": 1280,
+      "height": 225,
+      "format": "png",
+      "file_size_bytes": 17637,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 1749,
+        "bottom": 1974
+      },
+      "sha256": "d7e2d444ddcb9616938d848edcb86e533ece5395add56090cf1a9dcbec9fe853",
+      "transparent": false,
+      "alt_text": "Hi everyone,\n\nI can finally say it: Unfolding Origami is officially here.",
+      "embedded_text": [
+        "Hi everyone,",
+        "I can finally say it: Unfolding Origami is officially here."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 8
+    },
+    {
+      "number": "07",
+      "filename": "upload-pieces/07-amazon-bestseller-rankings.png",
+      "section_name": "Amazon Bestseller rankings",
+      "width": 1280,
+      "height": 432,
+      "format": "png",
+      "file_size_bytes": 56349,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 1974,
+        "bottom": 2406
+      },
+      "sha256": "75d72e14ffa7c6334442139f897c11b7521762f7db568a1af2eb77fde2b43a85",
+      "transparent": false,
+      "alt_text": "Even more unbelievable, within the first 48 hours of release it became an Amazon Bestseller, reaching:\n\n• #26 in Trauma Psychology eBooks\n\n• #125 in Trauma Psychology Books\n\n• #151 in Survival Biographies",
+      "embedded_text": [
+        "Even more unbelievable, within the first 48 hours of release it became an Amazon Bestseller, reaching:",
+        "• #26 in Trauma Psychology eBooks",
+        "• #125 in Trauma Psychology Books",
+        "• #151 in Survival Biographies"
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 9
+    },
+    {
+      "number": "08",
+      "filename": "upload-pieces/08-opening-letter-part-02.png",
+      "section_name": "Opening letter part 02",
+      "width": 1280,
+      "height": 824,
+      "format": "png",
+      "file_size_bytes": 131311,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 2406,
+        "bottom": 3230
+      },
+      "sha256": "194fe6b953b711be7d8c1526c1ba3ba15e6983533bcaa73f758e68d1d57e56bf",
+      "transparent": false,
+      "alt_text": "The shock still hasn't worn off. I've cried, laughed, sung, and felt scared all at once.\n\nThis book lived inside me for years, most of the time hidden. Writing it meant returning to experiences no one should endure, trying to understand what happened, and finding language for the parts of myself I had folded away.\n\nI wanted to take a moment to acknowledge the women who gave me the strength and support to write this and put it before an editor. Without their gentle encouragement, this book would not be here today.\n\nThis story erupted from me, demanding to be told, even when I tried to ignore it.",
+      "embedded_text": [
+        "The shock still hasn't worn off. I've cried, laughed, sung, and felt scared all at once.",
+        "This book lived inside me for years, most of the time hidden. Writing it meant returning to experiences no one should endure, trying to understand what happened, and finding language for the parts of myself I had folded away.",
+        "I wanted to take a moment to acknowledge the women who gave me the strength and support to write this and put it before an editor. Without their gentle encouragement, this book would not be here today.",
+        "This story erupted from me, demanding to be told, even when I tried to ignore it."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 10
+    },
+    {
+      "number": "09",
+      "filename": "upload-pieces/09-opening-letter-part-03.png",
+      "section_name": "Opening letter part 03",
+      "width": 1280,
+      "height": 768,
+      "format": "png",
+      "file_size_bytes": 148805,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 3230,
+        "bottom": 3998
+      },
+      "sha256": "287e8b2a2c023df7b22ebd149a4aed53c5d43dbb053af8d5f6efec1bc04fb484",
+      "transparent": false,
+      "alt_text": "Unfolding Origami follows coercive control, sexual assault, sorority hazing, addiction, dissociation, sobriety, and the long process of learning to trust yourself after others have distorted your reality.\n\nIt is not a story with a clean before and after. Healing has never looked that simple in my life. It has been frightening, uneven, painful, and deeply human.\n\nSeeing the finished book now is surreal. Something I carried privately for so long can finally be held by other people.\n\nTo everyone who read an early page, preordered a copy, followed along, encouraged me, or reminded me why this story mattered—to let my story become someone else's survival guide—thank you.",
+      "embedded_text": [
+        "Unfolding Origami follows coercive control, sexual assault, sorority hazing, addiction, dissociation, sobriety, and the long process of learning to trust yourself after others have distorted your reality.",
+        "It is not a story with a clean before and after. Healing has never looked that simple in my life. It has been frightening, uneven, painful, and deeply human.",
+        "Seeing the finished book now is surreal. Something I carried privately for so long can finally be held by other people.",
+        "To everyone who read an early page, preordered a copy, followed along, encouraged me, or reminded me why this story mattered—to let my story become someone else's survival guide—thank you."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 11
+    },
+    {
+      "number": "10",
+      "filename": "upload-pieces/10-opening-letter-part-04.png",
+      "section_name": "Opening letter part 04",
+      "width": 1280,
+      "height": 613,
+      "format": "png",
+      "file_size_bytes": 69109,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 3998,
+        "bottom": 4611
+      },
+      "sha256": "b5fc12669302e9816b425090d7cc84ca6bfcb7495fee5d781efb9ea66fc6a9a0",
+      "transparent": false,
+      "alt_text": "I hope this book reaches someone who needs language for what happened to them. I hope it helps someone feel less alone. Most of all, I hope it reminds readers that healing does not have to follow a straight line to be real.\n\nThank you for being here for this moment.\n\nWith gratitude and a full heart,\n\nLoren",
+      "embedded_text": [
+        "I hope this book reaches someone who needs language for what happened to them. I hope it helps someone feel less alone. Most of all, I hope it reminds readers that healing does not have to follow a straight line to be real.",
+        "Thank you for being here for this moment.",
+        "With gratitude and a full heart,",
+        "Loren"
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 12
+    },
+    {
+      "number": "11",
+      "filename": "upload-pieces/11-butterfly-separator-03.png",
+      "section_name": "Butterfly separator 03",
+      "width": 1280,
+      "height": 59,
+      "format": "png",
+      "file_size_bytes": 2973,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 4611,
+        "bottom": 4670
+      },
+      "sha256": "f4f0d5ef7ca5365520054a7deba0a4552efd2cb151ef8cda9b4411e0226011b2",
+      "transparent": false,
+      "alt_text": "",
+      "embedded_text": [],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 13
+    },
+    {
+      "number": "12",
+      "filename": "upload-pieces/12-interior-book-spread.png",
+      "section_name": "Interior book spread",
+      "width": 1280,
+      "height": 720,
+      "format": "png",
+      "file_size_bytes": 483501,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 4670,
+        "bottom": 5390
+      },
+      "sha256": "ea29efd7f5e004dde2683749d0edc6ec8135a7960f8c5418e06868d62ccbda47",
+      "transparent": false,
+      "alt_text": "Open pages of Unfolding Origami showing the chapter title “The Devil Lives Here.”",
+      "embedded_text": [],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 14
+    },
+    {
+      "number": "13",
+      "filename": "upload-pieces/13-inside-unfolding-origami.png",
+      "section_name": "Inside Unfolding Origami",
+      "width": 1280,
+      "height": 602,
+      "format": "png",
+      "file_size_bytes": 98420,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 5390,
+        "bottom": 5992
+      },
+      "sha256": "460864f742a8f383a4c71bbfc58fba0abcc58af53cb2652aa261decb5ab58d8f",
+      "transparent": false,
+      "alt_text": "Inside Unfolding Origami\n\nUnfolding Origami follows the long aftermath of coercion and trauma: what happens when fear, loyalty, identity, and survival become tangled together—and what it takes to begin separating them again.\n\nThis memoir does not present healing as a clean transformation. It follows the confusion, coping, relapse, sobriety, grief, insight, and gradual return to self-trust that came afterward.",
+      "embedded_text": [
+        "Inside Unfolding Origami\n\nUnfolding Origami follows the long aftermath of coercion and trauma: what happens when fear, loyalty, identity, and survival become tangled together—and what it takes to begin separating them again.\n\nThis memoir does not present healing as a clean transformation. It follows the confusion, coping, relapse, sobriety, grief, insight, and gradual return to self-trust that came afterward."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 15
+    },
+    {
+      "number": "14",
+      "filename": "upload-pieces/14-butterfly-separator-04.png",
+      "section_name": "Butterfly separator 04",
+      "width": 1280,
+      "height": 88,
+      "format": "png",
+      "file_size_bytes": 5790,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 6168,
+        "bottom": 6256
+      },
+      "sha256": "1f3ddf1cfe1d832a03ed86d156f2df8b9faec9e43f99fe6546d2286a79fcdaaa",
+      "transparent": false,
+      "alt_text": "",
+      "embedded_text": [],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 17
+    },
+    {
+      "number": "15",
+      "filename": "upload-pieces/15-sarah-edmondson-endorsement.png",
+      "section_name": "Sarah Edmondson endorsement quotation",
+      "width": 1280,
+      "height": 513,
+      "format": "png",
+      "file_size_bytes": 86304,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 6256,
+        "bottom": 6769
+      },
+      "sha256": "5c3ef54bbe0463cb1247d07d72dc24b2ba8b66acf081745724b55d17b76298ff",
+      "transparent": false,
+      "alt_text": "“Some wounds don’t bleed—they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.”",
+      "embedded_text": [
+        "“Some wounds don’t bleed—they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.”"
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 18
+    },
+    {
+      "number": "16",
+      "filename": "upload-pieces/16-reader-review.png",
+      "section_name": "Reader review",
+      "width": 1280,
+      "height": 757,
+      "format": "png",
+      "file_size_bytes": 96545,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 6979,
+        "bottom": 7736
+      },
+      "sha256": "75f7f2370ece765013d887b7673d40785f4bdbcbd6772d4c869765dc1189c0b8",
+      "transparent": false,
+      "alt_text": "READER REVIEW\n\nWhat readers are saying\n\n★★★★★\n\n5 out of 5 stars\n“What stood out most to me was how the book captures the subtle ways manipulation and trauma can reshape a person’s identity. Rather than focusing only on what happened, it explores what it takes to rebuild trust in yourself afterward.”\n\n- Amazon Review",
+      "embedded_text": [
+        "READER REVIEW\n\nWhat readers are saying\n\n★★★★★\n\n5 out of 5 stars\n“What stood out most to me was how the book captures the subtle ways manipulation and trauma can reshape a person’s identity. Rather than focusing only on what happened, it explores what it takes to rebuild trust in yourself afterward.”\n\n- Amazon Review"
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 20
+    },
+    {
+      "number": "17",
+      "filename": "upload-pieces/17-butterfly-separator-05-and-choose-your-copy.png",
+      "section_name": "Butterfly separator 05 and Choose Your Copy introduction",
+      "width": 1280,
+      "height": 408,
+      "format": "png",
+      "file_size_bytes": 42368,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 7736,
+        "bottom": 8144
+      },
+      "sha256": "e720d37850f074eecf967b4318a73d552cac3e2f26606005f289b0efa0d9353f",
+      "transparent": false,
+      "alt_text": "Choose Your Copy\n\nOrder the memoir through Amazon, or reserve a signed paperback directly from Loren through July 20, 2026.",
+      "embedded_text": [
+        "Choose Your Copy",
+        "Order the memoir through Amazon, or reserve a signed paperback directly from Loren through July 20, 2026."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 21
+    },
+    {
+      "number": "18",
+      "filename": "upload-pieces/18-signed-copy-deadline.png",
+      "section_name": "Signed-copy deadline",
+      "width": 1280,
+      "height": 130,
+      "format": "png",
+      "file_size_bytes": 13951,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 8252,
+        "bottom": 8382
+      },
+      "sha256": "886f9d008974a6451ca76aabb0cddd8f7c7c5e337673a8535294fbcae413f250",
+      "transparent": false,
+      "alt_text": "Signed-copy orders are available through July 20, 2026.",
+      "embedded_text": [
+        "Signed-copy orders are available through July 20, 2026."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 24
+    },
+    {
+      "number": "19",
+      "filename": "upload-pieces/19-support-the-book.png",
+      "section_name": "Support the book",
+      "width": 1280,
+      "height": 654,
+      "format": "png",
+      "file_size_bytes": 100568,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 8382,
+        "bottom": 9036
+      },
+      "sha256": "33225cd28fe0319913565ac329b99307325dd911363dc1c26058437a9b79ca5d",
+      "transparent": false,
+      "alt_text": "One more way to support the book\n\nWhen you have finished reading, an honest review on Amazon would mean a great deal to me. Reviews help independent books reach readers who may otherwise never find them.\n\nYou can also support the launch by sharing the book with someone who may connect with its themes. Every review, recommendation, and conversation helps this story travel farther.",
+      "embedded_text": [
+        "One more way to support the book\n\nWhen you have finished reading, an honest review on Amazon would mean a great deal to me. Reviews help independent books reach readers who may otherwise never find them.\n\nYou can also support the launch by sharing the book with someone who may connect with its themes. Every review, recommendation, and conversation helps this story travel farther."
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 25
+    },
+    {
+      "number": "20",
+      "filename": "upload-pieces/20-closing-letter.png",
+      "section_name": "Closing letter",
+      "width": 1280,
+      "height": 468,
+      "format": "png",
+      "file_size_bytes": 40378,
+      "source": "../launch-newsletter-preview.html rendered at 640 CSS px and deviceScaleFactor 2",
+      "source_pixel_range": {
+        "top": 9036,
+        "bottom": 9504
+      },
+      "sha256": "943715d59846eefadcab41ade39e06367f68987fd307ff7989d80f761e0bf811",
+      "transparent": false,
+      "alt_text": "Thank you for helping Unfolding Origami move from something I carried privately into a story that can now be held by other people.\n\nWith gratitude,\n\nLoren Galese",
+      "embedded_text": [
+        "Thank you for helping Unfolding Origami move from something I carried privately into a story that can now be held by other people.\n\nWith gratitude,\n\nLoren Galese"
+      ],
+      "clickable": false,
+      "destination": null,
+      "position_in_assembly_sequence": 26
+    }
+  ],
+  "native_elements": [
+    {
+      "id": "cta-01",
+      "sequence_position": 5,
+      "type": "button",
+      "label": "Buy the Book on Amazon",
+      "destination": "https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell a.button-link (button 1; exact text `Buy the Book on Amazon`)",
+      "cta_file": "native-elements/ctas/01-buy-the-book-on-amazon.md",
+      "preceding_element": "upload-piece-04",
+      "following_element": "cta-02",
+      "section": "Hero CTA group",
+      "hierarchy": [
+        "primary",
+        "purchase",
+        "amazon"
+      ],
+      "desktop": {
+        "alignment": "center",
+        "width_behavior": "fixed target",
+        "width_target_px": 249,
+        "height_target_px": 54,
+        "background_color": "#0D182A",
+        "text_color": "#F3E7D4",
+        "border": "2px solid #0D182A",
+        "border_radius_px": 4,
+        "font": "Arial, Helvetica, sans-serif",
+        "font_size_px": 16,
+        "font_weight": 700,
+        "letter_spacing_px": 0,
+        "line_height_px": 18,
+        "horizontal_padding_px": 26,
+        "vertical_padding_px": 16,
+        "space_above_px": 0,
+        "space_below_px": 12,
+        "source_measured_width_px": 249,
+        "source_measured_height_px": 54
+      },
+      "mobile": {
+        "full_width": true,
+        "width_target_px_at_390": 342,
+        "side_margin_px": 24,
+        "stack_group": "hero-buttons",
+        "stack_order": 1,
+        "gap_before_px": 0,
+        "gap_after_px": 12,
+        "source_measured_width_px_at_390": 342,
+        "source_measured_height_px_at_390": 54
+      },
+      "reference_image": "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
+      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
+      "validation_status": "verified-against-authoritative-html",
+      "source_order": 1,
+      "source_render_interval": "heroAmazon",
+      "source_computed_style": {
+        "background_color": "rgb(13, 24, 42)",
+        "border_radius": "4px",
+        "color": "rgb(243, 231, 212)",
+        "font_family": "Arial, Helvetica, sans-serif",
+        "font_size": "16px",
+        "font_weight": "700",
+        "letter_spacing": "normal",
+        "line_height": "18px",
+        "padding_top": "16px",
+        "padding_right": "26px",
+        "padding_bottom": "16px",
+        "padding_left": "26px"
+      },
+      "reference_dimensions": "1280x228",
+      "reference_size_bytes": 23129,
+      "reference_sha256": "b10bdd842f57fa71a3af897e68e3727cad8a9c064e48082f096b16ce9c3bbf26",
+      "reference_source_region": {
+        "left": 0,
+        "top": 1393,
+        "width": 1280,
+        "height": 132
+      }
+    },
+    {
+      "id": "cta-02",
+      "sequence_position": 6,
+      "type": "button",
+      "label": "Read an Excerpt",
+      "destination": "https://wovenself.com/excerpt-unfolding-origami.html",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell a.button-link (button 2; exact text `Read an Excerpt`)",
+      "cta_file": "native-elements/ctas/02-read-an-excerpt.md",
+      "preceding_element": "cta-01",
+      "following_element": "upload-piece-05",
+      "section": "Hero CTA group",
+      "hierarchy": [
+        "secondary",
+        "excerpt"
+      ],
+      "desktop": {
+        "alignment": "center",
+        "width_behavior": "fixed target",
+        "width_target_px": 181,
+        "height_target_px": 54,
+        "background_color": "#F7EFE4",
+        "text_color": "#0D182A",
+        "border": "2px solid #0D182A",
+        "border_radius_px": 4,
+        "font": "Arial, Helvetica, sans-serif",
+        "font_size_px": 16,
+        "font_weight": 700,
+        "letter_spacing_px": 0,
+        "line_height_px": 18,
+        "horizontal_padding_px": 26,
+        "vertical_padding_px": 16,
+        "space_above_px": 0,
+        "space_below_px": 10,
+        "source_measured_width_px": 181,
+        "source_measured_height_px": 54
+      },
+      "mobile": {
+        "full_width": true,
+        "width_target_px_at_390": 342,
+        "side_margin_px": 24,
+        "stack_group": "hero-buttons",
+        "stack_order": 2,
+        "gap_before_px": 12,
+        "gap_after_px": 10,
+        "source_measured_width_px_at_390": 342,
+        "source_measured_height_px_at_390": 54
+      },
+      "reference_image": "native-elements/ctas/references/02-read-an-excerpt-reference.png",
+      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
+      "validation_status": "verified-against-authoritative-html",
+      "source_order": 2,
+      "source_render_interval": "heroExcerpt",
+      "source_computed_style": {
+        "background_color": "rgb(247, 239, 228)",
+        "border_radius": "4px",
+        "color": "rgb(13, 24, 42)",
+        "font_family": "Arial, Helvetica, sans-serif",
+        "font_size": "16px",
+        "font_weight": "700",
+        "letter_spacing": "normal",
+        "line_height": "18px",
+        "padding_top": "16px",
+        "padding_right": "26px",
+        "padding_bottom": "16px",
+        "padding_left": "26px"
+      },
+      "reference_dimensions": "1280x224",
+      "reference_size_bytes": 20757,
+      "reference_sha256": "090a73ade303b0ef4a8e0bcc87b6256f5bbcea738bfd1bbeb094fb2cd613773a",
+      "reference_source_region": {
+        "left": 0,
+        "top": 1525,
+        "width": 1280,
+        "height": 128
+      }
+    },
+    {
+      "id": "cta-03",
+      "sequence_position": 16,
+      "type": "button",
+      "label": "Buy the Memoir Now",
+      "destination": "https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell a.button-link (button 3; exact text `Buy the Memoir Now`)",
+      "cta_file": "native-elements/ctas/03-buy-the-memoir-now.md",
+      "preceding_element": "upload-piece-13",
+      "following_element": "upload-piece-14",
+      "section": "Inside Unfolding Origami",
+      "hierarchy": [
+        "primary",
+        "purchase",
+        "amazon"
+      ],
+      "desktop": {
+        "alignment": "center",
+        "width_behavior": "fixed target",
+        "width_target_px": 214,
+        "height_target_px": 54,
+        "background_color": "#0D182A",
+        "text_color": "#F3E7D4",
+        "border": "2px solid #0D182A",
+        "border_radius_px": 4,
+        "font": "Arial, Helvetica, sans-serif",
+        "font_size_px": 16,
+        "font_weight": 700,
+        "letter_spacing_px": 0,
+        "line_height_px": 18,
+        "horizontal_padding_px": 26,
+        "vertical_padding_px": 16,
+        "space_above_px": 8,
+        "space_below_px": 26,
+        "source_measured_width_px": 214,
+        "source_measured_height_px": 54
+      },
+      "mobile": {
+        "full_width": true,
+        "width_target_px_at_390": 342,
+        "side_margin_px": 24,
+        "stack_group": null,
+        "stack_order": null,
+        "gap_before_px": 8,
+        "gap_after_px": 26,
+        "source_measured_width_px_at_390": 342,
+        "source_measured_height_px_at_390": 54
+      },
+      "reference_image": "native-elements/ctas/references/03-buy-the-memoir-now-reference.png",
+      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
+      "validation_status": "verified-against-authoritative-html",
+      "source_order": 3,
+      "source_render_interval": "insideAmazon",
+      "source_computed_style": {
+        "background_color": "rgb(13, 24, 42)",
+        "border_radius": "4px",
+        "color": "rgb(243, 231, 212)",
+        "font_family": "Arial, Helvetica, sans-serif",
+        "font_size": "16px",
+        "font_weight": "700",
+        "letter_spacing": "normal",
+        "line_height": "18px",
+        "padding_top": "16px",
+        "padding_right": "26px",
+        "padding_bottom": "16px",
+        "padding_left": "26px"
+      },
+      "reference_dimensions": "1280x272",
+      "reference_size_bytes": 22081,
+      "reference_sha256": "663916cb7eb0b9334838efee81f6794640c717f3330243f67e7826638e13fb30",
+      "reference_source_region": {
+        "left": 0,
+        "top": 5992,
+        "width": 1280,
+        "height": 176
+      }
+    },
+    {
+      "id": "native-sarah-attribution",
+      "sequence_position": 19,
+      "type": "linked-text",
+      "label": "Sarah Edmondson\nPodcast Host & Author of A Little Bit Culty",
+      "destination": "https://alittlebitculty.com/",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell .sarah-panel p a",
+      "preceding_element": "upload-piece-15",
+      "following_element": "upload-piece-16",
+      "width_behavior": "Full-width navy text block",
+      "height_target": "105px desktop source interval",
+      "alignment": "left",
+      "background_color": "#0D182A",
+      "text_color": "#9FB9D3",
+      "border": "none",
+      "border_radius": "0px",
+      "spacing_before": "11px continuation gap after the quotation",
+      "spacing_after": "46px bottom padding",
+      "mobile_behavior": "Left aligned with 24px side padding",
+      "proof_range": "sarahAttribution"
+    },
+    {
+      "id": "cta-04",
+      "sequence_position": 22,
+      "type": "button",
+      "label": "Buy on Amazon",
+      "destination": "https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell a.purchase-button (button 1; exact text `Buy on Amazon`)",
+      "cta_file": "native-elements/ctas/04-buy-on-amazon.md",
+      "preceding_element": "upload-piece-17",
+      "following_element": "cta-05",
+      "section": "Choose Your Copy purchase group",
+      "hierarchy": [
+        "primary",
+        "purchase",
+        "amazon"
+      ],
+      "desktop": {
+        "alignment": "center",
+        "width_behavior": "equal 50% column in 536px row with 7px inner gutter",
+        "width_target_px": null,
+        "height_target_px": 54,
+        "background_color": "#0D182A",
+        "text_color": "#F3E7D4",
+        "border": "2px solid #0D182A",
+        "border_radius_px": 4,
+        "font": "Arial, Helvetica, sans-serif",
+        "font_size_px": 16,
+        "font_weight": 700,
+        "letter_spacing_px": 0,
+        "line_height_px": 18,
+        "horizontal_padding_px": 18,
+        "vertical_padding_px": 16,
+        "space_above_px": 0,
+        "space_below_px": 0,
+        "group_gap_px": 14,
+        "source_measured_width_px": 261,
+        "source_measured_height_px": 54
+      },
+      "mobile": {
+        "full_width": true,
+        "width_target_px_at_390": 342,
+        "side_margin_px": 24,
+        "stack_group": "purchase-buttons",
+        "stack_order": 1,
+        "gap_before_px": 0,
+        "gap_after_px": 12,
+        "source_measured_width_px_at_390": 342,
+        "source_measured_height_px_at_390": 54
+      },
+      "reference_image": "native-elements/ctas/references/04-buy-on-amazon-reference.png",
+      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
+      "validation_status": "verified-against-authoritative-html",
+      "source_order": 4,
+      "source_render_interval": "purchaseButtons",
+      "source_computed_style": {
+        "background_color": "rgb(13, 24, 42)",
+        "border_radius": "4px",
+        "color": "rgb(243, 231, 212)",
+        "font_family": "Arial, Helvetica, sans-serif",
+        "font_size": "16px",
+        "font_weight": "700",
+        "letter_spacing": "normal",
+        "line_height": "18px",
+        "padding_top": "16px",
+        "padding_right": "18px",
+        "padding_bottom": "16px",
+        "padding_left": "18px"
+      },
+      "reference_dimensions": "566x236",
+      "reference_size_bytes": 18103,
+      "reference_sha256": "4a62f8c8fbc42cc42753443770f8c521817d9dd78fd9aa3cabdc8c7ac1d6520c",
+      "reference_source_region": {
+        "left": 72,
+        "top": 8128,
+        "width": 566,
+        "height": 140
+      }
+    },
+    {
+      "id": "cta-05",
+      "sequence_position": 23,
+      "type": "button",
+      "label": "Order Your Signed Copy",
+      "destination": "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell a.purchase-button (button 2; exact text `Order Your Signed Copy`)",
+      "cta_file": "native-elements/ctas/05-order-your-signed-copy.md",
+      "preceding_element": "cta-04",
+      "following_element": "upload-piece-18",
+      "section": "Choose Your Copy purchase group",
+      "hierarchy": [
+        "secondary",
+        "purchase",
+        "signed-copy",
+        "stripe"
+      ],
+      "desktop": {
+        "alignment": "center",
+        "width_behavior": "equal 50% column in 536px row with 7px inner gutter",
+        "width_target_px": null,
+        "height_target_px": 54,
+        "background_color": "#F7EFE4",
+        "text_color": "#0D182A",
+        "border": "2px solid #0D182A",
+        "border_radius_px": 4,
+        "font": "Arial, Helvetica, sans-serif",
+        "font_size_px": 16,
+        "font_weight": 700,
+        "letter_spacing_px": 0,
+        "line_height_px": 18,
+        "horizontal_padding_px": 18,
+        "vertical_padding_px": 16,
+        "space_above_px": 0,
+        "space_below_px": 0,
+        "group_gap_px": 14,
+        "source_measured_width_px": 261,
+        "source_measured_height_px": 54
+      },
+      "mobile": {
+        "full_width": true,
+        "width_target_px_at_390": 342,
+        "side_margin_px": 24,
+        "stack_group": "purchase-buttons",
+        "stack_order": 2,
+        "gap_before_px": 12,
+        "gap_after_px": 0,
+        "source_measured_width_px_at_390": 342,
+        "source_measured_height_px_at_390": 54
+      },
+      "reference_image": "native-elements/ctas/references/05-order-your-signed-copy-reference.png",
+      "reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON",
+      "validation_status": "verified-against-authoritative-html",
+      "source_order": 5,
+      "source_render_interval": "purchaseButtons",
+      "source_computed_style": {
+        "background_color": "rgb(247, 239, 228)",
+        "border_radius": "4px",
+        "color": "rgb(13, 24, 42)",
+        "font_family": "Arial, Helvetica, sans-serif",
+        "font_size": "16px",
+        "font_weight": "700",
+        "letter_spacing": "normal",
+        "line_height": "18px",
+        "padding_top": "16px",
+        "padding_right": "18px",
+        "padding_bottom": "16px",
+        "padding_left": "18px"
+      },
+      "reference_dimensions": "566x236",
+      "reference_size_bytes": 23398,
+      "reference_sha256": "c6a33b21ab62ecd5f88267cf3e4a2ad715d97aa6a221471cb944128488fd9c02",
+      "reference_source_region": {
+        "left": 642,
+        "top": 8128,
+        "width": 566,
+        "height": 140
+      }
+    },
+    {
+      "id": "native-author-links",
+      "sequence_position": 27,
+      "type": "linked-text",
+      "label": "Author links and copyright",
+      "destination": "four-destinations-see-links-guide",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell tr:nth-child(22) .footer-link",
+      "preceding_element": "upload-piece-20",
+      "following_element": "native-compliance-footer",
+      "width_behavior": "Full width",
+      "height_target": "Approved source interval",
+      "alignment": "center",
+      "background_color": "#0D182A",
+      "text_color": "#F3E7D4",
+      "border": "none",
+      "border_radius": "0px",
+      "spacing_before": "0px",
+      "spacing_after": "0px",
+      "mobile_behavior": "Stack four links vertically with at least 10px tappable separation",
+      "proof_range": "authorLinks"
+    },
+    {
+      "id": "native-compliance-footer",
+      "sequence_position": 28,
+      "type": "compliance-footer",
+      "label": "Flodesk native compliance footer",
+      "destination": "flodesk-native-unsubscribe-and-conditional-preferences",
+      "source": "newsletter/book-launch/launch-newsletter-preview.html",
+      "source_selector": ".email-shell tr:nth-child(23) td",
+      "preceding_element": "native-author-links",
+      "following_element": null,
+      "width_behavior": "Full width",
+      "height_target": "Flodesk native minimum",
+      "alignment": "center",
+      "background_color": "#0D182A",
+      "text_color": "#9FB9D3",
+      "border": "1px top border #5F86AD",
+      "border_radius": "0px",
+      "spacing_before": "0px",
+      "spacing_after": "28px",
+      "mobile_behavior": "Required address and links wrap without clipping",
+      "proof_range": "compliance"
+    }
+  ],
+  "assembly_sequence": [
+    {
+      "position": 1,
+      "kind": "upload-piece",
+      "reference": "01",
+      "filename": "01-author-identifier.png"
+    },
+    {
+      "position": 2,
+      "kind": "upload-piece",
+      "reference": "02",
+      "filename": "02-hero-visual.png"
+    },
+    {
+      "position": 3,
+      "kind": "upload-piece",
+      "reference": "03",
+      "filename": "03-butterfly-separator-01.png"
+    },
+    {
+      "position": 4,
+      "kind": "upload-piece",
+      "reference": "04",
+      "filename": "04-hero-eyebrow-heading-and-supporting-copy.png"
+    },
+    {
+      "position": 5,
+      "kind": "native-element",
+      "reference": "cta-01"
+    },
+    {
+      "position": 6,
+      "kind": "native-element",
+      "reference": "cta-02"
+    },
+    {
+      "position": 7,
+      "kind": "upload-piece",
+      "reference": "05",
+      "filename": "05-butterfly-separator-02.png"
+    },
+    {
+      "position": 8,
+      "kind": "upload-piece",
+      "reference": "06",
+      "filename": "06-opening-letter-part-01.png"
+    },
+    {
+      "position": 9,
+      "kind": "upload-piece",
+      "reference": "07",
+      "filename": "07-amazon-bestseller-rankings.png"
+    },
+    {
+      "position": 10,
+      "kind": "upload-piece",
+      "reference": "08",
+      "filename": "08-opening-letter-part-02.png"
+    },
+    {
+      "position": 11,
+      "kind": "upload-piece",
+      "reference": "09",
+      "filename": "09-opening-letter-part-03.png"
+    },
+    {
+      "position": 12,
+      "kind": "upload-piece",
+      "reference": "10",
+      "filename": "10-opening-letter-part-04.png"
+    },
+    {
+      "position": 13,
+      "kind": "upload-piece",
+      "reference": "11",
+      "filename": "11-butterfly-separator-03.png"
+    },
+    {
+      "position": 14,
+      "kind": "upload-piece",
+      "reference": "12",
+      "filename": "12-interior-book-spread.png"
+    },
+    {
+      "position": 15,
+      "kind": "upload-piece",
+      "reference": "13",
+      "filename": "13-inside-unfolding-origami.png"
+    },
+    {
+      "position": 16,
+      "kind": "native-element",
+      "reference": "cta-03"
+    },
+    {
+      "position": 17,
+      "kind": "upload-piece",
+      "reference": "14",
+      "filename": "14-butterfly-separator-04.png"
+    },
+    {
+      "position": 18,
+      "kind": "upload-piece",
+      "reference": "15",
+      "filename": "15-sarah-edmondson-endorsement.png"
+    },
+    {
+      "position": 19,
+      "kind": "native-element",
+      "reference": "native-sarah-attribution"
+    },
+    {
+      "position": 20,
+      "kind": "upload-piece",
+      "reference": "16",
+      "filename": "16-reader-review.png"
+    },
+    {
+      "position": 21,
+      "kind": "upload-piece",
+      "reference": "17",
+      "filename": "17-butterfly-separator-05-and-choose-your-copy.png"
+    },
+    {
+      "position": 22,
+      "kind": "native-element",
+      "reference": "cta-04"
+    },
+    {
+      "position": 23,
+      "kind": "native-element",
+      "reference": "cta-05"
+    },
+    {
+      "position": 24,
+      "kind": "upload-piece",
+      "reference": "18",
+      "filename": "18-signed-copy-deadline.png"
+    },
+    {
+      "position": 25,
+      "kind": "upload-piece",
+      "reference": "19",
+      "filename": "19-support-the-book.png"
+    },
+    {
+      "position": 26,
+      "kind": "upload-piece",
+      "reference": "20",
+      "filename": "20-closing-letter.png"
+    },
+    {
+      "position": 27,
+      "kind": "native-element",
+      "reference": "native-author-links"
+    },
+    {
+      "position": 28,
+      "kind": "native-element",
+      "reference": "native-compliance-footer"
+    }
+  ],
+  "reference_previews": [
+    {
+      "filename": "reference/approved-desktop-preview.png",
+      "viewport": "desktop",
+      "dimensions": "1440x5092",
+      "size_bytes": 878919,
+      "sha256": "2f31d6276df71bb82e9aeac56fb1cd13be59944bc4a93de40279bf9c2c474a24"
+    },
+    {
+      "filename": "reference/approved-mobile-preview.png",
+      "viewport": "mobile",
+      "dimensions": "390x5491",
+      "size_bytes": 566720,
+      "sha256": "cf5cb442ac2f6c34ee54a9ab09e07c526d3a75ff91102f25024acd34934e832c"
+    },
+    {
+      "filename": "reference/upload-pieces-contact-sheet.png",
+      "viewport": "contact-sheet",
+      "dimensions": "1320x3540",
+      "size_bytes": 974313,
+      "sha256": "25c5c5a9138cd5a4c14b739276fd7e5426173f9803cc1ee2ba0f334f5a9ed33f"
+    },
+    {
+      "filename": "reference/reassembled-upload-pieces-proof.png",
+      "viewport": "desktop-retina-proof",
+      "dimensions": "1280x10072",
+      "size_bytes": 2300932,
+      "sha256": "9dbf0e25ecb018e083f7d233a158657ae4134cd59881ece7c0c8f09822341a23"
+    },
+    {
+      "filename": "reference/reassembled-upload-pieces-mobile-proof.png",
+      "viewport": "mobile-retina-proof",
+      "dimensions": "780x6898",
+      "size_bytes": 1539027,
+      "sha256": "defbb3e3e1a3b23f8719efc2168fc9d57d500918e990613fbfe24109bb3a6c36"
+    },
+    {
+      "filename": "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
+      "viewport": "cta-reference-cta-01",
+      "dimensions": "1280x228",
+      "size_bytes": 23129,
+      "sha256": "b10bdd842f57fa71a3af897e68e3727cad8a9c064e48082f096b16ce9c3bbf26",
+      "reference_only": true,
+      "visible_reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
+    },
+    {
+      "filename": "native-elements/ctas/references/02-read-an-excerpt-reference.png",
+      "viewport": "cta-reference-cta-02",
+      "dimensions": "1280x224",
+      "size_bytes": 20757,
+      "sha256": "090a73ade303b0ef4a8e0bcc87b6256f5bbcea738bfd1bbeb094fb2cd613773a",
+      "reference_only": true,
+      "visible_reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
+    },
+    {
+      "filename": "native-elements/ctas/references/03-buy-the-memoir-now-reference.png",
+      "viewport": "cta-reference-cta-03",
+      "dimensions": "1280x272",
+      "size_bytes": 22081,
+      "sha256": "663916cb7eb0b9334838efee81f6794640c717f3330243f67e7826638e13fb30",
+      "reference_only": true,
+      "visible_reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
+    },
+    {
+      "filename": "native-elements/ctas/references/04-buy-on-amazon-reference.png",
+      "viewport": "cta-reference-cta-04",
+      "dimensions": "566x236",
+      "size_bytes": 18103,
+      "sha256": "4a62f8c8fbc42cc42753443770f8c521817d9dd78fd9aa3cabdc8c7ac1d6520c",
+      "reference_only": true,
+      "visible_reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
+    },
+    {
+      "filename": "native-elements/ctas/references/05-order-your-signed-copy-reference.png",
+      "viewport": "cta-reference-cta-05",
+      "dimensions": "566x236",
+      "size_bytes": 23398,
+      "sha256": "c6a33b21ab62ecd5f88267cf3e4a2ad715d97aa6a221471cb944128488fd9c02",
+      "reference_only": true,
+      "visible_reference_label": "REFERENCE ONLY — BUILD AS A NATIVE FLODESK BUTTON"
+    },
+    {
+      "filename": "native-elements/ctas/references/all-ctas-contact-sheet.png",
+      "viewport": "cta-contact-sheet",
+      "dimensions": "1340x1426",
+      "size_bytes": 130366,
+      "sha256": "1ae6c12f0d1476a46ecf5101a34f6682f40cee602b601b65c0fedd54cdf57e34",
+      "reference_only": true
+    }
+  ],
+  "proofs": {
+    "desktop": "reference/reassembled-upload-pieces-proof.png",
+    "mobile": "reference/reassembled-upload-pieces-mobile-proof.png",
+    "contact_sheet": "reference/upload-pieces-contact-sheet.png",
+    "cta_contact_sheet": "native-elements/ctas/references/all-ctas-contact-sheet.png",
+    "cta_manifest": "native-elements/ctas/cta-manifest.json",
+    "comparison_report": "reference/reassembly-comparison.json",
+    "direct_master_pixel_match": true
+  },
+  "source_files": [
+    "../launch-newsletter-preview.html",
+    "../launch-newsletter-copy.md",
+    "../launch-newsletter.txt",
+    "../link-map.md",
+    "../flodesk-build-guide.md",
+    "../previews/launch-newsletter-desktop.png",
+    "../previews/launch-newsletter-mobile.png",
+    "../scripts/export_flodesk_upload_pieces.mjs",
+    "native-elements/ctas/cta-manifest.json"
+  ],
+  "source_hashes": {
+    "../launch-newsletter-preview.html": "0ba09d28916a8d7a51621a19b10243ad8b2654c4590485368913b5c7f189922e",
+    "../launch-newsletter-copy.md": "f5c55bfbcaa6049b4e7b32fc63d988666988bdca39a3e9fd3b30712f3a33db2c",
+    "../launch-newsletter.txt": "aa7689c3e48fd603503fe80c8506bef6753d59d042dfb13764e50322a1b3f902",
+    "../link-map.md": "57ab37be338bd1eef1e5f88ee9c94250f4057a2900dd87296a74293631bf397d",
+    "../flodesk-build-guide.md": "9073316ec5b545c6cc0c784e1a49cf3272fa337f986a0ab2086bae77c5f5f894",
+    "../previews/launch-newsletter-desktop.png": "2f31d6276df71bb82e9aeac56fb1cd13be59944bc4a93de40279bf9c2c474a24",
+    "../previews/launch-newsletter-mobile.png": "cf5cb442ac2f6c34ee54a9ab09e07c526d3a75ff91102f25024acd34934e832c",
+    "../scripts/export_flodesk_upload_pieces.mjs": "39b91cda81e48d714cd4ee6f0e8ca11b5d5942f8f55e92c4a7208614c50f9531",
+    "native-elements/ctas/cta-manifest.json": "f64efcf17805ee4893eee8371374e3dddee6edc77fb9cc991826cb3834b15568"
+  },
+  "qa_status": {
+    "export": "passed",
+    "cta_source_contract": "passed",
+    "cta_reference_export": "passed",
+    "direct_master_reassembly": "passed-pixel-equal",
+    "approved_newsletter_validator": "pending",
+    "flodesk_package_validator": "pending",
+    "focused_tests": "pending",
+    "manifest_json": "pending",
+    "image_verification": "pending",
+    "visual_review": "pending",
+    "git_diff_check": "pending"
+  },
+  "known_review_items": [
+    "A single desktop-derived raster set cannot reproduce approved 16px mobile live-text sizing or responsive line wrapping when scaled from 640px to 390px.",
+    "Text-bearing upload pieces require descriptive alt text because their text is not selectable or independently responsive."
+  ]
+}

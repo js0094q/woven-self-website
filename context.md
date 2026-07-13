@@ -1,6 +1,6 @@
 # Woven Self Handoff Context
 
-Last updated: 2026-07-06
+Last updated: 2026-07-13
 
 This file is intentionally compact. Read it after `AGENTS.md` before spending tokens on broad repo discovery.
 
@@ -70,6 +70,15 @@ July 2026 paperback cover QA:
 - Verdict: `PASS WITH MINOR NOTES`; proceed to ebook work from the final repaired cover export or a later export from the repaired INDD.
 - Important note: the initial InDesign QA export had a blank barcode/ISBN box. The repaired INDD restores the barcode via `design/book-cover-unfolding-origami/indesign-handoff/reference/barcode-isbn-9798995611608.png`.
 - Existing placed artwork still reports about `159-161 PPI`, matching the supplied reference's effective resolution class; the restored barcode is 300 DPI.
+
+July 2026 launch-newsletter Flodesk package:
+
+- The deliberate tracked package lives at `newsletter/book-launch/flodesk-upload-package/` even though `newsletter/` is generally ignored.
+- The exact assembly contract is 28 positions: 20 numbered PNG upload pieces plus eight native Flodesk elements.
+- Five native CTA build files and source-derived reference proofs live under `native-elements/ctas/`; the reference PNGs are never the clickable implementation.
+- The launch-newsletter Amazon paperback route is the clean `B0H7YZ5N28` product URL. The excerpt route and signed-copy Stripe route remain distinct.
+- `python3 newsletter/book-launch/scripts/validate_launch_newsletter.py` and `python3 newsletter/book-launch/scripts/validate_flodesk_package.py` are the package gates.
+- Desktop proof parity is automated. A real Flodesk mobile review and internal test email are still required before scheduling or sending.
 
 ## Source Files To Inspect First
 
