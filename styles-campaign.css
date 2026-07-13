@@ -1,0 +1,113 @@
+:root {
+  --campaign-cream: #FBF7F0;
+  --campaign-warm-white: #FFFDF9;
+  --campaign-sage: #4A5C5A;
+  --campaign-muted-sage: #7D8C88;
+  --campaign-clay: #B98F76;
+  --campaign-soft-clay: #E6D1C3;
+  --campaign-ink: #2F3A38;
+  --campaign-mist: #EDE8E1;
+  --campaign-border: #D8CEC2;
+}
+
+.campaign-section {
+  background:
+    linear-gradient(135deg, rgba(74, 92, 90, 0.045) 0 1px, transparent 1px 100%),
+    linear-gradient(45deg, rgba(185, 143, 118, 0.04) 0 1px, transparent 1px 100%),
+    var(--campaign-cream);
+  background-size: 120px 120px, 180px 180px, auto;
+}
+
+.campaign-paper-card {
+  background: rgba(255, 253, 249, 0.88);
+  border: 1px solid var(--campaign-border);
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(47, 58, 56, 0.08);
+}
+
+.campaign-label {
+  font-family: Inter, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--campaign-clay);
+}
+
+.campaign-title {
+  font-family: "Playfair Display", serif;
+  color: var(--campaign-sage);
+  letter-spacing: -0.02em;
+}
+
+.campaign-body {
+  font-family: Inter, sans-serif;
+  color: var(--campaign-ink);
+  line-height: 1.75;
+}
+
+.campaign-quote {
+  font-family: "Playfair Display", serif;
+  color: var(--campaign-ink);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.campaign-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--campaign-sage);
+  color: var(--campaign-warm-white);
+  padding: 0.85rem 1.4rem;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(47, 58, 56, 0.14);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.campaign-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(47, 58, 56, 0.18);
+}
+
+.origami-corner {
+  position: relative;
+  overflow: hidden;
+}
+
+.origami-corner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 44px solid var(--campaign-soft-clay);
+  border-left: 44px solid transparent;
+  opacity: 0.75;
+}
+
+.campaign-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(74, 92, 90, 0.24),
+    transparent
+  );
+}
+
+.campaign-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--campaign-border);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: rgba(255, 253, 249, 0.7);
+  color: var(--campaign-sage);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
