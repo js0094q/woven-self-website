@@ -8,6 +8,9 @@
 - Outer background: `#07101F`.
 - Image blocks: one column, centered, full content width, no crop, 0 internal padding, 0 inter-image gap.
 - Master uploads: 1280px wide PNG, exported at 2× the approved 640px desktop content width.
+- Desktop CTA size: 261px wide × 54px high for all five buttons.
+- Mobile CTA size: 342px wide × 54px high at the approved 390px viewport.
+- Reference canvas: 1280 × 140 pixels with a centered 522 × 108 button.
 - `VISUAL MATCH REQUIRED`: Flodesk controls that do not accept an exact width or 0px gap must be set to the nearest control and checked against the desktop proof.
 - Mobile review: image text scales with the image. Compare a real mobile test against the approved mobile preview before sending.
 
@@ -46,9 +49,9 @@ Every row below is one Image block. The source for every piece is `../launch-new
 - Label: `Buy the Book on Amazon`.
 - Destination: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`.
 - Flodesk block type: Button.
-- Styling: centered; 249px desktop target; 54px high; `#0D182A` background; `#F3E7D4` text; 2px `#0D182A` border; 4px radius; Arial 16px/700; 26px horizontal and 16px vertical padding.
-- Desktop behavior: fixed target width and centered.
-- Mobile behavior: full width inside 24px side margins; hero stack order 1; 12px gap after.
+- Styling: centered; 261px desktop target; 54px high; `#0D182A` background; `#F3E7D4` text; 2px `#0D182A` border; 4px radius; Arial 16px/700; 26px horizontal and 16px vertical padding.
+- Desktop behavior: fixed 261px target width and centered.
+- Mobile behavior: 342px full width inside 24px side margins at the 390px viewport; hero stack order 1; 12px gap after.
 - Preceding upload piece: `upload-pieces/04-hero-eyebrow-heading-and-supporting-copy.png`.
 - Following element: native CTA `Read an Excerpt`.
 - Reference image: `native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png`.
@@ -60,9 +63,9 @@ Every row below is one Image block. The source for every piece is `../launch-new
 - Label: `Read an Excerpt`.
 - Destination: `https://wovenself.com/excerpt-unfolding-origami.html`.
 - Flodesk block type: Button.
-- Styling: centered; 181px desktop target; 54px high; `#F7EFE4` background; `#0D182A` text and 2px border; 4px radius; Arial 16px/700; 26px horizontal and 16px vertical padding.
-- Desktop behavior: fixed target width and centered.
-- Mobile behavior: full width inside 24px side margins; hero stack order 2; 12px gap before and 10px gap after.
+- Styling: centered; 261px desktop target; 54px high; `#F7EFE4` background; `#0D182A` text and 2px border; 4px radius; Arial 16px/700; 26px horizontal and 16px vertical padding.
+- Desktop behavior: fixed 261px target width and centered.
+- Mobile behavior: 342px full width inside 24px side margins at the 390px viewport; hero stack order 2; 12px gap before and 10px gap after.
 - Preceding element: native CTA `Buy the Book on Amazon`.
 - Following upload piece: `upload-pieces/05-butterfly-separator-02.png`.
 - Reference image: `native-elements/ctas/references/02-read-an-excerpt-reference.png`.
@@ -74,9 +77,9 @@ Every row below is one Image block. The source for every piece is `../launch-new
 - Label: `Buy the Memoir Now`.
 - Destination: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`.
 - Flodesk block type: Button.
-- Styling: centered; 214px desktop target; 54px high; `#0D182A` background; `#F3E7D4` text; 2px `#0D182A` border; 4px radius; Arial 16px/700; 26px horizontal and 16px vertical padding.
-- Desktop behavior: fixed target width; 8px above and 26px below.
-- Mobile behavior: full width inside 24px side margins; retain 8px above and 26px below.
+- Styling: centered; 261px desktop target; 54px high; `#0D182A` background; `#F3E7D4` text; 2px `#0D182A` border; 4px radius; Arial 16px/700; 26px horizontal and 16px vertical padding.
+- Desktop behavior: fixed 261px target width; 8px above and 26px below.
+- Mobile behavior: 342px full width inside 24px side margins at the 390px viewport; retain 8px above and 26px below.
 - Preceding upload piece: `upload-pieces/13-inside-unfolding-origami.png`.
 - Following upload piece: `upload-pieces/14-butterfly-separator-04.png`.
 - Reference image: `native-elements/ctas/references/03-buy-the-memoir-now-reference.png`.
@@ -97,9 +100,9 @@ Every row below is one Image block. The source for every piece is `../launch-new
 - Label: `Buy on Amazon`.
 - Destination: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`.
 - Flodesk block type: Button.
-- Styling: first equal-width column in a 536px desktop row; 54px high; `#0D182A` background; `#F3E7D4` text; 2px `#0D182A` border; 4px radius; Arial 16px/700; 18px horizontal and 16px vertical padding.
-- Desktop behavior: first of two equal columns with a 14px group gap.
-- Mobile behavior: full width inside 24px side margins; purchase stack order 1; 12px gap after.
+- Styling: centered; 261px desktop target in a 536px row; 54px high; `#0D182A` background; `#F3E7D4` text; 2px `#0D182A` border; 4px radius; Arial 16px/700; 18px horizontal and 16px vertical padding.
+- Desktop behavior: first of two 261px buttons in the 536px purchase row with a 14px group gap.
+- Mobile behavior: 342px full width inside 24px side margins at the 390px viewport; purchase stack order 1; 12px gap after.
 - Preceding upload piece: `upload-pieces/17-butterfly-separator-05-and-choose-your-copy.png`.
 - Following element: native CTA `Order Your Signed Copy`.
 - Reference image: `native-elements/ctas/references/04-buy-on-amazon-reference.png`.
@@ -111,9 +114,9 @@ Every row below is one Image block. The source for every piece is `../launch-new
 - Label: `Order Your Signed Copy`.
 - Destination: `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00`.
 - Flodesk block type: Button.
-- Styling: second equal-width column in a 536px desktop row; 54px high; `#F7EFE4` background; `#0D182A` text and 2px border; 4px radius; Arial 16px/700; 18px horizontal and 16px vertical padding.
-- Desktop behavior: second of two equal columns with a 14px group gap.
-- Mobile behavior: full width inside 24px side margins; purchase stack order 2; 12px gap before.
+- Styling: centered; 261px desktop target in a 536px row; 54px high; `#F7EFE4` background; `#0D182A` text and 2px border; 4px radius; Arial 16px/700; 18px horizontal and 16px vertical padding.
+- Desktop behavior: second of two 261px buttons in the 536px purchase row with a 14px group gap.
+- Mobile behavior: 342px full width inside 24px side margins at the 390px viewport; purchase stack order 2; 12px gap before.
 - Preceding element: native CTA `Buy on Amazon`.
 - Following upload piece: `upload-pieces/18-signed-copy-deadline.png`.
 - Reference image: `native-elements/ctas/references/05-order-your-signed-copy-reference.png`.

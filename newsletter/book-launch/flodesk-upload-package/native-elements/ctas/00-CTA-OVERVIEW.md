@@ -2,6 +2,15 @@
 
 These five files are production assembly specifications for native Flodesk button blocks. The clean PNGs in `references/` preserve the approved appearance and surrounding spacing without annotations. Use them for visual matching, but create every clickable CTA as the native Flodesk button documented in its Markdown file.
 
+## Uniform sizing contract
+
+- Desktop CTA size: 261px wide × 54px high for all five buttons.
+- Mobile CTA size: 342px wide × 54px high at the approved 390px viewport.
+- Reference canvas: 1280 × 140 pixels with a centered 522 × 108 button.
+- Reference canvas backgrounds: `#F7EFE4` for CTA 01, CTA 02, CTA 04, and CTA 05; `#F3E7D4` for CTA 03.
+
+At the approved 390px viewport, the 342px mobile width leaves 24px side margins. Each CTA file below keeps its label, destination, colors, padding, section spacing, and preceding and following elements explicit.
+
 ## Complete CTA table
 
 | CTA number | Label | Destination | Section | Sequence position | Previous element | Next element |
@@ -26,15 +35,13 @@ The Amazon and signed-copy routes are intentionally separate. Do not replace CTA
 
 ## Mobile requirements
 
-The following five requirements apply to the two-button `Choose Your Copy` purchase group only:
+The following three requirements apply to CTA 04 and CTA 05 in the two-button `Choose Your Copy` purchase group only:
 
 - CTA 04, `Buy on Amazon`, appears first.
-- CTA 04 and CTA 05 are full-width at 342px in the approved 390px mobile viewport, leaving 24px side margins.
 - The two buttons stack vertically.
 - The vertical separation between CTA 04 and CTA 05 is 12px.
-- Both purchase buttons target a 54px desktop height.
 
-The other three CTAs have their independently verified desktop and mobile behavior in their own files. Do not generalize the purchase-group rule without using those files.
+Amazon-first order and the 12px mobile gap are specific to CTA 04 and CTA 05. The uniform dimensions above apply to all five CTAs; use each CTA file for its complete individual assembly settings.
 
 ## Hero image link
 
@@ -57,4 +64,4 @@ To build the link:
 
 ## Production-image boundary
 
-Every PNG in `references/` is an unannotated source crop of the approved newsletter render. No label, watermark, instruction panel, or reference footer may be added to those pixels. The production email still uses five native Flodesk buttons so the destinations remain clickable, accessible, and editable.
+Each individual PNG in `references/` is a footer-free 1280 × 140 production canvas containing a centered 522 × 108 source-rendered button on its approved section background. No added reference label, watermark, instruction panel, or reference footer may be added. The production email still uses five native Flodesk buttons so the destinations remain clickable, accessible, and editable.

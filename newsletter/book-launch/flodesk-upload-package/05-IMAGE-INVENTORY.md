@@ -63,13 +63,15 @@ Upload only the 20 PNGs in `upload-pieces/`. The legacy `assets/` folders contai
 
 ## Native CTA visual references
 
-The six PNGs under `native-elements/ctas/references/` are production assembly guides, not upload pieces. Each individual CTA image is an unannotated exact crop of the approved source render, including the approved surrounding spacing. Use them to compare width, height, color, radius, typography, and spacing while building the five live Flodesk Button blocks.
+The six PNGs under `native-elements/ctas/references/` are production assembly guides, not upload pieces. Each individual CTA reference is a footer-free production canvas containing a centered source-rendered button. Use them to compare width, height, color, radius, typography, and spacing while building the five live Flodesk Button blocks.
 
-- `01-buy-the-book-on-amazon-reference.png`
-- `02-read-an-excerpt-reference.png`
-- `03-buy-the-memoir-now-reference.png`
-- `04-buy-on-amazon-reference.png`
-- `05-order-your-signed-copy-reference.png`
-- `all-ctas-contact-sheet.png`
+Reference canvas: 1280 × 140 pixels with a centered 522 × 108 button.
+
+- `01-buy-the-book-on-amazon-reference.png` — footer-free 1280 × 140 production canvas; centered 522 × 108 source-rendered button on `#F7EFE4`.
+- `02-read-an-excerpt-reference.png` — footer-free 1280 × 140 production canvas; centered 522 × 108 source-rendered button on `#F7EFE4`.
+- `03-buy-the-memoir-now-reference.png` — footer-free 1280 × 140 production canvas; centered 522 × 108 source-rendered button on `#F3E7D4`.
+- `04-buy-on-amazon-reference.png` — footer-free 1280 × 140 production canvas; centered 522 × 108 source-rendered button on `#F7EFE4`.
+- `05-order-your-signed-copy-reference.png` — footer-free 1280 × 140 production canvas; centered 522 × 108 source-rendered button on `#F7EFE4`.
+- `all-ctas-contact-sheet.png` — verification contact sheet containing all five uniform reference canvases in approved order.
 
 No CTA reference PNG belongs in `upload-pieces/`, and none is a substitute for its corresponding native button.

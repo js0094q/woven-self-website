@@ -843,6 +843,7 @@ def validate_ctas(
                 "- Block type: Button",
                 f"- Label: `{label}`",
                 f"- Destination: `{destination}`",
+                "- Desktop width target: 261px",
                 "- Desktop height target: 54px",
                 "## Mobile behavior",
                 "## Build instructions",

@@ -42,7 +42,7 @@ Do not schedule or send until every applicable item is checked and reviewed.
 - [ ] All five CTA files under `native-elements/ctas/` were used individually.
 - [ ] Each CTA appears exactly once in the 28-position assembly sequence.
 - [ ] Each CTA appears exactly once in `package-manifest.json` and `native-elements/ctas/cta-manifest.json`.
-- [ ] Each CTA reference PNG exists as an unannotated exact source crop with no label, watermark, instruction panel, or footer.
+- [ ] Each of the five CTA reference PNGs is a footer-free 1280 × 140 production canvas with a centered 522 × 108 source-rendered button on the approved section background and no added reference label, watermark, instruction panel, or footer.
 - [ ] `native-elements/ctas/references/all-ctas-contact-sheet.png` shows all five CTAs in approved order.
 - [ ] The Amazon and Stripe purchase routes remain distinct.
 - [ ] Every CTA remains a native Flodesk Button block; no reference image is the clickable implementation.
@@ -80,17 +80,18 @@ For every line, confirm the exact file, correct position, uncropped full-width d
 - [ ] All 28 steps appear in order with no extra blocks.
 - [ ] Consecutive image pieces touch without unintended gaps.
 - [ ] Native-element alignment matches `reference/reassembled-upload-pieces-proof.png`.
-- [ ] Buttons have consistent 54px height.
-- [ ] Purchase buttons share one equal-width row with 14px separation.
+- [ ] All five native buttons are centered at 261px wide × 54px high.
+- [ ] Purchase buttons share one 536px row in Amazon-first order; each is 261px wide with 14px separation.
 - [ ] No clipping, overflow, image crop, or unintended white gap appears.
 - [ ] Full build matches `reference/approved-desktop-preview.png` top to bottom.
 
 ## E. Mobile
 
 - [ ] Amazon purchase button appears before signed-copy button.
-- [ ] Purchase buttons are stacked and full width.
+- [ ] All five native buttons are 342px wide × 54px high at the approved 390px viewport with 24px side margins.
+- [ ] Purchase buttons are stacked in Amazon-first order.
 - [ ] Purchase-button visual separation is 12px.
-- [ ] Hero buttons are stacked and full width.
+- [ ] Hero buttons are stacked in their approved order.
 - [ ] Text inside every raster piece is readable at 100% zoom.
 - [ ] Rasterized body text is compared with the approved 16px mobile intent; any material reduction is reviewed and approved.
 - [ ] No text is clipped.

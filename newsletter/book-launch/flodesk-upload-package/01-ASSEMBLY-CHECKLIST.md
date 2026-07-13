@@ -2,6 +2,12 @@
 
 Use `07-UPLOAD-SEQUENCE.md` for the full settings behind each checkbox. Image block padding is 0; all pieces use full 640px content width and remain uncropped.
 
+## Uniform CTA contract
+
+- Desktop CTA size: 261px wide × 54px high for all five buttons.
+- Mobile CTA size: 342px wide × 54px high at the approved 390px viewport.
+- Reference canvas: 1280 × 140 pixels with a centered 522 × 108 button.
+
 ## Step 01 — `01-author-identifier.png`
 
 - [ ] Upload `upload-pieces/01-author-identifier.png`; set inventory alt text; leave unlinked; save.
@@ -26,8 +32,8 @@ Use `07-UPLOAD-SEQUENCE.md` for the full settings behind each checkbox. Image bl
 - [ ] Exact Amazon destination entered.
 - [ ] Desktop height matches the 54px target.
 - [ ] Navy and title-cream colors, 2px border, and 4px radius applied.
-- [ ] Centered 249px desktop width target applied.
-- [ ] Full-width mobile placement and first hero-stack position verified.
+- [ ] Centered 261px desktop width target applied.
+- [ ] 342px full-width mobile placement inside 24px side margins and first hero-stack position verified.
 - [ ] Saved destination reopened and confirmed.
 - [ ] Link tested.
 
@@ -39,8 +45,8 @@ Use `07-UPLOAD-SEQUENCE.md` for the full settings behind each checkbox. Image bl
 - [ ] Exact excerpt destination entered.
 - [ ] Desktop height matches the 54px target.
 - [ ] Paper-cream and navy colors, 2px border, and 4px radius applied.
-- [ ] Centered 181px desktop width target applied.
-- [ ] Full-width mobile placement, second hero-stack position, and 12px gap above verified.
+- [ ] Centered 261px desktop width target applied.
+- [ ] 342px full-width mobile placement inside 24px side margins, second hero-stack position, and 12px gap above verified.
 - [ ] Saved destination reopened and confirmed.
 - [ ] Link tested.
 
@@ -88,8 +94,8 @@ Use `07-UPLOAD-SEQUENCE.md` for the full settings behind each checkbox. Image bl
 - [ ] Exact Amazon destination entered.
 - [ ] Desktop height matches the 54px target.
 - [ ] Navy and title-cream colors, 2px border, and 4px radius applied.
-- [ ] Centered 214px desktop width target applied.
-- [ ] Full-width mobile placement plus 8px above and 26px below verified.
+- [ ] Centered 261px desktop width target applied.
+- [ ] 342px full-width mobile placement inside 24px side margins plus 8px above and 26px below verified.
 - [ ] Saved destination reopened and confirmed.
 - [ ] Link tested.
 
@@ -121,8 +127,8 @@ Use `07-UPLOAD-SEQUENCE.md` for the full settings behind each checkbox. Image bl
 - [ ] Exact Amazon destination entered.
 - [ ] Desktop height matches the approved 54px purchase-button target.
 - [ ] Navy and title-cream colors, 2px border, and 4px radius applied.
-- [ ] First equal-width desktop purchase-column behavior and 14px group gap applied.
-- [ ] Full-width mobile placement, Amazon-first order, and 12px gap after verified.
+- [ ] Centered 261px desktop width target applied as the first button in the 536px purchase row; 14px group gap retained.
+- [ ] 342px full-width mobile placement inside 24px side margins, Amazon-first order, and 12px gap after verified.
 - [ ] Saved destination reopened and confirmed.
 - [ ] Link tested.
 
@@ -134,8 +140,8 @@ Use `07-UPLOAD-SEQUENCE.md` for the full settings behind each checkbox. Image bl
 - [ ] Exact Stripe destination entered; it remains distinct from Amazon.
 - [ ] Desktop height matches the approved 54px purchase-button target.
 - [ ] Paper-cream and navy colors, 2px border, and 4px radius applied.
-- [ ] Second equal-width desktop purchase-column behavior and 14px group gap applied.
-- [ ] Full-width mobile placement, second order, and 12px gap above verified.
+- [ ] Centered 261px desktop width target applied as the second button in the 536px purchase row; 14px group gap retained.
+- [ ] 342px full-width mobile placement inside 24px side margins, second order, and 12px gap above verified.
 - [ ] Saved destination reopened and confirmed.
 - [ ] Link tested.
 

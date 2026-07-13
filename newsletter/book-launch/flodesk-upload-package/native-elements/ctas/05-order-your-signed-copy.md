@@ -9,7 +9,7 @@
 - Previous element: CTA 04 — `Buy on Amazon`
 - Next element: `upload-pieces/18-signed-copy-deadline.png`
 - Newsletter section: Choose Your Copy purchase group
-- Desktop position: Second of two equal 50% columns in the 536px purchase row; 7px inner gutter contributes to a 14px total inter-button gap
+- Desktop position: Centered 261px target in the approved purchase row
 - Mobile position: Second purchase CTA; 342px full width at the approved 390px viewport with 24px side margins
 
 ## Flodesk block
@@ -18,8 +18,10 @@
 - Label: `Order Your Signed Copy`
 - Destination: `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00`
 - Alignment: Center
-- Width behavior: Equal 50% desktop purchase column with a 7px inner gutter; full width on mobile
+- Width behavior: Fixed 261px target on desktop; full width inside 24px mobile side margins
+- Desktop width target: 261px
 - Desktop height target: 54px
+- Desktop group placement: Two 261px buttons side by side in the 536px purchase row with a 14px gap
 - Mobile width: 342px at a 390px viewport
 - Border radius: 4px
 - Background color: `#F7EFE4`
@@ -49,7 +51,7 @@
 3. Paste the exact Stripe destination above.
 4. Apply every color, border, radius, type, padding, width, height, alignment, and spacing value above.
 5. Position it after CTA 04 and before `upload-pieces/18-signed-copy-deadline.png`.
-6. Preview on desktop and confirm the second equal-width purchase column, 14px total group gutter, and 54px height.
+6. Preview on desktop and confirm the second 261px button in the 536px purchase row, with a 14px group gap and 54px height.
 7. Preview on mobile and confirm a 342px full-width button 12px below CTA 04.
 8. Save.
 9. Reopen the link settings.

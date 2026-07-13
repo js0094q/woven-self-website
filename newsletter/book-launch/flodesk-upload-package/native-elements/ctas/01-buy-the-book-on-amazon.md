@@ -9,7 +9,7 @@
 - Previous element: `upload-pieces/04-hero-eyebrow-heading-and-supporting-copy.png`
 - Next element: CTA 02 — `Read an Excerpt`
 - Newsletter section: Hero CTA group
-- Desktop position: Centered; fixed 249px target width inside the 640px email shell
+- Desktop position: Centered; fixed 261px target width inside the 640px email shell
 - Mobile position: First hero CTA; 342px full width at the approved 390px viewport with 24px side margins
 
 ## Flodesk block
@@ -18,7 +18,8 @@
 - Label: `Buy the Book on Amazon`
 - Destination: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`
 - Alignment: Center
-- Width behavior: Fixed 249px target on desktop; full width inside 24px mobile side margins
+- Width behavior: Fixed 261px target on desktop; full width inside 24px mobile side margins
+- Desktop width target: 261px
 - Desktop height target: 54px
 - Mobile width: 342px at a 390px viewport
 - Border radius: 4px
@@ -49,7 +50,7 @@
 3. Paste the exact Amazon destination above.
 4. Apply every color, border, radius, type, padding, width, height, alignment, and spacing value above.
 5. Position the block after `upload-pieces/04-hero-eyebrow-heading-and-supporting-copy.png`.
-6. Preview on desktop and confirm a centered 249px target width and 54px height.
+6. Preview on desktop and confirm a centered 261px target width and 54px height.
 7. Preview on mobile and confirm a 342px full-width block above CTA 02.
 8. Save.
 9. Reopen the link settings.

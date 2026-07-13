@@ -497,6 +497,34 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
             f"obsolete visible reference-footer instruction remains in: {offenders}",
         )
 
+    def test_package_docs_use_uniform_cta_sizing(self):
+        required_docs = (
+            "01-ASSEMBLY-CHECKLIST.md",
+            "02-FLODESK-BLOCK-MAP.md",
+            "03-LINKS-AND-BUTTONS.md",
+            "07-UPLOAD-SEQUENCE.md",
+            "native-elements/ctas/00-CTA-OVERVIEW.md",
+            *(f"native-elements/ctas/{cta['filename']}" for cta in CTA_DATA),
+        )
+        obsolete = ("249px", "181px", "214px")
+        for relative in required_docs:
+            with self.subTest(path=relative):
+                text = (PACKAGE_DIR / relative).read_text(encoding="utf-8")
+                offenders = [value for value in obsolete if value in text]
+                self.assertEqual(offenders, [], f"obsolete widths in {relative}: {offenders}")
+                if relative.endswith(".md") and "CTA" in text:
+                    self.assertIn("261px", text)
+
+    def test_reference_docs_name_the_uniform_canvas(self):
+        for relative in (
+            "native-elements/ctas/00-CTA-OVERVIEW.md",
+            "05-IMAGE-INVENTORY.md",
+            "06-FINAL-QA-CHECKLIST.md",
+        ):
+            text = (PACKAGE_DIR / relative).read_text(encoding="utf-8")
+            self.assertIn("1280 × 140", text, relative)
+            self.assertNotIn("unannotated exact source crop", text, relative)
+
     def test_cta_desktop_width_must_be_261_pixels(self):
         temporary, package = self.copy_package()
         self.addCleanup(temporary.cleanup)

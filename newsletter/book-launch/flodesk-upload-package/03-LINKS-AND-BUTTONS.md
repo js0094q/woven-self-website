@@ -22,13 +22,19 @@ The approved source contains no custom preference-management URL. Do not add a m
 
 ## Native button specifications
 
+Desktop CTA size: 261px wide × 54px high for all five buttons.
+
+Mobile CTA size: 342px wide × 54px high at the approved 390px viewport.
+
+Reference canvas: 1280 × 140 pixels with a centered 522 × 108 button.
+
 | Step | Label | Desktop width | Height | Alignment | Background | Text | Border/radius | Mobile behavior | Spacing |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 05 | Buy the Book on Amazon | 249px target | 54px | Center | `#0D182A` | `#F3E7D4` | 2px navy / 4px | Full width inside 24px margins | 12px before Step 06 mobile |
-| 06 | Read an Excerpt | 181px target | 54px | Center | `#F7EFE4` | `#0D182A` | 2px navy / 4px | Full width; second | 10px before piece 05 |
-| 16 | Buy the Memoir Now | 214px target | 54px | Center | `#0D182A` | `#F3E7D4` | 2px navy / 4px | Full width | 8px before; 26px after |
-| 22 | Buy on Amazon | Equal half-row | 54px | Center | `#0D182A` | `#F3E7D4` | 2px navy / 4px | Full width; first | 14px desktop gap; 12px mobile gap |
-| 23 | Order Your Signed Copy | Equal half-row | 54px | Center | `#F7EFE4` | `#0D182A` | 2px navy / 4px | Full width; second | Immediately before piece 18 |
+| 05 | Buy the Book on Amazon | 261px target | 54px | Center | `#0D182A` | `#F3E7D4` | 2px navy / 4px | 342px inside 24px margins; first | 12px before Step 06 mobile |
+| 06 | Read an Excerpt | 261px target | 54px | Center | `#F7EFE4` | `#0D182A` | 2px navy / 4px | 342px inside 24px margins; second | 10px before piece 05 |
+| 16 | Buy the Memoir Now | 261px target | 54px | Center | `#0D182A` | `#F3E7D4` | 2px navy / 4px | 342px inside 24px margins | 8px before; 26px after |
+| 22 | Buy on Amazon | 261px target | 54px | Center | `#0D182A` | `#F3E7D4` | 2px navy / 4px | 342px inside 24px margins; first | 14px desktop gap; 12px mobile gap |
+| 23 | Order Your Signed Copy | 261px target | 54px | Center | `#F7EFE4` | `#0D182A` | 2px navy / 4px | 342px inside 24px margins; second | 14px desktop gap; 12px mobile gap; before piece 18 |
 
 ## Exact link-entry sequence
 
@@ -46,7 +52,7 @@ The approved source contains no custom preference-management URL. Do not add a m
 2. Add a native Button block at Step 05, after upload piece 04.
 3. Enter `Buy the Book on Amazon` exactly.
 4. Paste `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28` exactly.
-5. Apply the CTA file's explicit desktop styling and 249px width target.
+5. Apply the CTA file's explicit desktop styling, 261px width target, and 54px height target.
 6. Apply its full-width mobile behavior and place it first in the hero CTA stack.
 7. Save.
 8. Reopen link settings and confirm the complete destination and exact label.
@@ -59,7 +65,7 @@ The approved source contains no custom preference-management URL. Do not add a m
 2. Add a native Button block at Step 06, after `Buy the Book on Amazon`.
 3. Enter `Read an Excerpt` exactly.
 4. Paste `https://wovenself.com/excerpt-unfolding-origami.html` exactly.
-5. Apply the CTA file's explicit desktop styling and 181px width target.
+5. Apply the CTA file's explicit desktop styling, 261px width target, and 54px height target.
 6. Apply its full-width mobile behavior, second-place stack order, and 12px gap above.
 7. Save.
 8. Reopen link settings and confirm the complete destination and exact label.
@@ -72,7 +78,7 @@ The approved source contains no custom preference-management URL. Do not add a m
 2. Add a native Button block at Step 16, after upload piece 13.
 3. Enter `Buy the Memoir Now` exactly.
 4. Paste `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28` exactly.
-5. Apply the CTA file's explicit desktop styling, 214px width target, and vertical spacing.
+5. Apply the CTA file's explicit desktop styling, 261px width target, 54px height target, and vertical spacing.
 6. Apply its full-width mobile behavior.
 7. Save.
 8. Reopen link settings and confirm the complete destination and exact label.
@@ -93,7 +99,7 @@ The approved source contains no custom preference-management URL. Do not add a m
 2. Add a native Button block at Step 22, after upload piece 17.
 3. Enter `Buy on Amazon` exactly.
 4. Paste `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28` exactly.
-5. Apply the CTA file's explicit styling and first equal-width desktop purchase column.
+5. Apply the CTA file's explicit styling and centered 261px target as the first button in the 536px desktop purchase row with a 14px gap.
 6. On mobile, set full width, stack order 1, and a 12px gap after it.
 7. Save.
 8. Reopen link settings and confirm the complete destination and exact label.
@@ -106,7 +112,7 @@ The approved source contains no custom preference-management URL. Do not add a m
 2. Add a native Button block at Step 23, after `Buy on Amazon`.
 3. Enter `Order Your Signed Copy` exactly.
 4. Paste `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00` exactly.
-5. Apply the CTA file's explicit styling and second equal-width desktop purchase column.
+5. Apply the CTA file's explicit styling and centered 261px target as the second button in the 536px desktop purchase row with a 14px gap.
 6. On mobile, set full width, stack order 2, and a 12px gap above it.
 7. Save.
 8. Reopen link settings and confirm the complete Stripe destination and exact label.
