@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "package_name": "Unfolding Origami Launch Newsletter Native CTA Kit",
-  "generated_at": "2026-07-13T15:53:05.412Z",
+  "generated_at": "2026-07-13T17:48:12.674Z",
   "source": "newsletter/book-launch/launch-newsletter-preview.html",
-  "source_sha256": "0ba09d28916a8d7a51621a19b10243ad8b2654c4590485368913b5c7f189922e",
+  "source_sha256": "77fd18cbbf853c146871857dfb81b0290887481bb92e491ff9e8c3c9e1659366",
   "validation_status": "verified-against-authoritative-html",
   "approved_order": [
     "cta-01",
@@ -34,7 +34,7 @@
       "desktop": {
         "alignment": "center",
         "width_behavior": "fixed target",
-        "width_target_px": 249,
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#0D182A",
         "text_color": "#F3E7D4",
@@ -49,7 +49,7 @@
         "vertical_padding_px": 16,
         "space_above_px": 0,
         "space_below_px": 12,
-        "source_measured_width_px": 249,
+        "source_measured_width_px": 261,
         "source_measured_height_px": 54
       },
       "mobile": {
@@ -81,14 +81,25 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x132",
-      "reference_size_bytes": 7728,
-      "reference_sha256": "c029e90e20591945a9ea5e396e270c786eb9a1a00619a39bef90e57749af3d15",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 8520,
+      "reference_sha256": "b78e6419eec11d1f2f0beb4a456e331ae47d932c4cf043cb74d13742333bf082",
       "reference_source_region": {
-        "left": 0,
+        "left": 379,
         "top": 1393,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
         "width": 1280,
-        "height": 132
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -110,7 +121,7 @@
       "desktop": {
         "alignment": "center",
         "width_behavior": "fixed target",
-        "width_target_px": 181,
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#F7EFE4",
         "text_color": "#0D182A",
@@ -125,7 +136,7 @@
         "vertical_padding_px": 16,
         "space_above_px": 0,
         "space_below_px": 10,
-        "source_measured_width_px": 181,
+        "source_measured_width_px": 261,
         "source_measured_height_px": 54
       },
       "mobile": {
@@ -157,14 +168,25 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x128",
-      "reference_size_bytes": 6245,
-      "reference_sha256": "96a08eadd7d48c3a0747fa3389f25173075e7d449640f9cbf456beb3793d2743",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 6976,
+      "reference_sha256": "f0a65fc193a53d778ce53381f36d9e75e048b3dd560590a6d376cd2568572c17",
       "reference_source_region": {
-        "left": 0,
+        "left": 379,
         "top": 1525,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
         "width": 1280,
-        "height": 128
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -187,7 +209,7 @@
       "desktop": {
         "alignment": "center",
         "width_behavior": "fixed target",
-        "width_target_px": 214,
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#0D182A",
         "text_color": "#F3E7D4",
@@ -202,7 +224,7 @@
         "vertical_padding_px": 16,
         "space_above_px": 8,
         "space_below_px": 26,
-        "source_measured_width_px": 214,
+        "source_measured_width_px": 261,
         "source_measured_height_px": 54
       },
       "mobile": {
@@ -234,14 +256,25 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x176",
-      "reference_size_bytes": 7002,
-      "reference_sha256": "ce3bbdb4ec8a21558db0a53b0023f772274a2f2850d53a46f9b0d79072842944",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 7412,
+      "reference_sha256": "04e2e45d7d059597a7eeb4c8a216cdc79544dd5892428ae2baa4192645aa9632",
       "reference_source_region": {
-        "left": 0,
-        "top": 5992,
+        "left": 379,
+        "top": 6008,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
         "width": 1280,
-        "height": 176
+        "height": 140,
+        "background_color": "#F3E7D4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -263,8 +296,8 @@
       ],
       "desktop": {
         "alignment": "center",
-        "width_behavior": "equal 50% column in 536px row with 7px inner gutter",
-        "width_target_px": null,
+        "width_behavior": "fixed 261px target; side by side in 536px row with 14px gap",
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#0D182A",
         "text_color": "#F3E7D4",
@@ -312,14 +345,25 @@
         "padding_bottom": "16px",
         "padding_left": "18px"
       },
-      "reference_dimensions": "566x140",
-      "reference_size_bytes": 5095,
-      "reference_sha256": "63323578864b3dd44570f055a6fa5f0e93471c297bb80b9c1a8bfee4c040e2b6",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 6226,
+      "reference_sha256": "cfb71da8a0f2d192651432438cba5e7d1dc5e6e473d91ae72706d080af35dae7",
       "reference_source_region": {
-        "left": 72,
-        "top": 8128,
-        "width": 566,
-        "height": 140
+        "left": 104,
+        "top": 8144,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
+        "width": 1280,
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -342,8 +386,8 @@
       ],
       "desktop": {
         "alignment": "center",
-        "width_behavior": "equal 50% column in 536px row with 7px inner gutter",
-        "width_target_px": null,
+        "width_behavior": "fixed 261px target; side by side in 536px row with 14px gap",
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#F7EFE4",
         "text_color": "#0D182A",
@@ -391,14 +435,25 @@
         "padding_bottom": "16px",
         "padding_left": "18px"
       },
-      "reference_dimensions": "566x140",
-      "reference_size_bytes": 8070,
-      "reference_sha256": "b150ecdb7be68d2a256c462e8be10a6cc99a64d6da6ede8a098e0f1e201272fa",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 9618,
+      "reference_sha256": "d4b3b373641ae50becace069b88d3e6b33d6c96542403f9255b9d907986270bb",
       "reference_source_region": {
-        "left": 642,
-        "top": 8128,
-        "width": 566,
-        "height": 140
+        "left": 654,
+        "top": 8144,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
+        "width": 1280,
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     }
   ]

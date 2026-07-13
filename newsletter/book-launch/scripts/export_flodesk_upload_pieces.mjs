@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import {
+  copyFileSync,
   createReadStream,
   existsSync,
   mkdirSync,
@@ -48,6 +49,13 @@ const EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami.html";
 const STRIPE_URL = "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00";
 const SARAH_URL = "https://alittlebitculty.com/";
 const SOURCE_HTML = "newsletter/book-launch/launch-newsletter-preview.html";
+const CTA_DESKTOP_WIDTH = 261;
+const CTA_HEIGHT = 54;
+const CTA_REFERENCE_CANVAS = {
+  width: 1280,
+  height: 140,
+  button: { left: 379, top: 16, width: 522, height: 108 },
+};
 const PIECES = [
   { number: "01", filename: "01-author-identifier.png", name: "Author identifier", range: "author" },
   { number: "02", filename: "02-hero-visual.png", name: "Hero visual", range: "hero", clickable: true, destination: AMAZON_URL },
@@ -86,11 +94,12 @@ const CTA_DEFINITIONS = [
     following_element: "cta-02",
     section: "Hero CTA group",
     hierarchy: ["primary", "purchase", "amazon"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
       width_behavior: "fixed target",
-      width_target_px: 249,
-      height_target_px: 54,
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#0D182A",
       text_color: "#F3E7D4",
       border: "2px solid #0D182A",
@@ -132,11 +141,12 @@ const CTA_DEFINITIONS = [
     following_element: "upload-piece-05",
     section: "Hero CTA group",
     hierarchy: ["secondary", "excerpt"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
       width_behavior: "fixed target",
-      width_target_px: 181,
-      height_target_px: 54,
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#F7EFE4",
       text_color: "#0D182A",
       border: "2px solid #0D182A",
@@ -178,11 +188,12 @@ const CTA_DEFINITIONS = [
     following_element: "upload-piece-14",
     section: "Inside Unfolding Origami",
     hierarchy: ["primary", "purchase", "amazon"],
+    reference_background_color: "#F3E7D4",
     desktop: {
       alignment: "center",
       width_behavior: "fixed target",
-      width_target_px: 214,
-      height_target_px: 54,
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#0D182A",
       text_color: "#F3E7D4",
       border: "2px solid #0D182A",
@@ -224,11 +235,12 @@ const CTA_DEFINITIONS = [
     following_element: "cta-05",
     section: "Choose Your Copy purchase group",
     hierarchy: ["primary", "purchase", "amazon"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
-      width_behavior: "equal 50% column in 536px row with 7px inner gutter",
-      width_target_px: null,
-      height_target_px: 54,
+      width_behavior: "fixed 261px target; side by side in 536px row with 14px gap",
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#0D182A",
       text_color: "#F3E7D4",
       border: "2px solid #0D182A",
@@ -271,11 +283,12 @@ const CTA_DEFINITIONS = [
     following_element: "upload-piece-18",
     section: "Choose Your Copy purchase group",
     hierarchy: ["secondary", "purchase", "signed-copy", "stripe"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
-      width_behavior: "equal 50% column in 536px row with 7px inner gutter",
-      width_target_px: null,
-      height_target_px: 54,
+      width_behavior: "fixed 261px target; side by side in 536px row with 14px gap",
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#F7EFE4",
       text_color: "#0D182A",
       border: "2px solid #0D182A",
@@ -748,45 +761,37 @@ async function createContactSheet(sharp, pieceResults) {
     .toFile(contactSheetPath);
 }
 
-async function createCtaReferences(
-  sharp,
-  master,
-  masterMetadata,
-  ranges,
-  desktopCtas,
-) {
+async function createCtaReferences(sharp, master, desktopCtas) {
   mkdirSync(ctaReferenceDirectory, { recursive: true });
   const results = [];
   for (const definition of CTA_DEFINITIONS) {
     const measured = desktopCtas[definition.source_index];
-    let region;
-    if (definition.source_index < 3) {
-      const [top, bottom] = ranges[definition.proof_range];
-      region = { left: 0, top, width: masterMetadata.width, height: bottom - top };
-    } else {
-      const leftPadding = definition.source_index === 3 ? 16 : 6;
-      const rightPadding = definition.source_index === 3 ? 6 : 16;
-      const left = Math.max(
-        0,
-        Math.round((measured.rect.left - leftPadding) * 2),
-      );
-      const right = Math.min(
-        masterMetadata.width,
-        Math.round((measured.rect.right + rightPadding) * 2),
-      );
-      const top = Math.max(0, Math.round((measured.rect.top - 8) * 2));
-      const bottom = Math.min(
-        masterMetadata.height,
-        Math.round((measured.rect.bottom + 8) * 2),
-      );
-      region = { left, top, width: right - left, height: bottom - top };
-    }
-    const sourceBuffer = await sharp(master)
+    const region = {
+      left: Math.round(measured.rect.left * 2),
+      top: Math.round(measured.rect.top * 2),
+      width: CTA_REFERENCE_CANVAS.button.width,
+      height: CTA_REFERENCE_CANVAS.button.height,
+    };
+    const buttonBuffer = await sharp(master)
       .extract(region)
       .toColourspace("srgb")
       .png({ compressionLevel: 9, adaptiveFiltering: true })
       .toBuffer();
-    const buffer = sourceBuffer;
+    const buffer = await sharp({
+      create: {
+        width: CTA_REFERENCE_CANVAS.width,
+        height: CTA_REFERENCE_CANVAS.height,
+        channels: 3,
+        background: definition.reference_background_color,
+      },
+    })
+      .composite([{
+        input: buttonBuffer,
+        left: CTA_REFERENCE_CANVAS.button.left,
+        top: CTA_REFERENCE_CANVAS.button.top,
+      }])
+      .png({ compressionLevel: 9, adaptiveFiltering: true })
+      .toBuffer();
     const filePath = path.join(packageDirectory, definition.reference_image);
     writeFileSync(filePath, buffer);
     const metadata = await sharp(buffer).metadata();
@@ -1067,15 +1072,17 @@ async function exportPackage() {
     }
 
     await createContactSheet(sharp, pieceResults);
-    const ctaReferenceResults = await createCtaReferences(
-      sharp,
-      master,
-      masterMetadata,
-      ranges,
-      desktopCtas,
-    );
+    const ctaReferenceResults = await createCtaReferences(sharp, master, desktopCtas);
     await createCtaContactSheet(sharp, ctaReferenceResults);
     await createMobileProof(browser, pieceResults);
+    copyFileSync(
+      approvedDesktopPreview,
+      path.join(referenceDirectory, "approved-desktop-preview.png"),
+    );
+    copyFileSync(
+      approvedMobilePreview,
+      path.join(referenceDirectory, "approved-mobile-preview.png"),
+    );
 
     const proofMetadata = await sharp(proofPath).metadata();
     const mobileProofMetadata = await sharp(mobileProofPath).metadata();
@@ -1124,7 +1131,12 @@ async function exportPackage() {
       const reference = ctaReferenceResults.find(
         (result) => result.definition.id === definition.id,
       );
-      const { source_index: sourceIndex, proof_range: proofRange, ...publicDefinition } = definition;
+      const {
+        source_index: sourceIndex,
+        proof_range: proofRange,
+        reference_background_color: referenceBackgroundColor,
+        ...publicDefinition
+      } = definition;
       return {
         ...publicDefinition,
         source_order: sourceIndex + 1,
@@ -1144,6 +1156,12 @@ async function exportPackage() {
         reference_size_bytes: reference.buffer.length,
         reference_sha256: sha256(reference.buffer),
         reference_source_region: reference.source_region,
+        reference_canvas: {
+          width: CTA_REFERENCE_CANVAS.width,
+          height: CTA_REFERENCE_CANVAS.height,
+          background_color: referenceBackgroundColor,
+          button_region: CTA_REFERENCE_CANVAS.button,
+        },
       };
     });
     const generatedAt = new Date().toISOString();

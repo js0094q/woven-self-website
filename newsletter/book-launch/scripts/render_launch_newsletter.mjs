@@ -197,6 +197,8 @@ async function auditPage(page, viewportName) {
       const butterflies = [
         ...document.querySelectorAll('img[data-butterfly="true"]'),
       ].filter((image) => isVisible(image) && image.complete && image.naturalWidth > 0);
+      const ctaButtons = [...document.querySelectorAll("a.button-link")];
+      const ctaRects = ctaButtons.map((button) => button.getBoundingClientRect());
       const purchaseButtons = [...document.querySelectorAll("a.purchase-button")];
       const purchaseRects = purchaseButtons.map((button) => {
         const rect = button.getBoundingClientRect();
@@ -229,6 +231,8 @@ async function auditPage(page, viewportName) {
         amazonLinksValid: amazonLinks.length > 0 && invalidAmazonLinks.length === 0,
         brokenImageCount: brokenImages.length,
         clippingCount: clippedElements.length,
+        ctaButtonWidths: ctaRects.map((rect) => rect.width),
+        ctaButtonHeights: ctaRects.map((rect) => rect.height),
         excerptLinksValid:
           excerptLinks.length === 1 && excerptLinks[0].href === approvedValues.excerpt,
         horizontalOverflowCount: overflowElements.length,
@@ -277,6 +281,23 @@ function validateAudit(audit) {
     audit.absolutePositionedCount === 0,
     `non-sr-only absolute positioning=${audit.absolutePositionedCount}`,
   );
+  requireCheck(audit.ctaButtonWidths.length === 5, "expected five CTA buttons");
+  requireCheck(
+    audit.ctaButtonHeights.every((height) => Math.abs(height - 54) <= 0.5),
+    `CTA heights=${audit.ctaButtonHeights.join(",")}`,
+  );
+  if (audit.viewport === "desktop") {
+    requireCheck(
+      audit.ctaButtonWidths.every((width) => Math.abs(width - 261) <= 0.5),
+      `desktop CTA widths=${audit.ctaButtonWidths.join(",")}`,
+    );
+  }
+  if (audit.viewport === "mobile") {
+    requireCheck(
+      audit.ctaButtonWidths.every((width) => Math.abs(width - 342) <= 0.5),
+      `mobile CTA widths=${audit.ctaButtonWidths.join(",")}`,
+    );
+  }
   requireCheck(audit.purchaseButtonHeights.length === 2, "expected two purchase buttons");
 
   if (audit.viewport === "desktop" && audit.purchaseButtonHeights.length === 2) {

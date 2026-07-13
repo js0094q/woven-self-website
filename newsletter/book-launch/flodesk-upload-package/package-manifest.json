@@ -1,7 +1,7 @@
 {
   "package_name": "Unfolding Origami Launch Newsletter",
   "status": "approved-for-manual-flodesk-assembly-with-complete-native-cta-kit-and-mobile-review-item",
-  "generated_at": "2026-07-13T15:53:05.412Z",
+  "generated_at": "2026-07-13T17:48:12.674Z",
   "created_from": "approved launch newsletter HTML and approved desktop preview",
   "upload_piece_count": 20,
   "master_width": 1280,
@@ -493,7 +493,7 @@
       "desktop": {
         "alignment": "center",
         "width_behavior": "fixed target",
-        "width_target_px": 249,
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#0D182A",
         "text_color": "#F3E7D4",
@@ -508,7 +508,7 @@
         "vertical_padding_px": 16,
         "space_above_px": 0,
         "space_below_px": 12,
-        "source_measured_width_px": 249,
+        "source_measured_width_px": 261,
         "source_measured_height_px": 54
       },
       "mobile": {
@@ -540,14 +540,25 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x132",
-      "reference_size_bytes": 7728,
-      "reference_sha256": "c029e90e20591945a9ea5e396e270c786eb9a1a00619a39bef90e57749af3d15",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 8520,
+      "reference_sha256": "b78e6419eec11d1f2f0beb4a456e331ae47d932c4cf043cb74d13742333bf082",
       "reference_source_region": {
-        "left": 0,
+        "left": 379,
         "top": 1393,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
         "width": 1280,
-        "height": 132
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -569,7 +580,7 @@
       "desktop": {
         "alignment": "center",
         "width_behavior": "fixed target",
-        "width_target_px": 181,
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#F7EFE4",
         "text_color": "#0D182A",
@@ -584,7 +595,7 @@
         "vertical_padding_px": 16,
         "space_above_px": 0,
         "space_below_px": 10,
-        "source_measured_width_px": 181,
+        "source_measured_width_px": 261,
         "source_measured_height_px": 54
       },
       "mobile": {
@@ -616,14 +627,25 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x128",
-      "reference_size_bytes": 6245,
-      "reference_sha256": "96a08eadd7d48c3a0747fa3389f25173075e7d449640f9cbf456beb3793d2743",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 6976,
+      "reference_sha256": "f0a65fc193a53d778ce53381f36d9e75e048b3dd560590a6d376cd2568572c17",
       "reference_source_region": {
-        "left": 0,
+        "left": 379,
         "top": 1525,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
         "width": 1280,
-        "height": 128
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -646,7 +668,7 @@
       "desktop": {
         "alignment": "center",
         "width_behavior": "fixed target",
-        "width_target_px": 214,
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#0D182A",
         "text_color": "#F3E7D4",
@@ -661,7 +683,7 @@
         "vertical_padding_px": 16,
         "space_above_px": 8,
         "space_below_px": 26,
-        "source_measured_width_px": 214,
+        "source_measured_width_px": 261,
         "source_measured_height_px": 54
       },
       "mobile": {
@@ -693,14 +715,25 @@
         "padding_bottom": "16px",
         "padding_left": "26px"
       },
-      "reference_dimensions": "1280x176",
-      "reference_size_bytes": 7002,
-      "reference_sha256": "ce3bbdb4ec8a21558db0a53b0023f772274a2f2850d53a46f9b0d79072842944",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 7412,
+      "reference_sha256": "04e2e45d7d059597a7eeb4c8a216cdc79544dd5892428ae2baa4192645aa9632",
       "reference_source_region": {
-        "left": 0,
-        "top": 5992,
+        "left": 379,
+        "top": 6008,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
         "width": 1280,
-        "height": 176
+        "height": 140,
+        "background_color": "#F3E7D4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -744,8 +777,8 @@
       ],
       "desktop": {
         "alignment": "center",
-        "width_behavior": "equal 50% column in 536px row with 7px inner gutter",
-        "width_target_px": null,
+        "width_behavior": "fixed 261px target; side by side in 536px row with 14px gap",
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#0D182A",
         "text_color": "#F3E7D4",
@@ -793,14 +826,25 @@
         "padding_bottom": "16px",
         "padding_left": "18px"
       },
-      "reference_dimensions": "566x140",
-      "reference_size_bytes": 5095,
-      "reference_sha256": "63323578864b3dd44570f055a6fa5f0e93471c297bb80b9c1a8bfee4c040e2b6",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 6226,
+      "reference_sha256": "cfb71da8a0f2d192651432438cba5e7d1dc5e6e473d91ae72706d080af35dae7",
       "reference_source_region": {
-        "left": 72,
-        "top": 8128,
-        "width": 566,
-        "height": 140
+        "left": 104,
+        "top": 8144,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
+        "width": 1280,
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -823,8 +867,8 @@
       ],
       "desktop": {
         "alignment": "center",
-        "width_behavior": "equal 50% column in 536px row with 7px inner gutter",
-        "width_target_px": null,
+        "width_behavior": "fixed 261px target; side by side in 536px row with 14px gap",
+        "width_target_px": 261,
         "height_target_px": 54,
         "background_color": "#F7EFE4",
         "text_color": "#0D182A",
@@ -872,14 +916,25 @@
         "padding_bottom": "16px",
         "padding_left": "18px"
       },
-      "reference_dimensions": "566x140",
-      "reference_size_bytes": 8070,
-      "reference_sha256": "b150ecdb7be68d2a256c462e8be10a6cc99a64d6da6ede8a098e0f1e201272fa",
+      "reference_dimensions": "1280x140",
+      "reference_size_bytes": 9618,
+      "reference_sha256": "d4b3b373641ae50becace069b88d3e6b33d6c96542403f9255b9d907986270bb",
       "reference_source_region": {
-        "left": 642,
-        "top": 8128,
-        "width": 566,
-        "height": 140
+        "left": 654,
+        "top": 8144,
+        "width": 522,
+        "height": 108
+      },
+      "reference_canvas": {
+        "width": 1280,
+        "height": 140,
+        "background_color": "#F7EFE4",
+        "button_region": {
+          "left": 379,
+          "top": 16,
+          "width": 522,
+          "height": 108
+        }
       }
     },
     {
@@ -1094,15 +1149,15 @@
       "filename": "reference/approved-desktop-preview.png",
       "viewport": "desktop",
       "dimensions": "1440x5092",
-      "size_bytes": 878919,
-      "sha256": "2f31d6276df71bb82e9aeac56fb1cd13be59944bc4a93de40279bf9c2c474a24"
+      "size_bytes": 878909,
+      "sha256": "3952a08bb167c7a7eb15d1ee18a8b5574768ee267d3d0eb8d112af924b46be06"
     },
     {
       "filename": "reference/approved-mobile-preview.png",
       "viewport": "mobile",
       "dimensions": "390x5491",
-      "size_bytes": 566720,
-      "sha256": "cf5cb442ac2f6c34ee54a9ab09e07c526d3a75ff91102f25024acd34934e832c"
+      "size_bytes": 566717,
+      "sha256": "7898c906aee29f6fcf18df7e231fea9c54e4ef19fcb1670feb919be3002c1422"
     },
     {
       "filename": "reference/upload-pieces-contact-sheet.png",
@@ -1115,8 +1170,8 @@
       "filename": "reference/reassembled-upload-pieces-proof.png",
       "viewport": "desktop-retina-proof",
       "dimensions": "1280x10072",
-      "size_bytes": 2300932,
-      "sha256": "9dbf0e25ecb018e083f7d233a158657ae4134cd59881ece7c0c8f09822341a23"
+      "size_bytes": 2300927,
+      "sha256": "70133d46337d7d6203b62b2c3a17f6c4b88f47613cbdadc3ac8250cc28a39e42"
     },
     {
       "filename": "reference/reassembled-upload-pieces-mobile-proof.png",
@@ -1128,49 +1183,49 @@
     {
       "filename": "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
       "viewport": "cta-reference-cta-01",
-      "dimensions": "1280x132",
-      "size_bytes": 7728,
-      "sha256": "c029e90e20591945a9ea5e396e270c786eb9a1a00619a39bef90e57749af3d15",
+      "dimensions": "1280x140",
+      "size_bytes": 8520,
+      "sha256": "b78e6419eec11d1f2f0beb4a456e331ae47d932c4cf043cb74d13742333bf082",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/02-read-an-excerpt-reference.png",
       "viewport": "cta-reference-cta-02",
-      "dimensions": "1280x128",
-      "size_bytes": 6245,
-      "sha256": "96a08eadd7d48c3a0747fa3389f25173075e7d449640f9cbf456beb3793d2743",
+      "dimensions": "1280x140",
+      "size_bytes": 6976,
+      "sha256": "f0a65fc193a53d778ce53381f36d9e75e048b3dd560590a6d376cd2568572c17",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/03-buy-the-memoir-now-reference.png",
       "viewport": "cta-reference-cta-03",
-      "dimensions": "1280x176",
-      "size_bytes": 7002,
-      "sha256": "ce3bbdb4ec8a21558db0a53b0023f772274a2f2850d53a46f9b0d79072842944",
+      "dimensions": "1280x140",
+      "size_bytes": 7412,
+      "sha256": "04e2e45d7d059597a7eeb4c8a216cdc79544dd5892428ae2baa4192645aa9632",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/04-buy-on-amazon-reference.png",
       "viewport": "cta-reference-cta-04",
-      "dimensions": "566x140",
-      "size_bytes": 5095,
-      "sha256": "63323578864b3dd44570f055a6fa5f0e93471c297bb80b9c1a8bfee4c040e2b6",
+      "dimensions": "1280x140",
+      "size_bytes": 6226,
+      "sha256": "cfb71da8a0f2d192651432438cba5e7d1dc5e6e473d91ae72706d080af35dae7",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/05-order-your-signed-copy-reference.png",
       "viewport": "cta-reference-cta-05",
-      "dimensions": "566x140",
-      "size_bytes": 8070,
-      "sha256": "b150ecdb7be68d2a256c462e8be10a6cc99a64d6da6ede8a098e0f1e201272fa",
+      "dimensions": "1280x140",
+      "size_bytes": 9618,
+      "sha256": "d4b3b373641ae50becace069b88d3e6b33d6c96542403f9255b9d907986270bb",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/all-ctas-contact-sheet.png",
       "viewport": "cta-contact-sheet",
-      "dimensions": "1340x946",
-      "size_bytes": 57006,
-      "sha256": "c236d997558b86eb141738c5cd84de2b247dedf4467a11a2e421a77915b703de",
+      "dimensions": "1340x930",
+      "size_bytes": 56727,
+      "sha256": "eb72c35c0c6b18561bdd453cb36f39032363403cbd7bc78e33d0edf9324a7c98",
       "reference_only": true
     }
   ],
@@ -1195,15 +1250,15 @@
     "native-elements/ctas/cta-manifest.json"
   ],
   "source_hashes": {
-    "../launch-newsletter-preview.html": "0ba09d28916a8d7a51621a19b10243ad8b2654c4590485368913b5c7f189922e",
+    "../launch-newsletter-preview.html": "77fd18cbbf853c146871857dfb81b0290887481bb92e491ff9e8c3c9e1659366",
     "../launch-newsletter-copy.md": "f5c55bfbcaa6049b4e7b32fc63d988666988bdca39a3e9fd3b30712f3a33db2c",
     "../launch-newsletter.txt": "aa7689c3e48fd603503fe80c8506bef6753d59d042dfb13764e50322a1b3f902",
     "../link-map.md": "57ab37be338bd1eef1e5f88ee9c94250f4057a2900dd87296a74293631bf397d",
     "../flodesk-build-guide.md": "9073316ec5b545c6cc0c784e1a49cf3272fa337f986a0ab2086bae77c5f5f894",
-    "../previews/launch-newsletter-desktop.png": "2f31d6276df71bb82e9aeac56fb1cd13be59944bc4a93de40279bf9c2c474a24",
-    "../previews/launch-newsletter-mobile.png": "cf5cb442ac2f6c34ee54a9ab09e07c526d3a75ff91102f25024acd34934e832c",
-    "../scripts/export_flodesk_upload_pieces.mjs": "86d03f52bc730e96efc9fe2c1d5c0cc426ae435082c6a95ba5903c06ba828d31",
-    "native-elements/ctas/cta-manifest.json": "75a45f40ce6378bffd2013e1dd6eed3219224ce42d9579884d36b5da88460644"
+    "../previews/launch-newsletter-desktop.png": "3952a08bb167c7a7eb15d1ee18a8b5574768ee267d3d0eb8d112af924b46be06",
+    "../previews/launch-newsletter-mobile.png": "7898c906aee29f6fcf18df7e231fea9c54e4ef19fcb1670feb919be3002c1422",
+    "../scripts/export_flodesk_upload_pieces.mjs": "43cba104c27ff6cf591b9043065cb87f117cbb24cc70f63ff6a34b470f1302bf",
+    "native-elements/ctas/cta-manifest.json": "f0154a7adb1e6c7e6311ca6e755f63acd375d8289d5e2bb7dc74e66560523bc9"
   },
   "qa_status": {
     "export": "passed",
