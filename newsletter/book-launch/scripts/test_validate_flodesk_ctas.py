@@ -1,8 +1,10 @@
 import json
 import shutil
+import struct
 import sys
 import tempfile
 import unittest
+import zlib
 from pathlib import Path
 
 
@@ -18,6 +20,15 @@ AMAZON_URL = (
 EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami.html"
 STRIPE_URL = "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
 SOURCE = "newsletter/book-launch/launch-newsletter-preview.html"
+CTA_DESKTOP_SIZE = (261, 54)
+CTA_MOBILE_SIZE = (342, 54)
+CTA_REFERENCE_SIZE = (1280, 140)
+CTA_REFERENCE_BUTTON_REGION = {
+    "left": 379,
+    "top": 16,
+    "width": 522,
+    "height": 108,
+}
 CTA_DATA = (
     {
         "id": "cta-01",
@@ -28,7 +39,7 @@ CTA_DATA = (
         "reference": "01-buy-the-book-on-amazon-reference.png",
         "preceding": "upload-piece-04",
         "following": "cta-02",
-        "desktop_width": "249px fixed target",
+        "desktop_width": "261px fixed target",
         "mobile_gap": 12,
         "stack_order": 1,
     },
@@ -41,7 +52,7 @@ CTA_DATA = (
         "reference": "02-read-an-excerpt-reference.png",
         "preceding": "cta-01",
         "following": "upload-piece-05",
-        "desktop_width": "181px fixed target",
+        "desktop_width": "261px fixed target",
         "mobile_gap": 10,
         "stack_order": 2,
     },
@@ -54,7 +65,7 @@ CTA_DATA = (
         "reference": "03-buy-the-memoir-now-reference.png",
         "preceding": "upload-piece-13",
         "following": "upload-piece-14",
-        "desktop_width": "214px fixed target",
+        "desktop_width": "261px fixed target",
         "mobile_gap": 0,
         "stack_order": 1,
     },
@@ -67,7 +78,7 @@ CTA_DATA = (
         "reference": "04-buy-on-amazon-reference.png",
         "preceding": "upload-piece-17",
         "following": "cta-05",
-        "desktop_width": "equal 50% purchase column",
+        "desktop_width": "261px fixed target",
         "mobile_gap": 12,
         "stack_order": 1,
     },
@@ -80,11 +91,123 @@ CTA_DATA = (
         "reference": "05-order-your-signed-copy-reference.png",
         "preceding": "cta-04",
         "following": "upload-piece-18",
-        "desktop_width": "equal 50% purchase column",
+        "desktop_width": "261px fixed target",
         "mobile_gap": 0,
         "stack_order": 2,
     },
 )
+
+
+def write_solid_png(path: Path, width: int, height: int) -> None:
+    def chunk(kind: bytes, payload: bytes) -> bytes:
+        checksum = zlib.crc32(kind + payload) & 0xFFFFFFFF
+        return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", checksum)
+
+    rows = b"".join(b"\x00" + bytes((247, 239, 228)) * width for _ in range(height))
+    path.write_bytes(
+        b"\x89PNG\r\n\x1a\n"
+        + chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0))
+        + chunk(b"IDAT", zlib.compress(rows, 9))
+        + chunk(b"IEND", b"")
+    )
+
+
+def read_png_rgb_rows(path: Path) -> tuple[int, int, list[bytes]]:
+    data = path.read_bytes()
+    if data[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError(f"not a PNG: {path}")
+
+    offset = 8
+    width = height = channels = 0
+    compressed = bytearray()
+    while offset + 12 <= len(data):
+        length = int.from_bytes(data[offset : offset + 4], "big")
+        kind = data[offset + 4 : offset + 8]
+        payload = data[offset + 8 : offset + 8 + length]
+        offset += 12 + length
+        if kind == b"IHDR":
+            width, height, bit_depth, color_type, compression, filtering, interlace = (
+                struct.unpack(">IIBBBBB", payload)
+            )
+            if (
+                bit_depth != 8
+                or color_type not in (2, 6)
+                or compression != 0
+                or filtering != 0
+                or interlace != 0
+            ):
+                raise ValueError(f"unsupported PNG encoding: {path}")
+            channels = 3 if color_type == 2 else 4
+        elif kind == b"IDAT":
+            compressed.extend(payload)
+        elif kind == b"IEND":
+            break
+
+    stride = width * channels
+    filtered = zlib.decompress(compressed)
+    rows: list[bytes] = []
+    previous = bytearray(stride)
+    cursor = 0
+    for _row_index in range(height):
+        filter_type = filtered[cursor]
+        cursor += 1
+        row = bytearray(filtered[cursor : cursor + stride])
+        cursor += stride
+        for index in range(stride):
+            left = row[index - channels] if index >= channels else 0
+            above = previous[index]
+            upper_left = previous[index - channels] if index >= channels else 0
+            if filter_type == 1:
+                predictor = left
+            elif filter_type == 2:
+                predictor = above
+            elif filter_type == 3:
+                predictor = (left + above) // 2
+            elif filter_type == 4:
+                estimate = left + above - upper_left
+                distances = (
+                    abs(estimate - left),
+                    abs(estimate - above),
+                    abs(estimate - upper_left),
+                )
+                predictor = (left, above, upper_left)[distances.index(min(distances))]
+            elif filter_type == 0:
+                predictor = 0
+            else:
+                raise ValueError(f"unsupported PNG filter {filter_type}: {path}")
+            row[index] = (row[index] + predictor) & 0xFF
+        rows.append(
+            bytes(
+                component
+                for pixel_start in range(0, stride, channels)
+                for component in row[pixel_start : pixel_start + 3]
+            )
+        )
+        previous = row
+    return width, height, rows
+
+
+def painted_bounds(path: Path, background: str) -> dict[str, int]:
+    width, height, rows = read_png_rgb_rows(path)
+    background_rgb = bytes.fromhex(background.removeprefix("#"))
+    painted = [
+        (x, y)
+        for y, row in enumerate(rows)
+        for x in range(width)
+        if row[x * 3 : x * 3 + 3] != background_rgb
+    ]
+    if not painted:
+        raise ValueError(f"PNG has no pixels distinct from its background: {path}")
+    left = min(x for x, _y in painted)
+    top = min(y for _x, y in painted)
+    right = max(x for x, _y in painted)
+    bottom = max(y for _x, y in painted)
+    return {
+        "left": left,
+        "top": top,
+        "width": right - left + 1,
+        "height": bottom - top + 1,
+    }
 
 
 class FlodeskCtaValidatorTests(unittest.TestCase):
@@ -304,7 +427,25 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
         missing = [relative for relative in required if not (cta_dir / relative).is_file()]
         self.assertEqual(missing, [], f"missing CTA deliverables: {missing}")
 
-    def test_cta_reference_images_are_footer_free_source_crops(self):
+    def test_all_cta_manifest_geometry_is_uniform(self):
+        manifest = self.read_json(
+            PACKAGE_DIR / "native-elements/ctas/cta-manifest.json"
+        )
+        for cta in manifest["ctas"]:
+            with self.subTest(cta=cta["id"]):
+                self.assertEqual(
+                    (cta["desktop"]["width_target_px"], cta["desktop"]["height_target_px"]),
+                    CTA_DESKTOP_SIZE,
+                )
+                self.assertEqual(
+                    (
+                        cta["mobile"]["width_target_px_at_390"],
+                        cta["mobile"]["source_measured_height_px_at_390"],
+                    ),
+                    CTA_MOBILE_SIZE,
+                )
+
+    def test_cta_reference_images_use_uniform_production_canvas(self):
         manifest = self.read_json(
             PACKAGE_DIR / "native-elements/ctas/cta-manifest.json"
         )
@@ -312,11 +453,33 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
             with self.subTest(cta=cta["id"]):
                 reference = PACKAGE_DIR / cta["reference_image"]
                 width, height, _transparent = validator.inspect_png(reference)
-                source_region = cta["reference_source_region"]
+                self.assertEqual((width, height), CTA_REFERENCE_SIZE)
+                self.assertEqual(cta["reference_dimensions"], "1280x140")
                 self.assertEqual(
-                    (width, height),
-                    (source_region["width"], source_region["height"]),
-                    f"{cta['id']} includes pixels outside its approved source region",
+                    cta["reference_canvas"]["button_region"],
+                    CTA_REFERENCE_BUTTON_REGION,
+                )
+                self.assertEqual(
+                    (
+                        cta["reference_source_region"]["width"],
+                        cta["reference_source_region"]["height"],
+                    ),
+                    (522, 108),
+                )
+
+    def test_cta_references_preserve_complete_painted_button_bounds(self):
+        manifest = self.read_json(
+            PACKAGE_DIR / "native-elements/ctas/cta-manifest.json"
+        )
+        for cta in manifest["ctas"]:
+            with self.subTest(cta=cta["id"]):
+                reference = PACKAGE_DIR / cta["reference_image"]
+                self.assertEqual(
+                    painted_bounds(
+                        reference,
+                        cta["reference_canvas"]["background_color"],
+                    ),
+                    CTA_REFERENCE_BUTTON_REGION,
                 )
 
     def test_package_docs_do_not_require_visible_reference_footers(self):
@@ -334,19 +497,67 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
             f"obsolete visible reference-footer instruction remains in: {offenders}",
         )
 
-    def test_cta_reference_footer_extension_is_rejected(self):
+    def test_package_docs_use_uniform_cta_sizing(self):
+        required_docs = (
+            "01-ASSEMBLY-CHECKLIST.md",
+            "02-FLODESK-BLOCK-MAP.md",
+            "03-LINKS-AND-BUTTONS.md",
+            "07-UPLOAD-SEQUENCE.md",
+            "native-elements/ctas/00-CTA-OVERVIEW.md",
+            *(f"native-elements/ctas/{cta['filename']}" for cta in CTA_DATA),
+        )
+        obsolete = ("249px", "181px", "214px")
+        for relative in required_docs:
+            with self.subTest(path=relative):
+                text = (PACKAGE_DIR / relative).read_text(encoding="utf-8")
+                offenders = [value for value in obsolete if value in text]
+                self.assertEqual(offenders, [], f"obsolete widths in {relative}: {offenders}")
+                if relative.endswith(".md") and "CTA" in text:
+                    self.assertIn("261px", text)
+
+    def test_reference_docs_name_the_uniform_canvas(self):
+        for relative in (
+            "native-elements/ctas/00-CTA-OVERVIEW.md",
+            "05-IMAGE-INVENTORY.md",
+            "06-FINAL-QA-CHECKLIST.md",
+        ):
+            text = (PACKAGE_DIR / relative).read_text(encoding="utf-8")
+            self.assertIn("1280 × 140", text, relative)
+            self.assertNotIn("unannotated exact source crop", text, relative)
+
+    def test_cta_desktop_width_must_be_261_pixels(self):
         temporary, package = self.copy_package()
         self.addCleanup(temporary.cleanup)
-        self.seed_cta_fixture(package)
-
-        def shrink_source_region(value):
-            value["ctas"][0]["reference_source_region"]["height"] -= 1
-
-        self.mutate_cta_manifest(package, shrink_source_region)
+        self.mutate_cta_manifest(
+            package,
+            lambda value: value["ctas"][0]["desktop"].update(width_target_px=260),
+        )
         self.assert_has_failure(
             package,
-            "CTA reference includes pixels outside approved source region: "
-            "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
+            "CTA `Buy the Book on Amazon` desktop width must be 261px.",
+        )
+
+    def test_cta_mobile_width_must_be_342_pixels(self):
+        temporary, package = self.copy_package()
+        self.addCleanup(temporary.cleanup)
+        self.mutate_cta_manifest(
+            package,
+            lambda value: value["ctas"][2]["mobile"].update(width_target_px_at_390=341),
+        )
+        self.assert_has_failure(
+            package,
+            "CTA `Buy the Memoir Now` mobile width must be 342px at 390px.",
+        )
+
+    def test_cta_reference_height_extension_is_rejected(self):
+        temporary, package = self.copy_package()
+        self.addCleanup(temporary.cleanup)
+        reference = package / "native-elements/ctas/references/04-buy-on-amazon-reference.png"
+        write_solid_png(reference, 1280, 141)
+        self.assert_has_failure(
+            package,
+            "CTA reference must be exactly 1280x140: "
+            "native-elements/ctas/references/04-buy-on-amazon-reference.png",
         )
 
     def test_missing_cta_file_reports_exact_path(self):

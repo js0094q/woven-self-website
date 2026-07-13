@@ -9,7 +9,7 @@
 - Previous element: CTA 01 — `Buy the Book on Amazon`
 - Next element: `upload-pieces/05-butterfly-separator-02.png`
 - Newsletter section: Hero CTA group
-- Desktop position: Centered; fixed 181px target width inside the 640px email shell
+- Desktop position: Centered; fixed 261px target width inside the 640px email shell
 - Mobile position: Second hero CTA; 342px full width at the approved 390px viewport with 24px side margins
 
 ## Flodesk block
@@ -18,7 +18,8 @@
 - Label: `Read an Excerpt`
 - Destination: `https://wovenself.com/excerpt-unfolding-origami.html`
 - Alignment: Center
-- Width behavior: Fixed 181px target on desktop; full width inside 24px mobile side margins
+- Width behavior: Fixed 261px target on desktop; full width inside 24px mobile side margins
+- Desktop width target: 261px
 - Desktop height target: 54px
 - Mobile width: 342px at a 390px viewport
 - Border radius: 4px
@@ -49,7 +50,7 @@
 3. Paste the exact excerpt destination above.
 4. Apply every color, border, radius, type, padding, width, height, alignment, and spacing value above.
 5. Position the block after CTA 01 and before `upload-pieces/05-butterfly-separator-02.png`.
-6. Preview on desktop and confirm a centered 181px target width and 54px height.
+6. Preview on desktop and confirm a centered 261px target width and 54px height.
 7. Preview on mobile and confirm a 342px full-width block 12px below CTA 01.
 8. Save.
 9. Reopen the link settings.

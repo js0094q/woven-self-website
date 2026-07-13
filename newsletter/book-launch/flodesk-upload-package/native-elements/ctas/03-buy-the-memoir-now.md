@@ -9,7 +9,7 @@
 - Previous element: `upload-pieces/13-inside-unfolding-origami.png`
 - Next element: `upload-pieces/14-butterfly-separator-04.png`
 - Newsletter section: Inside Unfolding Origami
-- Desktop position: Centered; fixed 214px target width inside the 640px email shell
+- Desktop position: Centered; fixed 261px target width inside the 640px email shell
 - Mobile position: Standalone full-width CTA; 342px at the approved 390px viewport with 24px side margins
 
 ## Flodesk block
@@ -18,7 +18,8 @@
 - Label: `Buy the Memoir Now`
 - Destination: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`
 - Alignment: Center
-- Width behavior: Fixed 214px target on desktop; full width inside 24px mobile side margins
+- Width behavior: Fixed 261px target on desktop; full width inside 24px mobile side margins
+- Desktop width target: 261px
 - Desktop height target: 54px
 - Mobile width: 342px at a 390px viewport
 - Border radius: 4px
@@ -49,7 +50,7 @@
 3. Paste the exact Amazon destination above.
 4. Apply every color, border, radius, type, padding, width, height, alignment, and spacing value above.
 5. Position the block after `upload-pieces/13-inside-unfolding-origami.png`.
-6. Preview on desktop and confirm a centered 214px target width and 54px height.
+6. Preview on desktop and confirm a centered 261px target width and 54px height, with 8px space above and 26px space below.
 7. Preview on mobile and confirm a 342px full-width standalone block.
 8. Save.
 9. Reopen the link settings.

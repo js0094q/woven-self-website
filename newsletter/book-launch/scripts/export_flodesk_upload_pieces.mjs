@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import {
+  copyFileSync,
   createReadStream,
   existsSync,
   mkdirSync,
@@ -48,6 +49,13 @@ const EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami.html";
 const STRIPE_URL = "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00";
 const SARAH_URL = "https://alittlebitculty.com/";
 const SOURCE_HTML = "newsletter/book-launch/launch-newsletter-preview.html";
+const CTA_DESKTOP_WIDTH = 261;
+const CTA_HEIGHT = 54;
+const CTA_REFERENCE_CANVAS = {
+  width: 1280,
+  height: 140,
+  button: { left: 379, top: 16, width: 522, height: 108 },
+};
 const PIECES = [
   { number: "01", filename: "01-author-identifier.png", name: "Author identifier", range: "author" },
   { number: "02", filename: "02-hero-visual.png", name: "Hero visual", range: "hero", clickable: true, destination: AMAZON_URL },
@@ -86,11 +94,12 @@ const CTA_DEFINITIONS = [
     following_element: "cta-02",
     section: "Hero CTA group",
     hierarchy: ["primary", "purchase", "amazon"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
       width_behavior: "fixed target",
-      width_target_px: 249,
-      height_target_px: 54,
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#0D182A",
       text_color: "#F3E7D4",
       border: "2px solid #0D182A",
@@ -132,11 +141,12 @@ const CTA_DEFINITIONS = [
     following_element: "upload-piece-05",
     section: "Hero CTA group",
     hierarchy: ["secondary", "excerpt"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
       width_behavior: "fixed target",
-      width_target_px: 181,
-      height_target_px: 54,
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#F7EFE4",
       text_color: "#0D182A",
       border: "2px solid #0D182A",
@@ -178,11 +188,12 @@ const CTA_DEFINITIONS = [
     following_element: "upload-piece-14",
     section: "Inside Unfolding Origami",
     hierarchy: ["primary", "purchase", "amazon"],
+    reference_background_color: "#F3E7D4",
     desktop: {
       alignment: "center",
       width_behavior: "fixed target",
-      width_target_px: 214,
-      height_target_px: 54,
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#0D182A",
       text_color: "#F3E7D4",
       border: "2px solid #0D182A",
@@ -224,11 +235,12 @@ const CTA_DEFINITIONS = [
     following_element: "cta-05",
     section: "Choose Your Copy purchase group",
     hierarchy: ["primary", "purchase", "amazon"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
-      width_behavior: "equal 50% column in 536px row with 7px inner gutter",
-      width_target_px: null,
-      height_target_px: 54,
+      width_behavior: "fixed 261px target; side by side in 536px row with 14px gap",
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#0D182A",
       text_color: "#F3E7D4",
       border: "2px solid #0D182A",
@@ -271,11 +283,12 @@ const CTA_DEFINITIONS = [
     following_element: "upload-piece-18",
     section: "Choose Your Copy purchase group",
     hierarchy: ["secondary", "purchase", "signed-copy", "stripe"],
+    reference_background_color: "#F7EFE4",
     desktop: {
       alignment: "center",
-      width_behavior: "equal 50% column in 536px row with 7px inner gutter",
-      width_target_px: null,
-      height_target_px: 54,
+      width_behavior: "fixed 261px target; side by side in 536px row with 14px gap",
+      width_target_px: CTA_DESKTOP_WIDTH,
+      height_target_px: CTA_HEIGHT,
       background_color: "#F7EFE4",
       text_color: "#0D182A",
       border: "2px solid #0D182A",
@@ -748,45 +761,108 @@ async function createContactSheet(sharp, pieceResults) {
     .toFile(contactSheetPath);
 }
 
-async function createCtaReferences(
-  sharp,
-  master,
-  masterMetadata,
-  ranges,
-  desktopCtas,
-) {
+function parseHexColor(color) {
+  const match = /^#([0-9a-f]{6})$/i.exec(color);
+  if (!match) throw new Error(`unsupported CTA reference background color: ${color}`);
+  return [0, 2, 4].map((offset) => Number.parseInt(match[1].slice(offset, offset + 2), 16));
+}
+
+async function findPaintedButtonRegion(sharp, master, masterMetadata, measured, definition) {
+  const searchPadding = 4;
+  const search = {
+    left: Math.max(0, Math.floor(measured.rect.left * 2) - searchPadding),
+    top: Math.max(0, Math.floor(measured.rect.top * 2) - searchPadding),
+  };
+  const searchRight = Math.min(
+    masterMetadata.width,
+    Math.ceil(measured.rect.right * 2) + searchPadding,
+  );
+  const searchBottom = Math.min(
+    masterMetadata.height,
+    Math.ceil(measured.rect.bottom * 2) + searchPadding,
+  );
+  const { data, info } = await sharp(master)
+    .extract({
+      ...search,
+      width: searchRight - search.left,
+      height: searchBottom - search.top,
+    })
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const background = parseHexColor(definition.reference_background_color);
+  let left = info.width;
+  let top = info.height;
+  let right = -1;
+  let bottom = -1;
+  for (let y = 0; y < info.height; y += 1) {
+    for (let x = 0; x < info.width; x += 1) {
+      const offset = (y * info.width + x) * info.channels;
+      if (
+        data[offset] !== background[0]
+        || data[offset + 1] !== background[1]
+        || data[offset + 2] !== background[2]
+      ) {
+        left = Math.min(left, x);
+        top = Math.min(top, y);
+        right = Math.max(right, x);
+        bottom = Math.max(bottom, y);
+      }
+    }
+  }
+  if (right < left || bottom < top) {
+    throw new Error(`CTA ${definition.id} has no painted pixels distinct from its background`);
+  }
+  const region = {
+    left: search.left + left,
+    top: search.top + top,
+    width: right - left + 1,
+    height: bottom - top + 1,
+  };
+  if (
+    region.width !== CTA_REFERENCE_CANVAS.button.width
+    || region.height !== CTA_REFERENCE_CANVAS.button.height
+  ) {
+    throw new Error(
+      `CTA ${definition.id} painted bounds must be ${CTA_REFERENCE_CANVAS.button.width}x${CTA_REFERENCE_CANVAS.button.height}, found ${region.width}x${region.height}`,
+    );
+  }
+  return region;
+}
+
+async function createCtaReferences(sharp, master, desktopCtas) {
   mkdirSync(ctaReferenceDirectory, { recursive: true });
+  const masterMetadata = await sharp(master).metadata();
   const results = [];
   for (const definition of CTA_DEFINITIONS) {
     const measured = desktopCtas[definition.source_index];
-    let region;
-    if (definition.source_index < 3) {
-      const [top, bottom] = ranges[definition.proof_range];
-      region = { left: 0, top, width: masterMetadata.width, height: bottom - top };
-    } else {
-      const leftPadding = definition.source_index === 3 ? 16 : 6;
-      const rightPadding = definition.source_index === 3 ? 6 : 16;
-      const left = Math.max(
-        0,
-        Math.round((measured.rect.left - leftPadding) * 2),
-      );
-      const right = Math.min(
-        masterMetadata.width,
-        Math.round((measured.rect.right + rightPadding) * 2),
-      );
-      const top = Math.max(0, Math.round((measured.rect.top - 8) * 2));
-      const bottom = Math.min(
-        masterMetadata.height,
-        Math.round((measured.rect.bottom + 8) * 2),
-      );
-      region = { left, top, width: right - left, height: bottom - top };
-    }
-    const sourceBuffer = await sharp(master)
+    const region = await findPaintedButtonRegion(
+      sharp,
+      master,
+      masterMetadata,
+      measured,
+      definition,
+    );
+    const buttonBuffer = await sharp(master)
       .extract(region)
       .toColourspace("srgb")
       .png({ compressionLevel: 9, adaptiveFiltering: true })
       .toBuffer();
-    const buffer = sourceBuffer;
+    const buffer = await sharp({
+      create: {
+        width: CTA_REFERENCE_CANVAS.width,
+        height: CTA_REFERENCE_CANVAS.height,
+        channels: 3,
+        background: definition.reference_background_color,
+      },
+    })
+      .composite([{
+        input: buttonBuffer,
+        left: CTA_REFERENCE_CANVAS.button.left,
+        top: CTA_REFERENCE_CANVAS.button.top,
+      }])
+      .png({ compressionLevel: 9, adaptiveFiltering: true })
+      .toBuffer();
     const filePath = path.join(packageDirectory, definition.reference_image);
     writeFileSync(filePath, buffer);
     const metadata = await sharp(buffer).metadata();
@@ -1067,15 +1143,17 @@ async function exportPackage() {
     }
 
     await createContactSheet(sharp, pieceResults);
-    const ctaReferenceResults = await createCtaReferences(
-      sharp,
-      master,
-      masterMetadata,
-      ranges,
-      desktopCtas,
-    );
+    const ctaReferenceResults = await createCtaReferences(sharp, master, desktopCtas);
     await createCtaContactSheet(sharp, ctaReferenceResults);
     await createMobileProof(browser, pieceResults);
+    copyFileSync(
+      approvedDesktopPreview,
+      path.join(referenceDirectory, "approved-desktop-preview.png"),
+    );
+    copyFileSync(
+      approvedMobilePreview,
+      path.join(referenceDirectory, "approved-mobile-preview.png"),
+    );
 
     const proofMetadata = await sharp(proofPath).metadata();
     const mobileProofMetadata = await sharp(mobileProofPath).metadata();
@@ -1124,7 +1202,12 @@ async function exportPackage() {
       const reference = ctaReferenceResults.find(
         (result) => result.definition.id === definition.id,
       );
-      const { source_index: sourceIndex, proof_range: proofRange, ...publicDefinition } = definition;
+      const {
+        source_index: sourceIndex,
+        proof_range: proofRange,
+        reference_background_color: referenceBackgroundColor,
+        ...publicDefinition
+      } = definition;
       return {
         ...publicDefinition,
         source_order: sourceIndex + 1,
@@ -1144,6 +1227,12 @@ async function exportPackage() {
         reference_size_bytes: reference.buffer.length,
         reference_sha256: sha256(reference.buffer),
         reference_source_region: reference.source_region,
+        reference_canvas: {
+          width: CTA_REFERENCE_CANVAS.width,
+          height: CTA_REFERENCE_CANVAS.height,
+          background_color: referenceBackgroundColor,
+          button_region: CTA_REFERENCE_CANVAS.button,
+        },
       };
     });
     const generatedAt = new Date().toISOString();

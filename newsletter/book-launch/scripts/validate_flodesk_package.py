@@ -137,6 +137,23 @@ EXPECTED_CTAS = (
         "reference": "native-elements/ctas/references/05-order-your-signed-copy-reference.png",
     },
 )
+CTA_DESKTOP_WIDTH_PX = 261
+CTA_HEIGHT_PX = 54
+CTA_MOBILE_WIDTH_PX = 342
+CTA_REFERENCE_SIZE = (1280, 140)
+CTA_REFERENCE_BUTTON_REGION = {
+    "left": 379,
+    "top": 16,
+    "width": 522,
+    "height": 108,
+}
+CTA_REFERENCE_BACKGROUNDS = {
+    "cta-01": "#F7EFE4",
+    "cta-02": "#F7EFE4",
+    "cta-03": "#F3E7D4",
+    "cta-04": "#F7EFE4",
+    "cta-05": "#F7EFE4",
+}
 EXPECTED_ASSEMBLY_SEQUENCE = (
     (1, "upload-piece", "01", "01-author-identifier.png"),
     (2, "upload-piece", "02", "02-hero-visual.png"),
@@ -701,6 +718,30 @@ def validate_links(links_guide: str, manifest: dict[str, Any], failures: list[st
                 )
 
 
+def validate_cta_geometry(
+    item: dict[str, Any], label: str, failures: list[str]
+) -> None:
+    desktop = item.get("desktop") if isinstance(item.get("desktop"), dict) else {}
+    mobile = item.get("mobile") if isinstance(item.get("mobile"), dict) else {}
+    if (
+        desktop.get("width_target_px") != CTA_DESKTOP_WIDTH_PX
+        or desktop.get("source_measured_width_px") != CTA_DESKTOP_WIDTH_PX
+    ):
+        failures.append(f"CTA `{label}` desktop width must be 261px.")
+    if (
+        desktop.get("height_target_px") != CTA_HEIGHT_PX
+        or desktop.get("source_measured_height_px") != CTA_HEIGHT_PX
+    ):
+        failures.append(f"CTA `{label}` desktop height must be 54px.")
+    if (
+        mobile.get("width_target_px_at_390") != CTA_MOBILE_WIDTH_PX
+        or mobile.get("source_measured_width_px_at_390") != CTA_MOBILE_WIDTH_PX
+    ):
+        failures.append(f"CTA `{label}` mobile width must be 342px at 390px.")
+    if mobile.get("source_measured_height_px_at_390") != CTA_HEIGHT_PX:
+        failures.append(f"CTA `{label}` mobile height must be 54px at 390px.")
+
+
 def validate_ctas(
     package_dir: Path,
     manifest: dict[str, Any],
@@ -802,6 +843,7 @@ def validate_ctas(
                 "- Block type: Button",
                 f"- Label: `{label}`",
                 f"- Destination: `{destination}`",
+                "- Desktop width target: 261px",
                 "- Desktop height target: 54px",
                 "## Mobile behavior",
                 "## Build instructions",
@@ -826,6 +868,7 @@ def validate_ctas(
                 failures.append(
                     f"CTA `{label}` has the wrong sequence position in package-manifest.json."
                 )
+            validate_cta_geometry(main_item, label, failures)
 
         cta_matches = cta_by_id.get(identifier, [])
         if not cta_matches:
@@ -856,6 +899,7 @@ def validate_ctas(
             for field in ("source_selector", "preceding_element", "following_element"):
                 if not item.get(field):
                     failures.append(f"CTA `{label}` is missing {field} in cta-manifest.json.")
+            validate_cta_geometry(item, label, failures)
 
         heading_pattern = re.compile(
             rf"^## Step \d{{2}} — Native CTA: {re.escape(label)}$", re.MULTILINE
@@ -891,18 +935,26 @@ def validate_ctas(
             except (OSError, ValueError) as error:
                 failures.append(f"CTA reference image is not a valid PNG: {reference}: {error}")
             else:
+                if (width, height) != CTA_REFERENCE_SIZE:
+                    failures.append(f"CTA reference must be exactly 1280x140: {reference}")
                 if cta_matches:
                     item = cta_matches[0]
                     if item.get("reference_dimensions") != f"{width}x{height}":
                         failures.append(f"CTA reference dimensions do not match: {reference}")
+                    canvas = item.get("reference_canvas")
+                    expected_canvas = {
+                        "width": 1280,
+                        "height": 140,
+                        "background_color": CTA_REFERENCE_BACKGROUNDS[identifier],
+                        "button_region": CTA_REFERENCE_BUTTON_REGION,
+                    }
+                    if canvas != expected_canvas:
+                        failures.append(f"CTA `{label}` reference canvas contract is invalid.")
                     source_region = item.get("reference_source_region")
                     if not isinstance(source_region, dict) or (
                         source_region.get("width"), source_region.get("height")
-                    ) != (width, height):
-                        failures.append(
-                            "CTA reference includes pixels outside approved source region: "
-                            f"{reference}"
-                        )
+                    ) != (522, 108):
+                        failures.append(f"CTA `{label}` reference source button must be 522x108.")
                     actual_hash = hashlib.sha256(reference_path.read_bytes()).hexdigest()
                     if item.get("reference_sha256") != actual_hash:
                         failures.append(f"CTA reference hash does not match: {reference}")

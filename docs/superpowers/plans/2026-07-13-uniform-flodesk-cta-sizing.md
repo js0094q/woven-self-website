@@ -261,7 +261,7 @@ def validate_cta_geometry(
 validate_cta_geometry(item, label, failures)
 ```
 
-Call `validate_cta_geometry(main_item, label, failures)` in the matching main-manifest branch so neither manifest can drift. Add `- Desktop width target: 261px` to the required CTA-file fragments. Replace the old source-region-equals-file-size assertion with:
+Call `validate_cta_geometry(main_item, label, failures)` in the matching main-manifest branch so neither manifest can drift. Replace the old source-region-equals-file-size assertion with:
 
 ```python
 if (width, height) != CTA_REFERENCE_SIZE:
@@ -482,6 +482,7 @@ git commit -m "Make Flodesk CTA sizing uniform"
 **Files:**
 - Modify: all documentation paths listed under `Assembly documentation`
 - Modify: `newsletter/book-launch/scripts/test_validate_flodesk_ctas.py`
+- Modify: `newsletter/book-launch/scripts/validate_flodesk_package.py:797-812`
 
 **Interfaces:**
 - Consumes: the exact 261 x 54 desktop and 342 x 54 mobile geometry from Task 1.
@@ -578,6 +579,8 @@ Update:
 - `06-FINAL-QA-CHECKLIST.md`: require all five references to be 1280 x 140 and all five desktop buttons to be 261 x 54.
 - `07-UPLOAD-SEQUENCE.md`: require a centered 261 x 54 desktop button in Steps 05, 06, 16, 22, and 23; retain purchase placement and mobile order.
 
+After all five CTA files contain the explicit line `- Desktop width target: 261px`, add that exact fragment to the validator's `required_fragments` tuple. This assertion belongs in Task 2 so Task 1 can complete with its documentation unchanged.
+
 Do not change the 28-position sequence or any URL.
 
 - [ ] **Step 5: Run focused tests and scan for stale sizing language**
@@ -601,7 +604,7 @@ git commit -m "Synchronize Flodesk CTA assembly sizing"
 
 ---
 
-### Task 3: Verify The Complete Package, Push The Current Branch, And Record The Result
+### Task 3: Verify The Complete Package For Final Review
 
 **Files:**
 - Verify: all Task 1 and Task 2 files
@@ -609,7 +612,7 @@ git commit -m "Synchronize Flodesk CTA assembly sizing"
 
 **Interfaces:**
 - Consumes: regenerated package and synchronized documentation.
-- Produces: evidence that all five CTA assets, both proofs, both manifests, validators, and sequence contracts are production-ready, plus an updated Basic Memory Cloud handoff note.
+- Produces: evidence that all five CTA assets, both proofs, both manifests, validators, and sequence contracts are production-ready for the required whole-branch review.
 
 - [ ] **Step 1: Run the complete local validation suite**
 
@@ -666,7 +669,7 @@ Open both reassembled proofs with `view_image`. Confirm all five labels appear i
 
 Send non-mutating HEAD or redirected GET checks to the exact Amazon, excerpt, and Stripe URLs. Record each as reachable, redirected-but-reachable, or unverified. Do not claim PASS for a destination that could not be checked.
 
-- [ ] **Step 5: Inspect the final branch state and push**
+- [ ] **Step 5: Inspect the final task branch state**
 
 Run:
 
@@ -676,15 +679,20 @@ git log -3 --oneline
 git diff --check
 ```
 
-Confirm the only remaining uncommitted files are the pre-existing `author.html` and `styles.css` changes. Push the current branch without force:
+The isolated worktree must be clean after the task commits. Record the final task-branch `HEAD` for the controller. Do not push, merge, or update Basic Memory inside Task 3; those actions occur only after the required whole-branch review.
 
-```bash
-git push origin integration/flodesk-and-campaign-reconciliation
-```
+---
 
-Verify the remote branch resolves to the local `HEAD`. Do not merge or deploy unless separately authorized after this package correction.
+## Post-Review Integration (Controller Only)
 
-- [ ] **Step 6: Append the verified result to Basic Memory Cloud**
+After every task review and the final whole-branch review are clean:
+
+1. Fast-forward `integration/flodesk-and-campaign-reconciliation` to the reviewed child-branch `HEAD` without staging or modifying the pre-existing `author.html` and `styles.css` changes.
+2. Push `integration/flodesk-and-campaign-reconciliation` without force.
+3. Verify the remote branch resolves to the exact reviewed commit.
+4. Append the verified result to Basic Memory Cloud as described below.
+
+### Basic Memory Cloud Handoff
 
 Read the existing note before editing:
 

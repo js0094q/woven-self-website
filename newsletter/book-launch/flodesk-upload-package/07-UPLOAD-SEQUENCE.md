@@ -1,6 +1,6 @@
 # Upload Sequence
 
-This is the shortest authoritative assembly sequence. Complete every step in order. Use one full-width Flodesk image block for each PNG. Set image-block padding to 0 and do not crop any image. Save after every step.
+This is the shortest authoritative assembly sequence. Complete every step in order. Use one full-width Flodesk image block for each PNG. Set image-block padding to 0 and do not crop any image. Save after every step. Every native CTA is centered at 261px × 54px on desktop and is 342px × 54px at the approved 390px mobile viewport with 24px side margins.
 
 ## Step 01 — Upload piece 01
 
@@ -41,8 +41,8 @@ This is the shortest authoritative assembly sequence. Complete every step in ord
 6. Confirm the preceding element is `upload-pieces/04-hero-eyebrow-heading-and-supporting-copy.png`.
 7. Confirm the following element is the Step 06 native CTA, `Read an Excerpt`.
 8. Save, reopen the link settings, and confirm the complete destination.
-9. Preview desktop: centered, 249px target width, 54px height.
-10. Preview mobile: full width inside 24px side margins and first in the hero CTA stack.
+9. Preview desktop: centered 261px target width and 54px height.
+10. Preview mobile: 342px width and 54px height inside 24px side margins, first in the hero CTA stack.
 
 ## Step 06 — Native CTA: Read an Excerpt
 
@@ -54,8 +54,8 @@ This is the shortest authoritative assembly sequence. Complete every step in ord
 6. Confirm the preceding element is the Step 05 native CTA, `Buy the Book on Amazon`.
 7. Confirm the following element is `upload-pieces/05-butterfly-separator-02.png`.
 8. Save, reopen the link settings, and confirm the complete destination.
-9. Preview desktop: centered, 181px target width, 54px height.
-10. Preview mobile: full width inside 24px side margins, second in the hero CTA stack, and 12px below Step 05.
+9. Preview desktop: centered 261px target width and 54px height.
+10. Preview mobile: 342px width and 54px height inside 24px side margins, second in the hero CTA stack, and 12px below Step 05.
 
 ## Step 07 — Upload piece 05
 
@@ -123,8 +123,8 @@ This is the shortest authoritative assembly sequence. Complete every step in ord
 6. Confirm the preceding element is `upload-pieces/13-inside-unfolding-origami.png`.
 7. Confirm the following element is `upload-pieces/14-butterfly-separator-04.png`.
 8. Save, reopen the link settings, and confirm the complete destination.
-9. Preview desktop: centered, 214px target width, 54px height, with 8px above and 26px below.
-10. Preview mobile: full width inside 24px side margins and in the same source position.
+9. Preview desktop: centered 261px target width and 54px height, with 8px above and 26px below.
+10. Preview mobile: 342px width and 54px height inside 24px side margins and in the same source position.
 
 ## Step 17 — Upload piece 14
 
@@ -169,8 +169,8 @@ This is the shortest authoritative assembly sequence. Complete every step in ord
 6. Confirm the preceding element is `upload-pieces/17-butterfly-separator-05-and-choose-your-copy.png`.
 7. Confirm the following element is the Step 23 native CTA, `Order Your Signed Copy`.
 8. Save, reopen the link settings, and confirm the complete destination.
-9. Preview desktop: first equal-width button in the 536px row, 54px high, with a 14px group gap.
-10. Preview mobile: full width, first in the purchase stack, with 12px separation before Step 23.
+9. Preview desktop: centered first 261px button in the 536px row, 54px high, with a 14px group gap.
+10. Preview mobile: 342px width and 54px height inside 24px side margins, first in the purchase stack, with 12px separation before Step 23.
 
 ## Step 23 — Native CTA: Order Your Signed Copy
 
@@ -182,8 +182,8 @@ This is the shortest authoritative assembly sequence. Complete every step in ord
 6. Confirm the preceding element is the Step 22 native CTA, `Buy on Amazon`.
 7. Confirm the following element is `upload-pieces/18-signed-copy-deadline.png`.
 8. Save, reopen the link settings, and confirm the complete destination.
-9. Preview desktop: second equal-width button in the 536px row, 54px high, with a 14px group gap.
-10. Preview mobile: full width, second in the purchase stack, and 12px below Step 22.
+9. Preview desktop: centered second 261px button in the 536px row, 54px high, with a 14px group gap.
+10. Preview mobile: 342px width and 54px height inside 24px side margins, second in the purchase stack, and 12px below Step 22.
 
 ## Step 24 — Upload piece 18
 

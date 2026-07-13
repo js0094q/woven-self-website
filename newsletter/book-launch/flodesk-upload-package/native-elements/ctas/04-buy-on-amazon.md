@@ -9,7 +9,7 @@
 - Previous element: `upload-pieces/17-butterfly-separator-05-and-choose-your-copy.png`
 - Next element: CTA 05 — `Order Your Signed Copy`
 - Newsletter section: Choose Your Copy purchase group
-- Desktop position: First of two equal 50% columns in the 536px purchase row; 7px inner gutter contributes to a 14px total inter-button gap
+- Desktop position: Centered 261px target in the approved purchase row
 - Mobile position: First purchase CTA; 342px full width at the approved 390px viewport with 24px side margins
 
 ## Flodesk block
@@ -18,8 +18,10 @@
 - Label: `Buy on Amazon`
 - Destination: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`
 - Alignment: Center
-- Width behavior: Equal 50% desktop purchase column with a 7px inner gutter; full width on mobile
+- Width behavior: Fixed 261px target on desktop; full width inside 24px mobile side margins
+- Desktop width target: 261px
 - Desktop height target: 54px
+- Desktop group placement: Two 261px buttons side by side in the 536px purchase row with a 14px gap
 - Mobile width: 342px at a 390px viewport
 - Border radius: 4px
 - Background color: `#0D182A`
@@ -49,7 +51,7 @@
 3. Paste the exact Amazon destination above.
 4. Apply every color, border, radius, type, padding, width, height, alignment, and spacing value above.
 5. Position it as the first button after `upload-pieces/17-butterfly-separator-05-and-choose-your-copy.png`.
-6. Preview on desktop and confirm the first equal-width purchase column, 14px total group gutter, and 54px height.
+6. Preview on desktop and confirm the first 261px button in the 536px purchase row, with a 14px group gap and 54px height.
 7. Preview on mobile and confirm a 342px full-width button above CTA 05 with 12px separation.
 8. Save.
 9. Reopen the link settings.
