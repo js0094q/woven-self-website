@@ -1359,3 +1359,690 @@ footer {
     max-width: 32ch;
   }
 }
+
+/* ================= AUTHOR PAGE BOOK SYSTEM ================= */
+
+.author-page {
+  --author-midnight: #101827;
+  --author-navy: #1c283c;
+  --author-blue: #263852;
+  --author-blush: #eba7b5;
+  --author-dusty-rose: #b97887;
+  --author-cream: #f4efe7;
+  --author-paper: #fbf8f3;
+  --author-ink: #19263a;
+  --author-muted: #617086;
+  --author-line: rgba(28, 40, 60, 0.2);
+  background: var(--author-paper);
+  color: var(--author-ink);
+}
+
+.author-page main {
+  background: var(--author-paper);
+  color: var(--author-ink);
+  overflow-x: clip;
+}
+
+.author-page main a {
+  color: inherit;
+}
+
+.author-page .eyebrow {
+  color: var(--author-dusty-rose);
+  letter-spacing: 0.12em;
+}
+
+.author-page .author-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(4.5rem, 8vw, 7rem) 0 clamp(4.75rem, 8vw, 7.5rem);
+  background:
+    linear-gradient(135deg, rgba(16, 24, 39, 0.99), rgba(28, 40, 60, 0.98) 64%, rgba(38, 56, 82, 0.98)),
+    var(--author-midnight);
+  color: var(--author-cream);
+}
+
+.author-page .author-hero-grid {
+  position: relative;
+  z-index: 1;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+}
+
+.author-page .author-hero-copy,
+.author-page .book-cover-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.author-page .author-hero .eyebrow {
+  color: var(--author-blush);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+}
+
+.author-page .author-hero h1 {
+  max-width: 780px;
+  color: var(--author-cream);
+  font-size: clamp(3.2rem, 6vw, 5.35rem);
+  letter-spacing: -0.04em;
+}
+
+.author-page .release-line {
+  color: var(--author-blush);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+}
+
+.author-page .hero-deck {
+  max-width: 620px;
+  color: rgba(244, 239, 231, 0.82);
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.author-page .author-hero-motif,
+.author-page .section-butterfly {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.author-page .author-hero-motif img,
+.author-page .section-butterfly img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.author-page .author-hero-motif-one {
+  top: 2rem;
+  left: 5%;
+  width: 72px;
+  opacity: 0.28;
+  transform: rotate(-12deg);
+}
+
+.author-page .author-hero-motif-two {
+  right: 42%;
+  bottom: 2.2rem;
+  width: 48px;
+  opacity: 0.26;
+  transform: rotate(10deg);
+}
+
+.author-page .book-cover-panel {
+  max-width: 360px;
+}
+
+.author-page .book-cover-frame img {
+  border: 1px solid rgba(244, 239, 231, 0.16);
+  border-radius: 20px;
+  box-shadow:
+    0 32px 70px rgba(0, 0, 0, 0.38),
+    0 9px 26px rgba(0, 0, 0, 0.24);
+}
+
+.author-page .author-hero-cta-group {
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.author-page .author-hero-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 0;
+}
+
+.author-page main .author-cta {
+  display: inline-flex;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.author-page main .author-cta:hover {
+  transform: translateY(-1px);
+}
+
+.author-page main .author-cta:focus-visible {
+  outline: 3px solid var(--author-blush);
+  outline-offset: 3px;
+}
+
+.author-page main .author-cta-primary {
+  background: var(--author-cream);
+  border-color: var(--author-cream);
+  color: var(--author-navy);
+}
+
+.author-page main .author-cta-primary:hover {
+  background: #fffaf4;
+  border-color: #fffaf4;
+}
+
+.author-page main .author-cta-secondary {
+  background: transparent;
+  border-color: rgba(244, 239, 231, 0.68);
+  color: var(--author-cream);
+}
+
+.author-page main .author-cta-secondary:hover {
+  background: rgba(235, 167, 181, 0.12);
+  border-color: var(--author-blush);
+  color: var(--author-cream);
+}
+
+.author-page main .author-cta-accent {
+  background: var(--author-blush);
+  border-color: var(--author-blush);
+  color: var(--author-navy);
+}
+
+.author-page main .author-cta-accent:hover {
+  background: #f2bbc6;
+  border-color: #f2bbc6;
+}
+
+.author-page .author-deadline {
+  margin: 0.9rem 0 0;
+  color: var(--author-blush);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.author-page .hero-deadline {
+  max-width: 44ch;
+  color: rgba(244, 239, 231, 0.78);
+}
+
+.author-page .endorsement-section {
+  position: relative;
+  padding: clamp(4.5rem, 8vw, 6.5rem) 0;
+  background: var(--author-paper);
+  border-top: 1px solid rgba(185, 120, 135, 0.28);
+  border-bottom: 1px solid rgba(185, 120, 135, 0.28);
+}
+
+.author-page .endorsement-section .site-container,
+.author-page .memoir-section .site-container,
+.author-page .newsletter-section .site-container {
+  position: relative;
+  z-index: 1;
+}
+
+.author-page .endorsement-section h2 {
+  color: var(--author-navy);
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  text-align: center;
+}
+
+.author-page .testimonial-grid {
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.author-page .testimonial-card {
+  padding: 2.25rem 1.25rem 2rem;
+  border-color: rgba(185, 120, 135, 0.46);
+  background: transparent;
+}
+
+.author-page .testimonial-card p {
+  color: var(--author-navy);
+}
+
+.author-page .testimonial-card figcaption {
+  color: var(--author-muted);
+}
+
+.author-page .testimonial-card figcaption span {
+  color: var(--author-dusty-rose);
+}
+
+.author-page .praise-butterfly {
+  top: 1.2rem;
+  right: 5%;
+  width: 48px;
+  opacity: 0.42;
+  transform: rotate(10deg);
+}
+
+.author-page .launch-section {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(4.75rem, 8vw, 6.75rem) 0;
+  background: var(--author-blue);
+  border-top: 0;
+  border-bottom: 0;
+  color: var(--author-cream);
+}
+
+.author-page .launch-grid {
+  position: relative;
+  z-index: 1;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.author-page .author-format-copy .eyebrow {
+  color: var(--author-blush);
+}
+
+.author-page .launch-section h2 {
+  color: var(--author-cream);
+  font-size: clamp(2.3rem, 4vw, 3.15rem);
+}
+
+.author-page .launch-section p {
+  color: rgba(244, 239, 231, 0.8);
+}
+
+.author-page .author-format-copy > p {
+  max-width: 48ch;
+}
+
+.author-page .author-format-copy > .author-deadline {
+  color: var(--author-blush);
+  font-weight: 600;
+}
+
+.author-page .author-format-actions {
+  display: flex;
+  width: min(100%, 320px);
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.author-page .formats-butterfly {
+  top: 1.7rem;
+  left: 8%;
+  width: 52px;
+  opacity: 0.26;
+  transform: rotate(-12deg);
+}
+
+.author-page .formats-card {
+  position: relative;
+  padding: clamp(1.5rem, 3.5vw, 2.4rem);
+  border: 1px solid rgba(235, 167, 181, 0.32);
+  border-radius: 18px;
+  background: var(--author-navy);
+  box-shadow: 0 24px 58px rgba(8, 14, 24, 0.28);
+  color: var(--author-cream);
+}
+
+.author-page .author-format-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.author-page .formats-card .detail-kicker {
+  color: var(--author-blush);
+}
+
+.author-page .author-format-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.4rem 0 0;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.author-page .author-format-list > div {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(244, 239, 231, 0.18);
+}
+
+.author-page .author-format-list dt {
+  color: var(--author-cream);
+  font-weight: 700;
+}
+
+.author-page .author-format-list dd {
+  margin: 0.2rem 0 0;
+  color: rgba(244, 239, 231, 0.74);
+}
+
+.author-page .author-format-list dd strong {
+  color: var(--author-blush);
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+}
+
+.author-page .author-format-list dd span {
+  color: rgba(244, 239, 231, 0.58);
+  font-size: 0.88rem;
+}
+
+.author-page .author-format-list dd .author-card-deadline {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--author-blush);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.author-page .formats-card .author-format-actions {
+  width: min(100%, 320px);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.8rem;
+}
+
+.author-page .formats-card .author-cta-primary {
+  background: var(--author-cream);
+  border-color: var(--author-cream);
+  color: var(--author-navy);
+}
+
+.author-page .formats-card .author-cta-secondary {
+  border-color: rgba(244, 239, 231, 0.7);
+  color: var(--author-cream);
+}
+
+.author-page .formats-card .author-cta-accent {
+  background: var(--author-blush);
+  border-color: var(--author-blush);
+  color: var(--author-navy);
+}
+
+.author-page .author-card-note {
+  margin: 1rem 0 0;
+  color: rgba(244, 239, 231, 0.68) !important;
+  font-size: 0.87rem !important;
+  line-height: 1.55 !important;
+}
+
+.author-page .formats-card .book-butterfly-accent-one {
+  width: 64px;
+  top: 1.2rem;
+  right: 1.25rem;
+  opacity: 0.86;
+}
+
+.author-page .formats-card .book-butterfly-accent-two {
+  width: 42px;
+  bottom: -1rem;
+  left: -1.1rem;
+  opacity: 0.52;
+}
+
+.author-page .formats-card .book-butterfly-accent-three {
+  width: 40px;
+  top: 8rem;
+  right: 1.9rem;
+  opacity: 0.42;
+}
+
+.author-page .memoir-section {
+  position: relative;
+  padding: clamp(5rem, 8vw, 7rem) 0;
+}
+
+.author-page .book-section {
+  background: var(--author-paper);
+  border-bottom: 1px solid rgba(185, 120, 135, 0.24);
+}
+
+.author-page .author-section {
+  background: var(--author-blue);
+  color: var(--author-cream);
+}
+
+.author-page .memoir-layout {
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.author-page .memoir-section h2 {
+  color: var(--author-navy);
+  font-size: clamp(2.35rem, 4vw, 3.2rem);
+}
+
+.author-page .memoir-section p {
+  color: var(--author-muted);
+}
+
+.author-page .memoir-copy .lead {
+  color: var(--author-ink);
+}
+
+.author-page .author-section .eyebrow {
+  color: var(--author-blush);
+}
+
+.author-page .author-section h2 {
+  color: var(--author-cream);
+}
+
+.author-page .author-section .memoir-section p,
+.author-page .author-section p {
+  color: rgba(244, 239, 231, 0.76);
+}
+
+.author-page .author-section .memoir-copy .lead {
+  color: var(--author-cream);
+}
+
+.author-page .author-portrait img {
+  border: 1px solid rgba(28, 40, 60, 0.16);
+  border-radius: 18px;
+  box-shadow:
+    0 24px 50px rgba(16, 24, 39, 0.16),
+    0 5px 16px rgba(16, 24, 39, 0.08);
+}
+
+.author-page .author-section .author-portrait img {
+  border-color: rgba(235, 167, 181, 0.42);
+  box-shadow: 0 24px 50px rgba(8, 14, 24, 0.28);
+}
+
+.author-page .book-butterfly {
+  top: 1.4rem;
+  right: 7%;
+  width: 48px;
+  opacity: 0.38;
+  transform: rotate(12deg);
+}
+
+.author-page .author-butterfly {
+  top: 1.5rem;
+  left: 7%;
+  width: 48px;
+  opacity: 0.28;
+  transform: rotate(-10deg);
+}
+
+.author-page .author-section .author-butterfly {
+  opacity: 0.5;
+}
+
+.author-page .newsletter-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(5rem, 8vw, 7rem) 0;
+  background: var(--author-cream);
+  border-top: 1px solid rgba(185, 120, 135, 0.28);
+}
+
+.author-page .newsletter-inner {
+  display: grid;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) 1.25rem;
+  justify-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(185, 120, 135, 0.42);
+  border-bottom: 1px solid rgba(185, 120, 135, 0.42);
+  text-align: center;
+}
+
+.author-page .newsletter-portrait {
+  width: min(100%, 178px);
+}
+
+.author-page .newsletter-portrait img {
+  max-height: 230px;
+  border-color: rgba(185, 120, 135, 0.38);
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: grayscale(1) contrast(1.03);
+}
+
+.author-page .newsletter-copy {
+  max-width: 620px;
+  text-align: center;
+}
+
+.author-page .newsletter-copy .eyebrow {
+  color: var(--author-dusty-rose);
+}
+
+.author-page .newsletter-copy h2 {
+  color: var(--author-navy);
+  font-size: clamp(2.4rem, 4vw, 3.35rem);
+}
+
+.author-page .newsletter-copy p {
+  max-width: 52ch;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--author-muted);
+}
+
+.author-page .newsletter-copy .author-cta {
+  width: min(100%, 250px);
+  margin-top: 1.7rem;
+  background: var(--author-navy);
+  border-color: var(--author-navy);
+  color: var(--author-cream);
+}
+
+.author-page .newsletter-butterfly {
+  top: 1.5rem;
+  left: 50%;
+  width: 48px;
+  opacity: 0.52;
+  transform: translateX(-50%) rotate(12deg);
+}
+
+.author-page footer {
+  background: var(--author-midnight);
+  border-top: 1px solid rgba(235, 167, 181, 0.22);
+  color: rgba(244, 239, 231, 0.68);
+}
+
+.author-page footer p {
+  margin: 0;
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  .author-page .author-hero {
+    padding: 4rem 0 4.75rem;
+  }
+
+  .author-page .author-hero-grid {
+    gap: 2.75rem;
+  }
+
+  .author-page .author-hero-actions {
+    max-width: 440px;
+  }
+
+  .author-page .author-hero-motif-one {
+    top: 1.3rem;
+    left: 2.5rem;
+    width: 56px;
+    opacity: 0.22;
+  }
+
+  .author-page .author-hero-motif-two {
+    display: none;
+  }
+
+  .author-page .formats-card {
+    width: min(100%, 620px);
+    margin: 0 auto;
+  }
+
+  .author-page .praise-butterfly,
+  .author-page .formats-butterfly,
+  .author-page .book-butterfly,
+  .author-page .author-butterfly {
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 640px) {
+  .author-page .author-hero {
+    padding: 3.25rem 0 4rem;
+  }
+
+  .author-page .author-hero h1 {
+    font-size: clamp(2.75rem, 13vw, 3.5rem);
+  }
+
+  .author-page .hero-deck {
+    font-size: 1rem;
+  }
+
+  .author-page .author-hero-actions {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .author-page main .author-cta {
+    min-height: 50px;
+  }
+
+  .author-page .author-format-actions {
+    width: 100%;
+    max-width: none;
+  }
+
+  .author-page .formats-card {
+    padding: 1.45rem;
+  }
+
+  .author-page .formats-card .book-butterfly-accent-one {
+    width: 52px;
+  }
+
+  .author-page .formats-card .book-butterfly-accent-three {
+    display: none;
+  }
+
+  .author-page .author-deadline {
+    font-size: 0.82rem;
+  }
+
+  .author-page .newsletter-inner {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .author-page .newsletter-butterfly {
+    width: 40px;
+  }
+
+  .author-page .praise-butterfly,
+  .author-page .formats-butterfly,
+  .author-page .book-butterfly,
+  .author-page .author-butterfly {
+    display: none;
+  }
+}
