@@ -21,7 +21,7 @@ const urls = {
   author: "https://wovenself.com/author.html",
   signedPaperback: "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00",
   kindle: "https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese-ebook/dp/B0H27BM8K1",
-  excerpt: "https://wovenself.com/excerpt-unfolding-origami.html",
+  excerpt: "https://wovenself.com/excerpt-unfolding-origami",
 };
 
 const palette = {

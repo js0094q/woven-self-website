@@ -70,7 +70,7 @@ Preorder Kindle ebook
 Image:
 `04-excerpt-feature.png`
 Flodesk link:
-`https://wovenself.com/excerpt-unfolding-origami.html`
+`https://wovenself.com/excerpt-unfolding-origami`
 
 Alt text:
 A quiet first look at Loren Galese's upcoming memoir

@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "check:excerpt": "node tests/excerpt-route.test.mjs",
     "export:magazine-ad": "node marketing/magazine-ad/export-visuals.mjs",
     "flodesk:kit": "node scripts/list-flodesk-build-kit.js"
   },

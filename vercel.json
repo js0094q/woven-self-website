@@ -10,7 +10,11 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/excerpt-unfolding-origami.html", "destination": "/excerpt-unfolding-origami", "permanent": true }
+  ],
   "rewrites": [
+    { "source": "/excerpt-unfolding-origami", "destination": "/assets/unfolding-origami-excerpt.pdf" },
     { "source": "/unfolding", "destination": "/author.html" },
     { "source": "/blog/:slug", "destination": "/blog/post.html?slug=:slug" }
   ]

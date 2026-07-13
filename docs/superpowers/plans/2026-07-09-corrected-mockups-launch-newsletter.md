@@ -20,7 +20,7 @@
 - Preserve the open-book source byte-identically; only its email derivative is transcoded.
 - Use the LinkedIn book-stack correction as the newsletter hero.
 - Amazon URL: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`.
-- Excerpt URL: `https://wovenself.com/excerpt-unfolding-origami.html`.
+- Excerpt URL: `https://wovenself.com/excerpt-unfolding-origami`.
 - Signed-copy URL: `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00`.
 - Sarah Edmondson URL: `https://alittlebitculty.com/`.
 - Review attribution: `- Amazon Review`.
@@ -681,7 +681,7 @@ Do not commit.
 
 ```python
 AMAZON_URL = "https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28"
-EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami.html"
+EXCERPT_URL = "https://wovenself.com/excerpt-unfolding-origami"
 SIGNED_URL = "https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
 SARAH_URL = "https://alittlebitculty.com/"
 REVIEW_ATTRIBUTION = "- Amazon Review"

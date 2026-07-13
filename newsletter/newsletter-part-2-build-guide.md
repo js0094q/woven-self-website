@@ -168,7 +168,7 @@ Read the Excerpt
 CTA URL:
 
 ```text
-https://wovenself.com/excerpt-unfolding-origami.html
+https://wovenself.com/excerpt-unfolding-origami
 ```
 
 ---
@@ -271,12 +271,10 @@ Before test send:
 
 - Confirm the cover image is the updated official cover.
 - Confirm the excerpt link opens:
-  - https://wovenself.com/excerpt-unfolding-origami.html
-- Confirm the PDF opens from the hidden excerpt page.
-- Confirm the hidden page is not in navigation.
-- Confirm the hidden page is not in sitemap.xml.
-- Confirm the hidden page has:
-  - `<meta name="robots" content="noindex,nofollow" />`
+  - https://wovenself.com/excerpt-unfolding-origami
+- Confirm the PDF opens directly from the excerpt URL.
+- Confirm no intermediary page appears.
+- Confirm the clean excerpt URL is in sitemap.xml.
 - Confirm signed paperback CTA links to Stripe.
 - Confirm Kindle CTA links to Amazon.
 - Confirm Kindle price is listed as $9.95.

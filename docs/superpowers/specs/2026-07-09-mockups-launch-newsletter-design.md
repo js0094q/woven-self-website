@@ -171,7 +171,7 @@ The HTML preview and Flodesk build guide use this exact visible order:
 ## Authoritative Links
 
 - Amazon: `https://www.amazon.com/Unfolding-Origami-Memoir-Loren-Galese/dp/B0H7YZ5N28`
-- Excerpt: `https://wovenself.com/excerpt-unfolding-origami.html`
+- Excerpt: `https://wovenself.com/excerpt-unfolding-origami`
 - Signed copy: `https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00`
 - Sarah Edmondson: `https://alittlebitculty.com/`
 
