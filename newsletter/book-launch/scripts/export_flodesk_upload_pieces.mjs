@@ -761,17 +761,88 @@ async function createContactSheet(sharp, pieceResults) {
     .toFile(contactSheetPath);
 }
 
+function parseHexColor(color) {
+  const match = /^#([0-9a-f]{6})$/i.exec(color);
+  if (!match) throw new Error(`unsupported CTA reference background color: ${color}`);
+  return [0, 2, 4].map((offset) => Number.parseInt(match[1].slice(offset, offset + 2), 16));
+}
+
+async function findPaintedButtonRegion(sharp, master, masterMetadata, measured, definition) {
+  const searchPadding = 4;
+  const search = {
+    left: Math.max(0, Math.floor(measured.rect.left * 2) - searchPadding),
+    top: Math.max(0, Math.floor(measured.rect.top * 2) - searchPadding),
+  };
+  const searchRight = Math.min(
+    masterMetadata.width,
+    Math.ceil(measured.rect.right * 2) + searchPadding,
+  );
+  const searchBottom = Math.min(
+    masterMetadata.height,
+    Math.ceil(measured.rect.bottom * 2) + searchPadding,
+  );
+  const { data, info } = await sharp(master)
+    .extract({
+      ...search,
+      width: searchRight - search.left,
+      height: searchBottom - search.top,
+    })
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const background = parseHexColor(definition.reference_background_color);
+  let left = info.width;
+  let top = info.height;
+  let right = -1;
+  let bottom = -1;
+  for (let y = 0; y < info.height; y += 1) {
+    for (let x = 0; x < info.width; x += 1) {
+      const offset = (y * info.width + x) * info.channels;
+      if (
+        data[offset] !== background[0]
+        || data[offset + 1] !== background[1]
+        || data[offset + 2] !== background[2]
+      ) {
+        left = Math.min(left, x);
+        top = Math.min(top, y);
+        right = Math.max(right, x);
+        bottom = Math.max(bottom, y);
+      }
+    }
+  }
+  if (right < left || bottom < top) {
+    throw new Error(`CTA ${definition.id} has no painted pixels distinct from its background`);
+  }
+  const region = {
+    left: search.left + left,
+    top: search.top + top,
+    width: right - left + 1,
+    height: bottom - top + 1,
+  };
+  if (
+    region.width !== CTA_REFERENCE_CANVAS.button.width
+    || region.height !== CTA_REFERENCE_CANVAS.button.height
+  ) {
+    throw new Error(
+      `CTA ${definition.id} painted bounds must be ${CTA_REFERENCE_CANVAS.button.width}x${CTA_REFERENCE_CANVAS.button.height}, found ${region.width}x${region.height}`,
+    );
+  }
+  return region;
+}
+
 async function createCtaReferences(sharp, master, desktopCtas) {
   mkdirSync(ctaReferenceDirectory, { recursive: true });
+  const masterMetadata = await sharp(master).metadata();
   const results = [];
   for (const definition of CTA_DEFINITIONS) {
     const measured = desktopCtas[definition.source_index];
-    const region = {
-      left: Math.round(measured.rect.left * 2),
-      top: Math.round(measured.rect.top * 2),
-      width: CTA_REFERENCE_CANVAS.button.width,
-      height: CTA_REFERENCE_CANVAS.button.height,
-    };
+    const region = await findPaintedButtonRegion(
+      sharp,
+      master,
+      masterMetadata,
+      measured,
+      definition,
+    );
     const buttonBuffer = await sharp(master)
       .extract(region)
       .toColourspace("srgb")

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "package_name": "Unfolding Origami Launch Newsletter Native CTA Kit",
-  "generated_at": "2026-07-13T17:48:12.674Z",
+  "generated_at": "2026-07-13T18:03:09.577Z",
   "source": "newsletter/book-launch/launch-newsletter-preview.html",
   "source_sha256": "77fd18cbbf853c146871857dfb81b0290887481bb92e491ff9e8c3c9e1659366",
   "validation_status": "verified-against-authoritative-html",
@@ -82,11 +82,11 @@
         "padding_left": "26px"
       },
       "reference_dimensions": "1280x140",
-      "reference_size_bytes": 8520,
-      "reference_sha256": "b78e6419eec11d1f2f0beb4a456e331ae47d932c4cf043cb74d13742333bf082",
+      "reference_size_bytes": 8568,
+      "reference_sha256": "e7f14e5b021e0a8f24146a70cad0a60a8177a2318bcdfcb6484153f3cb56448b",
       "reference_source_region": {
-        "left": 379,
-        "top": 1393,
+        "left": 380,
+        "top": 1394,
         "width": 522,
         "height": 108
       },
@@ -169,11 +169,11 @@
         "padding_left": "26px"
       },
       "reference_dimensions": "1280x140",
-      "reference_size_bytes": 6976,
-      "reference_sha256": "f0a65fc193a53d778ce53381f36d9e75e048b3dd560590a6d376cd2568572c17",
+      "reference_size_bytes": 7030,
+      "reference_sha256": "8d9b0566ab427cdda315286719a8c8de8c737eada40de570f718fc8a87c6b063",
       "reference_source_region": {
-        "left": 379,
-        "top": 1525,
+        "left": 380,
+        "top": 1526,
         "width": 522,
         "height": 108
       },
@@ -257,10 +257,10 @@
         "padding_left": "26px"
       },
       "reference_dimensions": "1280x140",
-      "reference_size_bytes": 7412,
-      "reference_sha256": "04e2e45d7d059597a7eeb4c8a216cdc79544dd5892428ae2baa4192645aa9632",
+      "reference_size_bytes": 7435,
+      "reference_sha256": "d72e8bd5e480241c2553311c53bcbbfc114754e0b1bf2cf9fc93f9e64bc2dc1c",
       "reference_source_region": {
-        "left": 379,
+        "left": 380,
         "top": 6008,
         "width": 522,
         "height": 108

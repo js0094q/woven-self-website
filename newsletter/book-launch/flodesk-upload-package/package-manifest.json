@@ -1,7 +1,7 @@
 {
   "package_name": "Unfolding Origami Launch Newsletter",
   "status": "approved-for-manual-flodesk-assembly-with-complete-native-cta-kit-and-mobile-review-item",
-  "generated_at": "2026-07-13T17:48:12.674Z",
+  "generated_at": "2026-07-13T18:03:09.577Z",
   "created_from": "approved launch newsletter HTML and approved desktop preview",
   "upload_piece_count": 20,
   "master_width": 1280,
@@ -541,11 +541,11 @@
         "padding_left": "26px"
       },
       "reference_dimensions": "1280x140",
-      "reference_size_bytes": 8520,
-      "reference_sha256": "b78e6419eec11d1f2f0beb4a456e331ae47d932c4cf043cb74d13742333bf082",
+      "reference_size_bytes": 8568,
+      "reference_sha256": "e7f14e5b021e0a8f24146a70cad0a60a8177a2318bcdfcb6484153f3cb56448b",
       "reference_source_region": {
-        "left": 379,
-        "top": 1393,
+        "left": 380,
+        "top": 1394,
         "width": 522,
         "height": 108
       },
@@ -628,11 +628,11 @@
         "padding_left": "26px"
       },
       "reference_dimensions": "1280x140",
-      "reference_size_bytes": 6976,
-      "reference_sha256": "f0a65fc193a53d778ce53381f36d9e75e048b3dd560590a6d376cd2568572c17",
+      "reference_size_bytes": 7030,
+      "reference_sha256": "8d9b0566ab427cdda315286719a8c8de8c737eada40de570f718fc8a87c6b063",
       "reference_source_region": {
-        "left": 379,
-        "top": 1525,
+        "left": 380,
+        "top": 1526,
         "width": 522,
         "height": 108
       },
@@ -716,10 +716,10 @@
         "padding_left": "26px"
       },
       "reference_dimensions": "1280x140",
-      "reference_size_bytes": 7412,
-      "reference_sha256": "04e2e45d7d059597a7eeb4c8a216cdc79544dd5892428ae2baa4192645aa9632",
+      "reference_size_bytes": 7435,
+      "reference_sha256": "d72e8bd5e480241c2553311c53bcbbfc114754e0b1bf2cf9fc93f9e64bc2dc1c",
       "reference_source_region": {
-        "left": 379,
+        "left": 380,
         "top": 6008,
         "width": 522,
         "height": 108
@@ -1184,24 +1184,24 @@
       "filename": "native-elements/ctas/references/01-buy-the-book-on-amazon-reference.png",
       "viewport": "cta-reference-cta-01",
       "dimensions": "1280x140",
-      "size_bytes": 8520,
-      "sha256": "b78e6419eec11d1f2f0beb4a456e331ae47d932c4cf043cb74d13742333bf082",
+      "size_bytes": 8568,
+      "sha256": "e7f14e5b021e0a8f24146a70cad0a60a8177a2318bcdfcb6484153f3cb56448b",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/02-read-an-excerpt-reference.png",
       "viewport": "cta-reference-cta-02",
       "dimensions": "1280x140",
-      "size_bytes": 6976,
-      "sha256": "f0a65fc193a53d778ce53381f36d9e75e048b3dd560590a6d376cd2568572c17",
+      "size_bytes": 7030,
+      "sha256": "8d9b0566ab427cdda315286719a8c8de8c737eada40de570f718fc8a87c6b063",
       "reference_only": true
     },
     {
       "filename": "native-elements/ctas/references/03-buy-the-memoir-now-reference.png",
       "viewport": "cta-reference-cta-03",
       "dimensions": "1280x140",
-      "size_bytes": 7412,
-      "sha256": "04e2e45d7d059597a7eeb4c8a216cdc79544dd5892428ae2baa4192645aa9632",
+      "size_bytes": 7435,
+      "sha256": "d72e8bd5e480241c2553311c53bcbbfc114754e0b1bf2cf9fc93f9e64bc2dc1c",
       "reference_only": true
     },
     {
@@ -1224,8 +1224,8 @@
       "filename": "native-elements/ctas/references/all-ctas-contact-sheet.png",
       "viewport": "cta-contact-sheet",
       "dimensions": "1340x930",
-      "size_bytes": 56727,
-      "sha256": "eb72c35c0c6b18561bdd453cb36f39032363403cbd7bc78e33d0edf9324a7c98",
+      "size_bytes": 56848,
+      "sha256": "50618b06a87cf09c93871aab843935f21ae17d59310c8937ac77253df864850a",
       "reference_only": true
     }
   ],
@@ -1257,8 +1257,8 @@
     "../flodesk-build-guide.md": "9073316ec5b545c6cc0c784e1a49cf3272fa337f986a0ab2086bae77c5f5f894",
     "../previews/launch-newsletter-desktop.png": "3952a08bb167c7a7eb15d1ee18a8b5574768ee267d3d0eb8d112af924b46be06",
     "../previews/launch-newsletter-mobile.png": "7898c906aee29f6fcf18df7e231fea9c54e4ef19fcb1670feb919be3002c1422",
-    "../scripts/export_flodesk_upload_pieces.mjs": "43cba104c27ff6cf591b9043065cb87f117cbb24cc70f63ff6a34b470f1302bf",
-    "native-elements/ctas/cta-manifest.json": "f0154a7adb1e6c7e6311ca6e755f63acd375d8289d5e2bb7dc74e66560523bc9"
+    "../scripts/export_flodesk_upload_pieces.mjs": "b6ccd7b71c9ab6825da5ec459637370352e38c8b3734ab28fb717e558bf809ae",
+    "native-elements/ctas/cta-manifest.json": "2f4a89280e985bb53d7cc73f755cc0c2cc7b9811800fd8f4c322a25c943704e9"
   },
   "qa_status": {
     "export": "passed",

@@ -112,6 +112,104 @@ def write_solid_png(path: Path, width: int, height: int) -> None:
     )
 
 
+def read_png_rgb_rows(path: Path) -> tuple[int, int, list[bytes]]:
+    data = path.read_bytes()
+    if data[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError(f"not a PNG: {path}")
+
+    offset = 8
+    width = height = channels = 0
+    compressed = bytearray()
+    while offset + 12 <= len(data):
+        length = int.from_bytes(data[offset : offset + 4], "big")
+        kind = data[offset + 4 : offset + 8]
+        payload = data[offset + 8 : offset + 8 + length]
+        offset += 12 + length
+        if kind == b"IHDR":
+            width, height, bit_depth, color_type, compression, filtering, interlace = (
+                struct.unpack(">IIBBBBB", payload)
+            )
+            if (
+                bit_depth != 8
+                or color_type not in (2, 6)
+                or compression != 0
+                or filtering != 0
+                or interlace != 0
+            ):
+                raise ValueError(f"unsupported PNG encoding: {path}")
+            channels = 3 if color_type == 2 else 4
+        elif kind == b"IDAT":
+            compressed.extend(payload)
+        elif kind == b"IEND":
+            break
+
+    stride = width * channels
+    filtered = zlib.decompress(compressed)
+    rows: list[bytes] = []
+    previous = bytearray(stride)
+    cursor = 0
+    for _row_index in range(height):
+        filter_type = filtered[cursor]
+        cursor += 1
+        row = bytearray(filtered[cursor : cursor + stride])
+        cursor += stride
+        for index in range(stride):
+            left = row[index - channels] if index >= channels else 0
+            above = previous[index]
+            upper_left = previous[index - channels] if index >= channels else 0
+            if filter_type == 1:
+                predictor = left
+            elif filter_type == 2:
+                predictor = above
+            elif filter_type == 3:
+                predictor = (left + above) // 2
+            elif filter_type == 4:
+                estimate = left + above - upper_left
+                distances = (
+                    abs(estimate - left),
+                    abs(estimate - above),
+                    abs(estimate - upper_left),
+                )
+                predictor = (left, above, upper_left)[distances.index(min(distances))]
+            elif filter_type == 0:
+                predictor = 0
+            else:
+                raise ValueError(f"unsupported PNG filter {filter_type}: {path}")
+            row[index] = (row[index] + predictor) & 0xFF
+        rows.append(
+            bytes(
+                component
+                for pixel_start in range(0, stride, channels)
+                for component in row[pixel_start : pixel_start + 3]
+            )
+        )
+        previous = row
+    return width, height, rows
+
+
+def painted_bounds(path: Path, background: str) -> dict[str, int]:
+    width, height, rows = read_png_rgb_rows(path)
+    background_rgb = bytes.fromhex(background.removeprefix("#"))
+    painted = [
+        (x, y)
+        for y, row in enumerate(rows)
+        for x in range(width)
+        if row[x * 3 : x * 3 + 3] != background_rgb
+    ]
+    if not painted:
+        raise ValueError(f"PNG has no pixels distinct from its background: {path}")
+    left = min(x for x, _y in painted)
+    top = min(y for _x, y in painted)
+    right = max(x for x, _y in painted)
+    bottom = max(y for _x, y in painted)
+    return {
+        "left": left,
+        "top": top,
+        "width": right - left + 1,
+        "height": bottom - top + 1,
+    }
+
+
 class FlodeskCtaValidatorTests(unittest.TestCase):
     def copy_package(self) -> tuple[tempfile.TemporaryDirectory, Path]:
         temporary = tempfile.TemporaryDirectory()
@@ -367,6 +465,21 @@ class FlodeskCtaValidatorTests(unittest.TestCase):
                         cta["reference_source_region"]["height"],
                     ),
                     (522, 108),
+                )
+
+    def test_cta_references_preserve_complete_painted_button_bounds(self):
+        manifest = self.read_json(
+            PACKAGE_DIR / "native-elements/ctas/cta-manifest.json"
+        )
+        for cta in manifest["ctas"]:
+            with self.subTest(cta=cta["id"]):
+                reference = PACKAGE_DIR / cta["reference_image"]
+                self.assertEqual(
+                    painted_bounds(
+                        reference,
+                        cta["reference_canvas"]["background_color"],
+                    ),
+                    CTA_REFERENCE_BUTTON_REGION,
                 )
 
     def test_package_docs_do_not_require_visible_reference_footers(self):
