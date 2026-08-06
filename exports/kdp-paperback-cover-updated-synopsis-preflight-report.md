@@ -3,8 +3,8 @@
 Generated: Mon Jul 06 2026 15:00:24 GMT-0400
 
 ## Source
-- INDD: `/Users/josephstewart/Documents/woven-self-website-main/design/book-cover-unfolding-origami/indesign-handoff/reference/Unfolding Origami - Updated Synopsis.indd`
-- QA PDF: `/Users/josephstewart/Documents/woven-self-website-main/exports/kdp-paperback-cover-updated-synopsis-qa.pdf`
+- INDD: `design/book-cover-unfolding-origami/indesign-handoff/reference/Unfolding Origami - Updated Synopsis.indd`
+- QA PDF: `exports/kdp-paperback-cover-updated-synopsis-qa.pdf`
 
 ## Document Geometry
 - Pages: 1
@@ -22,10 +22,10 @@ Status: PASS
 
 ## Link Check
 Status: PASS
-- fig_image_1_398527584.png: NORMAL (/Users/josephstewart/Documents/InDesign PDF Assets/3e5e3958-a82f-4092-9143-181b6e81ff75/fig_image_1_398527584.png)
-- fig_image_2_51609295.png: NORMAL (/Users/josephstewart/Documents/InDesign PDF Assets/3e5e3958-a82f-4092-9143-181b6e81ff75/fig_image_2_51609295.png)
-- fig_image_3_1961511324.png: NORMAL (/Users/josephstewart/Documents/InDesign PDF Assets/3e5e3958-a82f-4092-9143-181b6e81ff75/fig_image_3_1961511324.png)
-- fig_path_pattern_4_1099357371.png: NORMAL (/Users/josephstewart/Documents/InDesign PDF Assets/3e5e3958-a82f-4092-9143-181b6e81ff75/fig_path_pattern_4_1099357371.png)
+- fig_image_1_398527584.png: NORMAL (`<local-indesign-assets>/fig_image_1_398527584.png`)
+- fig_image_2_51609295.png: NORMAL (`<local-indesign-assets>/fig_image_2_51609295.png`)
+- fig_image_3_1961511324.png: NORMAL (`<local-indesign-assets>/fig_image_3_1961511324.png`)
+- fig_path_pattern_4_1099357371.png: NORMAL (`<local-indesign-assets>/fig_path_pattern_4_1099357371.png`)
 
 ## Overset / Text Overflow Check
 Status: PASS

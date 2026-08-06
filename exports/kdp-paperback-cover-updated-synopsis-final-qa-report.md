@@ -9,7 +9,7 @@ PASS WITH MINOR NOTES - Mechanically acceptable, but minor review items remain
 | File | Purpose |
 |---|---|
 | `design/book-cover-unfolding-origami/indesign-handoff/reference/Unfolding Origami - Updated Synopsis.indd` | Updated InDesign source, repaired with restored barcode artwork |
-| `/Users/josephstewart/Downloads/3e5e3958-a82f-4092-9143-181b6e81ff75.pdf` | Current/reference exported PDF |
+| `<local-reference>/current-cover-reference.pdf` | Current/reference exported PDF |
 | `exports/kdp-paperback-cover-updated-synopsis-qa.pdf` | Initial fresh export from InDesign, failed barcode check |
 | `exports/kdp-paperback-cover-updated-synopsis-final.pdf` | Corrected final export from InDesign |
 | `exports/qa/reference-cover-render.png` | 300 DPI render of supplied reference PDF |

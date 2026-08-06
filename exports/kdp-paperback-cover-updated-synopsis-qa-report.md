@@ -9,7 +9,7 @@ FAIL - Requires correction before KDP upload
 | File | Purpose |
 |---|---|
 | `design/book-cover-unfolding-origami/indesign-handoff/reference/Unfolding Origami - Updated Synopsis.indd` | Updated InDesign source |
-| `/Users/josephstewart/Downloads/3e5e3958-a82f-4092-9143-181b6e81ff75.pdf` | Current/reference exported PDF |
+| `<local-reference>/current-cover-reference.pdf` | Current/reference exported PDF |
 | `exports/kdp-paperback-cover-updated-synopsis-qa.pdf` | Fresh QA export from InDesign before repair |
 | `exports/qa/cover-visual-diff.png` | Visual diff proof |
 

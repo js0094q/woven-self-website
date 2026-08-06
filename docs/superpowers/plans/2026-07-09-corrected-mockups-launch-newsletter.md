@@ -90,10 +90,10 @@ Never reverse this convention.
 
 ### Preserve
 
-- `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-ereader-and-cover-Mockup-(web).png`
-- `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-OpenBook-Mockup-(linkedin).png`
-- `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-BookStack-Mockup-(insta).png`
-- `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-BookStack-Mockup--(linkedin).png`
+- `<local-downloads>/Loren-Galese-Unfolding-Origami-ereader-and-cover-Mockup-(web).png`
+- `<local-downloads>/Loren-Galese-Unfolding-Origami-OpenBook-Mockup-(linkedin).png`
+- `<local-downloads>/Loren-Galese-Unfolding-Origami-BookStack-Mockup-(insta).png`
+- `<local-downloads>/Loren-Galese-Unfolding-Origami-BookStack-Mockup--(linkedin).png`
 - All existing dirty files outside `newsletter/book-launch/` and the new docs files.
 
 ---
@@ -115,13 +115,14 @@ Run:
 
 ```bash
 git status --short
+: "${LOCAL_DOWNLOADS:?Set LOCAL_DOWNLOADS to the local mockup source directory}"
 file \
   exports/kdp-ebook-cover-1600x2560-fixed.png \
   exports/kdp-paperback-cover-updated-synopsis-final.pdf \
-  /Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-ereader-and-cover-Mockup-\(web\).png \
-  /Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-OpenBook-Mockup-\(linkedin\).png \
-  /Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-BookStack-Mockup-\(insta\).png \
-  /Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-BookStack-Mockup--\(linkedin\).png
+  "$LOCAL_DOWNLOADS/Loren-Galese-Unfolding-Origami-ereader-and-cover-Mockup-(web).png" \
+  "$LOCAL_DOWNLOADS/Loren-Galese-Unfolding-Origami-OpenBook-Mockup-(linkedin).png" \
+  "$LOCAL_DOWNLOADS/Loren-Galese-Unfolding-Origami-BookStack-Mockup-(insta).png" \
+  "$LOCAL_DOWNLOADS/Loren-Galese-Unfolding-Origami-BookStack-Mockup--(linkedin).png"
 ```
 
 Expected: all six paths exist. Verify actual pixel dimensions rather than assuming them. If PNG and JPEG variants both exist, compare dimensions and visible compression before selecting the higher-quality approved source. Record the selected path and SHA-256 hash.

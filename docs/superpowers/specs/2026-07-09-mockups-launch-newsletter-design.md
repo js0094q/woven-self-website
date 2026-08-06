@@ -16,10 +16,10 @@ The work is local campaign production only. It does not change the public websit
 
 - Final front cover: `exports/kdp-ebook-cover-1600x2560-fixed.png`
 - Paperback wrap and spine reference: `exports/kdp-paperback-cover-updated-synopsis-final.pdf`
-- Ereader and physical-cover mockup: `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-ereader-and-cover-Mockup-(web).png`
-- Open-book mockup: `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-OpenBook-Mockup-(linkedin).png`
-- Instagram book-stack mockup: `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-BookStack-Mockup-(insta).png`
-- LinkedIn book-stack mockup: `/Users/josephstewart/Downloads/Loren-Galese-Unfolding-Origami-BookStack-Mockup--(linkedin).png`
+- Ereader and physical-cover mockup: `<local-downloads>/Loren-Galese-Unfolding-Origami-ereader-and-cover-Mockup-(web).png`
+- Open-book mockup: `<local-downloads>/Loren-Galese-Unfolding-Origami-OpenBook-Mockup-(linkedin).png`
+- Instagram book-stack mockup: `<local-downloads>/Loren-Galese-Unfolding-Origami-BookStack-Mockup-(insta).png`
+- LinkedIn book-stack mockup: `<local-downloads>/Loren-Galese-Unfolding-Origami-BookStack-Mockup--(linkedin).png`
 - Approved decorative art: `images/unfolding-origami-butterfly-1.png`, `images/unfolding-origami-butterfly-2.png`, and `images/unfolding-origami-butterfly-3.png`
 
 The final ebook cover and rendered paperback wrap both visibly confirm the centered subtitle, intact title, endorsement, butterflies, origami box, and author credentials.
