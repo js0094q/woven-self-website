@@ -3,6 +3,7 @@
   "scripts": {
     "check:security": "node tests/security-headers.test.mjs && node tests/repository-privacy.test.mjs",
     "check:excerpt": "node tests/excerpt-route.test.mjs",
+    "check:signed-copy": "node tests/signed-copy-ordering.test.mjs",
     "export:magazine-ad": "node marketing/magazine-ad/export-visuals.mjs",
     "flodesk:kit": "node scripts/list-flodesk-build-kit.js"
   },
