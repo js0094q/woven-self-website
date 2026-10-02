@@ -1143,7 +1143,7 @@ footer {
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1151px) {
   #mobile-nav,
   #mobile-nav-panel {
     display: none !important;
