@@ -1,0 +1,12 @@
+.header-inner{height:auto;min-height:84px;gap:12px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.header-name{order:2;margin-left:auto;font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(18px,2vw,27px);line-height:1.3;color:var(--sage);text-decoration:none}
+main h1,main h2,main h3{font-family:'Playfair Display',serif!important;font-weight:700!important}
+main h2{font-size:clamp(2rem,3.8vw,3.4rem)!important;line-height:1.2}
+main h3{font-size:clamp(1.45rem,2.3vw,1.85rem)!important;line-height:1.3}
+.brand{order:1;min-width:0}.hamburger{order:3}.nav{order:4;width:100%;justify-content:center;flex-wrap:wrap;gap:18px}
+a.btn-primary::after,a.btn-outline::after,a.btn-secondary::after,a.author-cta::after{content:'↗';display:inline-flex;align-items:center;justify-content:center;width:1.65rem;height:1.65rem;min-width:1.65rem;margin-left:.6rem;border-radius:50%;background:#eba7b5;color:#19263a;font-size:1.05rem;font-weight:600;line-height:1;vertical-align:middle}
+.btn-primary:focus-visible,.btn-outline:focus-visible,.header-name:focus-visible{outline:3px solid #b97887;outline-offset:4px}
+.brand-logo{width:300px;height:82px}
+.home-opening-logo{display:block;width:min(100%,460px);height:auto;margin:0 auto 2rem}
+@media(max-width:700px){.brand-logo{width:230px;height:68px}.header-name{font-size:20px;max-width:none;width:100%;margin-left:0;text-align:center;order:4}.header-inner{gap:8px}.header-book{display:none}}
+@media(max-width:350px){.brand-logo{width:210px}.header-name{font-size:18px}.site-header .site-container{padding-left:8px;padding-right:8px}}

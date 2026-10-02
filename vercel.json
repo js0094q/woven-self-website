@@ -14,10 +14,10 @@
     }
   ],
   "redirects": [
-    { "source": "/excerpt-unfolding-origami.html", "destination": "/excerpt-unfolding-origami", "permanent": true }
+    { "source": "/excerpt-unfolding-origami.html", "destination": "https://www.amazon.com/dp/B0H27BM8K1?asin=B0H27BM8K1&revisionId=d20c49a2&format=3&depth=1", "permanent": false },
+    { "source": "/excerpt-unfolding-origami", "destination": "https://www.amazon.com/dp/B0H27BM8K1?asin=B0H27BM8K1&revisionId=d20c49a2&format=3&depth=1", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/excerpt-unfolding-origami", "destination": "/assets/unfolding-origami-excerpt.pdf" },
     { "source": "/unfolding", "destination": "/author.html" },
     { "source": "/blog/:slug", "destination": "/blog/post.html?slug=:slug" }
   ]

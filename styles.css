@@ -2046,3 +2046,15 @@ footer {
     display: none;
   }
 }
+
+.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.5rem;margin-top:2rem}.path-card{padding:2rem}.path-card p{margin-top:1rem}.home-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.15}.lead{max-width:70ch;font-size:1.15rem;line-height:1.8}@media(max-width:1150px){.nav{display:none}.hamburger{display:inline-flex}}@media(min-width:1151px) and (max-width:1250px){.nav{gap:.6rem}.nav-link{font-size:.85rem}.header-book{display:none}}
+.book-feature-image{display:block;margin-top:2rem}.book-feature-image img,.book-image-grid img{display:block;width:100%;height:auto;border-radius:18px}.author-photo-section{padding:clamp(3rem,6vw,5rem) 0}.book-image-grid{display:grid;gap:2rem;margin-top:2rem}.speaking-portrait{float:right;width:min(36%,340px);height:auto;margin:1.5rem 0 2rem 2.5rem;border-radius:18px} @media(max-width:700px){.speaking-portrait{float:none;width:min(100%,340px);margin:1.5rem 0}}
+.home-current{background:var(--bg-soft)}.current-book-image{width:100%;height:auto;border-radius:12px;margin:1rem 0}.page-portrait-section{padding:2rem 0 4rem}.page-portrait-section img{width:min(100%,560px);height:auto;display:block;margin:auto;border-radius:18px}.home-current h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.2}
+
+/* Shared header branding */
+.header-name{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.1rem,1.6vw,1.45rem);line-height:1.2;color:var(--color-primary,var(--sage));text-decoration:none;order:2;margin-left:auto}
+.brand{min-width:300px;order:1}
+.brand-logo{width:300px;height:82px}
+.header-inner{min-height:96px;height:auto;gap:1rem;padding-top:.5rem;padding-bottom:.5rem;flex-wrap:wrap}
+.site-header .nav{order:3;width:100%;justify-content:center;flex-wrap:wrap}
+@media(max-width:1150px){.brand{min-width:230px}.brand-logo{width:230px;height:68px}.header-name{order:3;width:100%;text-align:center;padding-bottom:.25rem;margin-left:0}.hamburger{order:2}.header-inner{min-height:106px;gap:.25rem 1rem}}
