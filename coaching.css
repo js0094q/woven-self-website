@@ -1,0 +1,63 @@
+/* Coaching uses the site's shared palette, typography, cards, and buttons. */
+.coaching-section { padding: clamp(3rem, 6vw, 5rem) 0; }
+.coaching-section[id] { scroll-margin-top: 12rem; }
+.coaching-content h1 {
+  max-width: 15ch;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.15;
+}
+.coaching-content h1,
+.coaching-content h2,
+.coaching-content h3 { text-wrap: balance; }
+.coaching-content h2 { max-width: 24ch; }
+.coaching-content p { max-width: 70ch; margin-top: 1.25rem; }
+.coaching-content ul { list-style: disc; padding-left: 1.25rem; margin-top: 1.25rem; }
+.coaching-content li + li { margin-top: .75rem; }
+.coaching-hero { background: var(--bg-soft); }
+.coaching-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.coaching-portrait { display: block; width: 100%; height: auto; border-radius: 18px; }
+.coaching-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.coaching-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+.coaching-comparison { background: var(--bg-soft); }
+.coaching-comparison .coaching-two-column { margin-top: 2rem; }
+.coaching-panel { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.5rem, 3vw, 2rem); }
+.coaching-panel ul { flex-grow: 1; margin-bottom: 2rem; }
+.coaching-content .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 1.75rem;
+  white-space: normal;
+}
+.coaching-panel .btn-primary { margin-top: 0; }
+.coaching-content .coaching-boundary { margin-top: 2rem; }
+.coaching-examples { padding-top: .5rem; }
+.coaching-examples dl { margin-top: 1.5rem; }
+.coaching-examples dl div + div { margin-top: 1.75rem; }
+.coaching-examples dt { font-weight: 600; }
+.coaching-examples dd { margin: .5rem 0 0; }
+.coaching-next { background: var(--bg-soft); }
+.coaching-scope { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.coaching-content ::selection { background: var(--book-cover-pink); color: var(--text); }
+@media (max-width: 900px) {
+  .coaching-focus-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 780px) {
+  .coaching-hero-grid,
+  .coaching-two-column { grid-template-columns: 1fr; }
+  .coaching-portrait { max-width: 380px; }
+}

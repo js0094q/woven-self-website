@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -26,121 +27,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/site-updates.css?v=header-size-20261001" />
 </head>
 
 <body class="antialiased">
 
-  <header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
   <div class="site-container header-inner">
-
-    <!-- Brand -->
-    <a href="/" class="brand">
-      <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
-    </a>
-
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about.html" class="nav-link">About</a>
-<a href="/coaching.html" class="nav-link">Coaching</a>
-<a href="/peer-support.html" class="nav-link">Peer Support</a>
-<a href="/speaking.html" class="nav-link">Speaking</a>
-      <a href="/therapy.html" class="nav-link">Therapy</a>
-      <a href="/author.html" class="nav-link">Unfolding Origami</a>
-      <a href="/substack.html" class="nav-link">Substack</a>
-      <a href="/#contact" class="nav-link">Contact</a>
-
-      <a
-        href="/therapy.html#booking"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-primary header-book"
-      >
-        Therapy inquiries
-      </a>
-    </nav>
+    <a href="/" class="brand" aria-label="The Woven Self home"><img src="/images/logo.png" alt="" class="brand-logo" loading="eager" decoding="async"></a>
     <a class="header-name" href="/">Loren Galese, LPC, ACS</a>
-
-    <button
-      class="hamburger"
-      type="button"
-      aria-label="Open menu"
-      aria-controls="mobile-nav"
-      aria-expanded="false"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
-      </svg>
+    <nav class="nav" aria-label="Primary">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="location">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      <a href="/therapy.html#booking" class="btn-primary header-book"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path></svg>
     </button>
-
   </div>
 </header>
+<div id="mobile-nav-panel" hidden aria-hidden="true"></div>
+<div id="mobile-nav" hidden inert aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu" tabindex="-1">
+  <button id="close-mobile-nav" type="button" aria-label="Close menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+  </button>
+  <nav aria-label="Mobile">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="location">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+  </nav>
+  <a href="/therapy.html#booking" class="btn-primary mobile-menu-cta"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
 
-  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="p-6 flex flex-col h-full">
-      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
+  <main id="main-content" tabindex="-1" class="py-16 sm:py-20"><div class="site-container"><p class="eyebrow">Quiet Alchemy with Loren</p><h1>Substack</h1><p class="lead mt-6">Writing, reflections, and book updates from Loren Galese.</p><p class="mt-6"><a class="btn-primary" href="https://quietalchemywloren.substack.com" target="_blank" rel="noopener noreferrer"><span class="btn-label">Read &amp; subscribe</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p><h2 class="mt-12">Recent posts</h2><div class="path-grid">
+<article class="card path-card"><p class="eyebrow">September 29, 2026</p><h3>That’s All Apart of the College Experience...Right?</h3><p>College Rape and Rage Continues</p><p class="mt-6"><a class="btn-secondary" href="https://quietalchemywloren.substack.com/p/thats-all-apart-of-the-college-experienceright" target="_blank" rel="noopener noreferrer"><span class="btn-label">Read on Substack</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p></article>
+<article class="card path-card"><p class="eyebrow">September 25, 2026</p><h3>If He’s Killing You, I See You</h3><p>Here’s What Had to Die First to be Reborn</p><p class="mt-6"><a class="btn-secondary" href="https://quietalchemywloren.substack.com/p/if-hes-killing-you-i-see-you" target="_blank" rel="noopener noreferrer"><span class="btn-label">Read on Substack</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p></article>
+<article class="card path-card"><p class="eyebrow">Pinned guide · September 4, 2026</p><h3>Start Here!</h3><p>A roadmap for readers who are new to Quiet Alchemy.</p><p class="mt-6"><a class="btn-secondary" href="https://quietalchemywloren.substack.com/p/start-here" target="_blank" rel="noopener noreferrer"><span class="btn-label">Start reading</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p></article>
+</div><p class="mt-8"><a class="btn-secondary" href="https://substack.com/@quietalchemywloren/posts" target="_blank" rel="noopener noreferrer"><span class="btn-label">See all posts</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p></div></main>
 
-      <nav class="mt-6 space-y-2">
-        <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
-        <a href="/about.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
-<a href="/coaching.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Coaching</a>
-<a href="/peer-support.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Peer Support</a>
-<a href="/speaking.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Speaking</a>
-        <a href="/therapy.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Therapy</a>
-        <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Unfolding Origami</a>
-        <a href="/substack.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Substack</a>
-        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
-      </nav>
-
-      <a
-        href="/therapy.html#booking"
-        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
-        target="_blank" rel="noopener noreferrer"
-      >Therapy inquiries</a>
-    </div>
-  </div>
-
-  <main class="py-16 sm:py-20"><div class="site-container"><p class="eyebrow">Quiet Alchemy with Loren</p><h1>Substack</h1><p class="lead mt-6">Writing, reflections, and book updates from Loren Galese.</p><p class="mt-6"><a class="btn-primary" href="https://quietalchemywloren.substack.com" target="_blank" rel="noopener noreferrer">Read &amp; subscribe</a></p><h2 class="mt-12">Recent posts</h2><div class="path-grid">
-<article class="card path-card"><p class="eyebrow">September 29, 2026</p><h3>That’s All Apart of the College Experience...Right?</h3><p>College Rape and Rage Continues</p><p class="mt-6"><a class="btn-outline" href="https://quietalchemywloren.substack.com/p/thats-all-apart-of-the-college-experienceright" target="_blank" rel="noopener noreferrer">Read on Substack</a></p></article>
-<article class="card path-card"><p class="eyebrow">September 25, 2026</p><h3>If He’s Killing You, I See You</h3><p>Here’s What Had to Die First to be Reborn</p><p class="mt-6"><a class="btn-outline" href="https://quietalchemywloren.substack.com/p/if-hes-killing-you-i-see-you" target="_blank" rel="noopener noreferrer">Read on Substack</a></p></article>
-<article class="card path-card"><p class="eyebrow">Pinned guide · September 4, 2026</p><h3>Start Here!</h3><p>A roadmap for readers who are new to Quiet Alchemy.</p><p class="mt-6"><a class="btn-outline" href="https://quietalchemywloren.substack.com/p/start-here" target="_blank" rel="noopener noreferrer">Start reading</a></p></article>
-</div><p class="mt-8"><a class="btn-outline" href="https://substack.com/@quietalchemywloren/posts" target="_blank" rel="noopener noreferrer">See all posts</a></p></div></main>
-
-  <footer class="bg-[var(--color-light-bg)] text-center py-8">
+  <footer class="site-footer">
+  <div class="site-container">
+    <nav class="footer-nav" aria-label="Footer">
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="location">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/speaking.html" class="nav-link">Speaking</a>
+        <a href="/substack.html" class="nav-link">Writing on Substack</a>
+    </nav>
     <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-
-    const toggleNav = () => {
-      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav?.classList.toggle('translate-x-full');
-      mobileNavPanel?.classList.toggle('hidden');
-    };
-
-    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
-      hamburgerBtn.addEventListener('click', toggleNav);
-      closeMobileNavBtn.addEventListener('click', toggleNav);
-      mobileNavPanel.addEventListener('click', toggleNav);
-
-      mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
-        });
-      });
-    }
-  </script>
+  <script defer src="/site.js"></script>
 
   
 

@@ -41,160 +41,189 @@
   </style>
 
   
-  <link rel="stylesheet" href="/site-updates.css?v=header-size-20261001" />
+  <link rel="stylesheet" href="/coaching.css?v=20261004">
 </head>
 
 <body class="antialiased">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <div class="site-container header-inner">
-
-   <!-- Brand -->
-<a href="/" class="brand">
-  <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
-</a>
-
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about.html" class="nav-link">About</a>
-<a href="/coaching.html" class="nav-link">Coaching</a>
-<a href="/peer-support.html" class="nav-link">Peer Support</a>
-<a href="/speaking.html" class="nav-link">Speaking</a>
-      <a href="/therapy.html" class="nav-link">Therapy</a>
-      <a href="/author.html" class="nav-link">Unfolding Origami</a>
-      <a href="/substack.html" class="nav-link">Substack</a>
-      <a href="/#contact" class="nav-link">Contact</a>
-
-      <a
-        href="/therapy.html#booking"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-primary header-book"
-      >
-        Therapy inquiries
-      </a>
-    </nav>
+    <a href="/" class="brand" aria-label="The Woven Self home"><img src="/images/logo.png" alt="" class="brand-logo" loading="eager" decoding="async"></a>
     <a class="header-name" href="/">Loren Galese, LPC, ACS</a>
-
-    <button
-      class="hamburger"
-      type="button"
-      aria-label="Open menu"
-      aria-controls="mobile-nav"
-      aria-expanded="false"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
-      </svg>
+    <nav class="nav" aria-label="Primary">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link" aria-current="page">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      <a href="/therapy.html#booking" class="btn-primary header-book"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path></svg>
     </button>
-
   </div>
 </header>
+<div id="mobile-nav-panel" hidden aria-hidden="true"></div>
+<div id="mobile-nav" hidden inert aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu" tabindex="-1">
+  <button id="close-mobile-nav" type="button" aria-label="Close menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+  </button>
+  <nav aria-label="Mobile">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link" aria-current="page">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+  </nav>
+  <a href="/therapy.html#booking" class="btn-primary mobile-menu-cta"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
 
-  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="p-6 flex flex-col h-full">
-      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
+  <main id="main-content" tabindex="-1">
+    <div class="coaching-content">
+      <section class="coaching-section coaching-hero" aria-labelledby="coaching-title">
+        <div class="site-container coaching-hero-grid">
+          <div>
+            <h1 id="coaching-title">Turn Insight Into Action</h1>
+            <p class="lead">You understand yourself better. Now what?</p>
+            <p>1:1 coaching provides focused, practical support for applying what you have learned about yourself to everyday decisions, relationships, and goals.</p>
+            <p>You've done some of the deeper work. Now comes the part where you figure out what to actually do with it. Together, we identify specific next steps and ways to follow through.</p>
+            <a class="btn-primary" href="#coaching-focus"><span class="btn-label">Explore coaching</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          </div>
+          <img class="coaching-portrait" src="/images/loren-blue-portrait.jpg" alt="Loren Galese in a blue floral blouse" loading="eager" decoding="async">
+        </div>
+      </section>
 
-      <nav class="mt-6 space-y-2">
-        <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
-        <a href="/about.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
-<a href="/coaching.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Coaching</a>
-<a href="/peer-support.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Peer Support</a>
-<a href="/speaking.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Speaking</a>
-        <a href="/therapy.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Therapy</a>
-        <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Unfolding Origami</a>
-        <a href="/substack.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Substack</a>
-        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
-      </nav>
+      <section id="coaching-focus" class="coaching-section" aria-labelledby="coaching-focus-title">
+        <div class="site-container">
+          <h2 id="coaching-focus-title">What we can work on</h2>
+          <p class="lead">The focus is practical and future-oriented. We start with a goal or decision that matters to you and work out how to move it forward.</p>
+          <div class="coaching-focus-grid">
+            <div>
+              <h3>Boundaries &amp; relationships</h3>
+              <ul>
+                <li>Setting and maintaining boundaries</li>
+                <li>Practicing communication in relationships</li>
+                <li>Developing self-trust in everyday choices</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Decisions &amp; direction</h3>
+              <ul>
+                <li>Making decisions and planning next steps</li>
+                <li>Navigating life transitions and identity changes</li>
+                <li>Moving forward on career or educational goals</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Routines &amp; follow-through</h3>
+              <ul>
+                <li>Putting skills and strategies into daily practice</li>
+                <li>Building routines and practical systems that support change</li>
+                <li>Creating accountability for goals that have remained stuck</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <a
-        href="/therapy.html#booking"
-        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
-        target="_blank" rel="noopener noreferrer"
-      >Therapy inquiries</a>
+      <section class="coaching-section coaching-comparison" aria-labelledby="coaching-comparison-title">
+        <div class="site-container">
+          <h2 id="coaching-comparison-title">Therapy or coaching?</h2>
+          <p class="lead">Some topics overlap. The purpose and kind of support are different.</p>
+          <div class="coaching-two-column">
+            <article class="card coaching-panel">
+              <h3>Therapy</h3>
+              <p>Clinical care to understand, process, and treat what is affecting your mental health.</p>
+              <ul>
+                <li>Mental health symptoms and significant emotional distress</li>
+                <li>Clinical assessment and diagnosis where appropriate</li>
+                <li>Trauma processing and treatment planning</li>
+                <li>Psychiatric or psychological conditions</li>
+                <li>Deeper exploration of longstanding patterns</li>
+              </ul>
+              <a class="btn-primary" href="/therapy.html"><span class="btn-label">Explore therapy</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </article>
+            <article class="card coaching-panel">
+              <h3>Coaching</h3>
+              <p>Non-clinical support to apply existing insight, plan, act, and follow through.</p>
+              <ul>
+                <li>Concrete goals, decisions, and next steps</li>
+                <li>Boundaries, communication, and relationships</li>
+                <li>Behavioral change and life transitions</li>
+                <li>Practical systems and implementing strategies</li>
+                <li>Accountability and following through on specific goals</li>
+              </ul>
+              <a class="btn-primary" href="#coaching-fit"><span class="btn-label">Explore coaching</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </article>
+          </div>
+          <p class="coaching-boundary">Coaching is not psychotherapy and does not replace mental health treatment. It can complement therapeutic work for people who are ready to focus on specific goals, decisions, and next steps.</p>
+        </div>
+      </section>
+
+      <section id="coaching-fit" class="coaching-section" aria-labelledby="coaching-fit-title">
+        <div class="site-container coaching-two-column">
+          <div>
+            <h2 id="coaching-fit-title">Is coaching a fit?</h2>
+            <p>Coaching may be a fit if you have insight into what you want to change and are ready to focus on putting it into practice. That understanding might come from therapy or other meaningful personal work.</p>
+            <p>You might have a specific decision to make, a goal you keep putting off, or a skill you understand but find hard to use in daily life.</p>
+            <p>If you need support for mental health symptoms, significant emotional distress, or trauma processing, therapy may be the more appropriate service. Coaching does not substitute for needed clinical care.</p>
+          </div>
+          <div class="coaching-examples">
+            <h3>What that can look like</h3>
+            <dl>
+              <div>
+                <dt>You know where a boundary belongs.</dt>
+                <dd>Plan what to say, practice the conversation, and decide how to maintain it.</dd>
+              </div>
+              <div>
+                <dt>You have a career or educational goal.</dt>
+                <dd>Break it into manageable steps and create a plan for following through.</dd>
+              </div>
+              <div>
+                <dt>You understand a pattern you want to change.</dt>
+                <dd>Choose a specific daily behavior to practice and build a routine that supports it.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="coaching-section coaching-next" aria-labelledby="coaching-next-title">
+        <div class="site-container">
+          <h2 id="coaching-next-title">Start with a next step</h2>
+          <p>If this sounds like the support you are looking for, get in touch about coaching. You do not need to share symptoms, trauma narratives, or other sensitive personal information in the inquiry form.</p>
+          <a class="btn-primary" href="/#contact"><span class="btn-label">Ask about coaching</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <div class="coaching-scope" aria-labelledby="coaching-scope-title">
+            <h3 id="coaching-scope-title">A clear scope of support</h3>
+            <p>Coaching is a non-clinical service, separate from my psychotherapy practice. It does not establish a therapist-client relationship or include formal mental health assessment, diagnosis, psychotherapy, or treatment of trauma or other mental health conditions. It is not a substitute for mental health treatment or crisis services. If your needs fall outside the scope of coaching, we will discuss appropriate referrals.</p>
+          </div>
+        </div>
+      </section>
     </div>
+<section class="py-16 sm:py-20" aria-labelledby="peer-support-heading"><div class="site-container"><div class="card group-card rounded-3xl p-7"><p class="eyebrow">COMING SOON</p><h2 id="peer-support-heading">What Comes Next</h2><h3 class="group-offering-title">Beyond the Letters: Life After the Degree</h3><p class="mt-4">Graduating and knowing what comes next are two very different things. This peer-support group is for the transition into adult life: work, relationships, independence, expectations, comparison, and figuring out what you actually want.</p><p class="mt-6"><a class="btn-secondary group-cta" href="/peer-support.html#interest-list"><span class="btn-label">Join the interest list</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p></div></div></section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="site-container">
+    <nav class="footer-nav" aria-label="Footer">
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link" aria-current="page">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/speaking.html" class="nav-link">Speaking</a>
+        <a href="/substack.html" class="nav-link">Writing on Substack</a>
+    </nav>
+    <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
   </div>
+</footer>
 
-  <main><section class="py-16 sm:py-20"><div class="site-container"><h1 class="font-serif">Current Offerings</h1><h2 class="mt-8 font-serif">1:1 Coaching</h2><p class="mt-6 lead">College experiences can leave you questioning your boundaries, your relationships, and your place in a community.</p><p class="mt-4">Individual coaching offers space to clarify your goals and choices as you navigate college life, coercive dynamics, and Greek-life experiences.</p><h2 class="mt-8">What we can focus on</h2><ul class="mt-4 list-disc pl-6"><li>Recognizing pressure and coercive patterns</li><li>Clarifying boundaries and practicing how to communicate them</li><li>Navigating belonging, loyalty, and decisions about Greek-life involvement</li><li>Identifying support and practical next steps</li></ul><section class="mt-8 card rounded-3xl p-7" aria-labelledby="coaching-disclaimer"><h2 id="coaching-disclaimer">Coaching Disclaimer</h2><p class="mt-4"><strong>Coaching is a non-clinical service and is separate from my psychotherapy practice.</strong> Coaching does not establish a therapist–client relationship and does not include mental health assessment, diagnosis, psychotherapy, or treatment of trauma or other mental health conditions. It is not a substitute for mental health treatment or crisis services. If your needs fall outside the scope of coaching, we will discuss appropriate referrals.</p></section><p class="mt-6"><strong>You are requesting coaching, not psychotherapy.</strong> Coaching does not include diagnosis or mental health treatment.</p><p class="mt-8"><a class="btn-primary" href="/#contact">Ask about 1:1 coaching</a></p></div></section><section class="page-portrait-section"><div class="site-container"><img src="/images/loren-blue-portrait.jpg" alt="Loren Galese in a blue floral blouse" loading="lazy" decoding="async"></div></section><section class="py-16 sm:py-20" aria-labelledby="peer-support-heading"><div class="site-container"><h2 id="peer-support-heading">Beyond the Letters: Peer Support After Greek Life</h2><p class="mt-4">A space for connection and shared perspective for people navigating difficult college and Greek-life experiences, including coercive dynamics, pressure to conform, unhealthy relationships, and questions about belonging.</p><p class="mt-4"><strong>Separate men’s and women’s groups.</strong> For adults 18+ who have left college and had fraternity or sorority involvement, including pledging without joining. Each group meets for six weekly, 75-minute sessions with six to eight participants. Cost: $25 per session ($150 total). Tentative start: November 2026, subject to sufficient enrollment; exact dates and times will be confirmed.</p><p class="mt-4">Discussions focus on recognizing patterns, exploring boundaries, rebuilding confidence in your own judgment, and identifying support. Participation does not require sharing your full story.</p><p class="mt-6"><strong>Peer support is a non-clinical service, not group therapy.</strong> It does not establish a therapist–client relationship or include mental health assessment, diagnosis, psychotherapy, or treatment. It is not a substitute for mental health treatment or crisis services. Participants are expected to respect one another’s privacy, but confidentiality among members cannot be guaranteed.</p><p class="mt-6"><strong>Interested?</strong> Request information about the group’s format, eligibility, availability, and enrollment.</p><p class="mt-8"><a class="btn-outline" href="/peer-support.html">Explore Beyond the Letters: Peer Support After Greek Life</a></p><p class="mt-4"><a href="/#contact" class="underline underline-offset-4">Ask about the group</a></p></div></section></main>
-
-  <footer class="py-8 text-center">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
-      <p class="mt-1 text-sm">Trauma-informed therapy in New Jersey, EMDR + IFS, couples therapy (Gottman + EFT), telehealth statewide</p>
-    </div>
-  </footer>
-
-  <script>
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-
-    const toggleNav = () => {
-      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav?.classList.toggle('translate-x-full');
-      mobileNavPanel?.classList.toggle('hidden');
-    };
-
-    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
-      hamburgerBtn.addEventListener('click', toggleNav);
-      closeMobileNavBtn.addEventListener('click', toggleNav);
-      mobileNavPanel.addEventListener('click', toggleNav);
-
-      mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
-        });
-      });
-    }
-
-    const contactForm = document.querySelector('.contact-form');
-    const formContainer = document.getElementById('contact-form-container');
-    const successMessage = document.getElementById('success-message');
-    const errorMessage = document.getElementById('form-error-message');
-    const submitButton = document.getElementById('contact-submit');
-
-    if (contactForm && successMessage && errorMessage && formContainer && submitButton) {
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const endpoint = contactForm.getAttribute('action') || '';
-        if (endpoint.includes('your-form-id')) {
-          errorMessage.classList.remove('hidden');
-          successMessage.classList.add('hidden');
-          return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-        errorMessage.classList.add('hidden');
-
-        try {
-          const formData = new FormData(contactForm);
-          const response = await fetch(endpoint, {
-            method: 'POST',
-            body: formData,
-            headers: { Accept: 'application/json' },
-          });
-
-          if (!response.ok) throw new Error('Form submission failed');
-
-          formContainer.classList.add('hidden');
-          successMessage.classList.remove('hidden');
-        } catch (error) {
-          errorMessage.classList.remove('hidden');
-          submitButton.disabled = false;
-          submitButton.textContent = 'Send Message';
-        }
-      });
-    }
-  </script>
+  <script defer src="/site.js"></script>
 
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
