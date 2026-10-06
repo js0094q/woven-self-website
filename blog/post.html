@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -50,75 +51,44 @@
 </head>
 
 <body class="antialiased">
- <header class="site-header">
+ <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
   <div class="site-container header-inner">
-
-    <!-- Brand -->
-    <a href="/" class="brand">
-      <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
-    </a>
-
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about.html" class="nav-link">About</a>
-      <a href="/#services" class="nav-link">Therapy</a>
-      <a href="/author.html" class="nav-link">Author</a>
-      <a href="/blog.html" class="nav-link">Blog</a>
-      <a href="/#contact" class="nav-link">Contact</a>
-
-      <a
-        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-primary header-book"
-      >
-        Book via Headway
-      </a>
+    <a href="/" class="brand" aria-label="The Woven Self home"><img src="/images/logo.png" alt="" class="brand-logo" loading="eager" decoding="async"></a>
+    <a class="header-name" href="/">Loren Galese, LPC, ACS</a>
+    <nav class="nav" aria-label="Primary">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="location">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      <a href="/therapy.html#booking" class="btn-primary header-book"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </nav>
-
-    <button
-      class="hamburger"
-      type="button"
-      aria-label="Open menu"
-      aria-controls="mobile-nav"
-      aria-expanded="false"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
-      </svg>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path></svg>
     </button>
-
   </div>
 </header>
+<div id="mobile-nav-panel" hidden aria-hidden="true"></div>
+<div id="mobile-nav" hidden inert aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu" tabindex="-1">
+  <button id="close-mobile-nav" type="button" aria-label="Close menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+  </button>
+  <nav aria-label="Mobile">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="location">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+  </nav>
+  <a href="/therapy.html#booking" class="btn-primary mobile-menu-cta"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
 
-  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="p-6 flex flex-col h-full">
-      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-
-      <nav class="mt-6 space-y-2">
-        <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
-        <a href="/about.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
-        <a href="/#services" class="block py-2 text-lg hover:text-[var(--color-primary)]">Therapy</a>
-        <a href="/author.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Author</a>
-        <a href="/blog.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Blog</a>
-        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
-      </nav>
-
-      <a
-        href="https://care.headway.co/providers/loren-galese?utm_source=pem&utm_medium=direct_link&utm_campaign=187918"
-        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
-        target="_blank" rel="noopener noreferrer"
-      >Book via Headway</a>
-    </div>
-  </div>
-
-  <main class="py-14 sm:py-16">
+  <main id="main-content" tabindex="-1" class="py-14 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <a href="../blog.html" class="inline-flex items-center gap-2 text-sm underline underline-offset-4">
         <span aria-hidden="true">←</span> Back to Blog
@@ -149,35 +119,23 @@
     </div>
   </main>
 
-  <footer class="bg-[var(--color-light-bg)] text-center py-8">
+  <footer class="site-footer">
+  <div class="site-container">
+    <nav class="footer-nav" aria-label="Footer">
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="location">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/speaking.html" class="nav-link">Speaking</a>
+        <a href="/substack.html" class="nav-link">Writing on Substack</a>
+    </nav>
     <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-
-    const toggleNav = () => {
-      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav?.classList.toggle('translate-x-full');
-      mobileNavPanel?.classList.toggle('hidden');
-    };
-
-    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
-      hamburgerBtn.addEventListener('click', toggleNav);
-      closeMobileNavBtn.addEventListener('click', toggleNav);
-      mobileNavPanel.addEventListener('click', toggleNav);
-
-      mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
-        });
-      });
-    }
-  </script>
+  <script defer src="/site.js"></script>
 
   <script>
     function getSlug() {
@@ -253,6 +211,15 @@
       const html = marked.parse(md);
       const article = document.getElementById('post-content');
       article.innerHTML = html;
+
+      // The metadata already renders the page title above the Markdown body.
+      const bodyTitle = article.querySelector('h1');
+      if (bodyTitle?.textContent.trim() === title) bodyTitle.remove();
+      article.querySelectorAll('h1').forEach((heading) => {
+        const sectionHeading = document.createElement('h2');
+        sectionHeading.replaceChildren(...heading.childNodes);
+        heading.replaceWith(sectionHeading);
+      });
 
       // Canonical: reflect the actual URL used for this system
       const canonical = document.querySelector('link[rel="canonical"]');

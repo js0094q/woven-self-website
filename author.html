@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://formspree.io https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'; form-action https://formspree.io">
@@ -98,82 +99,47 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/site-updates.css?v=header-size-20261001" />
 </head>
 
 <body class="antialiased author-page">
-  <header class="site-header">
-    <div class="site-container header-inner">
-      <a href="/" class="brand" aria-label="The Woven Self — Loren Galese home">
-        <img src="/images/logo.png" alt="The Woven Self logo" class="brand-logo" loading="eager" decoding="async" />
-      </a>
-
-      <nav class="nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/about.html" class="nav-link">About</a>
-<a href="/coaching.html" class="nav-link">Coaching</a>
-<a href="/peer-support.html" class="nav-link">Peer Support</a>
-<a href="/speaking.html" class="nav-link">Speaking</a>
-        <a href="/therapy.html" class="nav-link">Therapy</a>
-        <a href="/author.html" class="nav-link">Unfolding Origami</a>
-        <a href="/substack.html" class="nav-link">Substack</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-
-        <a
-          href="/therapy.html#booking"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary header-book"
-        >
-          Therapy inquiries
-        </a>
-      </nav>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="site-container header-inner">
+    <a href="/" class="brand" aria-label="The Woven Self home"><img src="/images/logo.png" alt="" class="brand-logo" loading="eager" decoding="async"></a>
     <a class="header-name" href="/">Loren Galese, LPC, ACS</a>
-
-      <button
-        class="hamburger"
-        type="button"
-        aria-label="Open menu"
-        aria-controls="mobile-nav"
-        aria-expanded="false"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <div id="mobile-nav-panel" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
-  <div id="mobile-nav" class="fixed top-0 right-0 z-50 h-full w-72 bg-[var(--color-background)] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="p-6 flex flex-col h-full">
-      <button id="close-mobile-nav" class="self-end text-[var(--color-primary)]" aria-label="Close menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-
-      <nav class="mt-6 space-y-2">
-        <a href="/" class="block py-2 text-lg hover:text-[var(--color-primary)]">Home</a>
-        <a href="/about.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">About</a>
-<a href="/coaching.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Coaching</a>
-<a href="/peer-support.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Peer Support</a>
-<a href="/speaking.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Speaking</a>
-        <a href="/therapy.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Therapy</a>
-        <a href="/author.html" class="block py-2 text-lg font-semibold text-[var(--color-primary)]">Unfolding Origami</a>
-        <a href="/substack.html" class="block py-2 text-lg hover:text-[var(--color-primary)]">Substack</a>
-        <a href="/#contact" class="block py-2 text-lg hover:text-[var(--color-primary)]">Contact</a>
-      </nav>
-
-      <a
-        href="/therapy.html#booking"
-        class="btn-primary mt-auto w-full text-center px-5 py-3 rounded-full font-semibold shadow-sm"
-        target="_blank" rel="noopener noreferrer"
-      >Therapy inquiries</a>
-    </div>
+    <nav class="nav" aria-label="Primary">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="page">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      <a href="/author.html#available-formats" class="btn-primary header-book"><span class="btn-label">Explore the book</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path></svg>
+    </button>
   </div>
+</header>
+<div id="mobile-nav-panel" hidden aria-hidden="true"></div>
+<div id="mobile-nav" hidden inert aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu" tabindex="-1">
+  <button id="close-mobile-nav" type="button" aria-label="Close menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+  </button>
+  <nav aria-label="Mobile">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="page">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+  </nav>
+  <a href="/author.html#available-formats" class="btn-primary mobile-menu-cta"><span class="btn-label">Explore the book</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</div>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="author-hero">
       <div class="author-hero-motif author-hero-motif-one" aria-hidden="true">
         <img src="/images/unfolding-origami-butterfly-1.png" alt="" loading="eager" decoding="async" />
@@ -195,24 +161,24 @@
                 href="https://www.amazon.com/dp/B0H7YZ5N28"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="author-cta author-cta-primary"
-              >Buy Paperback</a>
+                class="btn-primary"
+              ><span class="btn-label">Buy Paperback</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
               <a
                 href="https://www.amazon.com/dp/B0H27BM8K1"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="author-cta author-cta-secondary"
-              >Buy Kindle</a>
+                class="btn-secondary"
+              ><span class="btn-label">Buy Kindle</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
               <a
                 href="https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="author-cta author-cta-accent"
-              >Order Signed Copy</a>
+                class="btn-primary"
+              ><span class="btn-label">Order Signed Copy</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
               <a
                 href="https://www.amazon.com/dp/B0H27BM8K1?asin=B0H27BM8K1&amp;revisionId=d20c49a2&amp;format=3&amp;depth=1"
-                class="author-cta author-cta-secondary"
-              >Read an Excerpt</a>
+                class="btn-secondary"
+              ><span class="btn-label">Read an Excerpt</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
             </div>
             <p class="author-deadline hero-deadline">Order a signed paperback directly from Loren.</p>
           </div>
@@ -235,10 +201,10 @@
         <div class="testimonial-grid">
           <figure class="testimonial-card">
             <blockquote>
-              <p>&ldquo;Some wounds don&rsquo;t bleed&mdash;they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.&rdquo;</p>
+              <p>&ldquo;Some wounds don&rsquo;t bleed, they fold you inward. Galese traces that quiet unraveling and the courageous work of unfolding back into yourself. This memoir is both a survival guide and a testament to transforming pain into something fiercely alive and meaningful.&rdquo;</p>
             </blockquote>
             <figcaption>
-              <span>&mdash; <a href="https://alittlebitculty.com/" target="_blank" rel="noopener noreferrer" class="testimonial-author-link">Sarah Edmondson</a></span>
+              <span><a href="https://alittlebitculty.com/" target="_blank" rel="noopener noreferrer" class="testimonial-author-link">Sarah Edmondson</a></span>
               <small>Podcast Host &amp; Author of <em>A Little Bit Culty</em></small>
             </figcaption>
           </figure>
@@ -247,7 +213,7 @@
               <p>&ldquo;<em>Unfolding Origami</em> is a raw and psychologically honest memoir about grooming, coercion, and the ways young women are conditioned to silence their instincts in exchange for belonging. Galese explores the social dynamics of college, party culture, and Greek life that can blur the line between acceptance and danger, revealing how harmful systems are perpetuated under the guise of tradition, loyalty, and sisterhood.&rdquo;</p>
             </blockquote>
             <figcaption>
-              <span>&mdash; <a href="https://open.spotify.com/show/4p2drHyxCkepDIXRKhhaZ1" target="_blank" rel="noopener noreferrer" class="testimonial-author-link">Lucy Taylor</a></span>
+              <span><a href="https://open.spotify.com/show/4p2drHyxCkepDIXRKhhaZ1" target="_blank" rel="noopener noreferrer" class="testimonial-author-link">Lucy Taylor</a></span>
               <small>Host, <em>SNAPPED:The Podcast</em></small>
             </figcaption>
           </figure>
@@ -272,25 +238,25 @@
           </p>
           <p class="author-deadline">Order a signed paperback directly from Loren.</p>
           <div class="author-format-actions">
-            <a href="https://www.barnesandnoble.com/w/unfolding-origami-loren-galese/1150754232?ean=9798995611608" target="_blank" rel="noopener noreferrer" class="author-cta author-cta-secondary">Shop BN.com</a>
+            <a href="https://www.barnesandnoble.com/w/unfolding-origami-loren-galese/1150754232?ean=9798995611608" target="_blank" rel="noopener noreferrer" class="btn-secondary"><span class="btn-label">Shop BN.com</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
             <a
               href="https://www.amazon.com/dp/B0H7YZ5N28"
               target="_blank"
               rel="noopener noreferrer"
-              class="author-cta author-cta-primary"
-            >Buy Paperback</a>
+              class="btn-primary"
+            ><span class="btn-label">Buy Paperback</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
             <a
               href="https://www.amazon.com/dp/B0H27BM8K1"
               target="_blank"
               rel="noopener noreferrer"
-              class="author-cta author-cta-secondary"
-            >Buy Kindle</a>
+              class="btn-secondary"
+            ><span class="btn-label">Buy Kindle</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
             <a
               href="https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00"
               target="_blank"
               rel="noopener noreferrer"
-              class="author-cta author-cta-accent"
-            >Order Signed Copy</a>
+              class="btn-primary"
+            ><span class="btn-label">Order Signed Copy</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
           </div>
           <p class="author-deadline">Order a signed paperback directly from Loren.</p>
         </div>
@@ -313,7 +279,7 @@
           <p>
             Receive Loren&rsquo;s writing, book updates, and new reflections through her Substack, Quiet Alchemy.
           </p>
-          <a class="author-cta author-cta-primary" href="https://substack.com/@quietalchemywloren" target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+          <a class="btn-primary" href="https://substack.com/@quietalchemywloren" target="_blank" rel="noopener noreferrer"><span class="btn-label">Subscribe on Substack</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </div>
       </div>
     </section>
@@ -327,39 +293,39 @@
     </section>
 
 <section class="author-photo-section" aria-labelledby="more-book-title"><div class="site-container"><h2 id="more-book-title">Find your copy</h2><div class="path-grid">
-<article class="card path-card"><h3>Signed copy</h3><p>Order directly from Loren through the website’s secure checkout.</p><a class="btn-outline" href="https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00" target="_blank" rel="noopener noreferrer">Order signed copy</a></article>
-<article class="card path-card"><h3>Amazon</h3><p>Paperback and Kindle editions.</p><a class="btn-outline" href="https://www.amazon.com/dp/B0H7YZ5N28" target="_blank" rel="noopener noreferrer">Shop Amazon</a></article>
-<article class="card path-card"><h3>BN.com</h3><p>Find <em>Unfolding Origami</em> at Barnes &amp; Noble.</p><a class="btn-outline" href="https://www.barnesandnoble.com/w/unfolding-origami-loren-galese/1150754232?ean=9798995611608" target="_blank" rel="noopener noreferrer">Shop BN.com</a></article>
-</div><h2 class="mt-12">Reviews &amp; reader responses</h2><p class="mt-4">Read reader reviews on Amazon and explore the book’s feature in Indie Lit Lounge.</p><p class="mt-6"><a class="btn-outline" href="https://www.amazon.com/dp/B0H7YZ5N28#customerReviews" target="_blank" rel="noopener noreferrer">Read reader reviews</a></p><p class="mt-6"><a class="btn-outline" href="https://indielitlounge.substack.com/p/featured-unfolding-origami-a-memoir" target="_blank" rel="noopener noreferrer">Read the Indie Lit Lounge feature</a></p>
-<h2 class="mt-12">Coming soon! Apple Books and Audiobook format!</h2><div class="path-grid"><article class="card path-card"><p class="eyebrow">Coming soon</p><h3>Apple Books</h3><p><em>Unfolding Origami</em> is coming to Apple Books. The purchase link will be added when available.</p></article><article class="card path-card"><p class="eyebrow">Coming soon</p><h3>Audiobook</h3><p>An audio edition of <em>Unfolding Origami</em> is on its way. Release details will be shared here.</p></article></div><p class="mt-8"><a class="btn-outline" href="/substack.html">Follow book updates on Substack</a></p></div></section>
+<article class="card path-card"><h3>Signed copy</h3><p>Order directly from Loren through the website’s secure checkout.</p><a class="btn-secondary" href="https://buy.stripe.com/dRm28r0bp9Mc8ocdD53cc00" target="_blank" rel="noopener noreferrer"><span class="btn-label">Order signed copy</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></article>
+<article class="card path-card"><h3>Amazon</h3><p>Paperback and Kindle editions.</p><a class="btn-secondary" href="https://www.amazon.com/dp/B0H7YZ5N28" target="_blank" rel="noopener noreferrer"><span class="btn-label">Shop Amazon</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></article>
+<article class="card path-card"><h3>BN.com</h3><p>Find <em>Unfolding Origami</em> at Barnes &amp; Noble.</p><a class="btn-secondary" href="https://www.barnesandnoble.com/w/unfolding-origami-loren-galese/1150754232?ean=9798995611608" target="_blank" rel="noopener noreferrer"><span class="btn-label">Shop BN.com</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></article>
+</div><h2 class="mt-12">Reviews &amp; reader responses</h2><p class="mt-4">Read reader reviews on Amazon and explore the book’s feature in Indie Lit Lounge.</p><p class="mt-6"><a class="btn-secondary" href="https://www.amazon.com/dp/B0H7YZ5N28#customerReviews" target="_blank" rel="noopener noreferrer"><span class="btn-label">Read reader reviews</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p><p class="mt-6"><a class="btn-secondary" href="https://indielitlounge.substack.com/p/featured-unfolding-origami-a-memoir" target="_blank" rel="noopener noreferrer"><span class="btn-label">Read the Indie Lit Lounge feature</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p>
+<h2 class="mt-12">Coming soon! Apple Books and Audiobook format!</h2><div class="path-grid"><article class="card path-card"><p class="eyebrow">Coming soon</p><h3>Apple Books</h3><p><em>Unfolding Origami</em> is coming to Apple Books. The purchase link will be added when available.</p></article><article class="card path-card"><p class="eyebrow">Coming soon</p><h3>Audiobook</h3><p>An audio edition of <em>Unfolding Origami</em> is on its way. Release details will be shared here.</p></article></div><p class="mt-8"><a class="btn-secondary" href="/substack.html"><span class="btn-label">Follow book updates on Substack</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p></div></section>
     <section class="author-photo-section" aria-labelledby="amazon-reviews-heading">
       <div class="site-container">
         <h2 id="amazon-reviews-heading">Amazon Reader Reviews</h2>
         <div class="path-grid">
           <figure class="card path-card amazon-reader-review">
             <blockquote><p>Galese is a captivating storyteller. Even amidst the chilling details of one debilitating event after the next, her humor and resilience shine through. Unfolding Origami so accurately depicts the inner dialogue of a brain that has been impacted by trauma and the way in which a trauma lens can completely distort one’s sense of reality. The reader truly feels the author’s spiral, as she moves through painful experiences of coercion and manipulation across various facets of her life, grasping at anything to avoid the pain of what has happened. Instilling hope as she unfolds the inner most parts of herself on every page, it becomes clear that while healing trauma is never an easy feat, it is, in fact, possible.</p></blockquote>
-            <figcaption class="mt-6">— Amazon reader</figcaption>
+            <figcaption class="mt-6">Amazon reader</figcaption>
           </figure>
           <figure class="card path-card amazon-reader-review">
             <blockquote><p>Loren Galese used a word for what she did while she was being raped. Origami. Folding in on herself, smaller and smaller, until there was nothing left to hurt. She was nineteen. Her friends set her up with one of their cousins, talked her past every alarm she had, and told her not to be dramatic. She became a trauma therapist years afterward. Her book beautifully blends both women. From the girl who explained away every warning, and the clinician who can name every one of them now. Her writing is physical, and what I love most about it is that it refuses clean endings. From her Sobriety at twenty-one to her father dying of cancer, she tells her story plainly and bravely. This is a must-read for survivors, or anyone stuck in an abusive relationship, as Loren closes her memoir with practical instructions for finding a licensed therapist. She knows what it cost her to find one. And I believe her!</p></blockquote>
-            <figcaption class="mt-6">— Amazon reader</figcaption>
+            <figcaption class="mt-6">Amazon reader</figcaption>
           </figure>
           <figure class="card path-card amazon-reader-review">
 
             <blockquote><p>Loren’s writing keeps a reader so immersed even when it’s not an easy read. She has shared her worst nightmares in the hopes of helping others. I haven’t read a more honest healing book like this in a long time. I highly recommend this book, it explains trauma in a way that most people don’t understand.</p></blockquote>
-            <figcaption class="mt-6">— Amazon reader</figcaption>
+            <figcaption class="mt-6">Amazon reader</figcaption>
           </figure>
           <figure class="card path-card amazon-reader-review">
 
-            <blockquote><p>As someone who understands coercion—and has lived it myself—I found Unfolding Origami deeply authentic. Loren Galese captures something many books miss: the quiet, almost invisible decisions that slowly teach us to distrust our own instincts and silence our inner voice. That’s how coercive relationships often begin—not with dramatic moments, but with subtle compromises that accumulate over time.</p>
+            <blockquote><p>As someone who understands coercion, and has lived it myself, I found Unfolding Origami deeply authentic. Loren Galese captures something many books miss: the quiet, almost invisible decisions that slowly teach us to distrust our own instincts and silence our inner voice. That’s how coercive relationships often begin, not with dramatic moments, but with subtle compromises that accumulate over time.</p>
 <p>What makes this memoir so powerful is that it’s about far more than one abusive relationship. It’s about the universal human tendency to override ourselves in order to belong, be loved, or keep the peace. That’s something almost anyone can recognize.</p>
 <p>Loren’s honesty, insight, and compassion make this an important read for survivors, but I also hope young adults read it before they head out into the world. It offers a language for recognizing manipulation, honoring intuition, and understanding that our inner voice is worth protecting. I only wish I’d had a book like this years ago.</p></blockquote>
-            <figcaption class="mt-6">— Amazon reader</figcaption>
+            <figcaption class="mt-6">Amazon reader</figcaption>
           </figure>
           <figure class="card path-card amazon-reader-review">
             <h3><a href="https://www.amazon.com/portal/customer-reviews/srp/-/R6BYXBLO89NF3/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&amp;ie=UTF8" target="_blank" rel="noopener noreferrer">The best book I have read in YEARS</a></h3>
             <blockquote><p>From the second I started reading this book, I could not put it down. Loren's writing just grips you and her compelling story makes it impossible to stop reading. This book will change your life, your perspectives on others, and the way you understand sexual assault and addiction. I found myself sobbing quite a few times while reading it. I can't fathom the bravery and strength it took to write this book. I love her style of writing, her descriptions of people and experiences, and how she makes you feel like you are in the room. My boyfriend saw how sucked in I was and started reading it whenever I had to put it down, and he had the same reaction. I can't recommend it enough!</p></blockquote>
-            <figcaption class="mt-6">— <a href="https://www.amazon.com/gp/profile/amzn1.account.AFFP2JGAB3MHAJIIMII3SIVSOPKA?ref=cm_cr_dp_d_bdcrb_top" target="_blank" rel="noopener noreferrer">Mich</a><br><span class="text-sm">Reviewed in the United States on July 22, 2026 · Paperback</span></figcaption>
+            <figcaption class="mt-6"><a href="https://www.amazon.com/gp/profile/amzn1.account.AFFP2JGAB3MHAJIIMII3SIVSOPKA?ref=cm_cr_dp_d_bdcrb_top" target="_blank" rel="noopener noreferrer">Mich</a><br><span class="text-sm">Reviewed in the United States on July 22, 2026 · Paperback</span></figcaption>
           </figure>
           <figure class="card path-card amazon-reader-review">
 
@@ -367,45 +333,30 @@
 <p>What stood out most to me was how the book captures the subtle ways manipulation and trauma can reshape a person’s identity. Rather than focusing only on what happened, it explores what it takes to rebuild trust in yourself afterward. As both a therapist and survivor, Galese brings insight without ever sounding clinical, making complex psychological experiences accessible and deeply human. Her work and writing consistently center trauma-informed healing and compassionate self-understanding.</p>
 <p>This isn’t an easy read because of the subject matter, but it’s an important one. It offers validation to survivors while helping friends, family members, and professionals better understand the lasting effects of coercive control and trauma.</p>
 <p>If you appreciate memoirs that are courageous, compassionate, and ultimately hopeful, Unfolding Origami is well worth reading.</p></blockquote>
-            <figcaption class="mt-6">— Amazon reader</figcaption>
+            <figcaption class="mt-6">Amazon reader</figcaption>
           </figure>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="py-8 text-center">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
-    </div>
-  </footer>
+  <footer class="site-footer">
+  <div class="site-container">
+    <nav class="footer-nav" aria-label="Footer">
+        <a href="/therapy.html" class="nav-link">Therapy</a>
+        <a href="/coaching.html" class="nav-link">Coaching</a>
+        <a href="/peer-support.html" class="nav-link">Groups</a>
+        <a href="/author.html" class="nav-link" aria-current="page">Author</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/speaking.html" class="nav-link">Speaking</a>
+        <a href="/substack.html" class="nav-link">Writing on Substack</a>
+    </nav>
+    <p>&copy; 2026 The Woven Self Therapeutic Services, LLC</p>
+  </div>
+</footer>
 
-  <script>
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const closeMobileNavBtn = document.getElementById('close-mobile-nav');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-
-    const toggleNav = () => {
-      const isExpanded = hamburgerBtn?.getAttribute('aria-expanded') === 'true';
-      hamburgerBtn?.setAttribute('aria-expanded', String(!isExpanded));
-      mobileNav?.classList.toggle('translate-x-full');
-      mobileNavPanel?.classList.toggle('hidden');
-    };
-
-    if (hamburgerBtn && mobileNav && mobileNavPanel && closeMobileNavBtn) {
-      hamburgerBtn.addEventListener('click', toggleNav);
-      closeMobileNavBtn.addEventListener('click', toggleNav);
-      mobileNavPanel.addEventListener('click', toggleNav);
-
-      mobileNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileNav.classList.contains('translate-x-full')) toggleNav();
-        });
-      });
-    }
-
-  </script>
+  <script defer src="/site.js"></script>
 
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
