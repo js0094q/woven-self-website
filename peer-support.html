@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://formspree.io https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'; form-action https://formspree.io">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com 'unsafe-inline' https://*.vercel-scripts.com; connect-src 'self' https://*.vercel-analytics.com; object-src 'none'; base-uri 'self'; form-action 'none'">
 
   <title>Beyond the Letters: Life After the Degree | Loren Galese</title>
   <meta name="description" content="Beyond the Letters: Life After the Degree with Loren Galese." />
@@ -50,14 +50,11 @@
     <a href="/" class="brand" aria-label="The Woven Self home"><img src="/images/logo.png" alt="" class="brand-logo" loading="eager" decoding="async"></a>
     <a class="header-name" href="/">Loren Galese, LPC, ACS</a>
     <nav class="nav" aria-label="Primary">
-        <a href="/" class="nav-link">Home</a>
         <a href="/therapy.html" class="nav-link">Therapy</a>
-        <a href="/coaching.html" class="nav-link">Coaching</a>
-        <a href="/peer-support.html" class="nav-link" aria-current="page">Groups</a>
         <a href="/author.html" class="nav-link">Author</a>
         <a href="/about.html" class="nav-link">About</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-      <a href="/therapy.html#booking" class="btn-primary header-book"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a href="https://thewovenself.clientsecure.me/contact-widget" target="_blank" rel="noopener noreferrer" class="btn-primary header-book"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a href="https://thewovenself.clientsecure.me/sign-in" class="nav-link" target="_blank" rel="noopener noreferrer">Client portal</a>
     </nav>
     <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
       <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path></svg>
@@ -70,15 +67,12 @@
     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   </button>
   <nav aria-label="Mobile">
-        <a href="/" class="nav-link">Home</a>
         <a href="/therapy.html" class="nav-link">Therapy</a>
-        <a href="/coaching.html" class="nav-link">Coaching</a>
-        <a href="/peer-support.html" class="nav-link" aria-current="page">Groups</a>
         <a href="/author.html" class="nav-link">Author</a>
         <a href="/about.html" class="nav-link">About</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-  </nav>
-  <a href="/therapy.html#booking" class="btn-primary mobile-menu-cta"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a href="https://thewovenself.clientsecure.me/sign-in" class="nav-link" target="_blank" rel="noopener noreferrer">Client portal</a>
+    </nav>
+  <a href="https://thewovenself.clientsecure.me/contact-widget" target="_blank" rel="noopener noreferrer" class="btn-primary mobile-menu-cta"><span class="btn-label">Therapy inquiries</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
 </div>
 
   <main id="main-content" tabindex="-1" class="group-page">
@@ -143,25 +137,9 @@
           <p class="eyebrow">COMING SOON</p>
           <h2 id="interest-title">Join the interest list</h2>
           <p>Because graduating and knowing what comes next are two very different things.</p>
-          <p>Leave your name and email to hear when group details are available. Formal enrollment is not open yet.</p>
-          <form id="group-interest-form" method="POST" action="https://formspree.io/f/myzndadj" aria-describedby="interest-privacy">
-            <input type="hidden" name="_subject" value="Interest list: Beyond the Letters: Life After the Degree">
-            <input type="hidden" name="group" value="Beyond the Letters: Life After the Degree">
-            <input type="hidden" name="source" value="Post-college group interest list">
-            <label for="interest-name">Name</label>
-            <input id="interest-name" name="name" type="text" autocomplete="name" required>
-            <label for="interest-email">Email</label>
-            <input id="interest-email" name="email" type="email" autocomplete="email" required>
-            <p id="interest-privacy" class="group-form-note">This form is for group updates. Please do not include health information or other sensitive personal details. Your request is sent through Formspree.</p>
-            <button id="interest-submit" class="btn-primary group-cta" type="submit"><span class="btn-label">Join the interest list</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
-          </form>
-          <div id="interest-success" class="group-form-status" role="status" aria-live="polite" tabindex="-1" hidden>
-            <p><strong>Thank you for your interest.</strong></p>
-            <p>Your interest request was sent. Joining the interest list does not enroll you or reserve a place.</p>
-          </div>
-          <div id="interest-error" class="group-form-status" role="alert" tabindex="-1" hidden>
-            <p><strong>Your request did not go through.</strong> Please try again. Your entries are still here.</p>
-          </div>
+          <p>Email Loren to ask to join the interest list. Formal enrollment is not open yet.</p>
+          <p><a class="btn-primary group-cta" href="mailto:loren@wovenself.com?subject=Beyond%20the%20Letters%20interest%20list"><span class="btn-label">Email Loren about the interest list</span><span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></p>
+          <p class="group-form-note">Include only your name and interest in group updates. Please do not include health information or other sensitive personal details. Sending an email does not enroll you or reserve a place.</p>
         </section>
       </div>
     </section>
@@ -175,7 +153,9 @@
         <a href="/peer-support.html" class="nav-link" aria-current="page">Groups</a>
         <a href="/author.html" class="nav-link">Author</a>
         <a href="/about.html" class="nav-link">About</a>
-        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="https://thewovenself.clientsecure.me/contact-widget" class="nav-link" target="_blank" rel="noopener noreferrer">Therapy inquiries</a>
+        <a href="https://thewovenself.clientsecure.me/sign-in" class="nav-link" target="_blank" rel="noopener noreferrer">Client portal</a>
+        <a href="mailto:loren@wovenself.com" class="nav-link">Nonclinical inquiries</a>
         <a href="/speaking.html" class="nav-link">Speaking</a>
         <a href="/substack.html" class="nav-link">Writing on Substack</a>
     </nav>
@@ -184,46 +164,7 @@
 </footer>
 
   <script defer src="/site.js"></script>
-  <script>
-    const interestForm = document.getElementById('group-interest-form');
-    const interestSubmit = document.getElementById('interest-submit');
-    const interestSuccess = document.getElementById('interest-success');
-    const interestError = document.getElementById('interest-error');
 
-    if (interestForm && interestSubmit && interestSuccess && interestError) {
-      interestForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        if (!interestForm.reportValidity() || interestSubmit.disabled) return;
-        const submitLabel = interestSubmit.querySelector('.btn-label') || interestSubmit;
-        interestSubmit.disabled = true;
-        submitLabel.textContent = 'Sending...';
-        interestError.hidden = true;
-        interestSuccess.hidden = true;
-        const controller = new AbortController();
-        const timeoutId = window.setTimeout(() => controller.abort(), 20000);
-        try {
-          const response = await fetch(interestForm.action, {
-            method: 'POST',
-            body: new FormData(interestForm),
-            headers: { Accept: 'application/json' },
-            signal: controller.signal,
-          });
-          if (!response.ok) throw new Error('Interest request failed');
-          interestForm.reset();
-          interestForm.hidden = true;
-          interestSuccess.hidden = false;
-          interestSuccess.focus();
-        } catch {
-          interestError.hidden = false;
-          interestError.focus();
-        } finally {
-          window.clearTimeout(timeoutId);
-          interestSubmit.disabled = false;
-          submitLabel.textContent = 'Join the interest list';
-        }
-      });
-    }
-  </script>
 
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };

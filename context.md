@@ -1,6 +1,13 @@
 # Woven Self Handoff Context
 
-Last updated: 2026-07-06
+Last updated: 2026-10-21
+
+## Practice contact update
+
+- Therapy inquiries go directly to `https://thewovenself.clientsecure.me/contact-widget`; existing clients use `https://thewovenself.clientsecure.me/sign-in`.
+- Nonclinical inquiries use `loren@wovenself.com`. No website contact forms or clinical data collection. Formspree submission code and Headway/old scheduling links removed.
+- Therapy-first homepage preserves author, coaching and group content. Compact cream-and-sage CTAs approved by Joseph. Montclair address and availability announcement from current main preserved.
+- Both existing Vercel projects deploy this repository's main branch. No account or DNS changes are part of this release.
 
 This file is intentionally compact. Read it after `AGENTS.md` before spending tokens on broad repo discovery.
 

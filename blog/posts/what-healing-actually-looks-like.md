@@ -16,4 +16,4 @@ Sometimes it looks like calm. Other times it looks like noticing when you are ac
 In trauma work (including EMDR and IFS-informed approaches), progress often comes from building capacity, slowly and consistently.
 Not forcing yourself through something you are not ready for.
 
-If you are in New Jersey and looking for support, booking is available through Headway.
+If you are in New Jersey and looking for support, [contact Loren about therapy](https://thewovenself.clientsecure.me/contact-widget). Sending an inquiry does not book an appointment.

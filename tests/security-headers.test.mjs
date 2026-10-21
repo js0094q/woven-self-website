@@ -56,12 +56,12 @@ assert.equal(
 );
 assert.equal(
   cspDirectives.get('connect-src'),
-  "'self' https://formspree.io https://*.vercel-analytics.com",
+  "'self' https://*.vercel-analytics.com",
   'Reviewed connection sources must remain intact.'
 );
 assert.equal(cspDirectives.get('object-src'), "'none'", 'Plugins and embedded objects must remain disabled.');
 assert.equal(cspDirectives.get('base-uri'), "'self'", 'Base URL injection must remain constrained.');
-assert.equal(cspDirectives.get('form-action'), 'https://formspree.io', 'Forms must submit only to Formspree.');
+assert.equal(cspDirectives.get('form-action'), "'none'", 'Website form submissions must remain disabled.');
 assert.equal(cspDirectives.get('frame-ancestors'), "'none'", 'Modern browsers must deny framing.');
 assert.equal(cspDirectives.get('upgrade-insecure-requests'), '', 'Insecure subresources must be upgraded.');
 

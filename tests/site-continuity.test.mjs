@@ -3,7 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 
 const root = new URL('../', import.meta.url);
 const pages = ['index.html', 'therapy.html', 'coaching.html', 'peer-support.html', 'author.html', 'about.html', 'speaking.html', 'substack.html', 'blog.html', 'blog/post.html', 'preorder.html', 'preorder-thank-you.html'];
-const expected = ['Home', 'Therapy', 'Coaching', 'Groups', 'Author', 'About', 'Contact'];
+const expected = ['Therapy', 'Author', 'About', 'Client portal'];
 for (const path of pages) {
   const html = readFileSync(new URL(path, root), 'utf8');
   assert.doesNotMatch(html, /\u2014|&mdash;|&#(?:8212|x2014);/i, `${path}: copy punctuation`);
@@ -36,7 +36,8 @@ for (const path of pages) {
 const home = readFileSync(new URL('index.html', root), 'utf8');
 for (const term of ['Turn Insight Into Action', 'COMING SOON', 'What Comes Next', 'Beyond the Letters: Life After the Degree', 'Join the interest list']) assert.ok(home.includes(term), `Required homepage wording: ${term}`);
 const group = readFileSync(new URL('peer-support.html', root), 'utf8');
-assert.match(group, /id="group-interest-form"[^>]*action="https:\/\/formspree.io\//, 'Existing group inquiry backend');
+assert.match(group, /mailto:loren@wovenself.com\?subject=Beyond/, 'Group inquiries go directly to nonclinical email');
+assert.doesNotMatch(group, /<form\b|new FormData|fetch\(interestForm/, 'No public group form or submission handler');
 assert.doesNotMatch(group, /Greek.life|hazing|Cornell|In development/i, 'Current post-college positioning');
 const coaching = readFileSync(new URL('coaching.html', root), 'utf8');
 assert.doesNotMatch(coaching, /Peer Support After Greek Life|navigate college life|Greek-life involvement/i, 'Broad coaching positioning');

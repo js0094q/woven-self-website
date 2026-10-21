@@ -28,7 +28,7 @@ The website supports two primary goals:
 1. Therapy practice visibility
    - Present Loren's clinical background and therapeutic approach.
    - Make it easy for prospective clients to learn about services.
-   - Direct users to book through Headway.
+   - Direct prospective clients to Loren's SimplePractice contact inquiry form.
    - Provide a clear and accessible contact pathway.
 2. Author platform and book marketing
    - Promote Loren's author work.
@@ -294,5 +294,6 @@ Do not commit Stripe secret keys, restricted keys, API keys, webhook secrets, or
 
 - Preserve existing security headers and CSP behavior in `vercel.json`.
 - Do not collect therapy-related, clinical, or protected health information through preorder checkout flows.
-- Keep contact and booking pathways clear: therapy scheduling goes through Headway; preorder payments go through Stripe.
+- Keep contact pathways clear: therapy inquiries use `https://thewovenself.clientsecure.me/contact-widget`; existing clients use `https://thewovenself.clientsecure.me/sign-in`; book payments go through Stripe.
+- Nonclinical inquiries use the previously published `loren@wovenself.com` email. The website collects no clinical information and has no contact submission form.
 - Keep examples executable or clearly illustrative when updating documentation.
