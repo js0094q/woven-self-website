@@ -17,6 +17,7 @@
 .practice-number { font-size: .85rem; color: var(--muted); }
 .practice-mark { width: 100%; max-width: 390px; margin: 2rem auto; }
 .practice-contact { background: var(--bg-soft); }
+.practice-office-photo { display: block; width: 100%; max-width: 1000px; height: auto; margin-top: 1.5rem; border: 1px solid var(--border); border-radius: 16px; }
 .practice-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2rem; }
 .practice-contact-grid p, .practice-booking p { margin-top: 1.1rem; }
 .practice-faq { margin: 1.5rem 0 3rem; max-width: 850px; }
