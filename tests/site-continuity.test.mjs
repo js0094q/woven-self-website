@@ -34,7 +34,7 @@ for (const path of pages) {
   }
 }
 const home = readFileSync(new URL('index.html', root), 'utf8');
-for (const term of ['Turn Insight Into Action', 'COMING SOON', 'What Comes Next', 'Beyond the Letters: Life After the Degree', 'Join the interest list']) assert.ok(home.includes(term), `Required homepage wording: ${term}`);
+for (const term of ['Getting started', 'Fees &amp; insurance', 'Beyond the Letters: Life After the Degree', '/coaching.html', '/author.html', '/speaking.html']) assert.ok(home.includes(term), `Required homepage wording: ${term}`);
 const group = readFileSync(new URL('peer-support.html', root), 'utf8');
 assert.match(group, /mailto:loren@wovenself.com\?subject=Beyond/, 'Group inquiries go directly to nonclinical email');
 assert.doesNotMatch(group, /<form\b|new FormData|fetch\(interestForm/, 'No public group form or submission handler');

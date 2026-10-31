@@ -1700,6 +1700,45 @@ img.card { display: block; padding: 0; }
 .card :is(p, li) { overflow-wrap: anywhere; }
 .card .btn-primary, .card .btn-secondary { max-width: 100%; }
 
+/* Focused homepage and author-page simplification. */
+.home-page .practice-hero { padding-block: clamp(2rem, 4vw, 4rem); }
+.home-page .practice-portrait { width: 100%; max-width: 350px; justify-self: center; }
+.home-page .practice-portrait img { aspect-ratio: 4 / 5; object-position: center 35%; }
+.home-page .practice-text-link .btn-arrow { display: none; }
+.home-introduction, .home-secondary, .book-description { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.home-introduction { border-top: 1px solid var(--border); }
+.home-introduction p, .book-description p { max-width: 70ch; margin-block: 1rem; }
+.home-secondary h2 { font-size: var(--type-h3); }
+.home-secondary p { margin-block: 1rem; }
+.home-secondary nav { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; }
+.home-secondary a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: .25em; }
+.home-page .practice-office-photo { max-width: 720px; object-fit: contain; }
+.author-page .book-description .site-container { max-width: 850px; }
+.author-page .author-hero { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.author-page .book-cover-panel { width: 100%; max-width: 300px; }
+.author-page .book-cover-frame img { border-radius: 4px; }
+.author-page .book-cover-frame::after { border-radius: 4px; }
+.author-page .author-retailer { margin-top: 1rem; font-size: .9rem; }
+.author-page .author-retailer a, .author-page .author-photo-section a { text-decoration: underline; text-underline-offset: .25em; }
+.author-page .author-hero-actions .practice-text-link { display: flex; align-items: center; justify-content: center; min-height: 44px; color: var(--author-cream); }
+.author-page .author-hero-actions .practice-text-link .btn-arrow { display: none; }
+.author-page .endorsement-section { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.author-page .testimonial-card p { font-size: 1.1rem; }
+.author-page .newsletter-inner { grid-template-columns: 150px 1fr; max-width: 850px; text-align: left; align-items: center; padding-block: 2rem; }
+.author-page .newsletter-portrait img { display: block; width: 100%; height: auto; max-height: none; border-radius: 12px; }
+.author-page .compact-book-image { max-width: 680px; margin-inline: auto; }
+.author-page .reader-details { margin-top: 1.5rem; border-block: 1px solid var(--border); padding-block: 1rem; }
+.author-page .reader-details summary { cursor: pointer; font-weight: 600; min-height: 44px; padding-block: .6rem; }
+.author-page .reader-details .path-grid { grid-template-columns: 1fr; max-width: 75ch; }
+.author-page .author-photo-section p { margin-top: 1rem; }
+.author-page .site-footer .nav-link { color: var(--author-cream); }
+.author-page .site-footer .nav-link:focus-visible { outline-color: var(--author-blush); }
+@media (max-width: 640px) {
+  .author-page .newsletter-inner { grid-template-columns: 1fr; text-align: center; }
+  .author-page .newsletter-portrait { max-width: 150px; }
+  .author-page .book-cover-panel { max-width: 240px; margin-inline: auto; }
+}
+
 /* Compact shared header; desktop navigation has its own row. */
 .site-header { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); }
 .site-header .site-container { max-width: 1440px; padding-inline: clamp(1rem, 3vw, 2rem); }
