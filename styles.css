@@ -1801,6 +1801,23 @@ footer { overflow-wrap: anywhere; }
   *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
 }
 
+/* Shared contact chooser: preserve the existing page and exact official logo. */
+.woven-contact { box-sizing: border-box; width: min(440px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 28px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #b8c5bd; border-radius: 20px; background: #faf7f2; color: #2e4341; box-shadow: 0 20px 70px rgb(24 42 38 / .22); font-family: Inter, sans-serif; }
+.woven-contact::backdrop { background: rgb(28 44 41 / .45); }
+.woven-contact-close { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -16px -16px -12px auto; border: 0; border-radius: 50%; background: transparent; color: #2e4341; font-size: 28px; cursor: pointer; }
+.woven-contact-logo { display: block; width: 280px; max-width: 100%; height: auto; margin: 0 auto 18px; }
+.woven-contact h2 { margin: 0; color: #2e4341; text-align: center; font: 600 27px/1.2 'Playfair Display', Georgia, serif; }
+.woven-contact .woven-contact-intro { margin: 10px 0 20px; text-align: center; font-size: 14px; }
+.woven-contact-actions { display: grid; gap: 10px; }
+.woven-contact-actions a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; padding: 12px 15px; border: 1px solid #b8c5bd; border-radius: 12px; background: #f4efe7; color: #2e4341; text-decoration: none; }
+.woven-contact-actions a:hover, .woven-contact-close:hover { background: #e5ece5; }
+.woven-contact-actions strong { display: block; font-size: 15px; line-height: 1.4; font-weight: 600; }
+.woven-contact-actions small { display: block; margin-top: 3px; font-size: 12px; line-height: 1.5; }
+.woven-contact .woven-contact-privacy { margin: 16px 0 8px; font-size: 12px; line-height: 1.5; text-align: center; }
+.woven-contact-portal { display: flex; align-items: center; justify-content: center; min-height: 44px; color: #2e4341; font-size: 13px; line-height: 1.5; text-align: center; text-decoration: underline; text-underline-offset: 3px; }
+.woven-contact :focus-visible { outline: 3px solid #2e4341; outline-offset: 3px; }
+@media (max-width: 360px) { .woven-contact { padding: 20px; } .woven-contact h2 { font-size: 24px; } }
+
 /* Post-college content uses the shared typography and control tokens. */
 .group-offering-title { text-wrap: balance; overflow-wrap: break-word; }
 .group-copy { max-width: 760px; }

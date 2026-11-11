@@ -178,4 +178,73 @@
     });
   }
 
+  // Enhance existing inquiry links; their secure destinations remain the no-JS fallback.
+  const inquiryLinks = [...document.querySelectorAll('a[href="https://thewovenself.clientsecure.me/contact-widget"]')];
+  if (!inquiryLinks.length || typeof HTMLDialogElement === 'undefined') return;
+
+  const contact = document.createElement('dialog');
+  contact.id = 'woven-contact';
+  contact.className = 'woven-contact';
+  contact.setAttribute('aria-labelledby', 'woven-contact-title');
+  contact.innerHTML = `
+    <button class="woven-contact-close" type="button" aria-label="Close contact options" autofocus>×</button>
+    <img class="woven-contact-logo" src="/images/logo.png" alt="The Woven Self — Every part has a voice. Every thread tells a story.">
+    <h2 id="woven-contact-title">Contact Woven Self</h2>
+    <p class="woven-contact-intro">Choose the right place to connect.</p>
+    <div class="woven-contact-actions">
+      <a href="https://thewovenself.clientsecure.me/contact-widget" target="_blank" rel="noopener noreferrer"><span><strong>Contact Loren</strong><small>Clinical inquiries · secure SimplePractice form</small></span><span aria-hidden="true">↗</span></a>
+      <a href="https://thewovenself.clientsecure.me/request" target="_blank" rel="noopener noreferrer"><span><strong>Request an Appointment</strong><small>Explore availability through SimplePractice</small></span><span aria-hidden="true">↗</span></a>
+      <a href="mailto:joseph@wovenself.com"><span><strong>Contact Joseph</strong><small>Practice administration, insurance &amp; billing</small></span><span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="woven-contact-privacy">SimplePractice opens in a new tab. Please keep clinical details there, not in email.</p>
+    <a class="woven-contact-portal" href="https://thewovenself.clientsecure.me/sign-in" target="_blank" rel="noopener noreferrer">Existing clients: sign in to your portal ↗</a>`;
+  document.body.append(contact);
+  let contactTrigger = null;
+  let contactOverflow = '';
+  const restoreContactFocus = () => contactTrigger?.focus({ preventScroll: true });
+  const closeContact = () => {
+    if (!contact.open) return;
+    contact.close();
+    document.body.style.overflow = contactOverflow;
+    restoreContactFocus();
+  };
+  contact.querySelector('button').addEventListener('click', closeContact);
+  contact.addEventListener('cancel', (event) => { event.preventDefault(); closeContact(); });
+  contact.addEventListener('click', (event) => {
+    if (event.target !== contact) return;
+    const box = contact.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) closeContact();
+  });
+  contact.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const items = [...contact.querySelectorAll('button, a[href]')];
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  });
+  // Use verified hosted SimplePractice flows: the embedded client's close
+  // control did not work during integration QA. No clinical data touches this site.
+  contact.addEventListener('click', (event) => {
+    const action = event.target.closest('a');
+    if (!action) return;
+    closeContact();
+  }, true);
+  inquiryLinks.forEach((link) => {
+    link.setAttribute('aria-haspopup', 'dialog');
+    link.setAttribute('aria-controls', contact.id);
+    link.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const fromMobileMenu = menu?.contains(link);
+      closeMenu({ restoreFocus: false });
+      contactTrigger = fromMobileMenu ? openButton : link;
+      contactOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      contact.showModal();
+    });
+  });
 })();
