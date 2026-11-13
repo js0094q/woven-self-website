@@ -3,18 +3,25 @@ import { readFileSync, existsSync } from 'node:fs';
 
 const root = new URL('../', import.meta.url);
 const pages = ['index.html', 'therapy.html', 'coaching.html', 'peer-support.html', 'author.html', 'about.html', 'speaking.html', 'substack.html', 'blog.html', 'blog/post.html', 'preorder.html', 'preorder-thank-you.html'];
-const expected = ['Therapy', 'Author', 'About', 'Client portal'];
+const expected = {
+  Primary: ['Therapy', 'Author', 'About', 'Client portal'],
+  Mobile: ['Therapy', 'Coaching', 'Groups', 'Author', 'About', 'Client portal', 'Nonclinical inquiries', 'Speaking', 'Writing on Substack'],
+};
 for (const path of pages) {
   const html = readFileSync(new URL(path, root), 'utf8');
   assert.doesNotMatch(html, /\u2014|&mdash;|&#(?:8212|x2014);/i, `${path}: copy punctuation`);
   assert.match(html, /class="skip-link" href="#main-content"/, `${path}: skip link`);
   assert.match(html, /id="mobile-nav" hidden inert/, `${path}: closed menu is excluded from keyboard navigation`);
   assert.match(html, /src="\/site.js"/, `${path}: shared behavior`);
+  const expectedMobile = [...expected.Mobile];
+  if (['author.html', 'preorder.html', 'preorder-thank-you.html'].includes(path)) {
+    expectedMobile.splice(5, 0, 'Therapy inquiries');
+  }
   for (const label of ['Primary', 'Mobile']) {
     const nav = html.match(new RegExp(`<nav[^>]*aria-label="${label}"[^>]*>([\\s\\S]*?)<\\/nav>`))?.[1];
     assert.ok(nav, `${path}: ${label} navigation exists`);
     const names = [...nav.matchAll(/<a\b[^>]*class="nav-link"[^>]*>(.*?)<\/a>/g)].map(m => m[1]);
-    assert.deepEqual(names, expected, `${path}: ${label} labels and order`);
+    assert.deepEqual(names, label === 'Mobile' ? expectedMobile : expected.Primary, `${path}: ${label} labels and order`);
   }
   assert.match(html, /aria-label="Footer"/, `${path}: footer navigation`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);

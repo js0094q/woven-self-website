@@ -1705,6 +1705,11 @@ img.card { display: block; padding: 0; }
 .home-page .practice-portrait { width: 100%; max-width: 350px; justify-self: center; }
 .home-page .practice-portrait img { aspect-ratio: 4 / 5; object-position: center 35%; }
 .home-page .practice-text-link .btn-arrow { display: none; }
+.home-page .practice-care { padding-block: clamp(2rem, 3.5vw, 3rem); }
+.home-page .practice-care-grid { gap: 1.5rem 2rem; margin-block: 1.5rem; }
+.home-page .practice-care-grid article { padding-top: 1rem; }
+.home-page .practice-care-grid h3 { margin-block: .375rem .5rem; }
+.home-page .practice-care-grid p { margin-top: 0; }
 .home-introduction, .home-secondary, .book-description { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .home-introduction { border-top: 1px solid var(--border); }
 .home-introduction p, .book-description p { max-width: 70ch; margin-block: 1rem; }
@@ -1714,11 +1719,21 @@ img.card { display: block; padding: 0; }
 .home-secondary a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: .25em; }
 .home-page .practice-office-photo { max-width: 720px; object-fit: contain; }
 .author-page .book-description .site-container { max-width: 850px; }
+.author-page .book-description { background: var(--author-navy); color: #fff; }
+.author-page .book-description :is(h2, h3, p) { color: #fff; font-weight: 700; }
+.author-page .book-description h2 { max-width: 28ch; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.3; }
+.author-page .book-description p { max-width: 65ch; font-size: 1.125rem; line-height: 1.75; margin-block: 1.5rem; }
+.author-page .book-description .memoir-turn { margin-block: 2rem; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.35; }
+.author-page .memoir-turn span { display: block; }
+.author-page .memoir-turn span + span { margin-top: .5rem; }
+.author-page .book-description .memoir-closing { margin-bottom: 0; font-family: var(--font-heading); font-size: clamp(1.375rem, 2.2vw, 1.75rem); }
 .author-page .author-hero { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .author-page .book-cover-panel { width: 100%; max-width: 300px; }
 .author-page .book-cover-frame img { border-radius: 4px; }
 .author-page .book-cover-frame::after { border-radius: 4px; }
 .author-page .author-retailer { margin-top: 1rem; font-size: .9rem; }
+.author-page .author-retailer-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .5rem; }
+.author-page .author-retailer-actions .btn-secondary { min-height: 44px; border-color: rgba(244, 239, 231, .45); font-size: .875rem; padding: .5rem .875rem; }
 .author-page .author-retailer a, .author-page .author-photo-section a { text-decoration: underline; text-underline-offset: .25em; }
 .author-page .author-hero-actions .practice-text-link { display: flex; align-items: center; justify-content: center; min-height: 44px; color: var(--author-cream); }
 .author-page .author-hero-actions .practice-text-link .btn-arrow { display: none; }
@@ -1745,18 +1760,9 @@ img.card { display: block; padding: 0; }
 .header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 1rem; padding-block: 0.5rem; }
 .brand { grid-column: 1; grid-row: 1; min-width: 0; width: fit-content; }
 .brand-logo { display: block; width: 330px; max-width: 100%; height: 90px; object-fit: contain; object-position: left center; }
-.header-name { grid-column: 2; grid-row: 1; font: 700 clamp(2rem, 2.5vw, 2.25rem)/1.3 "Playfair Display", Georgia, serif; color: #343410; text-decoration: none; }
-/* Match the logo's olive/amber lettering with a deeper peach highlight
-   so the name stays readable on the cream header. Keep real, selectable text. */
-@supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  .header-name {
-    background-image: linear-gradient(105deg, #343410 0%, #595623 24%, #8f5013 42%, #b6794e 52%, #8f5013 64%, #343410 92%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-}
+.header-name { grid-column: 2; grid-row: 1; display: inline-flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: .25rem .75rem; max-width: 100%; color: #343410; text-decoration: none; }
+.header-signature { font: 400 clamp(2.75rem, 4vw, 3.5rem)/1.15 "Allura", "Segoe Script", "Brush Script MT", cursive; white-space: nowrap; }
+.header-credentials { font: 500 .875rem/1.4 var(--font-body); white-space: nowrap; }
 @media (forced-colors: active), print {
   .header-name { background-image: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
 }
@@ -1792,7 +1798,9 @@ footer { overflow-wrap: anywhere; }
   .nav { display: none; }
   .hamburger { display: inline-flex; }
   .brand-logo { width: min(300px, calc(100vw - 100px)); height: 78px; }
-  .header-name { grid-column: 1 / -1; grid-row: 2; justify-self: center; font-size: 1.625rem; padding-bottom: 0.25rem; }
+  .header-name { grid-column: 1 / -1; grid-row: 2; justify-self: center; padding-bottom: 0.25rem; }
+  .header-signature { font-size: clamp(2.25rem, 9vw, 2.75rem); }
+  .header-credentials { font-size: .75rem; }
   html { scroll-padding-top: 144px; }
 }
 @media (min-width: 1151px) { #mobile-nav, #mobile-nav-panel { display: none; } }
