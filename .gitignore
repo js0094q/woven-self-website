@@ -36,6 +36,7 @@ output/
 # Python virtual environments
 .venv/
 .uv-cache/
+__pycache__/
 
 # Node dependencies
 node_modules/

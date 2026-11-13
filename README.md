@@ -179,6 +179,16 @@ Do not remove existing security headers unless replacing them with equivalent or
 
 ## Blog System
 
+### Automatic Substack posts
+
+`substack.html` and the legacy `blog.html` show the latest three public posts from Quiet Alchemy, including featured images. `substack.js` loads `/api/substack`, a small Python Vercel Function using only the standard library. It reads the fixed public RSS URL; no credentials or visitor data are sent to Substack.
+
+Successful feed responses are cached for one hour. After that, Vercel can serve the previous response while refreshing in the background. New posts appear on subsequent page loads; a tab already open does not poll. If the request fails, the saved HTML cards remain available. Posts without images remain readable.
+
+The ordinary Python static preview shows the saved cards; it does not run Vercel Functions. After an approved deployment, verify `/api/substack` returns JSON and `/substack` loads the latest images. Run feed tests with `npm run check:substack` or `python3 -m unittest discover -s tests -p 'test_substack.py' -v`.
+
+### Original static blog
+
 The blog is static.
 
 Blog metadata is stored in:

@@ -1700,6 +1700,18 @@ img.card { display: block; padding: 0; }
 .card :is(p, li) { overflow-wrap: anywhere; }
 .card .btn-primary, .card .btn-secondary { max-width: 100%; }
 
+/* Substack artwork keeps its full composition, including portrait covers. */
+.substack-post-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+.substack-post-image[hidden] { display: none; }
+.substack-post-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; }
+
 /* Focused homepage and author-page simplification. */
 .home-page .practice-hero { padding-block: clamp(2rem, 4vw, 4rem); }
 .home-page .practice-portrait { width: 100%; max-width: 350px; justify-self: center; }
